@@ -1,0 +1,18 @@
+<div class="padding-global"><div class="padding-section-medium"><div class="container-large"><div class="collections_wrapper"><div class="collections_heading"><h2 li-setting:text="heading" class="heading-style-h3">Les produits du Panier à Café</h2></div><div class="max-width-large"><div class="collections_list">{% for block in section.blocks %}
+    {% if block.type == "collection" %}
+                    <div li-block="collection">
+                                    
+                                    {% for product in block.settings.collection_collection.products limit: block.settings.collection_collection_limit %}
+<div>
+    
+    <a li-object:href="collection.url" href="{{ collection.url }}" class="collections_item w-inline-block"><img src="{{ collection.featured_image | img_url: 'master' }}" loading="lazy" li-object:src="collection.featured_image | img_url: 'master'" alt="" class="collection_image">
+<div li-object="collection.title">{{ collection.title }}</div></a>
+    
+</div>
+{% endfor %}
+
+                                    
+                            </div>
+            {% endif %}
+{% endfor %}
+</div></div></div></div></div></div> {% schema %} {"tag":"section","name":"Liste Collections","class":"section_collections","blocks":[{"name":"collection","type":"collection","settings":[{"id":"collection_collection","type":"collection","label":"Collection"},{"type":"range","id":"collection_collection_limit","min":1,"max":99,"step":1,"label":"Limit: Collection","default":6}]},{"type":"@app"}],"presets":[{"name":"Liste Collections","category":"Liquify","blocks":[{"type":"collection"}]}]} {% endschema %}

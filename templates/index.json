@@ -1,0 +1,68 @@
+{
+    "sections": {
+        "hero": {
+            "type": "hero"
+        },
+        "hero_2": {
+            "type": "hero_2"
+        },
+        "collection_tabs": {
+            "type": "collection_tabs"
+        },
+        "bandeau": {
+            "type": "bandeau"
+        },
+        "contenu": {
+            "type": "contenu"
+        },
+        "lookbook": {
+            "type": "lookbook"
+        },
+        "liste_collections": {
+            "type": "liste_collections"
+        },
+        "chiffres": {
+            "type": "chiffres"
+        },
+        "selection": {
+            "type": "selection"
+        },
+        "pages": {
+            "type": "pages"
+        },
+        "contenu_2": {
+            "type": "contenu_2"
+        },
+        "related_articles": {
+            "type": "related_articles"
+        },
+        "logo_defilants": {
+            "type": "logo_defilants"
+        },
+        "collection_2": {
+            "type": "collection_2"
+        },
+        "reseaux": {
+            "type": "reseaux"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "hero",
+        "hero_2",
+        "collection_tabs",
+        "bandeau",
+        "contenu",
+        "lookbook",
+        "liste_collections",
+        "chiffres",
+        "selection",
+        "pages",
+        "contenu_2",
+        "related_articles",
+        "logo_defilants",
+        "collection_2",
+        "reseaux"
+    ]
+}

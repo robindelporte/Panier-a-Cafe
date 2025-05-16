@@ -1,0 +1,47 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="card_component"><div li-content-for-blocks="" class="content_wrapper">
+{% for block in section.blocks %}
+{% case block.type %}
+{% when '@app' %}
+{% render block %}
+{% when 'headline' %}
+            <div li-block="Headline">
+                    
+                    <h1>
+{{ block.settings.text_headline }}
+</h1>
+
+                    
+                </div>
+    {% when 'text' %}
+            <div li-block="Text">
+                    
+                    <div> {{ block.settings.richtext_paragraph }} </div>
+
+                    
+                </div>
+    {% when 'buttons' %}
+            <div li-block="Buttons">
+                    
+                    <div class="button-group">{% if block.settings.url_button_link %}    <div li-if="block.settings.url_button_link">
+    <a href="{{ block.settings.url_button_link }}" class="button w-button"> {{ block.settings.text_button_text }} </a>
+    </div>
+{% endif %}{% if block.settings.url_button_link_2 %}    <div li-if="block.settings.url_button_link_2">
+    <a href="{{ block.settings.url_button_link_2 }}" class="button is-secondary w-button"> {{ block.settings.text_button_text_2 }} </a>
+    </div>
+{% endif %}</div>
+                    
+                </div>
+    <div class="margin-top margin-small"><div class="marquees_wrapper"><div><div>Ils nous font confiance</div></div><div class="marquee is-hero">{% for logo in settings.marquee_1_logos %}    <div li-for="logo in settings.marquee_1_logos" class="marquee-content scroll reverse">
+                                    <img alt="logo.alt" src="{{ 'logo.image' | asset_url }}" loading="eager" class="marquee-image">
+
+                        </div>
+{% endfor %}{% for logo in settings.marquee_1_logos %}    <div li-for="logo in settings.marquee_1_logos" class="marquee-content scroll reverse">
+                                    <img alt="logo.alt" src="{{ 'logo.image' | asset_url }}" loading="eager" class="marquee-image">
+
+                        </div>
+{% endfor %}</div></div></div>{% endcase %}
+{% endfor %}
+
+    </div>
+<div id="w-node-_29701d91-6a33-e924-2092-7903b642ca7b-7dc6b7d0" class="card_img-wrapper"><img loading="lazy" alt="{{ section.settings.image_image.alt }}" src="{{ section.settings.image_image | img_url: 'master' }}" class="card_img">
+</div></div></div></div> {% schema %} {"tag":"section","name":"Header landing","class":"section_content","blocks":[{"name":"Headline","type":"headline","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy."}]},{"name":"Text","type":"text","settings":[{"id":"richtext_paragraph","type":"richtext","label":"Paragraph","default":"<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.<\/p>"}]},{"name":"Buttons","type":"buttons","settings":[{"id":"url_button_link","type":"url","label":"Button Link"},{"id":"text_button_text","type":"text","label":"Button Text","default":"Button"},{"id":"url_button_link_2","type":"url","label":"Button Link 2"},{"id":"text_button_text_2","type":"text","label":"Button Text 2","default":"Button 2"}]},{"type":"@app"}],"settings":[{"id":"image_image","type":"image_picker","label":"Image"}],"presets":[{"name":"Header landing","category":"Liquify","blocks":[{"type":"headline"},{"type":"text"},{"type":"buttons"}]}]} {% endschema %}

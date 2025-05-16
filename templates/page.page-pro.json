@@ -1,0 +1,32 @@
+{
+    "sections": {
+        "professionnels": {
+            "type": "professionnels"
+        },
+        "logo_defilants": {
+            "type": "logo_defilants"
+        },
+        "content": {
+            "type": "content"
+        },
+        "bandeau": {
+            "type": "bandeau"
+        },
+        "faq": {
+            "type": "faq"
+        },
+        "reseaux": {
+            "type": "reseaux"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "professionnels",
+        "logo_defilants",
+        "content",
+        "bandeau",
+        "faq",
+        "reseaux"
+    ]
+}

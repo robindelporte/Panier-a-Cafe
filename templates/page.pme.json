@@ -1,0 +1,36 @@
+{
+    "sections": {
+        "header_landing": {
+            "type": "header_landing"
+        },
+        "bandeau": {
+            "type": "bandeau"
+        },
+        "content": {
+            "type": "content"
+        },
+        "selection_manuel": {
+            "type": "selection_manuel"
+        },
+        "logo_defilants": {
+            "type": "logo_defilants"
+        },
+        "faq": {
+            "type": "faq"
+        },
+        "reseaux": {
+            "type": "reseaux"
+        }
+    },
+    "layout": "page.pme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "header_landing",
+        "bandeau",
+        "content",
+        "selection_manuel",
+        "logo_defilants",
+        "faq",
+        "reseaux"
+    ]
+}

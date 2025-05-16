@@ -1,0 +1,32 @@
+{
+    "sections": {
+        "product_hero_sub": {
+            "type": "product_hero_sub"
+        },
+        "product_recommended": {
+            "type": "product_recommended"
+        },
+        "whatever": {
+            "type": "whatever"
+        },
+        "animation_produit": {
+            "type": "animation_produit"
+        },
+        "category": {
+            "type": "category"
+        },
+        "reseaux": {
+            "type": "reseaux"
+        }
+    },
+    "layout": "product",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "product_hero_sub",
+        "product_recommended",
+        "whatever",
+        "animation_produit",
+        "category",
+        "reseaux"
+    ]
+}

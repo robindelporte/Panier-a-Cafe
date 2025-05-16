@@ -1,0 +1,28 @@
+<style>.button.is-tab-button {
+  opacity: 60%;
+}
+.button.is-tab-button.is-active {
+  opacity: 100%;
+}
+</style><div class="padding-global padding-section-large"><div class="container-large"><div class="tabs_wrapper is-team"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2>
+<div x-data="{tab: 1}" class="tabs_element is-team"><div li-for:inside="block in section.blocks" class="tabs_menu">
+        {% for block in section.blocks %}                            {% if block.type == 'tab' %}    <button x-bind:class="tab === {{forloop.index}} ? 'is-active' : ''" x-on:click="tab = {{forloop.index}}" role="tab" aria-controls="panel-{{section.index}}-{{forloop.index}}" tabindex="0" id="tab-{{section.index}}-{{forloop.index}}" x-bind:aria-selected="tab === {{forloop.index}} ? 'true' : 'false'" li-if="block.type == 'tab'" class="button is-team-tab is-active">
+    <div li-object="block.settings.text_tab_label">{{ block.settings.text_tab_label }}</div>    </button>
+{% endif %}
+                    {% endfor %}    </div>
+<div class="tabs_body">{% for block in section.blocks %}
+    {% if block.type == "tab" %}
+                    <div id="panel-{{section.index}}-{{forloop.index}}" x-show="tab === {{forloop.index}}" aria-labelledby="tab-{{section.index}}-{{forloop.index}}" role="tabpanel" x-bind:aria-hidden="tab === {{forloop.index}} ? 'false' : 'true'" x-cloak="" li-block="Tab" class="tabs_panel">
+                                    
+                                    <div class="tabs_panel-content is-team"><div class="tabs_panel-image-wrapper"><img src="{{ 'ilona.avif' | asset_url }}" loading="lazy" alt="" class="tabs_panel-image">
+</div><article class="tabs_panel-article"><h4 class="tabs_panel-article-heading">Future directrice artistique (et tornade créative)</h4><p>
+{{ block.settings.text_text }}
+</p>
+</article></div>
+                                    
+                            </div>
+            {% endif %}
+{% endfor %}
+</div></div></div></div></div> {% schema %} {"tag":"section","name":"Team","class":"section_tabs","blocks":[{"name":"Tab","type":"tab","settings":[{"id":"text_text","type":"text","label":"Text","default":"Ilona, c\u2019est l\u2019\u0153il graphique du Panier \u00e0 Caf\u00e9.\u2028Future directrice artistique, elle fa\u00e7onne l\u2019univers visuel de l\u2019entreprise : des packagings aux r\u00e9seaux sociaux, en passant par les affiches, les newsletters ou les \u00e9tiquettes.\u2028Cr\u00e9ative, organis\u00e9e et toujours pleine d\u2019id\u00e9es, elle donne du sens \u00e0 chaque visuel et de la coh\u00e9rence \u00e0 toute la communication.\u2028C\u2019est aussi elle qui guide l\u2019\u00e9quipe pour capter les bons contenus sur les march\u00e9s\u2026 et qui transforme un simple caf\u00e9 en belle histoire \u00e0 raconter."}]},{"type":"@app"}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Tabs"}],"presets":[{"name":"Team","category":"Liquify","blocks":[{"type":"tab"}]}]} {% endschema %}

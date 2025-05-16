@@ -1,0 +1,18 @@
+<div class="padding-global"><div class="container-large is-relative"><div class="padding-section-medium"><div class="tableau_component"><div class="tableau_content"><h2 class="heading-style-h3">Les conseils du torréfacteur</h2><div> {{ section.settings.richtext_contenu }} </div>
+<div class="conseil_image-wrapper"><img src="{{ 'conseil-torrefacteur.avif' | asset_url }}" loading="lazy" alt="" class="conseil_image">
+</div></div><div class="tableau_component-wrapper"><div class="tableau_wrapper"><ul role="list" class="tableau_list w-list-unstyled"><li class="tableau_list-item"><div class="display-inlineflex display-align-center gap-0-75"><div>Types de thé</div></div><div>
+{{ section.settings.text_the_noir }}
+</div>
+</li><li class="tableau_list-item"><div class="display-inlineflex display-align-center gap-0-75"><div>Origine</div></div><div class="display-inlineflex display-align-center gap-0-75"><div>
+{{ section.settings.text_2530s }}
+</div>
+</div></li><li class="tableau_list-item"><div class="display-inlineflex display-align-center gap-0-75"><div>Temps d’infusion</div></div><div>
+{{ section.settings.text_conseil_mouture }}
+</div>
+</li><li class="tableau_list-item"><div class="display-inlineflex display-align-center gap-0-75"><div>Température d’eau conseillée</div></div><div>
+{{ section.settings.text_materiel }}
+</div>
+</li><li class="tableau_list-item"><div class="display-inlineflex display-align-center gap-0-75"><div>Contenance</div></div><div>
+{{ section.settings.text_type_extraction }}
+</div>
+</li></ul></div></div></div></div></div></div> {% schema %} {"tag":"div","name":"conseils-the","class":"section_conseil","settings":[{"id":"richtext_contenu","type":"richtext","label":"Contenu","default":"<p>Ce caf\u00e9 nous vient tout droit du Salvador, cultiv\u00e9 sur les terres volcaniques de Chaparastique, dans le d\u00e9partement de San Miguel.\u2028Il pousse \u00e0 flanc de volcan, sur une plantation de 42 hectares tenue par Beatriz et Cyrille, avec qui nous collaborons en direct.\u2028C\u2019est d\u2019ailleurs notre premier caf\u00e9 import\u00e9 sans interm\u00e9diaire : une vraie fiert\u00e9 !\u2028Un terroir riche, une tra\u00e7abilit\u00e9 ma\u00eetris\u00e9e, pour une tasse pleine de sens !<\/p>"},{"id":"text_the_noir","type":"text","label":"Th\u00e9 noir","default":"Salvador"},{"id":"text_2530s","type":"text","label":"25\/30s","default":"Chine Sri Lanka"},{"id":"text_conseil_mouture","type":"text","label":"Conseil mouture","default":"4 minutes"},{"id":"text_materiel","type":"text","label":"Mat\u00e9riel","default":"80\u00b0C"},{"id":"text_type_extraction","type":"text","label":"Type extraction","default":"100g"}],"presets":[{"name":"conseils-the","category":"Liquify","blocks":[]}]} {% endschema %}

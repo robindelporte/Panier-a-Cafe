@@ -1,0 +1,28 @@
+{
+    "sections": {
+        "hero": {
+            "type": "hero"
+        },
+        "contenu_avec_titre": {
+            "type": "contenu_avec_titre"
+        },
+        "content": {
+            "type": "content"
+        },
+        "team": {
+            "type": "team"
+        },
+        "faq": {
+            "type": "faq"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "hero",
+        "contenu_avec_titre",
+        "content",
+        "team",
+        "faq"
+    ]
+}
