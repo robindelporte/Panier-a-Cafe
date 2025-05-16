@@ -11,27 +11,71 @@
   "sections": {
     "product_hero_sub": {
       "type": "product_hero_sub",
-      "settings": {}
+      "settings": {
+        "text_without_subscription": "Commande ponctuelle",
+        "text_with_subscription": "Livraison récurrente",
+        "text_explication_abonnement": "Explication de l'abonnement<br>"
+      }
     },
     "product_recommended": {
       "type": "product_recommended",
-      "settings": {}
+      "settings": {
+        "text_titre": "Achetez avec"
+      }
     },
     "contenu_produits": {
       "type": "contenu_produits",
-      "settings": {}
+      "settings": {
+        "text_button_text": "Voir mode d’emploi  PDF",
+        "url_button_link": "",
+        "text_tableau_1": "Spécialités",
+        "text_6": "6",
+        "text_tableau_3": "Caractéristiques standard des machines à café JURA",
+        "text_tableau_2": "Pourquoi vous allez l’adorer",
+        "text_tableau_4": "Quelques chiffres",
+        "text_salvador": "{{ product.metafields.custom.pays_d_origine.value.pays.value }}",
+        "text_1100m": "{{ product.metafields.custom.altitude_de_culture_.value }}m",
+        "text_100_arabica": "{{ product.metafields.custom.variete.value }}",
+        "text_janvier_2025": "{{ product.metafields.custom.recolte.value }}",
+        "text_nature": "{{ product.metafields.custom.traitement.value }}",
+        "text_achat_en_direct_du_producteur": "{{ product.metafields.custom.certification.value.nom.value }}",
+        "text_86": "{{ product.metafields.custom.score_sca.value }}",
+        "richtext_contenu": "<p>{{ product.metafields.custom.les_conseils_du_torrefacteur_texte | metafield_tag }}</p>",
+        "text_86c": "{{ product.metafields.custom.temp_rature_d_eau_conseill_e.value }}",
+        "text_2530s": "{{ product.metafields.custom.temps_d_extraction.value }}",
+        "text_info_temps_extraction": "{{ product.metafields.custom.info_temps_d_extraction.value }}",
+        "text_conseil_mouture": "{{ product.metafields.custom.conseil_de_mouture.value }}",
+        "text_materiel": "{{ product.metafields.custom.mat_riel_recommand_.value }}",
+        "text_type_extraction": "{{ product.metafields.custom.type_d_extraction_id_al.value }}",
+        "text_the_noir": "Salvador"
+      }
     },
     "animation_produit": {
       "type": "animation_produit",
-      "settings": {}
+      "settings": {
+        "text_animation_titre_1": "De la ferme à votre tasse, chaque étape compte",
+        "richtext_animation_texte_1": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>",
+        "text_animation_titre_2": "De la ferme à votre tasse, chaque étape compte",
+        "richtext_animation_texte_2": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>",
+        "text_animation_titre_3": "De la ferme à votre tasse, chaque étape compte",
+        "richtext_animation_texte_3": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>"
+      }
     },
     "category": {
       "type": "category",
-      "settings": {}
+      "settings": {
+        "text_headline": "Nos clients ont aussi acheté",
+        "collection_collection": "",
+        "collection_collection_limit": 6,
+        "url_button_link": "",
+        "text_button_text": "En voir plus"
+      }
     },
     "reseaux": {
       "type": "reseaux",
-      "settings": {}
+      "settings": {
+        "text_heading": "Suivez-nous sur nos réseaux sociaux"
+      }
     }
   },
   "layout": "product",
