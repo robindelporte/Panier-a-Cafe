@@ -1,32 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "collection_hero": {
-            "type": "collection_hero"
-        },
-        "collection_produits": {
-            "type": "collection_produits"
-        },
-        "bandeau": {
-            "type": "bandeau"
-        },
-        "faq": {
-            "type": "faq"
-        },
-        "collection_tabs": {
-            "type": "collection_tabs"
-        },
-        "reseaux": {
-            "type": "reseaux"
-        }
+  "sections": {
+    "collection_hero": {
+      "type": "collection_hero",
+      "settings": {}
     },
-    "layout": "collection",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "collection_hero",
-        "collection_produits",
-        "bandeau",
-        "faq",
-        "collection_tabs",
-        "reseaux"
-    ]
+    "collection_produits": {
+      "type": "collection_produits",
+      "settings": {}
+    },
+    "bandeau": {
+      "type": "bandeau",
+      "settings": {}
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {}
+    },
+    "collection_tabs": {
+      "type": "collection_tabs",
+      "settings": {}
+    },
+    "reseaux": {
+      "type": "reseaux",
+      "settings": {}
+    }
+  },
+  "layout": "collection",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "collection_hero",
+    "collection_produits",
+    "bandeau",
+    "faq",
+    "collection_tabs",
+    "reseaux"
+  ]
 }
