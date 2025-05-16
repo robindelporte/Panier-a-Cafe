@@ -30,9 +30,20 @@
 {% endif %}</ul></div></div><div class="caracteristiques_tabs-pane-column"><div class="tableau_wrapper"><ul role="list" class="tableau_list w-list-unstyled"><li class="tableau_list-item is-heading"><h3 class="text-size-large text-font-body text-weight-bold">
 {{ section.settings.text_tableau_2 }}
 </h3>
-</li>{% if product.metafields.custom.machine_a_cafe.pourquoi_item_1_titre != blank %}    <li li-if="product.metafields.custom.machine_a_cafe.pourquoi_item_1_titre != blank" class="tableau_list-item is-machine">
-    <div li-object="product.metafields.custom.machine_a_cafe.pourquoi_item_1_titre" class="text-size-medium">{{ product.metafields.custom.machine_a_cafe.pourquoi_item_1_titre }}</div><div li-object="product.metafields.custom.machine_a_cafe.pourquoi_item_1_texte">{{ product.metafields.custom.machine_a_cafe.pourquoi_item_1_texte }}</div>    </li>
-{% endif %}{% if product.metafields.custom.machine_a_cafe.pourquoi_item_2_titre != blank %}    <li li-if="product.metafields.custom.machine_a_cafe.pourquoi_item_2_titre != blank" class="tableau_list-item is-machine">
+</li>
+  
+ {% if product.metafields.custom.machine_a_cafe.pourquoi_item_1_titre != blank %}
+  <li class="tableau_list-item is-machine">
+    <div class="text-size-medium">
+      {{ product.metafields.custom.machine_a_cafe.pourquoi_item_1_titre }}
+    </div>
+    <div>
+      {{ product.metafields.custom.machine_a_cafe.pourquoi_item_1_texte }}
+    </div>
+  </li>
+{% endif %}
+  
+  {% if product.metafields.custom.machine_a_cafe.pourquoi_item_2_titre != blank %}    <li li-if="product.metafields.custom.machine_a_cafe.pourquoi_item_2_titre != blank" class="tableau_list-item is-machine">
     <div li-object="product.metafields.custom.machine_a_cafe.pourquoi_item_2_titre" class="text-size-medium">{{ product.metafields.custom.machine_a_cafe.pourquoi_item_2_titre }}</div><div li-object="product.metafields.custom.machine_a_cafe.pourquoi_item_2_texte">{{ product.metafields.custom.machine_a_cafe.pourquoi_item_2_texte }}</div>    </li>
 {% endif %}{% if product.metafields.custom.machine_a_cafe.pourquoi_item_3_titre != blank %}    <li li-if="product.metafields.custom.machine_a_cafe.pourquoi_item_3_titre != blank" class="tableau_list-item is-machine">
     <div li-object="product.metafields.custom.machine_a_cafe.pourquoi_item_3_titre" class="text-size-medium">{{ product.metafields.custom.machine_a_cafe.pourquoi_item_3_titre }}</div><div li-object="product.metafields.custom.machine_a_cafe.pourquoi_item_3_texte">{{ product.metafields.custom.machine_a_cafe.pourquoi_item_3_texte }}</div>    </li>
