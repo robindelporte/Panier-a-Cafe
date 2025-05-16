@@ -74,63 +74,7 @@
     {% assign machine = product.metafields.custom.machine.value %}
 <div id="w-node-b0de3c19-293a-7159-9278-7522a786336e-0a9591df" class="card_img-wrapper" style="{% if section.settings.left_right == 'right'%}order: 9999;{% endif %}"><img li-object:src="machine.a_propos_item_3_image | img_url: 'master'" loading="lazy" alt="" src="{{ machine.a_propos_item_3_image | img_url: 'master' }}" class="card_img">
 </div><div class="content_wrapper"><h3 li-object="machine.a_propos_item_3_titre" class="text-size-large text-font-body text-weight-bold">{{ machine.a_propos_item_3_titre }}</h3><p li-object="machine.a_propos_item_3_texte">{{ machine.a_propos_item_3_texte }}</p></div>    </div>
-{% endif %}</div></div></div></div></div></div></div></section><section class="section_videos"><style>.button.is-tab-button {
-  opacity: 60%;
-}
-.button.is-tab-button.is-active {
-  opacity: 100%;
-}
-</style><div class="padding-global padding-section-large"><div class="container-large"><div class="tabs_wrapper"><div x-data="{tab: 1}" class="tabs_element"><div li-for:inside="block in section.blocks" class="videos_tabs-menu">
-        {% for block in section.blocks %}                            {% if "product.metafields.custom.machine_a_cafe.video_1_titre != blank" %}    <button x-bind:class="tab === 1 ? 'is-active' : ''" x-on:click="tab = 1" role="tab" aria-controls="panel-1" tabindex="0" id="tab-1" x-bind:aria-selected="tab === 1 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_1_titre != blank"" class="button is-tab-button">
-    <div li-object="product.metafields.custom.machine_a_cafe.video_1_titre">{{ product.metafields.custom.machine_a_cafe.video_1_titre }}</div>    </button>
-{% endif %}
-                    {% endfor %}    </div>
-<div class="videos_tabs-content">{% if product.metafields.custom.machine_a_cafe.video_1_titre != blank %}    <div id="panel-1" x-show="tab === 1" aria-labelledby="tab-1" role="tabpanel" x-bind:aria-hidden="tab === 1 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_1_titre != blank" class="videos_tabs-pane">
-    <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_1_url %}
-                                {% if video_url contains "embed/" %}
-                                {% assign video_id = video_url | split: "embed/" | last | split: "?" | first %}
-                                {% else %}
-                                {% assign video_id = video_url | split: "watch?v=" | last | split: "&" | first %}
-                                {% endif %}
-                                <youtube-light-player src="https://www.youtube.com/watch?v={{ video_id }}"></youtube-light-player></div></div><div class="social_stickers-wrapper"><img width="160" loading="lazy" alt="" src="{{ 'sticker-pacaf.avif' | asset_url }}" class="social_sticker">
-</div></div>    </div>
-{% endif %}{% if product.metafields.custom.machine_a_cafe.video_2_titre != blank %}    <div id="panel-2" x-show="tab === 2" aria-labelledby="tab-2" role="tabpanel" x-bind:aria-hidden="tab === 2 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_2_titre != blank" class="videos_tabs-pane">
-    <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_2_url %}
-                                {% if video_url contains "embed/" %}
-                                {% assign video_id = video_url | split: "embed/" | last | split: "?" | first %}
-                                {% else %}
-                                {% assign video_id = video_url | split: "watch?v=" | last | split: "&" | first %}
-                                {% endif %}
-                                <youtube-light-player src="https://www.youtube.com/watch?v={{ video_id }}"></youtube-light-player></div></div><div class="social_stickers-wrapper"><img width="160" loading="lazy" alt="" src="{{ 'sticker-pacaf.avif' | asset_url }}" class="social_sticker">
-</div></div>    </div>
-{% endif %}{% if product.metafields.custom.machine_a_cafe.video_3_titre != blank %}    <div id="panel-3" x-show="tab === 3" aria-labelledby="tab-3" role="tabpanel" x-bind:aria-hidden="tab === 3 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_3_titre != blank" class="videos_tabs-pane">
-    <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_3_url %}
-                                {% if video_url contains "embed/" %}
-                                {% assign video_id = video_url | split: "embed/" | last | split: "?" | first %}
-                                {% else %}
-                                {% assign video_id = video_url | split: "watch?v=" | last | split: "&" | first %}
-                                {% endif %}
-                                <youtube-light-player src="https://www.youtube.com/watch?v={{ video_id }}"></youtube-light-player></div></div><div class="social_stickers-wrapper"><img width="160" loading="lazy" alt="" src="{{ 'sticker-pacaf.avif' | asset_url }}" class="social_sticker">
-</div></div>    </div>
-{% endif %}{% if product.metafields.custom.machine_a_cafe.video_4_titre != blank %}    <div id="panel-4" x-show="tab === 4" aria-labelledby="tab-4" role="tabpanel" x-bind:aria-hidden="tab === 4 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_4_titre != blank" class="videos_tabs-pane">
-    <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_4_url %}
-                                {% if video_url contains "embed/" %}
-                                {% assign video_id = video_url | split: "embed/" | last | split: "?" | first %}
-                                {% else %}
-                                {% assign video_id = video_url | split: "watch?v=" | last | split: "&" | first %}
-                                {% endif %}
-                                <youtube-light-player src="https://www.youtube.com/watch?v={{ video_id }}"></youtube-light-player></div></div><div class="social_stickers-wrapper"><img width="160" loading="lazy" alt="" src="{{ 'sticker-pacaf.avif' | asset_url }}" class="social_sticker">
-</div></div>    </div>
-{% endif %}{% if product.metafields.custom.machine_a_cafe.video_5_titre != blank %}    <div id="panel-5" x-show="tab === 5" aria-labelledby="tab-5" role="tabpanel" x-bind:aria-hidden="tab === 5 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_5_titre != blank" class="videos_tabs-pane">
-    <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_5_url %}
-                                {% if video_url contains "embed/" %}
-                                {% assign video_id = video_url | split: "embed/" | last | split: "?" | first %}
-                                {% else %}
-                                {% assign video_id = video_url | split: "watch?v=" | last | split: "&" | first %}
-                                {% endif %}
-                                <youtube-light-player src="https://www.youtube.com/watch?v={{ video_id }}"></youtube-light-player></div></div><div class="social_stickers-wrapper"><img width="160" loading="lazy" alt="" src="{{ 'sticker-pacaf.avif' | asset_url }}" class="social_sticker">
-</div></div>    </div>
-{% endif %}</div></div></div></div></div></section></div>
+{% endif %}</div></div></div></div></div></div></div></section></div>
 {% when 'Cafe' %} 
 <div li-when="'Cafe'">
 <div class="section_tableau"><div class="padding-global"><div class="padding-section-medium"><div class="container-large"><div class="tableau_component"><div class="tableau_component-wrapper"><div class="tableau_wrapper"><ul role="list" class="tableau_list w-list-unstyled"><li class="tableau_list-item"><div class="display-inlineflex display-align-center gap-0-75"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 25" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><mask id="mask0_7353_753" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="25"><rect y="0.5" width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_7353_753)"><path d="M12 20.0135C13.9564 18.2622 15.4534 16.5823 16.4913 14.974C17.5291 13.3657 18.048 11.957 18.048 10.748C18.048 8.925 17.4689 7.42633 16.3105 6.252C15.1522 5.07767 13.7154 4.4905 12 4.4905C10.2847 4.4905 8.84786 5.07767 7.68953 6.252C6.53119 7.42633 5.95203 8.925 5.95203 10.748C5.95203 11.957 6.47094 13.3657 7.50878 14.974C8.54661 16.5823 10.0437 18.2622 12 20.0135ZM12 21.4403C11.8052 21.4403 11.6104 21.4067 11.4155 21.3395C11.2205 21.2722 11.0442 21.168 10.8865 21.027C9.98919 20.2 9.14944 19.3483 8.36728 18.472C7.58528 17.5958 6.90553 16.7199 6.32803 15.8443C5.75036 14.9686 5.29328 14.1007 4.95678 13.2405C4.62028 12.3802 4.45203 11.5493 4.45203 10.748C4.45203 8.44033 5.19844 6.57208 6.69128 5.14325C8.18428 3.71442 9.95386 3 12 3C14.0462 3 15.8158 3.71442 17.3088 5.14325C18.8016 6.57208 19.548 8.44033 19.548 10.748C19.548 11.5493 19.3798 12.3785 19.0433 13.2355C18.7068 14.0927 18.2514 14.9607 17.677 15.8395C17.1025 16.7183 16.4243 17.5942 15.6423 18.4672C14.8603 19.3404 14.0205 20.1904 13.123 21.0173C12.9677 21.1583 12.7911 21.264 12.5933 21.3345C12.3956 21.405 12.1979 21.4403 12 21.4403ZM12.0018 12.3652C12.4993 12.3652 12.9246 12.1881 13.2778 11.8338C13.6311 11.4794 13.8078 11.0535 13.8078 10.556C13.8078 10.0585 13.6306 9.63308 13.2763 9.27975C12.9219 8.92658 12.4959 8.75 11.9983 8.75C11.5008 8.75 11.0754 8.92717 10.7223 9.2815C10.3689 9.63583 10.1923 10.0618 10.1923 10.5595C10.1923 11.057 10.3694 11.4823 10.7238 11.8355C11.0781 12.1887 11.5041 12.3652 12.0018 12.3652Z" fill="#5D544B"></path></g></svg></div><div>Pays</div></div><div>
