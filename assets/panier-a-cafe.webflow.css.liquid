@@ -3386,6 +3386,8 @@ figcaption {
 }
 
 .social_image {
+  aspect-ratio: 1;
+  object-fit: cover;
   border-radius: .375rem;
 }
 
@@ -3579,6 +3581,8 @@ figcaption {
   grid-column-gap: .25rem;
   grid-row-gap: .25rem;
   color: var(--_primitives---colors--neutral);
+  padding-left: 0;
+  list-style-type: none;
   display: inline-flex;
 }
 
@@ -6265,6 +6269,17 @@ figcaption {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   flex-flow: column;
+  display: flex;
+}
+
+.breadcrumbs_item {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   display: flex;
 }
 
