@@ -5,7 +5,7 @@
 {% endif %}{% if product.metafields.custom.pays_d_origine != blank %}   {%- assign pays_origine = product.metafields.custom.pays_d_origine.value %}  <div li-if="product.metafields.custom.pays_d_origine != blank" class="product-item_tag">
     <img src="{{ pays_origine.drapeau | img_url: 'large' }}" loading="lazy" li-object:src="pays_origine.drapeau | img_url: 'large'" alt="" class="flag_icon">
 <div li-object="pays_origine.pays">{{ pays_origine.pays }}</div>    </div>
-{% endif %}{% if product.metafields.custom.certification %}   {%- assign certification = product.metafields.custom.certification.value %}  <div li-if="product.metafields.custom.certification != blank" class="product-item_tag">
+{% endif %}{% if product.metafields.custom.certification %}   {%- assign certification = product.metafields.custom.certifications.value %}  <div li-if="product.metafields.custom.certification != blank" class="product-item_tag">
     <img src="{{ certifications.icone | img_url: 'large'  }}" loading="lazy" li-object:src="certifications.icone | img_url: 'large'" alt="" class="flag_icon">
 <div li-object="certifications.nom">{{ certifications.nom }}</div>    </div>
 {% endif %}</div></div><div class="spacer-xxsmall"></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link w-inline-block"><div class="product-item_left"><div li-object="product.title" class="product_name">{{ product.title }}</div><div>Gourmand & Malté</div></div><div class="product-item_price">{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="padding-bottom padding-xxxsmall">
