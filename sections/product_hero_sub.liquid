@@ -67,14 +67,16 @@
 <span class="product-header_radio-label w-form-label" for="radio-4">
 {{ section.settings.text_with_subscription }}
 </span>
-</label><div x-show="sellingplan_active" class="w-layout-vflex product-header_subscription_radio-lable is-on"><div class="subscription_ponctual"><div class="text-color-camel"><div class="text-size-large text-weight-bold"><span li-js-price="product.selected_or_first_available_variant.price" x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.price, true, '{{ shop.money_with_currency_format }}')">12,40€</span>/unité</div></div><select x-model="selling_plan" data-name="selling_plan" class="form_input is-select"><option value="">Choisir un plan</option>{% for plan in variant.selling_plan_allocations %}    <option li-for="plan in variant.selling_plan_allocations">
-                                    
-                            <value li-object:value="plan.selling_plan.id" value="{{ plan.selling_plan.id }}"><div li-object:text="plan.selling_plan.name">
-{{ plan.selling_plan.name }}
-</div></value>
-                            
-                        </option>
-{% endfor %}</select><template x-if="selected_or_first_available_variant.available">
+</label><div x-show="sellingplan_active" class="w-layout-vflex product-header_subscription_radio-lable is-on"><div class="subscription_ponctual"><div class="text-color-camel"><div class="text-size-large text-weight-bold"><span li-js-price="product.selected_or_first_available_variant.price" x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.price, true, '{{ shop.money_with_currency_format }}')">12,40€</span>/unité</div></div>
+  
+  <select x-model="selling_plan" data-name="selling_plan" class="form_input is-select">
+<option value="">Choisir un plan</option>
+  {% for plan in variant.selling_plan_allocations %}
+    <option value="{{ plan.selling_plan.id }}">{{ plan.selling_plan.name }}</option>
+  {% endfor %}
+</select>
+  
+  <template x-if="selected_or_first_available_variant.available">
             <div li-js-if="selected_or_first_available_variant.available" class="product-header_buy-wrappper">
         <div class="quantity-container"><button type="button" x-on:click="quantity = Math.min(quantity - 1)" class="quantity-btn decrement"><div class="icon-1x1-10px w-embed"><svg width="11" height="3" viewbox="0 0 11 3" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2.2192V0.777344H10.093V2.2192H0Z" fill="#77634F"></path></svg></div></button><input type="text" min="1" max="99" li-element="add-to-cart-quantity" class="quantity-display" value="1" x-model="quantity">
 <button type="button" x-on:click="quantity = Math.min(quantity + 1)" class="quantity-btn increment"><div class="icon-1x1-10px w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 11 11" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M4.41861 6.22057H0.0930252V4.77871H4.41861V0.453125H5.86047V4.77871H10.186V6.22057H5.86047V10.5461H4.41861V6.22057Z" fill="currentColor"></path></svg></div></button></div><a x-on:click="$nextTick(() => { document.querySelector('[data-minicart-trigger]').click() })" li-element="add-to-cart" href="#" class="button max-width-full w-button" @click="addToCart($event, true)" :disabled="!addToCartButton">Ajouter au panier</a>        </div>
