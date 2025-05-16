@@ -84,18 +84,6 @@
         {% for block in section.blocks %}                            {% if "product.metafields.custom.machine_a_cafe.video_1_titre != blank" %}    <button x-bind:class="tab === 1 ? 'is-active' : ''" x-on:click="tab = 1" role="tab" aria-controls="panel-1" tabindex="0" id="tab-1" x-bind:aria-selected="tab === 1 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_1_titre != blank"" class="button is-tab-button">
     <div li-object="product.metafields.custom.machine_a_cafe.video_1_titre">{{ product.metafields.custom.machine_a_cafe.video_1_titre }}</div>    </button>
 {% endif %}
-                            {% if "product.metafields.custom.machine_a_cafe.video_2_titre != blank" %}    <button x-bind:class="tab === 2 ? 'is-active' : ''" x-on:click="tab = 2" role="tab" aria-controls="panel-{{section.index}}-{{forloop.index}}" tabindex="0" id="tab-2" x-bind:aria-selected="tab === 2 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_2_titre != blank"" class="button is-tab-button">
-    <div li-object="product.metafields.custom.machine_a_cafe.video_2_titre">{{ product.metafields.custom.machine_a_cafe.video_2_titre }}</div>    </button>
-{% endif %}
-                            {% if "product.metafields.custom.machine_a_cafe.video_3_titre != blank" %}    <button x-bind:class="tab === 3 ? 'is-active' : ''" x-on:click="tab = 3" role="tab" aria-controls="panel-3" tabindex="0" id="tab-3" x-bind:aria-selected="tab === 3 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_3_titre != blank"" class="button is-tab-button">
-    <div li-object="product.metafields.custom.machine_a_cafe.video_3_titre">{{ product.metafields.custom.machine_a_cafe.video_3_titre }}</div>    </button>
-{% endif %}
-                            {% if "product.metafields.custom.machine_a_cafe.video_4_titre != blank" %}    <button x-bind:class="tab === 4 ? 'is-active' : ''" x-on:click="tab = 4" role="tab" aria-controls="panel-4" tabindex="0" id="tab-4" x-bind:aria-selected="tab === 4 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_4_titre != blank"" class="button is-tab-button">
-    <div li-object="product.metafields.custom.machine_a_cafe.video_3_titre">{{ product.metafields.custom.machine_a_cafe.video_3_titre }}</div>    </button>
-{% endif %}
-                            {% if "product.metafields.custom.machine_a_cafe.video_5_titre != blank" %}    <button x-bind:class="tab === 5 ? 'is-active' : ''" x-on:click="tab = 5" role="tab" aria-controls="panel-5" tabindex="0" id="tab-5" x-bind:aria-selected="tab === 5 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_5_titre != blank"" class="button is-tab-button">
-    <div li-object="product.metafields.custom.machine_a_cafe.video_3_titre">{{ product.metafields.custom.machine_a_cafe.video_3_titre }}</div>    </button>
-{% endif %}
                     {% endfor %}    </div>
 <div class="videos_tabs-content">{% if product.metafields.custom.machine_a_cafe.video_1_titre != blank %}    <div id="panel-1" x-show="tab === 1" aria-labelledby="tab-1" role="tabpanel" x-bind:aria-hidden="tab === 1 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_1_titre != blank" class="videos_tabs-pane">
     <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_1_url %}
