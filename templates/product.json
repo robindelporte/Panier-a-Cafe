@@ -1,32 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "product_hero_sub": {
-            "type": "product_hero_sub"
-        },
-        "product_recommended": {
-            "type": "product_recommended"
-        },
-        "whatever": {
-            "type": "whatever"
-        },
-        "animation_produit": {
-            "type": "animation_produit"
-        },
-        "category": {
-            "type": "category"
-        },
-        "reseaux": {
-            "type": "reseaux"
-        }
+  "sections": {
+    "product_hero_sub": {
+      "type": "product_hero_sub",
+      "settings": {}
     },
-    "layout": "product",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "product_hero_sub",
-        "product_recommended",
-        "whatever",
-        "animation_produit",
-        "category",
-        "reseaux"
-    ]
+    "product_recommended": {
+      "type": "product_recommended",
+      "settings": {}
+    },
+    "contenu_produits": {
+      "type": "contenu_produits",
+      "settings": {}
+    },
+    "animation_produit": {
+      "type": "animation_produit",
+      "settings": {}
+    },
+    "category": {
+      "type": "category",
+      "settings": {}
+    },
+    "reseaux": {
+      "type": "reseaux",
+      "settings": {}
+    }
+  },
+  "layout": "product",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "product_hero_sub",
+    "product_recommended",
+    "contenu_produits",
+    "animation_produit",
+    "category",
+    "reseaux"
+  ]
 }
