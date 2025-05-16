@@ -36,19 +36,19 @@
 </h3>
 </li>{% if product.metafields.custom.machine != blank %}    <li li-if="product.metafields.custom.machine != blank" class="tableau_list-item is-machine">
     {% assign machine = product.metafields.custom.machine.value %}
-<div li-object="pourquoi_item_1_titre" class="text-size-medium">{{ pourquoi_item_1_titre }}</div><div li-object="pourquoi_item_1_texte">{{ pourquoi_item_1_texte }}</div>    </li>
+<div li-object="machine.pourquoi_item_1_titre" class="text-size-medium">{{ machine.pourquoi_item_1_titre }}</div><div li-object="machine.pourquoi_item_1_texte">{{ machine.pourquoi_item_1_texte }}</div>    </li>
 {% endif %}{% if product.metafields.custom.machine != blank %}    <li li-if="product.metafields.custom.machine != blank" class="tableau_list-item is-machine">
     {% assign machine = product.metafields.custom.machine.value %}
-<div li-object="pourquoi_item_2_titre" class="text-size-medium">{{ pourquoi_item_2_titre }}</div><div li-object="pourquoi_item_2_texte">{{ pourquoi_item_2_texte }}</div>    </li>
+<div li-object="machine.pourquoi_item_2_titre" class="text-size-medium">{{ machine.pourquoi_item_2_titre }}</div><div li-object="machine.pourquoi_item_2_texte">{{ machine.pourquoi_item_2_texte }}</div>    </li>
 {% endif %}{% if product.metafields.custom.machine != blank %}    <li li-if="product.metafields.custom.machine != blank" class="tableau_list-item is-machine">
     {% assign machine = product.metafields.custom.machine.value %}
-<div li-object="pourquoi_item_3_titre" class="text-size-medium">{{ pourquoi_item_3_titre }}</div><div li-object="pourquoi_item_3_texte">{{ pourquoi_item_3_texte }}</div>    </li>
+<div li-object="machine.pourquoi_item_3_titre" class="text-size-medium">{{ machine.pourquoi_item_3_titre }}</div><div li-object="machine.pourquoi_item_3_texte">{{ machine.pourquoi_item_3_texte }}</div>    </li>
 {% endif %}{% if product.metafields.custom.machine != blank %}    <li li-if="product.metafields.custom.machine != blank" class="tableau_list-item is-machine">
     {% assign machine = product.metafields.custom.machine.value %}
-<div li-object="pourquoi_item_4_titre" class="text-size-medium">{{ pourquoi_item_4_titre }}</div><div li-object="pourquoi_item_4_texte">{{ pourquoi_item_4_texte }}</div>    </li>
+<div li-object="machine.pourquoi_item_4_titre" class="text-size-medium">{{ machine.pourquoi_item_4_titre }}</div><div li-object="machine.pourquoi_item_4_texte">{{ machine.pourquoi_item_4_texte }}</div>    </li>
 {% endif %}{% if product.metafields.custom.machine != blank %}    <li li-if="product.metafields.custom.machine != blank" class="tableau_list-item is-machine">
     {% assign machine = product.metafields.custom.machine.value %}
-<div li-object="pourquoi_item_5_titre" class="text-size-medium">{{ pourquoi_item_5_titre }}</div><div li-object="pourquoi_item_5_texte">{{ pourquoi_item_5_texte }}</div>    </li>
+<div li-object="machine.pourquoi_item_5_titre" class="text-size-medium">{{ machine.pourquoi_item_5_titre }}</div><div li-object="machine.pourquoi_item_5_texte">{{ machine.pourquoi_item_5_texte }}</div>    </li>
 {% endif %}</ul></div><div class="tableau_wrapper"><ul role="list" class="tableau_list w-list-unstyled"><li class="tableau_list-item is-heading"><h3 class="text-size-large text-font-body text-weight-bold">
 {{ section.settings.text_tableau_4 }}
 </h3>
@@ -66,11 +66,11 @@
     {% assign machine = product.metafields.custom.machine.value %}
 <div id="w-node-b0de3c19-293a-7159-9278-7522a786335a-0a9591df" class="card_img-wrapper" style="{% if section.settings.left_right == 'right'%}order: 9999;{% endif %}"><img li-object:src="machine.a_propos_item_1_image | img_url: 'master'" loading="lazy" alt="" src="{{ machine.a_propos_item_1_image | img_url: 'master' }}" class="card_img">
 </div><div class="content_wrapper"><h3 li-object="machine.a_propos_item_1_titre" id="w-node-b0de3c19-293a-7159-9278-7522a786335e-0a9591df" class="text-size-large text-font-body text-weight-bold">{{ machine.a_propos_item_1_titre }}</h3><p li-object="machine.a_propos_item_1_texte">{{ machine.a_propos_item_1_texte }}</p></div>    </div>
-{% endif %}{% if product.metafields.custom.machine_a_cafe.a_propos_item_2_titre != blank %}    <div li-if="product.metafields.custom.machine_a_cafe.a_propos_item_2_titre != blank" class="card_component">
+{% endif %}{% if product.metafields.custom.machine != blank %}    <div li-if="product.metafields.custom.machine != blank" class="card_component">
     {% assign machine = product.metafields.custom.machine.value %}
 <div class="content_wrapper"><h3 li-object="machine.a_propos_item_2_titre" class="text-size-large text-font-body text-weight-bold">{{ machine.a_propos_item_2_titre }}</h3><p li-object="machine.a_propos_item_2_texte">{{ machine.a_propos_item_2_texte }}</p></div><div id="w-node-b0de3c19-293a-7159-9278-7522a786336b-0a9591df" class="card_img-wrapper" style="{% if section.settings.left_right == 'right'%}order: 9999;{% endif %}"><img li-object:src="machine.a_propos_item_2_image | img_url: 'master'" loading="lazy" alt="" src="{{ machine.a_propos_item_2_image | img_url: 'master' }}" class="card_img">
 </div>    </div>
-{% endif %}{% if product.metafields.custom.machine_a_cafe.a_propos_item_3_titre != blank %}    <div li-if="product.metafields.custom.machine_a_cafe.a_propos_item_3_titre != blank" class="card_component">
+{% endif %}{% if product.metafields.custom.machine != blank %}    <div li-if="product.metafields.custom.machine != blank" class="card_component">
     {% assign machine = product.metafields.custom.machine.value %}
 <div id="w-node-b0de3c19-293a-7159-9278-7522a786336e-0a9591df" class="card_img-wrapper" style="{% if section.settings.left_right == 'right'%}order: 9999;{% endif %}"><img li-object:src="machine.a_propos_item_3_image | img_url: 'master'" loading="lazy" alt="" src="{{ machine.a_propos_item_3_image | img_url: 'master' }}" class="card_img">
 </div><div class="content_wrapper"><h3 li-object="machine.a_propos_item_3_titre" class="text-size-large text-font-body text-weight-bold">{{ machine.a_propos_item_3_titre }}</h3><p li-object="machine.a_propos_item_3_texte">{{ machine.a_propos_item_3_texte }}</p></div>    </div>
