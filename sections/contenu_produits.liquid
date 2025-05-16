@@ -20,7 +20,7 @@
 {{ section.settings.text_tableau_3 }}
 </h3>
 </li>{% if product.metafields.custom.machine != blank %}  {%- assign machine = product.metafields.custom.machine.value %}  <li li-if="product.metafields.custom.machine != blank" class="tableau_list-item">
-    <div li-object=caracteristique_item_1_titre" class="text-size-medium">{{ caracteristique_item_1_titre }}</div><div li-object="caracteristique_item_1_texte">{{ caracteristique_item_1_texte }}</div>   </li>
+    <div li-object=machine.caracteristique_item_1_titre" class="text-size-medium">{{ machine.caracteristique_item_1_titre }}</div><div li-object="machine.caracteristique_item_1_texte">{{ machine.caracteristique_item_1_texte }}</div>   </li>
 {% endif %}{% if product.metafields.custom.machine_a_cafe.caracteristique_item_2_titre != blank %}    <li li-if="product.metafields.custom.machine_a_cafe.caracteristique_item_2_titre != blank" class="tableau_list-item">
     <div class="display-inlineflex display-align-center gap-0-75"><div li-object="product.metafields.custom.machine_a_cafe.caracteristique_item_2_titre">{{ product.metafields.custom.machine_a_cafe.caracteristique_item_2_titre }}</div></div><div li-object="product.metafields.custom.machine_a_cafe.caracteristique_item_2_texte">{{ product.metafields.custom.machine_a_cafe.caracteristique_item_2_texte }}</div>    </li>
 {% endif %}{% if product.metafields.custom.machine_a_cafe.caracteristique_item_3_titre != blank %}    <li li-if="product.metafields.custom.machine_a_cafe.caracteristique_item_3_titre != blank" class="tableau_list-item">
