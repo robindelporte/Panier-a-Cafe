@@ -1,0 +1,16 @@
+{
+    "sections": {
+        "marche": {
+            "type": "marche"
+        },
+        "reseaux": {
+            "type": "reseaux"
+        }
+    },
+    "layout": "page.marche",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "marche",
+        "reseaux"
+    ]
+}

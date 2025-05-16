@@ -1,0 +1,32 @@
+{
+    "sections": {
+        "collection_hero": {
+            "type": "collection_hero"
+        },
+        "collection_produits": {
+            "type": "collection_produits"
+        },
+        "bandeau": {
+            "type": "bandeau"
+        },
+        "faq": {
+            "type": "faq"
+        },
+        "collection_tabs": {
+            "type": "collection_tabs"
+        },
+        "reseaux": {
+            "type": "reseaux"
+        }
+    },
+    "layout": "collection",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "collection_hero",
+        "collection_produits",
+        "bandeau",
+        "faq",
+        "collection_tabs",
+        "reseaux"
+    ]
+}

@@ -1,0 +1,69 @@
+<style>.button.is-tab-button {
+  opacity: 60%;
+}
+.button.is-tab-button.is-active {
+  opacity: 100%;
+}
+</style><div class="padding-global padding-section-large"><div class="container-large"><div class="tabs_wrapper"><div x-data="{tab: 1}" class="tabs_element"><div li-for:inside="block in section.blocks" class="videos_tabs-menu">
+        {% for block in section.blocks %}                            {% if "product.metafields.custom.machine_a_cafe.video_1_titre != blank" %}    <button x-bind:class="tab === 1 ? 'is-active' : ''" x-on:click="tab = 1" role="tab" aria-controls="panel-1" tabindex="0" id="tab-1" x-bind:aria-selected="tab === 1 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_1_titre != blank"" class="button is-tab-button">
+    <div li-object="product.metafields.custom.machine_a_cafe.video_1_titre">{{ product.metafields.custom.machine_a_cafe.video_1_titre }}</div>    </button>
+{% endif %}
+                            {% if "product.metafields.custom.machine_a_cafe.video_2_titre != blank" %}    <button x-bind:class="tab === 2 ? 'is-active' : ''" x-on:click="tab = 2" role="tab" aria-controls="panel-{{section.index}}-{{forloop.index}}" tabindex="0" id="tab-2" x-bind:aria-selected="tab === 2 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_2_titre != blank"" class="button is-tab-button">
+    <div li-object="product.metafields.custom.machine_a_cafe.video_2_titre">{{ product.metafields.custom.machine_a_cafe.video_2_titre }}</div>    </button>
+{% endif %}
+                            {% if "product.metafields.custom.machine_a_cafe.video_3_titre != blank" %}    <button x-bind:class="tab === 3 ? 'is-active' : ''" x-on:click="tab = 3" role="tab" aria-controls="panel-3" tabindex="0" id="tab-3" x-bind:aria-selected="tab === 3 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_3_titre != blank"" class="button is-tab-button">
+    <div li-object="product.metafields.custom.machine_a_cafe.video_3_titre">{{ product.metafields.custom.machine_a_cafe.video_3_titre }}</div>    </button>
+{% endif %}
+                            {% if "product.metafields.custom.machine_a_cafe.video_4_titre != blank" %}    <button x-bind:class="tab === 4 ? 'is-active' : ''" x-on:click="tab = 4" role="tab" aria-controls="panel-4" tabindex="0" id="tab-4" x-bind:aria-selected="tab === 4 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_4_titre != blank"" class="button is-tab-button">
+    <div li-object="product.metafields.custom.machine_a_cafe.video_3_titre">{{ product.metafields.custom.machine_a_cafe.video_3_titre }}</div>    </button>
+{% endif %}
+                            {% if "product.metafields.custom.machine_a_cafe.video_5_titre != blank" %}    <button x-bind:class="tab === 5 ? 'is-active' : ''" x-on:click="tab = 5" role="tab" aria-controls="panel-5" tabindex="0" id="tab-5" x-bind:aria-selected="tab === 5 ? 'true' : 'false'" li-if=""product.metafields.custom.machine_a_cafe.video_5_titre != blank"" class="button is-tab-button">
+    <div li-object="product.metafields.custom.machine_a_cafe.video_3_titre">{{ product.metafields.custom.machine_a_cafe.video_3_titre }}</div>    </button>
+{% endif %}
+                    {% endfor %}    </div>
+<div class="videos_tabs-content">{% if product.metafields.custom.machine_a_cafe.video_1_titre != blank %}    <div id="panel-1" x-show="tab === 1" aria-labelledby="tab-1" role="tabpanel" x-bind:aria-hidden="tab === 1 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_1_titre != blank" class="videos_tabs-pane">
+    <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_1_url %}
+                                {% if video_url contains "embed/" %}
+                                {% assign video_id = video_url | split: "embed/" | last | split: "?" | first %}
+                                {% else %}
+                                {% assign video_id = video_url | split: "watch?v=" | last | split: "&" | first %}
+                                {% endif %}
+                                <youtube-light-player src="https://www.youtube.com/watch?v={{ video_id }}"></youtube-light-player></div></div><div class="social_stickers-wrapper"><img width="160" loading="lazy" alt="" src="{{ 'sticker-pacaf.avif' | asset_url }}" class="social_sticker">
+</div></div>    </div>
+{% endif %}{% if product.metafields.custom.machine_a_cafe.video_2_titre != blank %}    <div id="panel-2" x-show="tab === 2" aria-labelledby="tab-2" role="tabpanel" x-bind:aria-hidden="tab === 2 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_2_titre != blank" class="videos_tabs-pane">
+    <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_2_url %}
+                                {% if video_url contains "embed/" %}
+                                {% assign video_id = video_url | split: "embed/" | last | split: "?" | first %}
+                                {% else %}
+                                {% assign video_id = video_url | split: "watch?v=" | last | split: "&" | first %}
+                                {% endif %}
+                                <youtube-light-player src="https://www.youtube.com/watch?v={{ video_id }}"></youtube-light-player></div></div><div class="social_stickers-wrapper"><img width="160" loading="lazy" alt="" src="{{ 'sticker-pacaf.avif' | asset_url }}" class="social_sticker">
+</div></div>    </div>
+{% endif %}{% if product.metafields.custom.machine_a_cafe.video_3_titre != blank %}    <div id="panel-3" x-show="tab === 3" aria-labelledby="tab-3" role="tabpanel" x-bind:aria-hidden="tab === 3 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_3_titre != blank" class="videos_tabs-pane">
+    <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_3_url %}
+                                {% if video_url contains "embed/" %}
+                                {% assign video_id = video_url | split: "embed/" | last | split: "?" | first %}
+                                {% else %}
+                                {% assign video_id = video_url | split: "watch?v=" | last | split: "&" | first %}
+                                {% endif %}
+                                <youtube-light-player src="https://www.youtube.com/watch?v={{ video_id }}"></youtube-light-player></div></div><div class="social_stickers-wrapper"><img width="160" loading="lazy" alt="" src="{{ 'sticker-pacaf.avif' | asset_url }}" class="social_sticker">
+</div></div>    </div>
+{% endif %}{% if product.metafields.custom.machine_a_cafe.video_4_titre != blank %}    <div id="panel-4" x-show="tab === 4" aria-labelledby="tab-4" role="tabpanel" x-bind:aria-hidden="tab === 4 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_4_titre != blank" class="videos_tabs-pane">
+    <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_4_url %}
+                                {% if video_url contains "embed/" %}
+                                {% assign video_id = video_url | split: "embed/" | last | split: "?" | first %}
+                                {% else %}
+                                {% assign video_id = video_url | split: "watch?v=" | last | split: "&" | first %}
+                                {% endif %}
+                                <youtube-light-player src="https://www.youtube.com/watch?v={{ video_id }}"></youtube-light-player></div></div><div class="social_stickers-wrapper"><img width="160" loading="lazy" alt="" src="{{ 'sticker-pacaf.avif' | asset_url }}" class="social_sticker">
+</div></div>    </div>
+{% endif %}{% if product.metafields.custom.machine_a_cafe.video_5_titre != blank %}    <div id="panel-5" x-show="tab === 5" aria-labelledby="tab-5" role="tabpanel" x-bind:aria-hidden="tab === 5 ? 'false' : 'true'" x-cloak="" li-if="product.metafields.custom.machine_a_cafe.video_5_titre != blank" class="videos_tabs-pane">
+    <div class="youtube_player-wrapper"><div class="youtube_player"><div class="youtube_embed w-embed">{% assign video_url = product.metafields.custom.machine_a_cafe.video_5_url %}
+                                {% if video_url contains "embed/" %}
+                                {% assign video_id = video_url | split: "embed/" | last | split: "?" | first %}
+                                {% else %}
+                                {% assign video_id = video_url | split: "watch?v=" | last | split: "&" | first %}
+                                {% endif %}
+                                <youtube-light-player src="https://www.youtube.com/watch?v={{ video_id }}"></youtube-light-player></div></div><div class="social_stickers-wrapper"><img width="160" loading="lazy" alt="" src="{{ 'sticker-pacaf.avif' | asset_url }}" class="social_sticker">
+</div></div>    </div>
+{% endif %}</div></div></div></div></div> {% schema %} {"tag":"section","name":"Video Machines","class":"section_videos","presets":[{"name":"Video Machines","category":"Liquify","blocks":[]}]} {% endschema %}

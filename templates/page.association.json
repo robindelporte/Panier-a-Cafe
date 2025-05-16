@@ -1,0 +1,32 @@
+{
+    "sections": {
+        "hero": {
+            "type": "hero"
+        },
+        "contenu_titre_sticke": {
+            "type": "contenu_titre_sticke"
+        },
+        "card_swiper": {
+            "type": "card_swiper"
+        },
+        "content": {
+            "type": "content"
+        },
+        "pages": {
+            "type": "pages"
+        },
+        "reseaux": {
+            "type": "reseaux"
+        }
+    },
+    "layout": "page.association",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "hero",
+        "contenu_titre_sticke",
+        "card_swiper",
+        "content",
+        "pages",
+        "reseaux"
+    ]
+}
