@@ -1,68 +1,205 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "hero": {
-            "type": "hero"
-        },
-        "hero_2": {
-            "type": "hero_2"
-        },
-        "collection_tabs": {
-            "type": "collection_tabs"
-        },
-        "bandeau": {
-            "type": "bandeau"
-        },
-        "contenu": {
-            "type": "contenu"
-        },
-        "lookbook": {
-            "type": "lookbook"
-        },
-        "liste_collections": {
-            "type": "liste_collections"
-        },
-        "chiffres": {
-            "type": "chiffres"
-        },
-        "selection": {
-            "type": "selection"
-        },
-        "pages": {
-            "type": "pages"
-        },
-        "contenu_2": {
-            "type": "contenu_2"
-        },
-        "related_articles": {
-            "type": "related_articles"
-        },
-        "logo_defilants": {
-            "type": "logo_defilants"
-        },
-        "collection_2": {
-            "type": "collection_2"
-        },
-        "reseaux": {
-            "type": "reseaux"
-        }
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "text_headline": "L'association",
+        "richtext_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+        "url_button_link": "",
+        "text_button_text": "More Information"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "hero",
-        "hero_2",
-        "collection_tabs",
-        "bandeau",
-        "contenu",
-        "lookbook",
-        "liste_collections",
-        "chiffres",
-        "selection",
-        "pages",
-        "contenu_2",
-        "related_articles",
-        "logo_defilants",
-        "collection_2",
-        "reseaux"
-    ]
+    "hero_2": {
+      "type": "hero_2",
+      "settings": {
+        "text_headline": "Short heading here",
+        "richtext_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+        "url_button_link": "",
+        "text_button_text": "More Information"
+      }
+    },
+    "collection_tabs": {
+      "type": "collection_tabs",
+      "settings": {
+        "collection_list": []
+      }
+    },
+    "bandeau": {
+      "type": "bandeau",
+      "settings": {
+        "text_heading": "Heading"
+      }
+    },
+    "contenu": {
+      "type": "contenu",
+      "settings": {}
+    },
+    "lookbook": {
+      "type": "lookbook",
+      "settings": {}
+    },
+    "liste_collections": {
+      "type": "liste_collections",
+      "blocks": {
+        "collection_JD78jq": {
+          "type": "collection",
+          "settings": {
+            "collection_collection": "cafes",
+            "collection_collection_limit": 1
+          }
+        },
+        "collection_rFCwLB": {
+          "type": "collection",
+          "settings": {
+            "collection_collection": "cafes-bio",
+            "collection_collection_limit": 1
+          }
+        }
+      },
+      "block_order": [
+        "collection_JD78jq",
+        "collection_rFCwLB"
+      ],
+      "settings": {}
+    },
+    "chiffres": {
+      "type": "chiffres",
+      "blocks": {
+        "chiffres_RKYjdb": {
+          "type": "chiffres",
+          "settings": {
+            "text_valeur_gauche": "100",
+            "text_valeur_droite": "%",
+            "text_texte": "Nous mettons à l’honneur des cafés produits par des femmes engagées."
+          }
+        }
+      },
+      "block_order": [
+        "chiffres_RKYjdb"
+      ],
+      "settings": {
+        "text_heading": "Le panier à café en chiffre"
+      }
+    },
+    "selection": {
+      "type": "selection",
+      "blocks": {
+        "product_QMyEfm": {
+          "type": "product",
+          "settings": {
+            "product_product": "cafe-akela",
+            "text_etiquette": "Café du mois"
+          }
+        },
+        "product_ytt4XB": {
+          "type": "product",
+          "settings": {
+            "product_product": "cafe-printanier",
+            "text_etiquette": "Café de saison"
+          }
+        }
+      },
+      "block_order": [
+        "product_QMyEfm",
+        "product_ytt4XB"
+      ],
+      "settings": {
+        "text_titre": "Un café pour chaque mois, une ambiance pour chaque saison",
+        "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
+      }
+    },
+    "pages": {
+      "type": "pages",
+      "blocks": {
+        "carte_phaUYV": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/TheVerveineBio1-Moyenne.jpg",
+            "text_heading": "Notre histoire",
+            "url_link": "",
+            "text_text": "Découvrir"
+          }
+        }
+      },
+      "block_order": [
+        "carte_phaUYV"
+      ],
+      "settings": {}
+    },
+    "contenu_2": {
+      "type": "contenu_2",
+      "blocks": {
+        "carte_dFEGn9": {
+          "type": "carte",
+          "settings": {}
+        },
+        "carte_Fahxej": {
+          "type": "carte",
+          "settings": {}
+        },
+        "carte_cbmVcN": {
+          "type": "carte",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "carte_dFEGn9",
+        "carte_Fahxej",
+        "carte_cbmVcN"
+      ],
+      "settings": {
+        "text_heading": "Recycle ton café, sans te prendre la tête",
+        "text_paragraph": "Si ton marc de café avait une seconde vie ? Grâce à notre sac de collecte, on te propose de recycler ton marc pour le transformer en pellets pour poêles à granulés via notre partenariat avec Environ Alpes. Pour les pros (PME, restaurateurs), on récupère le sac directement lors de nos livraisons de café. Pour les particuliers, il suffit de nous le rapporter sur les marchés ou à l’atelier lors de ta prochaine visite. Simple, utile… et bien plus écolo que de le jeter à la poubelle !",
+        "url_button_link": "",
+        "text_button_text": "Je veux un sac"
+      }
+    },
+    "related_articles": {
+      "type": "related_articles",
+      "settings": {
+        "text_headline": "Nouveautés du blog"
+      }
+    },
+    "collection_2": {
+      "type": "collection_2",
+      "settings": {
+        "text_heading": "Nos nouveautés",
+        "collection_collection": "cafes",
+        "collection_collection_limit": 6
+      }
+    },
+    "reseaux": {
+      "type": "reseaux",
+      "settings": {
+        "text_heading": "Suivez-nous sur nos réseaux sociaux"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "hero",
+    "hero_2",
+    "collection_tabs",
+    "bandeau",
+    "contenu",
+    "lookbook",
+    "liste_collections",
+    "chiffres",
+    "selection",
+    "pages",
+    "contenu_2",
+    "related_articles",
+    "collection_2",
+    "reseaux"
+  ]
 }
