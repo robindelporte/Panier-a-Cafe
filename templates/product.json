@@ -14,7 +14,7 @@
       "settings": {
         "text_without_subscription": "Commande ponctuelle",
         "text_with_subscription": "Livraison récurrente",
-        "text_explication_abonnement": "Explication de l'abonnement<br>"
+        "text_explication_abonnement": "Explication de l'abonnement"
       }
     },
     "product_recommended": {
