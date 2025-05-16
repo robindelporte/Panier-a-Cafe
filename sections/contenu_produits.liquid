@@ -32,7 +32,7 @@
 </h3>
 </li>
   
-  {% if product.metafields.custom.machine != blank %} {%- assign machine = product.metafields.custom.machine.value %} <div li-if="product.metafields.custom.machine != blank" class="product-item_tag"> 
+  {% if product.metafields.custom.machine != blank %} {%- assign machine = product.metafields.custom.machine.value %} <div li-if="product.metafields.custom.machine != blank" class="tableau_list-item is-machine"> 
     <div li-object="machine_a_cafe.a_propos_item_1_titre" class="text-size-medium">{{ machine_a_cafe.a_propos_item_1_texte }}</div><div li-object=machine_a_cafe.a_propos_item_1_texte">{{ machine_a_cafe.a_propos_item_1_texte }}</div>    </li>
 {% endif %}
   
