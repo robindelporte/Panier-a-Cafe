@@ -47,7 +47,11 @@
         "text_conseil_mouture": "{{ product.metafields.custom.conseil_de_mouture.value }}",
         "text_materiel": "{{ product.metafields.custom.mat_riel_recommand_.value }}",
         "text_type_extraction": "{{ product.metafields.custom.type_d_extraction_id_al.value }}",
-        "text_the_noir": "Salvador"
+        "text_type_the": "{{ product.metafields.custom.the.value.types_de_the.value }}",
+        "text_origine": "{{ product.metafields.custom.the.value.origine.value }}",
+        "text_temps_infusion": "{{ product.metafields.custom.the.value.temps_infusion.value }}",
+        "text_temperature_eau": "{{ product.metafields.custom.the.value.temperature.value }}",
+        "text_contenance": "{{ product.metafields.custom.the.value.contenance.value }}"
       }
     },
     "animation_produit": {
