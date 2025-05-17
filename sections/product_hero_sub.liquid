@@ -36,8 +36,8 @@
     </template>
 </div></div><div class="product_header-separator"></div><div li-case="product.type" class="product-header_tag-list-wrapper">
 {% case product.type %}
-{% when Cafe %} 
-<div li-when="Cafe" class="product-header_tag-list">
+{% when 'Cafe' %} 
+<div li-when="'Cafe'" class="product-header_tag-list">
 <div class="product_header-tag"><img src="{{ section.settings.image_badges_variete_cafe_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_badges_variete_cafe_image.alt }}" class="icon-embed-xsmall">
 <div class="product_header-tag-text">
 {{ section.settings.text_badges_variete_cafe_texte }}
@@ -47,8 +47,8 @@
 {{ section.settings.text_badges_certification_cafe_texte }}
 </div>
 </div></div>
-{% when The %} 
-<div li-when="The" class="product-header_tag-list">
+{% when 'The' %} 
+<div li-when="'The'" class="product-header_tag-list">
 <div class="product_header-tag"><img src="{{ section.settings.image_badges_type_de_the_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_badges_type_de_the_image.alt }}" class="icon-embed-xsmall">
 <div class="product_header-tag-text">
 {{ section.settings.text_badges_type_de_the_texte }}
@@ -58,8 +58,8 @@
 {{ section.settings.text_badge_origine_the_texte }}
 </div>
 </div></div>
-{% when Machine %} 
-<div li-when="Machine" class="product-header_tag-list">
+{% when 'Machine' %} 
+<div li-when="'Machine'" class="product-header_tag-list">
 <div class="product_header-tag"><img src="{{ section.settings.image_badges_broyeur_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_badges_broyeur_image.alt }}" class="icon-embed-xsmall">
 <div class="product_header-tag-text">
 {{ section.settings.text_badges_broyeur_texte }}
