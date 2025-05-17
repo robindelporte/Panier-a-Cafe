@@ -4338,10 +4338,14 @@ figcaption {
   padding-top: 5rem;
   padding-bottom: 5rem;
   transition: transform .2s, opacity .2s;
-  display: flex;
+  display: none;
   position: fixed;
   inset: 0%;
   overflow: scroll;
+}
+
+.addresses_modal.show {
+  display: flex;
 }
 
 .addresses_modal-close {
