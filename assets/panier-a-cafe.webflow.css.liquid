@@ -5907,7 +5907,7 @@ figcaption {
   padding: .2rem 0;
   font-size: 1rem;
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
 }
 
 .nav_dropdown-link_child:hover {
@@ -6003,12 +6003,21 @@ figcaption {
   border: var(--_ui-styles---stroke--border-width) solid var(--color-scheme-1--border);
   border-radius: var(--_ui-styles---radius--small);
   background-color: var(--color-scheme-1--background);
+  flex-flow: column;
   padding: .5rem;
+  display: flex;
   top: 3rem;
 }
 
 .navbar_small-dropdown-link {
+  border-bottom: 1px solid var(--_primitives---opacity--transparent);
+  margin-bottom: .5rem;
   padding: .5rem 1rem;
+  text-decoration: none;
+}
+
+.navbar_small-dropdown-link:hover {
+  border-bottom-color: var(--_primitives---brand--chocolat);
 }
 
 .navbar_small-dropdown-link.w--current {
