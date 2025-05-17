@@ -18,7 +18,8 @@
           "collection_search_bestseller_limit": 6,
           "free_shipping": "8000",
           "url_routesroot_url": "/",
-          "menu": "main-menu"
+          "menu": "main-menu",
+          "small": "small-menu"
         }
       },
       "footer": {
