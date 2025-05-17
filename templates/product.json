@@ -13,6 +13,12 @@
       "type": "product_hero_sub",
       "settings": {
         "image_settingsimage": "{{ product.metafields.custom.pays_d_origine.value.drapeau.value }}",
+        "text_badges_variete_cafe_texte": "100% {{ product.metafields.custom.variete.value }}",
+        "text_badges_certification_cafe_texte": "{{ product.metafields.custom.certification.value.nom.value }}",
+        "text_badges_type_de_the_texte": "100% Arabica",
+        "text_badge_origine_the_texte": "100% Arabica",
+        "text_badges_broyeur_texte": "100% Arabica",
+        "text_badges_marque_texte": "100% Arabica",
         "text_without_subscription": "Commande ponctuelle",
         "text_with_subscription": "Livraison récurrente",
         "text_explication_abonnement": "Explication de l'abonnement"
