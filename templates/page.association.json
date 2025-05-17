@@ -1,32 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "hero": {
-            "type": "hero"
-        },
-        "contenu_titre_sticke": {
-            "type": "contenu_titre_sticke"
-        },
-        "card_swiper": {
-            "type": "card_swiper"
-        },
-        "content": {
-            "type": "content"
-        },
-        "pages": {
-            "type": "pages"
-        },
-        "reseaux": {
-            "type": "reseaux"
-        }
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "text_headline": "L'association",
+        "richtext_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+        "url_button_link": "",
+        "text_button_text": "More Information"
+      }
     },
-    "layout": "page.association",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "hero",
-        "contenu_titre_sticke",
-        "card_swiper",
-        "content",
-        "pages",
-        "reseaux"
-    ]
+    "contenu_titre_sticke": {
+      "type": "contenu_titre_sticke",
+      "blocks": {
+        "h2_Ggh6Q4": {
+          "type": "h2",
+          "settings": {
+            "text_titre": "Heading"
+          }
+        },
+        "headline_CLXzQD": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy."
+          }
+        },
+        "text_AeEqxG": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>"
+          }
+        },
+        "buttons_njLR4e": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "shopify://pages/contact",
+            "text_button_text": "Button",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
+        }
+      },
+      "block_order": [
+        "h2_Ggh6Q4",
+        "headline_CLXzQD",
+        "text_AeEqxG",
+        "buttons_njLR4e"
+      ],
+      "settings": {
+        "image_image": "shopify://shop_images/Z10S-2.jpg"
+      }
+    },
+    "card_swiper": {
+      "type": "card_swiper",
+      "blocks": {
+        "card_69NwWX": {
+          "type": "card",
+          "settings": {}
+        },
+        "card_xyepVC": {
+          "type": "card",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "card_69NwWX",
+        "card_xyepVC"
+      ],
+      "settings": {}
+    },
+    "content": {
+      "type": "content",
+      "settings": {}
+    },
+    "pages": {
+      "type": "pages",
+      "settings": {}
+    },
+    "reseaux": {
+      "type": "reseaux",
+      "settings": {
+        "text_heading": "Suivez-nous sur nos réseaux sociaux"
+      }
+    }
+  },
+  "layout": "page.association",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "hero",
+    "contenu_titre_sticke",
+    "card_swiper",
+    "content",
+    "pages",
+    "reseaux"
+  ]
 }
