@@ -17,7 +17,8 @@
           "collection_search_bestseller": "cafes",
           "collection_search_bestseller_limit": 6,
           "free_shipping": "8000",
-          "menu": ""
+          "url_routesroot_url": "",
+          "menu": "main-menu"
         }
       },
       "footer": {
