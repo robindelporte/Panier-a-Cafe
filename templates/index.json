@@ -43,9 +43,33 @@
       "type": "contenu",
       "settings": {}
     },
-    "lookbook": {
-      "type": "lookbook",
-      "settings": {}
+    "dots_1_farfn7": {
+      "type": "dots_1",
+      "blocks": {
+        "dot_F6hNjh": {
+          "type": "dot",
+          "settings": {
+            "image_dot_image": "shopify://shop_images/lookbook.png",
+            "text_dot_heading": "Heading",
+            "text_dot_text": "Text",
+            "url_dot_link": "",
+            "text_dot_link_text": "Text Link",
+            "text_x_achse": "This is some text inside of a div block.",
+            "text_y_achse": "This is some text inside of a div block."
+          }
+        }
+      },
+      "block_order": [
+        "dot_F6hNjh"
+      ],
+      "name": "Dots 1",
+      "settings": {
+        "image_bg_image": "shopify://shop_images/lookbook.png",
+        "text_heading": "Heading",
+        "text_text": "This is some text inside of a div block.",
+        "url_button_link": "",
+        "text_button_text": "Button Text"
+      }
     },
     "liste_collections": {
       "type": "liste_collections",
@@ -192,7 +216,7 @@
     "collection_tabs",
     "bandeau",
     "contenu",
-    "lookbook",
+    "dots_1_farfn7",
     "liste_collections",
     "chiffres",
     "selection",
