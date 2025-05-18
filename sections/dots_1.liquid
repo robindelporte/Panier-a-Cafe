@@ -1,0 +1,43 @@
+<div x-data="{index: 0}" class="dots_outer-wrapper"><div class="default-bg-wrapper"><img loading="lazy" alt="{{ section.settings.image_bg_image.alt }}" src="{{ section.settings.image_bg_image | img_url: 'master' }}" class="default-bg-image">
+<div class="dots_bg-overlay"></div></div><div class="dots_active-overlay">{% for block in section.blocks %}
+    {% if block.type == "dot" %}
+                    <div class="dots_dot" x-bind:style="{ left:'{{ block.settings.text_x_achse }}%' , top:'{{ block.settings.text_y_achse }}%' , zIndex: index === {{ forloop.index }} ? '50' : 'auto' }" x-on:mouseover="index = {{forloop.index}}" role="button" x-on:mouseleave="index = 0" aria-controls="dot-content-{{forloop.index}}" li-block="Dot" tabindex="0" x-bind:aria-current="index === {{forloop.index}} ? 'true' : 'false'">
+                                    
+                                    <div id="dot-content-{{forloop.index}}" x-show="index === {{forloop.index}}" x-cloak="" x-transition.delay.50ms="" x-transition.duration.200ms="" x-bind:aria-hidden="index === {{forloop.index}} ? 'false' : 'true'" class="dots_dot-content"><div class="dots_dot-inner"><img class="dots_dot-image" src="{{ block.settings.image_dot_image | img_url: 'master' }}" alt="{{ block.settings.image_dot_image.alt }}" sizes="100vw" loading="lazy">
+<div class="dots_dot-text"><div class="text-size-large">
+{{ block.settings.text_dot_heading }}
+</div>
+<div class="text-size-medium">
+{{ block.settings.text_dot_text }}
+</div>
+<a href="{{ block.settings.url_dot_link }}" class="text-size-regular text-weight-medium text-style-link"> {{ block.settings.text_dot_link_text }} </a>
+</div></div></div>
+                                    
+                                    <div x-bind:class="index === {{forloop.index}} ? 'is-active' : ''" class="dots_dot-icon"><div class="dots_dot-icon-inner"></div></div>
+                                    
+                                    <div class="hide w-embed">{% assign dots_total = forloop.length %}</div>
+                                    
+                                    <div class="hide">
+{{ block.settings.text_x_achse }}
+</div>
+
+                                    
+                                    <div class="hide">
+{{ block.settings.text_y_achse }}
+</div>
+
+                                    
+                            </div>
+            {% endif %}
+{% endfor %}
+</div><div class="padding-global padding-section-small"><div class="container-large"><div class="dots_outer-wrapper"><div class="dots_top max-width-medium"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2>
+<div class="text-size-medium">
+{{ section.settings.text_text }}
+</div>
+<a href="{{ section.settings.url_button_link }}" class="button is-white w-button"> {{ section.settings.text_button_text }} </a>
+</div><div class="dots_bottom"><div class="swiper_bullet-wrapper">{% for block in section.blocks %}    <div x-bind:aria-current="index === {{forloop.index}} ? 'true' : 'false'" x-on:click="index = {{forloop.index}}" x-bind:class="index === {{forloop.index}} ? 'is-active' : ''" li-for="block in section.blocks" aria-label="Slide {{forloop.index}} / {{forloop.length}}" class="swiper_bullet">
+                                    
+                        </div>
+{% endfor %}</div><div class="swiper_navigation"><button aria-label="Vorherige Slide" x-on:click="index = index > 1 ? index - 1 : {{ dots_total }}" class="swiper_button swiper_prev"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323" style="transform: rotate(180deg)"><g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g></svg></div></button><button aria-label="Nächste Slide" x-on:click="index = index < {{ dots_total }} ? index + 1 : 1" class="swiper_button swiper_next"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323"><g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g></svg></div></button></div></div></div></div></div></div> {% schema %} {"tag":"section","name":"Dots 1","class":"section_dots","blocks":[{"name":"Dot","type":"dot","settings":[{"id":"image_dot_image","type":"image_picker","label":"Dot Image"},{"id":"text_dot_heading","type":"text","label":"Dot Heading","default":"Heading"},{"id":"text_dot_text","type":"text","label":"Dot Text","default":"Text"},{"id":"url_dot_link","type":"url","label":"Dot Link"},{"id":"text_dot_link_text","type":"text","label":"Dot Link Text","default":"Text Link"},{"id":"text_x_achse","type":"text","label":"X-Achse","default":"This is some text inside of a div block."},{"id":"text_y_achse","type":"text","label":"Y-Achse","default":"This is some text inside of a div block."}]},{"type":"@app"}],"settings":[{"id":"image_bg_image","type":"image_picker","label":"BG Image"},{"id":"text_heading","type":"text","label":"Heading","default":"Heading"},{"id":"text_text","type":"text","label":"Text","default":"This is some text inside of a div block."},{"id":"url_button_link","type":"url","label":"Button Link"},{"id":"text_button_text","type":"text","label":"Button Text","default":"Button Text"}],"presets":[{"name":"Dots 1","category":"Liquify","blocks":[{"type":"dot"}]}]} {% endschema %}
