@@ -5401,6 +5401,7 @@ figcaption {
 
 .filter_form_checkbox-icon {
   border: 1px solid var(--_primitives---brand--chocolat);
+  background-color: var(--_primitives---opacity--transparent);
   cursor: pointer;
   border-radius: .25rem;
   flex: none;
@@ -5413,10 +5414,10 @@ figcaption {
 }
 
 .filter_form_checkbox-icon.w--redirected-checked {
-  box-shadow: none;
-  background-color: #000;
-  background-image: none;
-  background-size: 16px 16px;
+  background-color: var(--_primitives---colors--full-white);
+  background-image: url({{ 'check.png' | asset_url }});
+  background-position: 50%;
+  background-size: 12px 12px;
   border-width: 1px;
   border-color: #000;
 }
