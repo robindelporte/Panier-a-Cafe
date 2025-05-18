@@ -23,7 +23,7 @@
 {% endif %}
                             
                         </div>
-{% endfor %}</div></div><div class="margin-top margin-small"><button li-render="submit-button" class="button is-filter is-full-width"><div>Filtrer</div></button></div></div></form><a data-w-id="3aca0ba3-59b0-ae26-453f-175668f5bc13" href="#" class="filter_tablet-modal-close-button w-inline-block"><img alt="" src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/624380709031623afe4aee7e_icon_close-modal.svg" class="icon-1x1-small">
+{% endfor %}</div></div><div class="margin-top margin-small"><button li-render-filter="submit-button" class="button is-filter is-full-width"><div>Filtrer</div></button></div></div></form><a data-w-id="3aca0ba3-59b0-ae26-453f-175668f5bc13" href="#" class="filter_tablet-modal-close-button w-inline-block"><img alt="" src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/624380709031623afe4aee7e_icon_close-modal.svg" class="icon-1x1-small">
 </a></div><div id="w-node-_0b4a3b29-1fa7-6c47-5b26-de46d9ea3ce6-f2213f04" class="filter_feed"><div class="filter_product-list-wrapper w-dyn-list"><div role="list" class="filter_product-list w-dyn-items">{% for product in collection.products %}    <div li-for="product in collection.products" role="listitem" class="filter_product-list-item w-dyn-item">
                                     
                             {% render 'product_item', product: product %}
