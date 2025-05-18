@@ -3,10 +3,12 @@
 </a><div class="product-item_tag_list">{% if product.selected_or_first_available_variant.available != true %}    <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag is-red">
     Épuisé    </div>
 {% endif %}{% if product.metafields.custom.pays_d_origine != blank %}    <div li-if="product.metafields.custom.pays_d_origine != blank" class="product-item_tag">
-    <div class="hide w-embed">{% - assign pays_origine = product.metafields.custom.pays_d_origine.value %}</div><img src="{{ pays_origine.drapeau | img_url: 'large' }}" loading="lazy" li-object:src="pays_origine.drapeau | img_url: 'large'" alt="" class="flag_icon">
+    {% assign pays_origine = product.metafields.custom.pays_d_origine.value %}
+<img src="{{ pays_origine.drapeau | img_url: 'large' }}" loading="lazy" li-object:src="pays_origine.drapeau | img_url: 'large'" alt="" class="flag_icon">
 <div li-object="pays_origine.pays" class="product-item_tag-text">{{ pays_origine.pays }}</div>    </div>
 {% endif %}{% if product.metafields.custom.certification %}    <div li-if="product.metafields.custom.certification" class="product-item_tag">
-    <div class="hide w-embed">{% - assign certification = product.metafields.custom.certification.value %}</div><img src="{{ certification.icone | img_url: 'large' }}" loading="lazy" li-object:src="certification.icone | img_url: 'large'" alt="" class="flag_icon">
+    {% assign certification = product.metafields.custom.certification.value %}
+<img src="{{ certification.icone | img_url: 'large' }}" loading="lazy" li-object:src="certification.icone | img_url: 'large'" alt="" class="flag_icon">
 <div li-object="certification.nom" class="product-item_tag-text">{{ certification.nom }}</div>    </div>
 {% endif %}</div></div><div class="spacer-xxsmall"></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link w-inline-block"><div class="product-item_left"><div li-object="product.title" class="product_name">{{ product.title }}</div><div>Gourmand & Malté</div></div><div class="product-item_price">{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="padding-bottom padding-xxxsmall">
     <div li-object="product.compare_at_price | money" class="text-size-small">{{ product.compare_at_price | money }}</div>    </div>
