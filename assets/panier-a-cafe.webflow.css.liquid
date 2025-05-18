@@ -2063,7 +2063,7 @@ figcaption {
 }
 
 .nav_dropdown-close-button {
-  z-index: 99999999;
+  z-index: 1001;
   cursor: pointer;
   background-color: #0000;
   padding: 0;
@@ -2284,11 +2284,13 @@ figcaption {
 }
 
 .mini-cart_header {
+  z-index: 1;
   border-bottom: 1px solid var(--base-color-neutral--neutral-lightest\<deleted\|relume-variable-color-neutral-3\>);
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
   display: flex;
+  position: relative;
 }
 
 .mini-cart_line-item {
@@ -5499,11 +5501,14 @@ figcaption {
 }
 
 .filter_empty {
-  border: 1px solid var(--base-color-neutral--neutral-lighter\<deleted\|relume-variable-color-neutral-4\>);
-  background-color: var(--base-color-neutral--neutral-lightest\<deleted\|relume-variable-color-neutral-3\>);
+  background-color: var(--_primitives---colors--full-white);
   text-align: center;
   border-radius: .5rem;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
   padding: 2.9rem;
+  display: flex;
 }
 
 .lookbook_component {
@@ -6305,6 +6310,7 @@ figcaption {
 
 .flag_icon {
   border-radius: var(--_ui-styles---radius--full);
+  object-fit: cover;
   width: 1rem;
   height: 1rem;
 }
@@ -6503,6 +6509,14 @@ figcaption {
 
 .nav_cart-holder.show {
   display: flex;
+}
+
+.sort_option {
+  padding: .25rem .5rem;
+}
+
+.product-item_tag-text {
+  margin-bottom: -3px;
 }
 
 @media screen and (max-width: 991px) {
