@@ -54,22 +54,17 @@
         "text_conseil_mouture": "{{ product.metafields.custom.conseil_de_mouture.value }}",
         "text_materiel": "{{ product.metafields.custom.mat_riel_recommand_.value }}",
         "text_type_extraction": "{{ product.metafields.custom.type_d_extraction_id_al.value }}",
+        "text_animation_titre_1": "De la ferme à votre tasse, chaque étape compte",
+        "richtext_animation_texte_1": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>",
+        "text_animation_titre_2": "De la ferme à votre tasse, chaque étape compte",
+        "richtext_animation_texte_2": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>",
+        "text_animation_titre_3": "De la ferme à votre tasse, chaque étape compte",
+        "richtext_animation_texte_3": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>",
         "text_type_the": "{{ product.metafields.custom.the.value.types_de_the.value }}",
         "text_origine": "{{ product.metafields.custom.the.value.origine.value }}",
         "text_temps_infusion": "{{ product.metafields.custom.the.value.temps_infusion.value }}",
         "text_temperature_eau": "{{ product.metafields.custom.the.value.temperature.value }}",
         "text_contenance": "{{ product.metafields.custom.the.value.contenance.value }}"
-      }
-    },
-    "animation_produit": {
-      "type": "animation_produit",
-      "settings": {
-        "text_animation_titre_1": "{{ product.metafields.custom.animation_titre_n_1.value }}",
-        "richtext_animation_texte_1": "<p>{{ product.metafields.custom.animation_texte_n_1 | metafield_tag }}</p>",
-        "text_animation_titre_2": "{{ product.metafields.custom.animation_titre_n_2.value }}",
-        "richtext_animation_texte_2": "<p>{{ product.metafields.custom.animation_texte_n_2 | metafield_tag }}</p>",
-        "text_animation_titre_3": "{{ product.metafields.custom.animation_titre_n_3.value }}",
-        "richtext_animation_texte_3": "<p>{{ product.metafields.custom.animation_texte_n_3 | metafield_tag }}</p>"
       }
     },
     "category": {
@@ -95,7 +90,6 @@
     "product_hero_sub",
     "product_recommended",
     "contenu_produits",
-    "animation_produit",
     "category",
     "reseaux"
   ]
