@@ -191,6 +191,59 @@
         "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
       }
     },
+    "logo_defilants_AabqgA": {
+      "type": "logo_defilants",
+      "blocks": {
+        "logo_egDpwF": {
+          "type": "logo",
+          "settings": {
+            "image_logo": "shopify://shop_images/haute_savoie.png"
+          }
+        },
+        "logo_zJhiHH": {
+          "type": "logo",
+          "settings": {
+            "image_logo": "shopify://shop_images/bresil.png"
+          }
+        },
+        "logo_HCWack": {
+          "type": "logo",
+          "settings": {
+            "image_logo": "shopify://shop_images/maroc.png"
+          }
+        },
+        "logo_Y3G9Hx": {
+          "type": "logo",
+          "settings": {
+            "image_logo": "shopify://shop_images/afrique_du_sud.png"
+          }
+        },
+        "logo_bwMiUb": {
+          "type": "logo",
+          "settings": {
+            "image_logo": "shopify://shop_images/Sri_lanka.png"
+          }
+        },
+        "logo_RCMdYJ": {
+          "type": "logo",
+          "settings": {
+            "image_logo": "shopify://shop_images/costa_rica.png"
+          }
+        }
+      },
+      "block_order": [
+        "logo_egDpwF",
+        "logo_zJhiHH",
+        "logo_HCWack",
+        "logo_Y3G9Hx",
+        "logo_bwMiUb",
+        "logo_RCMdYJ"
+      ],
+      "name": "Logo defilants",
+      "settings": {
+        "text_heading": "Ils nous font confiance"
+      }
+    },
     "pages": {
       "type": "pages",
       "blocks": {
@@ -269,6 +322,7 @@
     "chiffres",
     "lookbook_Q4hEjV",
     "selection",
+    "logo_defilants_AabqgA",
     "pages",
     "contenu_2",
     "related_articles",
