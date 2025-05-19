@@ -1,7 +1,7 @@
 <div class="lookbook_component"><div class="lookbook_image-wrapper"><img class="lookbook_image" src="{{ section.settings.image_bg_image | img_url: 'master' }}" width="720" alt="{{ section.settings.image_bg_image.alt }}" sizes="(max-width: 767px) 100vw, 720px" loading="lazy">
 <div class="lookbook_points-wrapper">{% for block in section.blocks %}
     {% if block.type == "dot" %}
-                    <div class="lookbook_points" x-bind:style="{ left:'{{ block.settings.text_x_achse }}%' , top:'{{ block.settings.text_y_achse }}%' , zIndex: index === {{ forloop.index }} ? '50' : 'auto' }" x-on:mouseover="index = {{forloop.index}}" role="button" x-on:mouseleave="index = 0" aria-controls="dot-content-{{forloop.index}}" li-block="Dot" tabindex="0" x-bind:aria-current="index === {{forloop.index}} ? 'true' : 'false'">
+                    <div aria-controls="dot-content-{{forloop.index}}" li-block="Dot" x-bind:style="{ left:'{{ block.settings.text_x_achse }}%' , top:'{{ block.settings.text_y_achse }}%' , zIndex: index === {{ forloop.index }} ? '50' : 'auto' }" role="button" tabindex="0" class="lookbook_points">
                                     
                                     <div class="lookbook_ellipse-camel"></div>
                                     
