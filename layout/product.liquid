@@ -115,6 +115,7 @@
 
 <div class="page-wrapper">{% render 'global_styles' %}
 {% section 'header' %}
+<!-- Start of Judge.me code --><div style='clear:both'></div><div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-auto-install='false'>{{ product.metafields.judgeme.widget }}</div><!-- End of Judge.me code -->
  {{ content_for_layout }} {% section 'footer' %}
 </div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=68025cbd2676ca8827196077" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="{{ 'webflow.js' | asset_url }}" type="text/javascript"></script><script src="{{ 'section-rendering.js' | asset_url }}"></script>{% render 'search_javascript' %}
 <script src="https://unpkg.com/youtube-light-player"></script><script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><script>$(".swiper-container").each(function (index) {
@@ -176,6 +177,61 @@
       console.error(e);
     });
   });
+</script><script>document.addEventListener('DOMContentLoaded', function() {
+    // S&eacute;lectionner tous les conteneurs de quantit&eacute;
+    const quantityContainers = document.querySelectorAll('.quantity-container');
+    // Pour chaque conteneur, initialiser ses propres contr&ocirc;les
+    quantityContainers.forEach(function(container) {
+        const decrementBtn = container.querySelector('.quantity-btn.decrement');
+        const incrementBtn = container.querySelector('.quantity-btn.increment');
+        const quantityDisplay = container.querySelector('.quantity-display');
+        if (!decrementBtn || !incrementBtn || !quantityDisplay) {
+            console.log('Un des &eacute;l&eacute;ments manque dans ce conteneur', container);
+            return;
+        }
+        const minValue = parseInt(quantityDisplay.getAttribute('min')) || 1;
+        const maxValue = parseInt(quantityDisplay.getAttribute('max')) || 99;
+        // Update buttons state
+        function updateButtonsState() {
+            const currentValue = parseInt(quantityDisplay.value);
+            decrementBtn.disabled = currentValue <= minValue;
+            incrementBtn.disabled = currentValue >= maxValue;
+        }
+        // Increment quantity
+        incrementBtn.addEventListener('click', function(e) {
+            e.preventDefault(); // Emp&ecirc;cher la soumission du formulaire
+            e.stopPropagation(); // Emp&ecirc;cher la propagation aux autres &eacute;l&eacute;ments
+            const currentValue = parseInt(quantityDisplay.value);
+            if (currentValue < maxValue) {
+                quantityDisplay.value = currentValue + 1;
+                updateButtonsState();
+            }
+        });
+        // Decrement quantity
+        decrementBtn.addEventListener('click', function(e) {
+            e.preventDefault(); // Emp&ecirc;cher la soumission du formulaire
+            e.stopPropagation(); // Emp&ecirc;cher la propagation aux autres &eacute;l&eacute;ments
+            const currentValue = parseInt(quantityDisplay.value);
+            if (currentValue > minValue) {
+                quantityDisplay.value = currentValue - 1;
+                updateButtonsState();
+            }
+        });
+        // Emp&ecirc;cher le champ d'entr&eacute;e de soumettre le formulaire sur Entr&eacute;e
+        quantityDisplay.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+            }
+        });
+        // Initialize buttons state
+        updateButtonsState();
+        // Ajouter type="button" aux boutons de mani&egrave;re programmatique
+        decrementBtn.setAttribute('type', 'button');
+        incrementBtn.setAttribute('type', 'button');
+    });
+    // Ajouter un journal pour voir combien de conteneurs ont &eacute;t&eacute; initialis&eacute;s
+    console.log('Nombre de conteneurs de quantit&eacute; initialis&eacute;s:', quantityContainers.length);
+});
 </script>
 </body>
 </html>
