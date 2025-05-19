@@ -39,9 +39,51 @@
         "text_heading": "Heading"
       }
     },
+    "dots_1_iChKCC": {
+      "type": "dots_1",
+      "blocks": {
+        "dot_hywPBc": {
+          "type": "dot",
+          "settings": {
+            "image_dot_image": "shopify://shop_images/CafeAmoreBio1.webp",
+            "text_dot_heading": "Amore Bio",
+            "text_dot_text": "Text",
+            "url_dot_link": "shopify://products/cafe-bio-amore",
+            "text_dot_link_text": "Text Link",
+            "text_x_achse": "20",
+            "text_y_achse": "50"
+          }
+        }
+      },
+      "block_order": [
+        "dot_hywPBc"
+      ],
+      "name": "Dots 1",
+      "settings": {
+        "image_bg_image": "shopify://shop_images/panier-a-cafe.webp",
+        "text_heading": "Heading",
+        "text_text": "This is some text inside of a div block.",
+        "url_button_link": "",
+        "text_button_text": "Button Text"
+      }
+    },
     "contenu": {
       "type": "contenu",
-      "settings": {}
+      "blocks": {
+        "headline_8AkqxF": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy."
+          }
+        }
+      },
+      "block_order": [
+        "headline_8AkqxF"
+      ],
+      "settings": {
+        "image_image": "shopify://shop_images/Flag_of_El_Salvador.svg",
+        "image": "left"
+      }
     },
     "liste_collections": {
       "type": "liste_collections",
@@ -187,6 +229,7 @@
     "hero_2",
     "collection_tabs",
     "bandeau",
+    "dots_1_iChKCC",
     "contenu",
     "liste_collections",
     "chiffres",
