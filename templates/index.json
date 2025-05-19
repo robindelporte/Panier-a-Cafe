@@ -218,8 +218,8 @@
         "collection_AHGHNG": {
           "type": "collection",
           "settings": {
-            "collection_collection": "",
-            "collection_collection_limit": 6
+            "collection_collection": "cafetiere-a-filtre",
+            "collection_collection_limit": 1
           }
         }
       },
