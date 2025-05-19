@@ -14,11 +14,7 @@
           <div
             x-bind:aria-current="index === {{ forloop.index }} ? 'true' : 'false'"
             li-block="Dot"
-           x-bind:style="{
-    left: '{{ block.settings.text_x_achse }}%',
-    top: '{{ block.settings.text_y_achse }}%',
-    zIndex: index === 4 ? '50' : 'auto'
-  }" 
+            style="left:{{ block.settings.text_x_achse }}%; top:{{ block.settings.text_y_achse }}%; zIndex: {% if forloop.index == index %}50{% else %}auto{% endif %}"
             tabindex="0"
             x-on:mouseover="index = {{ forloop.index }}; swiper.slideTo({{ forloop.index0 }})"
             x-on:mouseleave="index = 0"
