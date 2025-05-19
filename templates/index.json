@@ -237,14 +237,41 @@
         "chiffres_RKYjdb": {
           "type": "chiffres",
           "settings": {
-            "text_valeur_gauche": "100",
+            "text_valeur_gauche": "70",
             "text_valeur_droite": "%",
-            "text_texte": "Nous mettons à l’honneur des cafés produits par des femmes engagées."
+            "text_texte": "de nos cafés sont conditionnés par des personnes en situation de handicap"
+          }
+        },
+        "chiffres_VYTFRe": {
+          "type": "chiffres",
+          "settings": {
+            "text_valeur_gauche": "50",
+            "text_valeur_droite": "+",
+            "text_texte": "références de cafés de spécialité disponibles à l’année"
+          }
+        },
+        "chiffres_B37afM": {
+          "type": "chiffres",
+          "settings": {
+            "text_valeur_gauche": "90",
+            "text_valeur_droite": "%",
+            "text_texte": "de nos emballages sont recyclables ou réutilisables"
+          }
+        },
+        "chiffres_xUyJa8": {
+          "type": "chiffres",
+          "settings": {
+            "text_valeur_gauche": "15",
+            "text_valeur_droite": "‎ Pays",
+            "text_texte": "d’origine représentés dans notre sélection"
           }
         }
       },
       "block_order": [
-        "chiffres_RKYjdb"
+        "chiffres_RKYjdb",
+        "chiffres_VYTFRe",
+        "chiffres_B37afM",
+        "chiffres_xUyJa8"
       ],
       "settings": {
         "text_heading": "Le panier à café en chiffre"
@@ -288,27 +315,87 @@
             "url_link": "",
             "text_text": "Découvrir"
           }
+        },
+        "carte_LDjiPP": {
+          "type": "carte",
+          "settings": {
+            "text_heading": "Les ateliers",
+            "url_link": "",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_GDiddG": {
+          "type": "carte",
+          "settings": {
+            "text_heading": "L’association",
+            "url_link": "",
+            "text_text": "Découvrir"
+          }
         }
       },
       "block_order": [
-        "carte_phaUYV"
+        "carte_phaUYV",
+        "carte_LDjiPP",
+        "carte_GDiddG"
       ],
       "settings": {}
+    },
+    "contenu_NjqhEJ": {
+      "type": "contenu",
+      "blocks": {
+        "headline_Ua4DNJ": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Un événement qui a du goût"
+          }
+        },
+        "text_6dMUx4": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Que ce soit pour un mariage, un séminaire, un salon pro ou un anniversaire, on débarque avec notre coffee truck et nos baristas pour préparer des boissons chaudes sur mesure, avec le sourire et beaucoup (beaucoup) de caféine !<br/><br/>Vous organisez un événement plus intimiste ? On peut aussi vous louer une machine à café pour un week-end ou une soirée, avec tout le nécessaire pour régaler vos invités.<br/><br/>Un bon moment, un bon café… et une équipe aux petits soins pour faire de votre événement un souvenir qui se boit jusqu’à la dernière goutte !<br/><br/></p>"
+          }
+        },
+        "buttons_fDykPH": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "",
+            "text_button_text": "Button",
+            "url_button_link_2": "shopify://pages/a-propos",
+            "text_button_text_2": "Je veux en savoir plus !"
+          }
+        }
+      },
+      "block_order": [
+        "headline_Ua4DNJ",
+        "text_6dMUx4",
+        "buttons_fDykPH"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "image_image": "shopify://shop_images/BALLANCETIMEMORE3.webp",
+        "left_right": "left"
+      }
     },
     "contenu_2": {
       "type": "contenu_2",
       "blocks": {
         "carte_dFEGn9": {
           "type": "carte",
-          "settings": {}
+          "settings": {
+            "image_image": "shopify://shop_images/recyclage-1.png"
+          }
         },
         "carte_Fahxej": {
           "type": "carte",
-          "settings": {}
+          "settings": {
+            "image_image": "shopify://shop_images/recyclage-2.png"
+          }
         },
         "carte_cbmVcN": {
           "type": "carte",
-          "settings": {}
+          "settings": {
+            "image_image": "shopify://shop_images/recyclage-3.png"
+          }
         }
       },
       "block_order": [
@@ -319,7 +406,7 @@
       "settings": {
         "text_heading": "Recycle ton café, sans te prendre la tête",
         "text_paragraph": "Si ton marc de café avait une seconde vie ? Grâce à notre sac de collecte, on te propose de recycler ton marc pour le transformer en pellets pour poêles à granulés via notre partenariat avec Environ Alpes. Pour les pros (PME, restaurateurs), on récupère le sac directement lors de nos livraisons de café. Pour les particuliers, il suffit de nous le rapporter sur les marchés ou à l’atelier lors de ta prochaine visite. Simple, utile… et bien plus écolo que de le jeter à la poubelle !",
-        "url_button_link": "",
+        "url_button_link": "shopify://pages/contact",
         "text_button_text": "Je veux un sac"
       }
     },
@@ -356,6 +443,7 @@
     "chiffres",
     "selection",
     "pages",
+    "contenu_NjqhEJ",
     "contenu_2",
     "related_articles",
     "collection_2",
