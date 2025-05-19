@@ -106,8 +106,9 @@
         "dot_3rARpP": {
           "type": "dot",
           "settings": {
-            "text_x_achse": "This is some text inside of a div block.",
-            "text_y_achse": "This is some text inside of a div block."
+            "text_x_achse": "20",
+            "text_y_achse": "30",
+            "product_produit": "cafe-bio-amore"
           }
         }
       },
