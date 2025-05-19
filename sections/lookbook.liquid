@@ -24,9 +24,9 @@
                             </div>
             {% endif %}
 {% endfor %}
-</div></div><div class="lookbook_swiper-wrapper"><div x-init="swiper = new Swiper($el, {      slidesPerView: 1,      spaceBetween: 20,      navigation: {        nextEl: '.swiper-next.in-lookbook',        prevEl: '.swiper-prev.in-lookbook'      },      on: {        slideChange: function() {          index = this.activeIndex + 1;        }      }    })" x-data="{ swiper: null }" class="hide"></div><div class="swiper in-lookbook"><div role="list" class="swiper-wrapper in-lookbook">{% for block in section.blocks %}    <div li-for="block in section.blocks" class="swiper-slide in-lookbook">
+</div></div><div class="lookbook_swiper-wrapper"><div class="swiper in-lookbook"><div role="list" class="swiper-wrapper in-lookbook">{% for block in section.blocks %}    <div li-for="block in section.blocks" class="swiper-slide in-lookbook">
                                     
-                            <div class="lookbook-product">{% render 'product_item', product: block.settings.product %}
+                            <div class="lookbook-product">{% render 'product_item', product: block.settings.produit %}
 </div>
                             
                         </div>
