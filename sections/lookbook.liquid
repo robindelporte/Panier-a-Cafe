@@ -32,7 +32,7 @@
     <div role="list" class="swiper-wrapper in-lookbook">
       {% for block in section.blocks %}
         {% if block.type == "dot" %}
-          % assign product = all_products[block.settings.product_produit] %}
+          {% assign product = all_products[block.settings.product_produit] %}
         <div li-for="block in section.blocks" class="swiper-slide in-lookbook">
      <div class="lookbook-product">{% render 'product_item', product: product %}</div>
    </div>
