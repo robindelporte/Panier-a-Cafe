@@ -144,49 +144,6 @@
         "left_right": "right"
       }
     },
-    "liste_collections": {
-      "type": "liste_collections",
-      "blocks": {
-        "collection_JD78jq": {
-          "type": "collection",
-          "settings": {
-            "collection_collection": "cafes",
-            "collection_collection_limit": 1
-          }
-        },
-        "collection_rFCwLB": {
-          "type": "collection",
-          "settings": {
-            "collection_collection": "cafes-bio",
-            "collection_collection_limit": 1
-          }
-        }
-      },
-      "block_order": [
-        "collection_JD78jq",
-        "collection_rFCwLB"
-      ],
-      "settings": {}
-    },
-    "chiffres": {
-      "type": "chiffres",
-      "blocks": {
-        "chiffres_RKYjdb": {
-          "type": "chiffres",
-          "settings": {
-            "text_valeur_gauche": "100",
-            "text_valeur_droite": "%",
-            "text_texte": "Nous mettons à l’honneur des cafés produits par des femmes engagées."
-          }
-        }
-      },
-      "block_order": [
-        "chiffres_RKYjdb"
-      ],
-      "settings": {
-        "text_heading": "Le panier à café en chiffre"
-      }
-    },
     "lookbook_Q4hEjV": {
       "type": "lookbook",
       "blocks": {
@@ -232,6 +189,65 @@
       "name": "Lookbook",
       "settings": {
         "image_bg_image": "shopify://shop_images/lookbook.png"
+      }
+    },
+    "liste_collections": {
+      "type": "liste_collections",
+      "blocks": {
+        "collection_JD78jq": {
+          "type": "collection",
+          "settings": {
+            "collection_collection": "cafes",
+            "collection_collection_limit": 1
+          }
+        },
+        "collection_rFCwLB": {
+          "type": "collection",
+          "settings": {
+            "collection_collection": "accessoires",
+            "collection_collection_limit": 1
+          }
+        },
+        "collection_WQmVzN": {
+          "type": "collection",
+          "settings": {
+            "collection_collection": "les-thes",
+            "collection_collection_limit": 1
+          }
+        },
+        "collection_AHGHNG": {
+          "type": "collection",
+          "settings": {
+            "collection_collection": "",
+            "collection_collection_limit": 6
+          }
+        }
+      },
+      "block_order": [
+        "collection_JD78jq",
+        "collection_rFCwLB",
+        "collection_WQmVzN",
+        "collection_AHGHNG"
+      ],
+      "settings": {}
+    },
+    "chiffres": {
+      "type": "chiffres",
+      "blocks": {
+        "chiffres_RKYjdb": {
+          "type": "chiffres",
+          "settings": {
+            "text_valeur_gauche": "100",
+            "text_valeur_droite": "%",
+            "text_texte": "Nous mettons à l’honneur des cafés produits par des femmes engagées."
+          }
+        }
+      },
+      "block_order": [
+        "chiffres_RKYjdb"
+      ],
+      "settings": {
+        "text_heading": "Le panier à café en chiffre"
       }
     },
     "selection": {
@@ -335,9 +351,9 @@
     "collection_tabs",
     "bandeau",
     "contenu",
+    "lookbook_Q4hEjV",
     "liste_collections",
     "chiffres",
-    "lookbook_Q4hEjV",
     "selection",
     "pages",
     "contenu_2",
