@@ -11,16 +11,26 @@
     <div class="lookbook_points-wrapper">
       {% for block in section.blocks %}
         {% if block.type == 'dot' %}
-          <div
-            x-bind:aria-current="index === {{ forloop.index }} ? 'true' : 'false'"
-            li-block="Dot"
-            style="left:{{ block.settings.text_x_achse }}%; top:{{ block.settings.text_y_achse }}%; zIndex: {% if forloop.index == index %}50{% else %}auto{% endif %}"
-            tabindex="0"
-            x-on:mouseover="index = {{ forloop.index }}; swiper.slideTo({{ forloop.index0 }})"
-            x-on:mouseleave="index = 0"
-            x-data="{ productIndex: {{ forloop.index }} }"
-            class="lookbook_points"
-          >
+          
+     <div
+  x-bind:aria-current="index === {{ forloop.index }} ? 'true' : 'false'"
+  li-block="Dot"
+  x-bind:style="{
+    left: '{{ block.settings.text_x_achse }}%', 
+    top: '{{ block.settings.text_y_achse }}%',
+    zIndex: index === {{ forloop.index }} ? '50' : 'auto',
+    backgroundColor: index === {{ forloop.index }} ? '#ff0000' : '#ffffff',
+    transform: index === {{ forloop.index }} ? 'scale(1.2)' : 'scale(1)'
+  }"
+  tabindex="0"
+  x-on:mouseover="index = {{ forloop.index }}; swiper.slideTo({{ forloop.index0 }})"
+  x-on:mouseleave="index = 0"
+  x-data="{ productIndex: {{ forloop.index }} }"
+  class="lookbook_points"
+>
+
+
+        
             <div class="lookbook_ellipse-camel"></div>
 
             <div class="lookbook_ellipse-white"></div>
