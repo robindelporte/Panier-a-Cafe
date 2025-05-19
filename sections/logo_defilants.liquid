@@ -18,13 +18,18 @@
 </style></div><h2 class="text-align-center">
 {{ section.settings.text_heading }}
 </h2>
-<div class="marquees_wrapper"><div class="marquee is-1"><div class="marquee-content scroll reverse">{% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo.alt }}" src="{{ block.settings.image_logo | img_url: 'master' }}" class="marquee-image">
+<div class="marquees_wrapper"><div class="marquee is-1"><div class="marquee-content scroll reverse"><div li-content-for-blocks="">
+{% for block in section.blocks %}
+{% case block.type %}
+{% when '@app' %}
+{% render block %}
+{% when 'logo' %}
+            <div li-block="Logo" class="marquee_image-container">
+                    <img loading="eager" alt="{{ block.settings.image_logo.alt }}" src="{{ block.settings.image_logo | img_url: 'master' }}" class="marquee-image">
 
-                            </div>
-            {% endif %}
+                </div>
+    {% endcase %}
 {% endfor %}
-</div><div class="marquee-content scroll reverse"><div class="marquee_image-container"><img loading="eager" src="{{ 'logoipsum-287.svg' | asset_url }}" alt="" class="marquee-image">
-</div></div></div></div></div></div> {% schema %} {"tag":"section","name":"Logo defilants","class":"section_marquee","blocks":[{"name":"Logo","type":"logo","settings":[{"id":"image_logo","type":"image_picker","label":"Logo"}]},{"type":"@app"}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Ils nous font confiance"}],"presets":[{"name":"Logo defilants","category":"Liquify","blocks":[{"type":"logo"}]}]} {% endschema %}
+
+    </div>
+</div></div></div></div></div> {% schema %} {"tag":"section","name":"Logo defilants","class":"section_marquee","blocks":[{"name":"Logo","type":"logo","settings":[{"id":"image_logo","type":"image_picker","label":"Logo"}]},{"type":"@app"}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Ils nous font confiance"}],"presets":[{"name":"Logo defilants","category":"Liquify","blocks":[{"type":"logo"}]}]} {% endschema %}
