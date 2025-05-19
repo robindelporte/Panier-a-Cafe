@@ -47,11 +47,64 @@
     "collection_tabs": {
       "type": "collection_tabs",
       "settings": {
-        "collection_list": []
+        "collection_list": [
+          "cafes",
+          "capsules",
+          "les-thes"
+        ]
       }
     },
     "bandeau": {
       "type": "bandeau",
+      "blocks": {
+        "icone_qVKtDx": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        },
+        "icone_LcNNVX": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Carte_bleu.png",
+            "text_titre_icone": "Paiement sécurisé",
+            "text_description": "Visa, PayPal, Apple Pay, Mastercard."
+          }
+        },
+        "icone_RXURHd": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Colis.png",
+            "text_titre_icone": "Livraison offerte",
+            "text_description": "Pour toute commande de plus de 80€."
+          }
+        },
+        "icone_XmDjxh": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Grains_de_cafes.png",
+            "text_titre_icone": "Abonnement",
+            "text_description": "Café sélectionné et livré automatiquement !"
+          }
+        },
+        "icone_xLz4Yb": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Localisation.png",
+            "text_titre_icone": "Boutique",
+            "text_description": "805 route des Futaies74370 Villaz."
+          }
+        }
+      },
+      "block_order": [
+        "icone_qVKtDx",
+        "icone_LcNNVX",
+        "icone_RXURHd",
+        "icone_XmDjxh",
+        "icone_xLz4Yb"
+      ],
       "settings": {
         "text_heading": "Heading"
       }
@@ -62,16 +115,33 @@
         "headline_8AkqxF": {
           "type": "headline",
           "settings": {
-            "text_headline": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy."
+            "text_headline": "Bien plus qu’un café"
+          }
+        },
+        "text_aVDg3A": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Au Panier à Café, chaque grain raconte une histoire. Celle d’un produit sourcé avec soin, qui tient compte de l’humain et de l’environnement.</p><p>Derrière chaque tasse, il y a un engagement ! Nous travaillons avec des producteurs rémunérés justement, soutenons des coopératives de femmes, favorisons les circuits courts et confions la préparation de nos sachets aux travailleurs de l’ESAT des EPANOU du Parmelan.</p><p>Notre objectif est simple : proposer un café qui a du goût, du sens, et un impact positif !<br/></p>"
+          }
+        },
+        "buttons_KzmgBX": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "",
+            "text_button_text": "Button",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
           }
         }
       },
       "block_order": [
-        "headline_8AkqxF"
+        "headline_8AkqxF",
+        "text_aVDg3A",
+        "buttons_KzmgBX"
       ],
       "settings": {
         "image_image": "shopify://shop_images/Flag_of_El_Salvador.svg",
-        "left_right": "left"
+        "left_right": "right"
       }
     },
     "liste_collections": {
@@ -191,31 +261,6 @@
         "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
       }
     },
-    "logo_defilants_AabqgA": {
-      "type": "logo_defilants",
-      "blocks": {
-        "logo_RCMdYJ": {
-          "type": "logo",
-          "settings": {
-            "image_logo": "shopify://shop_images/costa_rica.png"
-          }
-        },
-        "logo_h8qHeM": {
-          "type": "logo",
-          "settings": {
-            "image_logo": "shopify://shop_images/bresil.png"
-          }
-        }
-      },
-      "block_order": [
-        "logo_RCMdYJ",
-        "logo_h8qHeM"
-      ],
-      "name": "Logo defilants",
-      "settings": {
-        "text_heading": "Ils nous font confiance"
-      }
-    },
     "pages": {
       "type": "pages",
       "blocks": {
@@ -294,7 +339,6 @@
     "chiffres",
     "lookbook_Q4hEjV",
     "selection",
-    "logo_defilants_AabqgA",
     "pages",
     "contenu_2",
     "related_articles",
