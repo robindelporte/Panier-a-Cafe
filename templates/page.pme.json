@@ -204,11 +204,106 @@
         "text_heading": "Ils nous font confiance"
       }
     },
+    "bandeau_HqpdQH": {
+      "type": "bandeau",
+      "blocks": {
+        "icone_qQkhpT": {
+          "type": "icone",
+          "settings": {
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        },
+        "icone_NC8Y4z": {
+          "type": "icone",
+          "settings": {
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        },
+        "icone_zABnHn": {
+          "type": "icone",
+          "settings": {
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        },
+        "icone_X7YH3j": {
+          "type": "icone",
+          "settings": {
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        }
+      },
+      "block_order": [
+        "icone_qQkhpT",
+        "icone_NC8Y4z",
+        "icone_zABnHn",
+        "icone_X7YH3j"
+      ],
+      "name": "bandeau",
+      "settings": {
+        "text_heading": "Heading"
+      }
+    },
     "faq": {
       "type": "faq",
+      "blocks": {
+        "faq_item_baFUAj": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_L8iTHa": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_eWheER": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_Qg7jwx": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_yV7afz": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_LeY4AA": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_baFUAj",
+        "faq_item_L8iTHa",
+        "faq_item_eWheER",
+        "faq_item_Qg7jwx",
+        "faq_item_yV7afz",
+        "faq_item_LeY4AA"
+      ],
       "settings": {
         "text_heading": "Foire aux questions",
-        "richtext_richtext": "<p>\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                </p>"
+        "richtext_richtext": "<p><br/>                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                </p>"
       }
     },
     "reseaux": {
@@ -228,6 +323,7 @@
     "selection_manuel",
     "1747682149541c87b9",
     "logo_defilants",
+    "bandeau_HqpdQH",
     "faq",
     "reseaux"
   ]
