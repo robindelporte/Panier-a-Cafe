@@ -9,23 +9,40 @@
  */
 {
   "sections": {
-    "hero": {
-      "type": "hero",
-      "settings": {
-        "text_headline": "L'association",
-        "richtext_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
-        "url_button_link": "",
-        "text_button_text": "More Information"
-      }
-    },
-    "hero_2": {
-      "type": "hero_2",
-      "settings": {
-        "text_headline": "Short heading here",
-        "richtext_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
-        "url_button_link": "",
-        "text_button_text": "More Information"
-      }
+    "hero_slider_VT7Gy9": {
+      "type": "hero_slider",
+      "blocks": {
+        "slide_PR3Lh8": {
+          "type": "slide",
+          "settings": {
+            "textarea_heading": "Heading",
+            "text_text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "url_button_1_link": "",
+            "text_button_1_text": "Button Text",
+            "url_button_2_link": "",
+            "text_button_2_text": "Button Text",
+            "image_image_desktop": "shopify://shop_images/panier-a-cafe.webp"
+          }
+        },
+        "slide_DN8F66": {
+          "type": "slide",
+          "settings": {
+            "textarea_heading": "Heading",
+            "text_text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "url_button_1_link": "",
+            "text_button_1_text": "Button Text",
+            "url_button_2_link": "",
+            "text_button_2_text": "Button Text",
+            "image_image_desktop": "shopify://shop_images/lookbook.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_PR3Lh8",
+        "slide_DN8F66"
+      ],
+      "name": "Hero Slider",
+      "settings": {}
     },
     "collection_tabs": {
       "type": "collection_tabs",
@@ -244,8 +261,7 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "hero",
-    "hero_2",
+    "hero_slider_VT7Gy9",
     "collection_tabs",
     "bandeau",
     "contenu",
