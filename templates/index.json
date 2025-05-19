@@ -23,23 +23,10 @@
             "text_button_2_text": "Button Text",
             "video_desktop": "shopify://files/videos/panier-a-cafe.mp4"
           }
-        },
-        "slide_DN8F66": {
-          "type": "slide",
-          "settings": {
-            "textarea_heading": "Heading",
-            "text_text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "url_button_1_link": "",
-            "text_button_1_text": "Button Text",
-            "url_button_2_link": "",
-            "text_button_2_text": "Button Text",
-            "image_image_desktop": "shopify://shop_images/lookbook.png"
-          }
         }
       },
       "block_order": [
-        "slide_PR3Lh8",
-        "slide_DN8F66"
+        "slide_PR3Lh8"
       ],
       "name": "Hero Slider",
       "settings": {}
