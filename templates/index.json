@@ -166,7 +166,7 @@
         "dot_fbpLVi": {
           "type": "dot",
           "settings": {
-            "text_x_achse": "50",
+            "text_x_achse": "60",
             "text_y_achse": "55",
             "product_produit": "cafe-el-greengo"
           }
