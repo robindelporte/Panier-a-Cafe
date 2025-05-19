@@ -1,15 +1,7 @@
 <div x-data="{ index: 0 } class="lookbook_component"><div class="lookbook_image-wrapper"><img class="lookbook_image" src="{{ section.settings.image_bg_image | img_url: 'master' }}" width="720" alt="{{ section.settings.image_bg_image.alt }}" sizes="(max-width: 479px) 100vw, 720px" loading="lazy">
 <div class="lookbook_points-wrapper">{% for block in section.blocks %}
     {% if block.type == "dot" %}
-                    <div
-  li-block="Dot"
-  style="left:{{ block.settings.text_x_achse }}%; top:{{ block.settings.text_y_achse }}%; zIndex: {% if forloop.index == index %}50{% else %}auto{% endif %}"
-  tabindex="0"
-  id=""
-  x-on:mouseover="index = {{ forloop.index }}; $store.swiperStore.swiperInstance.slideTo({{ forloop.index0 }})"
-  x-on:mouseleave="index = 0"
-  class="lookbook_points"
->
+                    <div li-block="Dot" style="left:{{ block.settings.text_x_achse }}%; top:{{ block.settings.text_y_achse }}%; zIndex: {% if forloop.index == index %}50{% else %}auto{% endif %}" tabindex="0" id="" x-on:mouseover="index = {{ forloop.index }}; $store.swiperStore.swiperInstance.slideTo({{ forloop.index0 }})" class="lookbook_points">
                                     
                                     <div class="li-custom w-embed"></div>
 
