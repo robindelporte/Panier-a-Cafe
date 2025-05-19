@@ -8,10 +8,10 @@
 </div>
 {% if block.settings.text_button_1_text != blank or block.settings.text_button_2_text != blank %}    <div li-if="block.settings.text_button_1_text != blank or block.settings.text_button_2_text != blank" class="button-group z-index-2">
     {% if block.settings.text_button_1_text != blank %}    <div li-if="block.settings.text_button_1_text != blank" class="button-block animation-css-fade">
-    <a href="{{ block.settings.url_button_1_link }}" class="button w-button"> {{ block.settings.text_button_1_text }} </a>
+    <a href="{{ block.settings.url_button_1_link }}" class="button is-alternate w-button"> {{ block.settings.text_button_1_text }} </a>
     </div>
 {% endif %}{% if block.settings.text_button_2_text != blank %}    <div li-if="block.settings.text_button_2_text != blank" class="button-block animation-css-fade">
-    <a href="{{ block.settings.url_button_2_link }}" class="button is-white w-button"> {{ block.settings.text_button_2_text }} </a>
+    <a href="{{ block.settings.url_button_2_link }}" class="button is-secondary w-button"> {{ block.settings.text_button_2_text }} </a>
     </div>
 {% endif %}    </div>
 {% endif %}</div></div>
