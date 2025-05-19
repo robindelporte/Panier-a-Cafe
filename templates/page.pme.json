@@ -1,36 +1,234 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "header_landing": {
-            "type": "header_landing"
+  "sections": {
+    "header_landing": {
+      "type": "header_landing",
+      "blocks": {
+        "headline_jHg3qc": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Faites plaisir à vos équipes avec du vrai bon café !"
+          }
         },
-        "bandeau": {
-            "type": "bandeau"
-        },
-        "content": {
-            "type": "content"
-        },
-        "selection_manuel": {
-            "type": "selection_manuel"
-        },
-        "logo_defilants": {
-            "type": "logo_defilants"
-        },
-        "faq": {
-            "type": "faq"
-        },
-        "reseaux": {
-            "type": "reseaux"
+        "text_Ht3eAx": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Au Panier à Café, on torréfie localement des cafés de spécialité pensés pour les entreprises qui veulent offrir plus qu’un simple café. <br/>On vous équipe avec des machines simples d’utilisation et on vous livre régulièrement du café fraîchement torréfié, sans que vous ayez à y penser.<br/>Mais encore ? Pour vos salarié·es qui veulent prolonger l’expérience à la maison ? <br/>Ils peuvent commander directement sur notre site et être livrés au bureau, sans frais supplémentaires !<br/><br/></p>"
+          }
         }
+      },
+      "block_order": [
+        "headline_jHg3qc",
+        "text_Ht3eAx"
+      ],
+      "settings": {}
     },
-    "layout": "page.pme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "header_landing",
-        "bandeau",
-        "content",
-        "selection_manuel",
-        "logo_defilants",
-        "faq",
-        "reseaux"
-    ]
+    "bandeau": {
+      "type": "bandeau",
+      "blocks": {
+        "icone_EMbxwq": {
+          "type": "icone",
+          "settings": {
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        },
+        "icone_bTn9Qc": {
+          "type": "icone",
+          "settings": {
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        },
+        "icone_Cn4Ftq": {
+          "type": "icone",
+          "settings": {
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        },
+        "icone_4aXzcR": {
+          "type": "icone",
+          "settings": {
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        }
+      },
+      "block_order": [
+        "icone_EMbxwq",
+        "icone_bTn9Qc",
+        "icone_Cn4Ftq",
+        "icone_4aXzcR"
+      ],
+      "settings": {
+        "text_heading": "Titre"
+      }
+    },
+    "contenu_rmNcje": {
+      "type": "contenu",
+      "blocks": {
+        "headline_byXCCj": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Un café de qualité, adapté"
+          }
+        },
+        "text_6PjNhd": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Chez nous, pas de formule imposée. Vous choisissez les cafés qui correspondent à vos goûts et à votre budget. Fruité, intense, bio ou engagé ? On vous guide dans la sélection pour que chaque pause café soit un vrai moment de plaisir. Le tout, livré régulièrement dans vos bureaux, sans contrainte. C’est simple, local, et surtout très bon.</p>"
+          }
+        },
+        "buttons_q8xGMk": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "",
+            "text_button_text": "Button",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
+        }
+      },
+      "block_order": [
+        "headline_byXCCj",
+        "text_6PjNhd",
+        "buttons_q8xGMk"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "left_right": "right"
+      }
+    },
+    "contenu_gDW33K": {
+      "type": "contenu",
+      "blocks": {
+        "headline_nachty": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Livraison partagée pour vos salarié·es"
+          }
+        },
+        "text_L7jhJM": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Vos équipes craquent pour notre café ? Bonne nouvelle : elles peuvent commander en ligne, et on leur livre leurs paquets directement sur le lieu de travail. Pas de frais de port, pas de déplacements, juste du bon café à partager… ou à garder pour soi. Une petite attention qui fait toute la différence au bureau !</p>"
+          }
+        }
+      },
+      "block_order": [
+        "headline_nachty",
+        "text_L7jhJM"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "left_right": "left"
+      }
+    },
+    "selection_manuel": {
+      "type": "selection_manuel",
+      "blocks": {
+        "selection_yAqFKx": {
+          "type": "selection",
+          "settings": {
+            "text_titre_selection": "Talamanca",
+            "text_texte_tag_1": "Costa Rica",
+            "text_texte_tag_2": "Costa Rica",
+            "text_paragraphe": "Un café riche et gourmand, parfait pour méthode douce (V60, Chemex et Aéropress) ou en espresso pour révéler toute la complexité. Ce café nous vient tout droit de la région de Chirripo, dans la province de San José, au Costa Rica. Cultivé par la famille Urena Rojas, ce micro-lot est issu de la plantation Higueron, un lieu emblématique niché à 1825m d'altitude.",
+            "url_button_lien": "",
+            "text_button_texte": "Découvrir",
+            "url_link": "",
+            "text_etiquette": "Café du mois"
+          }
+        },
+        "selection_B9GyNp": {
+          "type": "selection",
+          "settings": {
+            "text_titre_selection": "Talamanca",
+            "text_texte_tag_1": "Costa Rica",
+            "text_texte_tag_2": "Costa Rica",
+            "text_paragraphe": "Un café riche et gourmand, parfait pour méthode douce (V60, Chemex et Aéropress) ou en espresso pour révéler toute la complexité. Ce café nous vient tout droit de la région de Chirripo, dans la province de San José, au Costa Rica. Cultivé par la famille Urena Rojas, ce micro-lot est issu de la plantation Higueron, un lieu emblématique niché à 1825m d'altitude.",
+            "url_button_lien": "",
+            "text_button_texte": "Découvrir",
+            "url_link": "",
+            "text_etiquette": "Café du mois"
+          }
+        }
+      },
+      "block_order": [
+        "selection_yAqFKx",
+        "selection_B9GyNp"
+      ],
+      "settings": {
+        "text_titre_section": "Un café pour chaque mois, une ambiance pour chaque saison",
+        "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
+      }
+    },
+    "1747682149541c87b9": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_Kg7A9k": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_Kg7A9k"
+      ],
+      "settings": {}
+    },
+    "logo_defilants": {
+      "type": "logo_defilants",
+      "settings": {
+        "text_heading": "Ils nous font confiance"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "text_heading": "Foire aux questions",
+        "richtext_richtext": "<p>\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                </p>"
+      }
+    },
+    "reseaux": {
+      "type": "reseaux",
+      "settings": {
+        "text_heading": "Suivez-nous sur nos réseaux sociaux"
+      }
+    }
+  },
+  "layout": "page.pme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "header_landing",
+    "bandeau",
+    "contenu_rmNcje",
+    "contenu_gDW33K",
+    "selection_manuel",
+    "1747682149541c87b9",
+    "logo_defilants",
+    "faq",
+    "reseaux"
+  ]
 }
