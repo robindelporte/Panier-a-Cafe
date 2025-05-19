@@ -100,20 +100,47 @@
         "text_heading": "Le panier à café en chiffre"
       }
     },
-    "lookbook_3arhNV": {
+    "lookbook_Q4hEjV": {
       "type": "lookbook",
       "blocks": {
-        "dot_3rARpP": {
+        "dot_rKWdBB": {
           "type": "dot",
           "settings": {
             "text_x_achse": "20",
-            "text_y_achse": "30",
+            "text_y_achse": "55",
             "product_produit": "cafe-bio-amore"
+          }
+        },
+        "dot_gzz6UU": {
+          "type": "dot",
+          "settings": {
+            "text_x_achse": "40",
+            "text_y_achse": "50",
+            "product_produit": "cafe-el-volcano"
+          }
+        },
+        "dot_HfryfP": {
+          "type": "dot",
+          "settings": {
+            "text_x_achse": "60",
+            "text_y_achse": "50",
+            "product_produit": "cafe-el-greengo"
+          }
+        },
+        "dot_YfqrmX": {
+          "type": "dot",
+          "settings": {
+            "text_x_achse": "90",
+            "text_y_achse": "40",
+            "product_produit": "cafe-decafeine"
           }
         }
       },
       "block_order": [
-        "dot_3rARpP"
+        "dot_rKWdBB",
+        "dot_gzz6UU",
+        "dot_HfryfP",
+        "dot_YfqrmX"
       ],
       "name": "Lookbook",
       "settings": {
@@ -224,7 +251,7 @@
     "contenu",
     "liste_collections",
     "chiffres",
-    "lookbook_3arhNV",
+    "lookbook_Q4hEjV",
     "selection",
     "pages",
     "contenu_2",
