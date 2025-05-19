@@ -18,82 +18,13 @@
 </style></div><h2 class="text-align-center">
 {{ section.settings.text_heading }}
 </h2>
-<div class="marquees_wrapper"><div class="marquee is-1">{% for logo in settings.marquee_1_logos %}    <div li-for="logo in settings.marquee_1_logos" class="marquee-content scroll reverse">
-                                    
-                            {% for block in section.blocks %}
+<div class="marquees_wrapper"><div class="marquee is-1"><div class="marquee-content scroll reverse">{% for block in section.blocks %}
     {% if block.type == "logo" %}
                     <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_1_1.alt }}" src="{{ block.settings.image_logo_1_1 | img_url: 'master' }}" class="marquee-image">
+                                    <img loading="eager" alt="{{ block.settings.image_logo.alt }}" src="{{ block.settings.image_logo | img_url: 'master' }}" class="marquee-image">
 
                             </div>
             {% endif %}
 {% endfor %}
-
-                            
-                        </div>
-{% endfor %}{% for logo in settings.marquee_1_logos %}    <div li-for="logo in settings.marquee_1_logos" class="marquee-content scroll reverse">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_1_2.alt }}" src="{{ block.settings.image_logo_1_2 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}</div><div class="marquee is-2">{% for logo in settings.marquee_2_logos %}    <div li-for="logo in settings.marquee_2_logos" class="marquee-content scroll">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_2_1.alt }}" src="{{ block.settings.image_logo_2_1 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}{% for logo in settings.marquee_2_logos %}    <div li-for="logo in settings.marquee_2_logos" class="marquee-content scroll">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_2_2.alt }}" src="{{ block.settings.image_logo_2_2 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}</div><div class="marquee is-3">{% for logo in settings.marquee_3_logos %}    <div li-for="logo in settings.marquee_3_logos" class="marquee-content scroll reverse">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_3_1.alt }}" src="{{ block.settings.image_logo_3_1 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}{% for logo in settings.marquee_3_logos %}    <div li-for="logo in settings.marquee_3_logos" class="marquee-content scroll reverse">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_3_2.alt }}" src="{{ block.settings.image_logo_3_2 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}</div></div></div></div> {% schema %} {"tag":"section","name":"Logo defilants","class":"section_marquee","blocks":[{"name":"Logo","type":"logo","settings":[{"id":"image_logo_1_1","type":"image_picker","label":"Logo-1-1"}]},{"type":"@app"}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Ils nous font confiance"}],"presets":[{"name":"Logo defilants","category":"Liquify","blocks":[{"type":"logo"}]}]} {% endschema %}
+</div><div class="marquee-content scroll reverse"><div class="marquee_image-container"><img loading="eager" src="{{ 'logoipsum-287.svg' | asset_url }}" alt="" class="marquee-image">
+</div></div></div></div></div></div> {% schema %} {"tag":"section","name":"Logo defilants","class":"section_marquee","blocks":[{"name":"Logo","type":"logo","settings":[{"id":"image_logo","type":"image_picker","label":"Logo"}]},{"type":"@app"}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Ils nous font confiance"}],"presets":[{"name":"Logo defilants","category":"Liquify","blocks":[{"type":"logo"}]}]} {% endschema %}

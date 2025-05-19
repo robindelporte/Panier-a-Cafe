@@ -3159,6 +3159,12 @@ figcaption {
   position: relative;
 }
 
+.swiper_component.is-home-hero {
+  z-index: 1;
+  width: 100%;
+  position: relative;
+}
+
 .collections_swiper-wrapper {
   width: 100%;
   position: relative;
@@ -3196,6 +3202,11 @@ figcaption {
   display: flex;
 }
 
+.swiper.is-home-hero {
+  width: 100%;
+  overflow: hidden;
+}
+
 .swiper-wrapper {
   align-items: flex-start;
   display: flex;
@@ -3226,6 +3237,10 @@ figcaption {
   align-items: stretch;
   width: 50vw;
   max-width: 50vw;
+}
+
+.swiper-wrapper.is-home-hero {
+  width: 100%;
 }
 
 .swiper-slide {
@@ -3275,6 +3290,17 @@ figcaption {
   display: flex;
 }
 
+.swiper-slide.is-home-hero {
+  z-index: 1;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  min-height: 45rem;
+  padding: 5.25rem 6.75rem 9rem;
+  display: flex;
+  position: relative;
+}
+
 .swiper_overlay-navigation {
   z-index: 2;
   pointer-events: none;
@@ -3316,6 +3342,10 @@ figcaption {
   left: 0;
 }
 
+.swiper_button.swiper-prev.is-home-hero {
+  position: static;
+}
+
 .swiper_button.swiper-next.in-lookbook {
   border-color: var(--_primitives---brand--chocolat);
   right: 0;
@@ -3345,6 +3375,10 @@ figcaption {
 
 .swiper_button.swiper-next.pointer-events-on {
   right: -1.5rem;
+}
+
+.swiper_button.swiper-next.is-home-hero {
+  position: static;
 }
 
 .swiper_button-icon {
@@ -6781,6 +6815,96 @@ figcaption {
   display: none;
 }
 
+.home-hero_wrapper {
+  position: relative;
+}
+
+.swiper_content {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 42rem;
+  height: 100%;
+  display: flex;
+}
+
+.button-block {
+  flex: auto;
+}
+
+.image-hero_bg {
+  z-index: -1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+  overflow: hidden;
+}
+
+.image-hero_desktop-bg {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.image-hero_bg-image {
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.image-hero_video-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.image-hero_bg-embed {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.image-hero_mobile-bg {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  inset: 0%;
+}
+
+.home-hero_controls {
+  z-index: 1;
+  pointer-events: none;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+  padding-left: 6.75rem;
+  padding-right: 6.75rem;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.home-hero_navigation {
+  grid-column-gap: .75rem;
+  grid-row-gap: .75rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 3.25rem;
@@ -7048,6 +7172,10 @@ figcaption {
 
   .swiper-slide.is-card-swiper {
     width: 40%;
+  }
+
+  .swiper-slide.is-home-hero {
+    padding: 4rem 3rem 7rem;
   }
 
   .socials_list {
@@ -7476,6 +7604,16 @@ figcaption {
     max-height: 30vh;
     display: none;
   }
+
+  .swiper_content {
+    max-width: 36rem;
+  }
+
+  .home-hero_controls {
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -7829,6 +7967,17 @@ figcaption {
     grid-row-gap: 2rem;
   }
 
+  .swiper.is-collections {
+    overflow: hidden;
+  }
+
+  .swiper-slide.is-home-hero {
+    min-height: 40rem;
+    padding-top: 2.75rem;
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+  }
+
   .swiper_pagination {
     height: .8125rem;
   }
@@ -8063,6 +8212,12 @@ figcaption {
     position: fixed;
     top: 0;
   }
+
+  .swiper_content {
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: none;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -8232,6 +8387,12 @@ figcaption {
 
   .swiper-slide.is-card-swiper {
     width: min(19.375rem, 90vw);
+  }
+
+  .swiper-slide.is-home-hero {
+    padding-top: 2rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 
   .swiper_button.swiper-prev.pointer-events-on {
@@ -8460,6 +8621,26 @@ figcaption {
   .footer_soutien-image {
     width: 100%;
     height: 100%;
+  }
+
+  .section_home-hero {
+    padding: .25rem;
+  }
+
+  .swiper_content {
+    opacity: 100;
+  }
+
+  .image-hero_mobile-bg {
+    display: block;
+  }
+
+  .home-hero_controls {
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    flex-flow: wrap;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 }
 
