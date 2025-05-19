@@ -12,10 +12,11 @@
     "hero": {
       "type": "hero",
       "settings": {
+        "image_bild": "shopify://shop_images/association.webp",
         "text_headline": "L'association",
         "richtext_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
         "url_button_link": "",
-        "text_button_text": "More Information"
+        "text_button_text": "Découvrir"
       }
     },
     "contenu_titre_sticke": {
@@ -24,45 +25,87 @@
         "h2_Ggh6Q4": {
           "type": "h2",
           "settings": {
-            "text_titre": "Heading"
+            "text_titre": "L’association : Nos Trucs Z’en Plus"
           }
         },
         "headline_CLXzQD": {
           "type": "headline",
           "settings": {
-            "text_headline": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy."
+            "text_headline": "Une aventure humaine, ici et bientôt là-bas"
           }
         },
         "text_AeEqxG": {
           "type": "text",
           "settings": {
-            "richtext_paragraph": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>"
-          }
-        },
-        "buttons_njLR4e": {
-          "type": "buttons",
-          "settings": {
-            "url_button_link": "shopify://pages/contact",
-            "text_button_text": "Button",
-            "url_button_link_2": "",
-            "text_button_text_2": "Button 2"
+            "richtext_paragraph": "<p>Nous avons créé une association loi 1901 à but non lucratif avec une idée forte en tête : emmener des personnes en situation de handicap dans les pays producteurs de café, pour leur faire vivre une expérience unique et immersive !<br/><br/>Ce projet, nous le portons avec cœur : permettre à aux EPANOU; jeunes et adultes accompagnés par des ESAT, de découvrir, sur place, les étapes de production du café qu’ils manipulent ici en France. Du tri à la cueillette, en passant par le lavage et la torréfaction, ce sera pour eux une plongée concrète dans l’univers du café de spécialité.Pour nous accompagner dans cette aventure, nous avons la chance d’avoir une marraine de choix : Mercotte, passionnée de transmission, de gourmandise… et de projets qui ont du sens.<br/>Ce n’est que le début, mais l’envie est immense.<br/>On espère vous embarquer avec nous !<br/><br/></p>"
           }
         }
       },
       "block_order": [
         "h2_Ggh6Q4",
         "headline_CLXzQD",
-        "text_AeEqxG",
-        "buttons_njLR4e"
+        "text_AeEqxG"
       ],
       "settings": {
         "image_image": "shopify://shop_images/Z10S-2.jpg"
+      }
+    },
+    "selection_manuel_DVdGBb": {
+      "type": "selection_manuel",
+      "blocks": {
+        "selection_gg9rJi": {
+          "type": "selection",
+          "settings": {
+            "text_titre_selection": "Soutiens l’asso… avec du style !",
+            "text_texte_tag_1": "Costa Rica",
+            "text_texte_tag_2": "Costa Rica",
+            "text_paragraphe": "On te propose nos sacs en toile de jute, ceux qui ont transporté du café depuis les quatre coins du monde !Même taille, même format… mais origine mystère ! Chaque sac a sa propre histoire, son pays, son visuel, et ses petites imperfections qui font tout le charme. Mais surtout : 100% du montant est reversé à notre association, pour nos employés en situation de handicap.Un objet utile, décoratif, engagé… et qui sent bon le café d’ailleurs !",
+            "url_button_lien": "",
+            "text_button_texte": "Découvrir nos sacs",
+            "url_link": "",
+            "text_etiquette": "Sacs en toile de jute"
+          }
+        },
+        "selection_phUfQA": {
+          "type": "selection",
+          "settings": {
+            "text_titre_selection": "Un kilo pour toi, un euro pour eux !",
+            "text_texte_tag_1": "Costa Rica",
+            "text_texte_tag_2": "Costa Rica",
+            "text_paragraphe": "À chaque achat d’un sac de café d’un kilo, tu fais plus que te régaler : 1 euro est reversé à notre association, qui œuvre pour créer des ponts entre le monde du café et les personnes en situation de handicap.Une façon concrète de soutenir nos actions dans les pays producteurs, tout en continuant à savourer ton café préféré. Parce qu’un bon café, c’est encore meilleur quand il a du sens.",
+            "url_button_lien": "",
+            "text_button_texte": "Découvrir nos cafés",
+            "url_link": "shopify://collections/cafes",
+            "text_etiquette": "Sachet de 1 kilo"
+          }
+        }
+      },
+      "block_order": [
+        "selection_gg9rJi",
+        "selection_phUfQA"
+      ],
+      "name": "Selection manuel",
+      "settings": {
+        "text_titre_section": "Soutiens l’asso… avec du style !",
+        "text_sous_titre": "On ne va pas te mentir, pour les emmener avec nous, on a besoin de sous… mais pour la bonne cause ! Alors, si tu achètes un kilo ou un joli sac en toile, tu fais kiffer ton intérieur et notre asso. Gagnant-gagnant, non ?"
       }
     },
     "card_swiper": {
       "type": "card_swiper",
       "blocks": {
         "card_69NwWX": {
+          "type": "card",
+          "settings": {}
+        },
+        "card_VtyHfV": {
+          "type": "card",
+          "settings": {}
+        },
+        "card_qL8wzE": {
+          "type": "card",
+          "settings": {}
+        },
+        "card_JeMNxQ": {
           "type": "card",
           "settings": {}
         },
@@ -73,16 +116,81 @@
       },
       "block_order": [
         "card_69NwWX",
+        "card_VtyHfV",
+        "card_qL8wzE",
+        "card_JeMNxQ",
         "card_xyepVC"
       ],
       "settings": {}
     },
-    "content": {
-      "type": "content",
-      "settings": {}
+    "contenu_7FfWwj": {
+      "type": "contenu",
+      "blocks": {
+        "headline_3Bbkwk": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Pourquoi ce choix ?"
+          }
+        },
+        "text_8nKQED": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Parce que ce projet est né d’une relation de confiance construite depuis plusieurs années. <br/>Chaque jeudi, les EPANOU viennent à l’atelier pour ensacher vos sachets de café, avec rigueur, application… et toujours le sourire ! Ils font déjà pleinement partie de l’aventure du Panier à Café.<br/>Alors on s’est dit : et si on allait encore plus loin ? Si on leur offrait la possibilité de voir, de leurs propres yeux, l’origine de ce café qu’ils manipulent chaque semaine ? <br/><br/>Ce projet d’immersion dans les pays producteurs est la suite naturelle d’un lien fort, humain et quotidien !<br/><br/></p>"
+          }
+        },
+        "buttons_Tq7YHg": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "",
+            "text_button_text": "Button",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
+        }
+      },
+      "block_order": [
+        "headline_3Bbkwk",
+        "text_8nKQED",
+        "buttons_Tq7YHg"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "left_right": "right"
+      }
     },
     "pages": {
       "type": "pages",
+      "blocks": {
+        "carte_dwGbUF": {
+          "type": "carte",
+          "settings": {
+            "text_heading": "Notre histoire",
+            "url_link": "",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_nmNmAT": {
+          "type": "carte",
+          "settings": {
+            "text_heading": "Notre histoire",
+            "url_link": "",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_FNhQ6p": {
+          "type": "carte",
+          "settings": {
+            "text_heading": "Notre histoire",
+            "url_link": "",
+            "text_text": "Découvrir"
+          }
+        }
+      },
+      "block_order": [
+        "carte_dwGbUF",
+        "carte_nmNmAT",
+        "carte_FNhQ6p"
+      ],
       "settings": {}
     },
     "reseaux": {
@@ -97,8 +205,9 @@
   "order": [
     "hero",
     "contenu_titre_sticke",
+    "selection_manuel_DVdGBb",
     "card_swiper",
-    "content",
+    "contenu_7FfWwj",
     "pages",
     "reseaux"
   ]

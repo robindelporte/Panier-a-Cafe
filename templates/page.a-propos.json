@@ -1,28 +1,90 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "hero": {
-            "type": "hero"
-        },
-        "contenu_avec_titre": {
-            "type": "contenu_avec_titre"
-        },
-        "content": {
-            "type": "content"
-        },
-        "team": {
-            "type": "team"
-        },
-        "faq": {
-            "type": "faq"
-        }
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "text_headline": "Notre Histoire",
+        "richtext_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+        "url_button_link": "",
+        "text_button_text": "More Information"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "hero",
-        "contenu_avec_titre",
-        "content",
-        "team",
-        "faq"
-    ]
+    "contenu_avec_titre": {
+      "type": "contenu_avec_titre",
+      "blocks": {
+        "text_bXX7Q6": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Au Panier à Café, le café c’est sacré. On ne rigole pas avec les arômes, la traçabilité ou la façon dont il est torréfié. Ce n’est pas juste une boisson du matin, c’est une histoire de passion, de rencontres et d’engagement.<br/><br/>Pourtant, il y a encore quelques années, Fabien travaillait dans l’horlogerie de luxe. Puis un jour, il a dit stop. Il voulait du sens, du concret, de l’humain. Alors il a tout plaqué, s’est formé à la torréfaction, a acheté une machine, un coffee truck… et le Panier à Café est né !<br/><br/>Depuis 8 ans, on sourit, on torréfie, on part en voyage, on forme des jeunes, on travaille avec des personnes en situation de handicap… et surtout, on vous fait découvrir des cafés comme vous n’en avez jamais goûtés. Le café mérite mieux que d’être avalé à la va-vite : c’est un grand cru à part entière.<br/><br/>Et nous, on est là pour vous le prouver !<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_bXX7Q6"
+      ],
+      "settings": {
+        "text_heading": "L’histoire du Panier à Café"
+      }
+    },
+    "contenu_UhVyzY": {
+      "type": "contenu",
+      "blocks": {
+        "text_k6XLNc": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Au Panier à Café, le café c’est sacré. On ne rigole pas avec les arômes, la traçabilité ou la façon dont il est torréfié. Ce n’est pas juste une boisson du matin, c’est une histoire de passion, de rencontres et d’engagement.<br/><br/>Pourtant, il y a encore quelques années, Fabien travaillait dans l’horlogerie de luxe. Puis un jour, il a dit stop. Il voulait du sens, du concret, de l’humain. Alors il a tout plaqué, s’est formé à la torréfaction, a acheté une machine, un coffee truck… et le Panier à Café est né !<br/><br/>Depuis 8 ans, on sourit, on torréfie, on part en voyage, on forme des jeunes, on travaille avec des personnes en situation de handicap… et surtout, on vous fait découvrir des cafés comme vous n’en avez jamais goûtés. Le café mérite mieux que d’être avalé à la va-vite : c’est un grand cru à part entière.<br/><br/>Et nous, on est là pour vous le prouver !<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_k6XLNc"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "left_right": "right"
+      }
+    },
+    "team": {
+      "type": "team",
+      "blocks": {
+        "tab_8PtcDJ": {
+          "type": "tab",
+          "settings": {
+            "text_text": "Ilona, c’est l’œil graphique du Panier à Café. Future directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter."
+          }
+        }
+      },
+      "block_order": [
+        "tab_8PtcDJ"
+      ],
+      "settings": {
+        "text_heading": "Tabs"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "text_heading": "Foire aux questions",
+        "richtext_richtext": "<p>\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                </p>"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "hero",
+    "contenu_avec_titre",
+    "contenu_UhVyzY",
+    "team",
+    "faq"
+  ]
 }
