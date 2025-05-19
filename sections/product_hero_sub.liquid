@@ -1261,7 +1261,7 @@
                               <a
                                 li-element="add-to-cart"
                                 href="#"
-                                x-on:click"$nextTick(() => { document.querySelector('[data-minicart-trigger]').click() })"
+                                x-on:click="$nextTick(() => { document.querySelector('[data-minicart-trigger]').click() })"
                                 class="button is-secondary max-width-full w-button"
                                 @click="addToCart($event, true)"
                                 :disabled="!addToCartButton"
