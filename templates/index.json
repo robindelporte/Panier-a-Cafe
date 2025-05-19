@@ -103,44 +103,44 @@
     "lookbook_Q4hEjV": {
       "type": "lookbook",
       "blocks": {
-        "dot_Nnyqif": {
+        "dot_M3UGXj": {
           "type": "dot",
           "settings": {
-            "text_x_achse": "10",
+            "text_x_achse": "15",
+            "text_y_achse": "45",
+            "product_produit": "cafe-bio-amore"
+          }
+        },
+        "dot_zBqMMg": {
+          "type": "dot",
+          "settings": {
+            "text_x_achse": "35",
             "text_y_achse": "50",
-            "product_produit": "cafe-bio-amore"
+            "product_produit": "cafe-el-volcano"
           }
         },
-        "dot_rKWdBB": {
+        "dot_fbpLVi": {
           "type": "dot",
           "settings": {
-            "text_x_achse": "30",
+            "text_x_achse": "50",
             "text_y_achse": "55",
-            "product_produit": "cafe-bio-amore"
+            "product_produit": "cafe-el-greengo"
           }
         },
-        "dot_YfqrmX": {
+        "dot_LqU8yq": {
           "type": "dot",
           "settings": {
             "text_x_achse": "90",
-            "text_y_achse": "40",
-            "product_produit": "cafe-decafeine"
-          }
-        },
-        "dot_8QNCWB": {
-          "type": "dot",
-          "settings": {
-            "text_x_achse": "60",
             "text_y_achse": "45",
-            "product_produit": "cafe-el-greengo"
+            "product_produit": "cafe-bio-amore"
           }
         }
       },
       "block_order": [
-        "dot_Nnyqif",
-        "dot_rKWdBB",
-        "dot_YfqrmX",
-        "dot_8QNCWB"
+        "dot_M3UGXj",
+        "dot_zBqMMg",
+        "dot_fbpLVi",
+        "dot_LqU8yq"
       ],
       "name": "Lookbook",
       "settings": {
