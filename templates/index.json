@@ -121,14 +121,14 @@
         "text_aVDg3A": {
           "type": "text",
           "settings": {
-            "richtext_paragraph": "<p>Au Panier à Café, chaque grain raconte une histoire. Celle d’un produit sourcé avec soin, qui tient compte de l’humain et de l’environnement.</p><p>Derrière chaque tasse, il y a un engagement ! Nous travaillons avec des producteurs rémunérés justement, soutenons des coopératives de femmes, favorisons les circuits courts et confions la préparation de nos sachets aux travailleurs de l’ESAT des EPANOU du Parmelan.</p><p>Notre objectif est simple : proposer un café qui a du goût, du sens, et un impact positif !<br/></p>"
+            "richtext_paragraph": "<p>Au Panier à Café, chaque grain raconte une histoire. Celle d’un produit sourcé avec soin, qui tient compte de l’humain et de l’environnement.<br/><br/>Derrière chaque tasse, il y a un engagement ! Nous travaillons avec des producteurs rémunérés justement, soutenons des coopératives de femmes, favorisons les circuits courts et confions la préparation de nos sachets aux travailleurs de l’ESAT des EPANOU du Parmelan.<br/><br/>Notre objectif est simple : proposer un café qui a du goût, du sens, et un impact positif !<br/></p>"
           }
         },
         "buttons_KzmgBX": {
           "type": "buttons",
           "settings": {
-            "url_button_link": "",
-            "text_button_text": "Button",
+            "url_button_link": "shopify://collections/cafes",
+            "text_button_text": "Découvrir nos cafés",
             "url_button_link_2": "",
             "text_button_text_2": "Button 2"
           }
