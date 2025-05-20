@@ -25,10 +25,6 @@
       "type": "collection_tabs",
       "settings": {}
     },
-    "collection_tabs_marr": {
-      "type": "collection_tabs_marr",
-      "settings": {}
-    },
     "bandeau": {
       "type": "bandeau",
       "settings": {}
@@ -89,7 +85,6 @@
     "hero",
     "hero_2",
     "collection_tabs",
-    "collection_tabs_marr",
     "bandeau",
     "contenu",
     "lookbook",
