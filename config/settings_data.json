@@ -33,7 +33,7 @@
           "collection_search_bestseller_limit": 4,
           "free_shipping": "8000",
           "url_routesroot_url": "/",
-          "small": ""
+          "small": "small-menu"
         }
       },
       "footer": {
