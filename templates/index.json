@@ -337,8 +337,69 @@
       ],
       "settings": {}
     },
+    "contenu_kbV9Uz": {
+      "type": "contenu",
+      "blocks": {
+        "headline_reGw4f": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Un événement qui a du goût"
+          }
+        },
+        "text_KyFDdw": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Que ce soit pour un mariage, un séminaire, un salon pro ou un anniversaire, on débarque avec notre coffee truck et nos baristas pour préparer des boissons chaudes sur mesure, avec le sourire et beaucoup (beaucoup) de caféine !<br/><br/>Vous organisez un événement plus intimiste ? On peut aussi vous louer une machine à café pour un week-end ou une soirée, avec tout le nécessaire pour régaler vos invités.<br/><br/>Un bon moment, un bon café… et une équipe aux petits soins pour faire de votre événement un souvenir qui se boit jusqu’à la dernière goutte !</p>"
+          }
+        },
+        "buttons_NDrikW": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "shopify://pages/contact",
+            "text_button_text": "Je veux en savoir plus !",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
+        }
+      },
+      "block_order": [
+        "headline_reGw4f",
+        "text_KyFDdw",
+        "buttons_NDrikW"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "image_image": "shopify://shop_images/chr-image.webp",
+        "left_right": "right"
+      }
+    },
     "contenu_2": {
       "type": "contenu_2",
+      "blocks": {
+        "carte_DedxnW": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/recyclage-1.png"
+          }
+        },
+        "carte_f4wAfh": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/recyclage-2.png"
+          }
+        },
+        "carte_Ln8jFn": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/recyclage-3.png"
+          }
+        }
+      },
+      "block_order": [
+        "carte_DedxnW",
+        "carte_f4wAfh",
+        "carte_Ln8jFn"
+      ],
       "settings": {
         "text_heading": "Recycle ton café, sans te prendre la tête",
         "text_paragraph": "Si ton marc de café avait une seconde vie ? Grâce à notre sac de collecte, on te propose de recycler ton marc pour le transformer en pellets pour poêles à granulés via notre partenariat avec Environ Alpes. Pour les pros (PME, restaurateurs), on récupère le sac directement lors de nos livraisons de café. Pour les particuliers, il suffit de nous le rapporter sur les marchés ou à l’atelier lors de ta prochaine visite. Simple, utile… et bien plus écolo que de le jeter à la poubelle !",
@@ -403,6 +464,7 @@
     "chiffres",
     "selection",
     "pages",
+    "contenu_kbV9Uz",
     "contenu_2",
     "related_articles",
     "collection_tabs_marr_6khPpp",
