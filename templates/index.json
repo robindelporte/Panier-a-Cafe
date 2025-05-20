@@ -11,27 +11,45 @@
   "sections": {
     "hero_slider": {
       "type": "hero_slider",
-      "settings": {}
-    },
-    "hero": {
-      "type": "hero",
-      "settings": {}
-    },
-    "hero_2": {
-      "type": "hero_2",
+      "blocks": {
+        "slide_W8mLC8": {
+          "type": "slide",
+          "settings": {
+            "textarea_heading": "Heading",
+            "text_text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "url_button_1_link": "",
+            "text_button_1_text": "Button Text",
+            "url_button_2_link": "",
+            "text_button_2_text": "Button Text"
+          }
+        }
+      },
+      "block_order": [
+        "slide_W8mLC8"
+      ],
       "settings": {}
     },
     "collection_tabs": {
       "type": "collection_tabs",
-      "settings": {}
+      "settings": {
+        "collection_list": [
+          "cafes",
+          "les-thes",
+          "machines-et-cafetieres"
+        ]
+      }
     },
     "bandeau": {
       "type": "bandeau",
-      "settings": {}
+      "settings": {
+        "text_heading": "Heading"
+      }
     },
     "contenu": {
       "type": "contenu",
-      "settings": {}
+      "settings": {
+        "left_right": "left"
+      }
     },
     "lookbook": {
       "type": "lookbook",
@@ -43,11 +61,16 @@
     },
     "chiffres": {
       "type": "chiffres",
-      "settings": {}
+      "settings": {
+        "text_heading": "Le panier à café en chiffre"
+      }
     },
     "selection": {
       "type": "selection",
-      "settings": {}
+      "settings": {
+        "text_titre": "Un café pour chaque mois, une ambiance pour chaque saison",
+        "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
+      }
     },
     "pages": {
       "type": "pages",
@@ -55,35 +78,50 @@
     },
     "contenu_2": {
       "type": "contenu_2",
-      "settings": {}
+      "settings": {
+        "text_heading": "Recycle ton café, sans te prendre la tête",
+        "text_paragraph": "Si ton marc de café avait une seconde vie ? Grâce à notre sac de collecte, on te propose de recycler ton marc pour le transformer en pellets pour poêles à granulés via notre partenariat avec Environ Alpes. Pour les pros (PME, restaurateurs), on récupère le sac directement lors de nos livraisons de café. Pour les particuliers, il suffit de nous le rapporter sur les marchés ou à l’atelier lors de ta prochaine visite. Simple, utile… et bien plus écolo que de le jeter à la poubelle !",
+        "url_button_link": "",
+        "text_button_text": "Je veux un sac"
+      }
     },
     "related_articles": {
       "type": "related_articles",
-      "settings": {}
+      "settings": {
+        "text_headline": "Nouveautés du blog"
+      }
     },
     "logo_defilants": {
       "type": "logo_defilants",
-      "settings": {}
+      "settings": {
+        "text_heading": "Ils nous font confiance"
+      }
     },
     "collection_2": {
       "type": "collection_2",
-      "settings": {}
+      "settings": {
+        "text_heading": "Nos nouveautés"
+      }
     },
     "reseaux": {
       "type": "reseaux",
-      "settings": {}
+      "settings": {
+        "text_heading": "Suivez-nous sur nos réseaux sociaux"
+      }
     },
     "newsletter": {
       "type": "newsletter",
-      "settings": {}
+      "settings": {
+        "text_headline": "S'inscrire à la newsletter",
+        "text_checkbox": "En vous inscrivant, vous acceptez notre <a href=\"#\" li-settings:url=\"Politique de confidentialite\">politique de confidentialité</a> et consentez à recevoir des emails.",
+        "url_politique_de_confidentialite": ""
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "hero_slider",
-    "hero",
-    "hero_2",
     "collection_tabs",
     "bandeau",
     "contenu",
