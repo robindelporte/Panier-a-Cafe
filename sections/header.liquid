@@ -75,7 +75,7 @@
 
                                     {% if link.links.size > 0 %}
                                       <div li-if="link.links.size > 0" class="nav_dropdown-links-wrapper">
-                                        {% for child_link in link_links %}
+                                        {% for child_link in menu_links %}
                                           <div li-for="child_link in link_links" class="nav_dropdown-link-item">
                                             <a
                                               li-object="child_link.title"
