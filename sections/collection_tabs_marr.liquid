@@ -1,0 +1,22 @@
+<style>.button.is-tab-button {
+  opacity: 60%;
+}
+.button.is-tab-button.is-active {
+  opacity: 100%;
+}
+</style><div class="padding-global padding-section-medium"><div class="container-large"><div x-data="{tab: {{section.index}}1}" class="category_wrapper"><div class="category_top"><div role="tablist" li-for:inside="collection in section.settings.collection_list" class="tab_menu">
+        {% for collection in section.settings.collection_list %}                            <button role="tab" x-on:click="tab = {{section.index}}{{forloop.index}}" aria-controls="collection-tab-{{section.index}}{{forloop.index}}" id="collection-button-{{section.index}}{{forloop.index}}" x-bind:aria-selected="tab === {{section.index}}{{forloop.index}} ? 'true' : 'false'" x-bind:class="tab === {{section.index}}{{forloop.index}} ? 'is-active' : ''" class="button is-tab-button is-alternate is-active"><div li-object="collection.title">{{ collection.title }}</div></button>
+                    {% endfor %}    </div>
+</div><div li-for:inside="collection in section.settings.collection_list" class="tab_body">
+        {% for collection in section.settings.collection_list %}                            
+                            <div id="collection-tab-{{section.index}}{{forloop.index}}" role="tabpanel" aria-labelledby="collection-button-{{section.index}}{{forloop.index}}" x-show="tab === {{section.index}}{{forloop.index}}" class="category_tab-panel"><div li-for:inside="product in collection.products limit: 4" class="category_tab-grid">
+        {% for product in collection.products limit: 4 %}                            
+                            {% render 'product_item', product: product %}
+
+                            
+                    {% endfor %}    </div>
+<a li-object:href="collection.url" href="{{ collection.url }}" class="button is-white w-button">En voir plus</a></div>
+                            
+                    {% endfor %}    </div>
+</div></div></div><div class="hide w-embed"></div>
+ {% schema %} {"tag":"section","name":"Collection Tabs Marr","class":"section_category is-marrong","settings":[{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs Marr","category":"Liquify","blocks":[]}]} {% endschema %}
