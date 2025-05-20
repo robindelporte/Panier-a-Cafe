@@ -1,16 +1,53 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "marche": {
-            "type": "marche"
+  "sections": {
+    "marche": {
+      "type": "marche",
+      "blocks": {
+        "tab_ALztBd": {
+          "type": "tab",
+          "settings": {
+            "text_horaires": "7h - 13h",
+            "text_adresse": "Place Ste Claire (En vieille Ville)",
+            "url_link": ""
+          }
         },
-        "reseaux": {
-            "type": "reseaux"
+        "tab_8AreXU": {
+          "type": "tab",
+          "settings": {
+            "text_horaires": "7h - 13h",
+            "text_adresse": "Place Ste Claire (En vieille Ville)",
+            "url_link": ""
+          }
         }
+      },
+      "block_order": [
+        "tab_ALztBd",
+        "tab_8AreXU"
+      ],
+      "settings": {
+        "text_heading": "Où nous trouver ?"
+      }
     },
-    "layout": "page.marche",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "marche",
-        "reseaux"
-    ]
+    "reseaux": {
+      "type": "reseaux",
+      "settings": {
+        "text_heading": "Suivez-nous sur nos réseaux sociaux"
+      }
+    }
+  },
+  "layout": "page.marche",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "marche",
+    "reseaux"
+  ]
 }
