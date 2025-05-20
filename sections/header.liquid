@@ -59,10 +59,9 @@
                   <div class="padding-global max-width-full not-mobile">
                     <div class="container-large">
                       <div class="nav_dropdown-grid-wrapper">
-                        {% assign menu_links = linklists[settings.menu].links %}
-                        {% if menu_links.size > 0 %}
+                        {% if link.links.size > 0 %}
                           <div li-if="link.links.size > 0" class="nav_dropdown-grid">
-                            {% for link in menu_links %}
+                            {% for link in linklists[settings.menu].links %}
                               <div li-for="link in linklists[settings.menu].links" class="nav_child-link">
                                 <div li-object="link.title" class="nav_dropdown-link">{{ link.title }}</div>
 
