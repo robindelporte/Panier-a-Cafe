@@ -36,8 +36,8 @@
   --_primitives---opacity--transparent: transparent;
   --_primitives---opacity--neutral-darkest-15: #00000026;
   --_primitives---brand--camel: #77634f;
-  --_primitives---opacity--neutral-darkest-10: #0000001a;
   --_primitives---colors--full-white: white;
+  --_primitives---opacity--neutral-darkest-10: #0000001a;
   --color-scheme-1--border-secondary: #ededed;
   --_primitives---colors--neutral: #666;
   --_primitives---opacity--neutral-darkest-60: #0009;
@@ -906,6 +906,11 @@ figcaption {
 
 .button.is-tab-button.w--current, .button.is-tab-button.is-active {
   border-bottom-color: var(--_primitives---brand--chocolat);
+}
+
+.button.is-tab-button.is-alternate {
+  border-bottom-color: var(--_primitives---colors--full-white);
+  color: var(--_primitives---colors--full-white);
 }
 
 .button.is-outline {
@@ -3019,6 +3024,10 @@ figcaption {
 
 .section_category {
   position: relative;
+}
+
+.section_category.is-marrong {
+  background-color: var(--_primitives---brand--chocolat);
 }
 
 .category_wrapper {

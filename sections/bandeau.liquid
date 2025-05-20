@@ -1,9 +1,7 @@
-<div class="padding-global"><div class="padding-section-medium"><div class="container-large">{% if section.settings.heading %}    <div li-if="section.settings.heading" class="bandeau_heading-wrapper">
-    <h2>
+<div class="padding-global"><div class="padding-section-medium"><div class="container-large"><div class="bandeau_heading-wrapper"><h2>
 {{ section.settings.text_heading }}
 </h2>
-    </div>
-{% endif %}<div class="icon_list-wrapper">{% for block in section.blocks %}
+</div><div class="icon_list-wrapper">{% for block in section.blocks %}
     {% if block.type == "icone" %}
                     <div li-block="icone" class="icon-wrapper">
                                     <img src="{{ block.settings.image_icone | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_icone.alt }}" class="icon">
