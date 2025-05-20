@@ -15,11 +15,9 @@
         "settings": {
           "richtext_banner_content": "<p> Livraison offerte pour toute commande de +80€</p>",
           "collection_search_bestseller": "cafes",
-          "collection_search_bestseller_limit": 6,
+          "collection_search_bestseller_limit": 4,
           "free_shipping": "8000",
-          "url_routesroot_url": "/",
-          "menu": "main-menu",
-          "small": "small-menu"
+          "url_routesroot_url": "/"
         }
       },
       "footer": {
