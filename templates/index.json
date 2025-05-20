@@ -432,9 +432,7 @@
     "collection_2": {
       "type": "collection_2",
       "settings": {
-        "text_heading": "Nos nouveautés",
-        "collection_collection": "cafes",
-        "collection_collection_limit": 6
+        "text_heading": "Nos nouveautés"
       }
     },
     "reseaux": {
