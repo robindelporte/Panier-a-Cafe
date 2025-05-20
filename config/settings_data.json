@@ -12,12 +12,28 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "menu_9ktF9N": {
+            "type": "menu",
+            "name": "menu",
+            "settings": {
+              "menu": "main-menu",
+              "product_1": "cafe-el-diablo",
+              "product_2": "cafe-el-diablo"
+            },
+            "blocks": {}
+          }
+        },
+        "block_order": [
+          "menu_9ktF9N"
+        ],
         "settings": {
           "richtext_banner_content": "<p> Livraison offerte pour toute commande de +80€</p>",
           "collection_search_bestseller": "cafes",
           "collection_search_bestseller_limit": 4,
           "free_shipping": "8000",
-          "url_routesroot_url": "/"
+          "url_routesroot_url": "/",
+          "small": ""
         }
       },
       "footer": {
