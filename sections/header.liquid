@@ -99,8 +99,8 @@
                                     <a li-object:href="product.url" href="{{ product_1.url }}" class="w-inline-block"
                                       ><img
                                         alt=""
-                                        src="{{ product_1.featured_image }}"
-                                        li-object:src="product.featured_image | img_url: 'master'"
+                                        src="{{ product_1.featured_image | img_url: 'master' }}"
+                                        li-object:src="product_1.featured_image | img_url: 'master'"
                                         loading="lazy"
                                       > </a
                                     ><a
