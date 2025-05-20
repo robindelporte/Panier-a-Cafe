@@ -139,27 +139,33 @@
         "selection_yAqFKx": {
           "type": "selection",
           "settings": {
-            "text_titre_selection": "Talamanca",
-            "text_texte_tag_1": "Costa Rica",
-            "text_texte_tag_2": "Costa Rica",
-            "text_paragraphe": "Un café riche et gourmand, parfait pour méthode douce (V60, Chemex et Aéropress) ou en espresso pour révéler toute la complexité. Ce café nous vient tout droit de la région de Chirripo, dans la province de San José, au Costa Rica. Cultivé par la famille Urena Rojas, ce micro-lot est issu de la plantation Higueron, un lieu emblématique niché à 1825m d'altitude.",
+            "text_titre_selection": "Une sélection de café personnalisé",
+            "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
+            "text_texte_tag_1": "100% Arabica",
+            "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
+            "text_texte_tag_2": "Selon vos goûts",
+            "text_paragraphe": "Vous aimez les cafés fruités, ronds ou plus corsés ? On vous guide pour choisir la torréfaction qui plaira à vos équipes. Côté prix ? On s’adapte à votre consommation et à vos contraintes.Un vrai bon café, livré automatiquement tous les mois.",
             "url_button_lien": "",
             "text_button_texte": "Découvrir",
             "url_link": "",
-            "text_etiquette": "Café du mois"
+            "image_image_produit": "shopify://shop_images/cafe.png",
+            "text_etiquette": "Un café de spécialité"
           }
         },
         "selection_B9GyNp": {
           "type": "selection",
           "settings": {
-            "text_titre_selection": "Talamanca",
-            "text_texte_tag_1": "Costa Rica",
-            "text_texte_tag_2": "Costa Rica",
-            "text_paragraphe": "Un café riche et gourmand, parfait pour méthode douce (V60, Chemex et Aéropress) ou en espresso pour révéler toute la complexité. Ce café nous vient tout droit de la région de Chirripo, dans la province de San José, au Costa Rica. Cultivé par la famille Urena Rojas, ce micro-lot est issu de la plantation Higueron, un lieu emblématique niché à 1825m d'altitude.",
+            "text_titre_selection": "Des machines pensées pour vous",
+            "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
+            "text_texte_tag_1": "Location adaptée à vos besoins",
+            "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
+            "text_texte_tag_2": "Installation & SAV inclus",
+            "text_paragraphe": "Que vous soyez une petite structure ou une entreprise plus large, nous vous proposons une formule adaptée à vos besoins :  → La location de machines à café professionnelles performantes et simples d’utilisation  → Une sélection de cafés de spécialité en fonction de vos goûts et de votre budget",
             "url_button_lien": "",
             "text_button_texte": "Découvrir",
             "url_link": "",
-            "text_etiquette": "Café du mois"
+            "image_image_produit": "shopify://shop_images/machine_773d7676-cd81-4b4b-ab13-d1165622b2a6.png",
+            "text_etiquette": "Une machine et du café"
           }
         }
       },
@@ -168,8 +174,8 @@
         "selection_B9GyNp"
       ],
       "settings": {
-        "text_titre_section": "Un café pour chaque mois, une ambiance pour chaque saison",
-        "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
+        "text_titre_section": "Nos offres : Machine + Café",
+        "text_sous_titre": ""
       }
     },
     "1747736933cbdb30f3": {
@@ -181,9 +187,9 @@
             "form_id": "473013",
             "text_color": "#202020",
             "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
+            "button_label_color": "#ffffff",
             "links_color": "#241f18",
-            "errors_color": "#E02229",
+            "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "center",
             "padding_top": 64,
@@ -210,29 +216,33 @@
         "icone_qQkhpT": {
           "type": "icone",
           "settings": {
-            "text_titre_icone": "Livraison en 48h",
-            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+            "image_icone": "shopify://shop_images/Enveloppe.png",
+            "text_titre_icone": "Prenez contact",
+            "text_description": "commande@lepanieracafé.fr Expliquez-nous vos besoins, on vous guide de A à Z."
           }
         },
         "icone_NC8Y4z": {
           "type": "icone",
           "settings": {
-            "text_titre_icone": "Livraison en 48h",
-            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+            "image_icone": "shopify://shop_images/machine.png",
+            "text_titre_icone": "Choisissez votre machine",
+            "text_description": "On vous conseille le modèle adapté à votre rythme et à la taille de votre équipe."
           }
         },
         "icone_zABnHn": {
           "type": "icone",
           "settings": {
-            "text_titre_icone": "Livraison en 48h",
-            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+            "image_icone": "shopify://shop_images/Grains_de_cafes_714b57cf-cfb3-435c-aae1-459827d38467.png",
+            "text_titre_icone": "Recevez votre café",
+            "text_description": "On livre régulièrement du café fraîchement torréfié, en grains ou moulu selon vos préférences."
           }
         },
         "icone_X7YH3j": {
           "type": "icone",
           "settings": {
-            "text_titre_icone": "Livraison en 48h",
-            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+            "image_icone": "shopify://shop_images/Bras_fort.png",
+            "text_titre_icone": "Installation rapide",
+            "text_description": "On installe la machine et vous êtes prêts à offrir de vraies pauses café à vos équipes."
           }
         }
       },
@@ -244,7 +254,7 @@
       ],
       "name": "bandeau",
       "settings": {
-        "text_heading": "Heading"
+        "text_heading": "Comment ça marche ?"
       }
     },
     "faq": {
