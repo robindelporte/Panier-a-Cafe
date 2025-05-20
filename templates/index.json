@@ -9,455 +9,99 @@
  */
 {
   "sections": {
-    "hero_slider_VT7Gy9": {
+    "hero_slider": {
       "type": "hero_slider",
-      "blocks": {
-        "slide_PR3Lh8": {
-          "type": "slide",
-          "settings": {
-            "textarea_heading": "Heading",
-            "text_text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "url_button_1_link": "",
-            "text_button_1_text": "Button Text",
-            "url_button_2_link": "",
-            "text_button_2_text": "Button Text",
-            "video_desktop": "shopify://files/videos/panier-a-cafe.mp4"
-          }
-        },
-        "slide_CHcDwN": {
-          "type": "slide",
-          "settings": {
-            "textarea_heading": "Heading",
-            "text_text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "url_button_1_link": "",
-            "text_button_1_text": "Button Text",
-            "url_button_2_link": "",
-            "text_button_2_text": "Button Text",
-            "image_image_desktop": "shopify://shop_images/panier-a-cafe.webp"
-          }
-        }
-      },
-      "block_order": [
-        "slide_PR3Lh8",
-        "slide_CHcDwN"
-      ],
-      "name": "Hero Slider",
+      "settings": {}
+    },
+    "hero": {
+      "type": "hero",
+      "settings": {}
+    },
+    "hero_2": {
+      "type": "hero_2",
       "settings": {}
     },
     "collection_tabs": {
       "type": "collection_tabs",
-      "settings": {
-        "collection_list": [
-          "cafes",
-          "capsules",
-          "les-thes"
-        ]
-      }
+      "settings": {}
+    },
+    "collection_tabs_marr": {
+      "type": "collection_tabs_marr",
+      "settings": {}
     },
     "bandeau": {
       "type": "bandeau",
-      "blocks": {
-        "icone_qVKtDx": {
-          "type": "icone",
-          "settings": {
-            "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
-            "text_titre_icone": "Livraison en 48h",
-            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
-          }
-        },
-        "icone_LcNNVX": {
-          "type": "icone",
-          "settings": {
-            "image_icone": "shopify://shop_images/Carte_bleu.png",
-            "text_titre_icone": "Paiement sécurisé",
-            "text_description": "Visa, PayPal, Apple Pay, Mastercard."
-          }
-        },
-        "icone_RXURHd": {
-          "type": "icone",
-          "settings": {
-            "image_icone": "shopify://shop_images/Colis.png",
-            "text_titre_icone": "Livraison offerte",
-            "text_description": "Pour toute commande de plus de 80€."
-          }
-        },
-        "icone_XmDjxh": {
-          "type": "icone",
-          "settings": {
-            "image_icone": "shopify://shop_images/Grains_de_cafes.png",
-            "text_titre_icone": "Abonnement",
-            "text_description": "Café sélectionné et livré automatiquement !"
-          }
-        },
-        "icone_xLz4Yb": {
-          "type": "icone",
-          "settings": {
-            "image_icone": "shopify://shop_images/Localisation.png",
-            "text_titre_icone": "Boutique",
-            "text_description": "805 route des Futaies74370 Villaz."
-          }
-        }
-      },
-      "block_order": [
-        "icone_qVKtDx",
-        "icone_LcNNVX",
-        "icone_RXURHd",
-        "icone_XmDjxh",
-        "icone_xLz4Yb"
-      ],
-      "settings": {
-        "text_heading": "Heading"
-      }
+      "settings": {}
     },
     "contenu": {
       "type": "contenu",
-      "blocks": {
-        "headline_8AkqxF": {
-          "type": "headline",
-          "settings": {
-            "text_headline": "Bien plus qu’un café"
-          }
-        },
-        "text_aVDg3A": {
-          "type": "text",
-          "settings": {
-            "richtext_paragraph": "<p>Au Panier à Café, chaque grain raconte une histoire. Celle d’un produit sourcé avec soin, qui tient compte de l’humain et de l’environnement.<br/><br/>Derrière chaque tasse, il y a un engagement ! Nous travaillons avec des producteurs rémunérés justement, soutenons des coopératives de femmes, favorisons les circuits courts et confions la préparation de nos sachets aux travailleurs de l’ESAT des EPANOU du Parmelan.<br/><br/>Notre objectif est simple : proposer un café qui a du goût, du sens, et un impact positif !<br/></p>"
-          }
-        },
-        "buttons_KzmgBX": {
-          "type": "buttons",
-          "settings": {
-            "url_button_link": "shopify://collections/cafes",
-            "text_button_text": "Découvrir nos cafés",
-            "url_button_link_2": "",
-            "text_button_text_2": "Button 2"
-          }
-        }
-      },
-      "block_order": [
-        "headline_8AkqxF",
-        "text_aVDg3A",
-        "buttons_KzmgBX"
-      ],
-      "settings": {
-        "image_image": "shopify://shop_images/Flag_of_El_Salvador.svg",
-        "left_right": "right"
-      }
+      "settings": {}
     },
-    "lookbook_Q4hEjV": {
+    "lookbook": {
       "type": "lookbook",
-      "blocks": {
-        "dot_M3UGXj": {
-          "type": "dot",
-          "settings": {
-            "text_x_achse": "15",
-            "text_y_achse": "45",
-            "product_produit": "cafe-bio-amore"
-          }
-        },
-        "dot_zBqMMg": {
-          "type": "dot",
-          "settings": {
-            "text_x_achse": "35",
-            "text_y_achse": "50",
-            "product_produit": "cafe-el-volcano"
-          }
-        },
-        "dot_fbpLVi": {
-          "type": "dot",
-          "settings": {
-            "text_x_achse": "60",
-            "text_y_achse": "55",
-            "product_produit": "cafe-el-greengo"
-          }
-        },
-        "dot_LqU8yq": {
-          "type": "dot",
-          "settings": {
-            "text_x_achse": "90",
-            "text_y_achse": "45",
-            "product_produit": "cafe-bio-amore"
-          }
-        }
-      },
-      "block_order": [
-        "dot_M3UGXj",
-        "dot_zBqMMg",
-        "dot_fbpLVi",
-        "dot_LqU8yq"
-      ],
-      "name": "Lookbook",
-      "settings": {
-        "image_bg_image": "shopify://shop_images/lookbook.png"
-      }
+      "settings": {}
     },
     "liste_collections": {
       "type": "liste_collections",
-      "blocks": {
-        "collection_JD78jq": {
-          "type": "collection",
-          "settings": {
-            "url_lien_collection": "shopify://collections/cafes",
-            "image_image_collection": "shopify://shop_images/Cafe_en_grain.png",
-            "text_nom_collection": "Café en grain"
-          }
-        },
-        "collection_rFCwLB": {
-          "type": "collection",
-          "settings": {
-            "url_lien_collection": "shopify://collections/accessoires",
-            "image_image_collection": "shopify://shop_images/Accessoires.png",
-            "text_nom_collection": "Accessoires"
-          }
-        },
-        "collection_WQmVzN": {
-          "type": "collection",
-          "settings": {
-            "url_lien_collection": "shopify://collections/les-thes",
-            "image_image_collection": "shopify://shop_images/Thes.png",
-            "text_nom_collection": "Thés"
-          }
-        },
-        "collection_AHGHNG": {
-          "type": "collection",
-          "settings": {
-            "url_lien_collection": "shopify://collections/cafetiere-a-filtre",
-            "image_image_collection": "shopify://shop_images/Cafetiere_a_filtre.png",
-            "text_nom_collection": "Cafetière à filtre"
-          }
-        },
-        "collection_bxA7Wj": {
-          "type": "collection",
-          "settings": {
-            "url_lien_collection": "shopify://collections/machines-a-cafe-a-grain",
-            "image_image_collection": "shopify://shop_images/Machines.png",
-            "text_nom_collection": "Machines"
-          }
-        }
-      },
-      "block_order": [
-        "collection_JD78jq",
-        "collection_rFCwLB",
-        "collection_WQmVzN",
-        "collection_AHGHNG",
-        "collection_bxA7Wj"
-      ],
       "settings": {}
     },
     "chiffres": {
       "type": "chiffres",
-      "blocks": {
-        "chiffres_RKYjdb": {
-          "type": "chiffres",
-          "settings": {
-            "text_valeur_gauche": "70",
-            "text_valeur_droite": "%",
-            "text_texte": "de nos cafés sont conditionnés par des personnes en situation de handicap"
-          }
-        },
-        "chiffres_VYTFRe": {
-          "type": "chiffres",
-          "settings": {
-            "text_valeur_gauche": "50",
-            "text_valeur_droite": "+",
-            "text_texte": "références de cafés de spécialité disponibles à l’année"
-          }
-        },
-        "chiffres_B37afM": {
-          "type": "chiffres",
-          "settings": {
-            "text_valeur_gauche": "90",
-            "text_valeur_droite": "%",
-            "text_texte": "de nos emballages sont recyclables ou réutilisables"
-          }
-        },
-        "chiffres_xUyJa8": {
-          "type": "chiffres",
-          "settings": {
-            "text_valeur_gauche": "15",
-            "text_valeur_droite": "‎ Pays",
-            "text_texte": "d’origine représentés dans notre sélection"
-          }
-        }
-      },
-      "block_order": [
-        "chiffres_RKYjdb",
-        "chiffres_VYTFRe",
-        "chiffres_B37afM",
-        "chiffres_xUyJa8"
-      ],
-      "settings": {
-        "text_heading": "Le panier à café en chiffre"
-      }
+      "settings": {}
     },
     "selection": {
       "type": "selection",
-      "blocks": {
-        "product_QMyEfm": {
-          "type": "product",
-          "settings": {
-            "product_product": "cafe-akela",
-            "text_etiquette": "Café du mois"
-          }
-        },
-        "product_ytt4XB": {
-          "type": "product",
-          "settings": {
-            "product_product": "cafe-printanier",
-            "text_etiquette": "Café de saison"
-          }
-        }
-      },
-      "block_order": [
-        "product_QMyEfm",
-        "product_ytt4XB"
-      ],
-      "settings": {
-        "text_titre": "Un café pour chaque mois, une ambiance pour chaque saison",
-        "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
-      }
+      "settings": {}
     },
     "pages": {
       "type": "pages",
-      "blocks": {
-        "carte_phaUYV": {
-          "type": "carte",
-          "settings": {
-            "image_image": "shopify://shop_images/TheVerveineBio1-Moyenne.jpg",
-            "text_heading": "Notre histoire",
-            "url_link": "",
-            "text_text": "Découvrir"
-          }
-        },
-        "carte_LDjiPP": {
-          "type": "carte",
-          "settings": {
-            "text_heading": "Les ateliers",
-            "url_link": "",
-            "text_text": "Découvrir"
-          }
-        },
-        "carte_GDiddG": {
-          "type": "carte",
-          "settings": {
-            "text_heading": "L’association",
-            "url_link": "",
-            "text_text": "Découvrir"
-          }
-        }
-      },
-      "block_order": [
-        "carte_phaUYV",
-        "carte_LDjiPP",
-        "carte_GDiddG"
-      ],
       "settings": {}
-    },
-    "contenu_NjqhEJ": {
-      "type": "contenu",
-      "blocks": {
-        "headline_Ua4DNJ": {
-          "type": "headline",
-          "settings": {
-            "text_headline": "Un événement qui a du goût"
-          }
-        },
-        "text_6dMUx4": {
-          "type": "text",
-          "settings": {
-            "richtext_paragraph": "<p>Que ce soit pour un mariage, un séminaire, un salon pro ou un anniversaire, on débarque avec notre coffee truck et nos baristas pour préparer des boissons chaudes sur mesure, avec le sourire et beaucoup (beaucoup) de caféine !<br/><br/>Vous organisez un événement plus intimiste ? On peut aussi vous louer une machine à café pour un week-end ou une soirée, avec tout le nécessaire pour régaler vos invités.<br/><br/>Un bon moment, un bon café… et une équipe aux petits soins pour faire de votre événement un souvenir qui se boit jusqu’à la dernière goutte !<br/><br/></p>"
-          }
-        },
-        "buttons_fDykPH": {
-          "type": "buttons",
-          "settings": {
-            "url_button_link": "",
-            "text_button_text": "Button",
-            "url_button_link_2": "shopify://pages/a-propos",
-            "text_button_text_2": "Je veux en savoir plus !"
-          }
-        }
-      },
-      "block_order": [
-        "headline_Ua4DNJ",
-        "text_6dMUx4",
-        "buttons_fDykPH"
-      ],
-      "name": "Contenu",
-      "settings": {
-        "image_image": "shopify://shop_images/BALLANCETIMEMORE3.webp",
-        "left_right": "left"
-      }
     },
     "contenu_2": {
       "type": "contenu_2",
-      "blocks": {
-        "carte_dFEGn9": {
-          "type": "carte",
-          "settings": {
-            "image_image": "shopify://shop_images/recyclage-1.png"
-          }
-        },
-        "carte_Fahxej": {
-          "type": "carte",
-          "settings": {
-            "image_image": "shopify://shop_images/recyclage-2.png"
-          }
-        },
-        "carte_cbmVcN": {
-          "type": "carte",
-          "settings": {
-            "image_image": "shopify://shop_images/recyclage-3.png"
-          }
-        }
-      },
-      "block_order": [
-        "carte_dFEGn9",
-        "carte_Fahxej",
-        "carte_cbmVcN"
-      ],
-      "settings": {
-        "text_heading": "Recycle ton café, sans te prendre la tête",
-        "text_paragraph": "Si ton marc de café avait une seconde vie ? Grâce à notre sac de collecte, on te propose de recycler ton marc pour le transformer en pellets pour poêles à granulés via notre partenariat avec Environ Alpes. Pour les pros (PME, restaurateurs), on récupère le sac directement lors de nos livraisons de café. Pour les particuliers, il suffit de nous le rapporter sur les marchés ou à l’atelier lors de ta prochaine visite. Simple, utile… et bien plus écolo que de le jeter à la poubelle !",
-        "url_button_link": "shopify://pages/contact",
-        "text_button_text": "Je veux un sac"
-      }
+      "settings": {}
     },
     "related_articles": {
       "type": "related_articles",
-      "settings": {
-        "text_headline": "Nouveautés du blog"
-      }
+      "settings": {}
+    },
+    "logo_defilants": {
+      "type": "logo_defilants",
+      "settings": {}
     },
     "collection_2": {
       "type": "collection_2",
-      "settings": {
-        "text_heading": "Nos nouveautés"
-      }
+      "settings": {}
     },
     "reseaux": {
       "type": "reseaux",
-      "settings": {
-        "text_heading": "Suivez-nous sur nos réseaux sociaux"
-      }
+      "settings": {}
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {}
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "hero_slider_VT7Gy9",
+    "hero_slider",
+    "hero",
+    "hero_2",
     "collection_tabs",
+    "collection_tabs_marr",
     "bandeau",
     "contenu",
-    "lookbook_Q4hEjV",
+    "lookbook",
     "liste_collections",
     "chiffres",
     "selection",
     "pages",
-    "contenu_NjqhEJ",
     "contenu_2",
     "related_articles",
+    "logo_defilants",
     "collection_2",
-    "reseaux"
+    "reseaux",
+    "newsletter"
   ]
 }
