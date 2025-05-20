@@ -24,10 +24,10 @@
 {% endif %}
                             
                         </div>
-{% endfor %}</div><div class="nav_dropdown-grid is-2"><div id="w-node-_1708ebff-0ffc-cd25-ecef-fcae6629e00c-eddd3128"><div class="nav_child-link">{% assign product = all_products[block.settings.product_produit_en_avant_1] %} <a li-object:href="product.url" href="{{ product.url }}" class="w-inline-block"><img alt="" src="{{ product.featured_image | img_url: 'master' }}" li-object:src="product.featured_image | img_url: 'master'" loading="lazy" class="nav_dropdown-image">
+{% endfor %}</div><div class="nav_dropdown-grid is-2"><div id="w-node-_1708ebff-0ffc-cd25-ecef-fcae6629e00c-eddd3128"><div class="nav_child-link is-image">{% assign product = all_products[block.settings.product_produit_en_avant_1] %} <a li-object:href="product.url" href="{{ product.url }}" class="w-inline-block"><img alt="" src="{{ product.featured_image | img_url: 'master' }}" li-object:src="product.featured_image | img_url: 'master'" loading="lazy" class="nav_dropdown-image">
 </a><a li-object:href="product.url" href="{{ product.url }}" class="nav_dropdown-link w-inline-block"><div li-object:text="product.title">
 {{ product.title }}
-</div></a></div></div><div id="w-node-_0bbe715d-c0c0-b0dd-1a9f-9865d92d1fa3-eddd3128"><div class="nav_child-link">{% assign product = all_products[block.settings.product_produit_en_avant_2] %} <a li-object:href="product.url" href="{{ product.url }}" class="w-inline-block"><img alt="" src="{{ product.featured_image | img_url: 'master' }}" li-object:src="product.featured_image | img_url: 'master'" loading="lazy" class="nav_dropdown-image">
+</div></a></div></div><div id="w-node-_0bbe715d-c0c0-b0dd-1a9f-9865d92d1fa3-eddd3128"><div class="nav_child-link is-image">{% assign product = all_products[block.settings.product_produit_en_avant_2] %} <a li-object:href="product.url" href="{{ product.url }}" class="w-inline-block"><img alt="" src="{{ product.featured_image | img_url: 'master' }}" li-object:src="product.featured_image | img_url: 'master'" loading="lazy" class="nav_dropdown-image">
 </a><a li-object:href="product.url" href="{{ product.url }}" class="nav_dropdown-link w-inline-block"><div li-object:text="product.title">
 {{ product.title }}
 </div></a></div></div></div></div></div></div></nav>    </div>
