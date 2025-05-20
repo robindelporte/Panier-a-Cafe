@@ -24,10 +24,10 @@
 
                             
                         </div>
-{% endfor %}</div><div class="footre_soutien"><div>Ils nous soutiennent</div><div class="footer_soutiens-list"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="footer_soutien-image">
-<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="footer_soutien-image">
-<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="footer_soutien-image">
-<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="footer_soutien-image">
+{% endfor %}</div><div class="footre_soutien"><div>Ils nous soutiennent</div><div class="footer_soutiens-list"><img src="{{ section.settings.image_soutien_1 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_soutien_1.alt }}" class="footer_soutien-image">
+<img src="{{ section.settings.image_soutien_2 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_soutien_2.alt }}" class="footer_soutien-image">
+<img src="{{ section.settings.image_soutien_3 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_soutien_3.alt }}" class="footer_soutien-image">
+<img src="{{ section.settings.image_soutien_4 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_soutien_4.alt }}" class="footer_soutien-image">
 </div></div></div></div></div><div class="footer_divider"></div><div class="background-color-black"><div class="padding-global padding-section-xsmall"><div class="container-large"><div class="footer_icon-grid"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="footer_logo-link w-inline-block"><img src="{{ 'logo_panier_a_cafe-creme.png' | asset_url }}" loading="lazy" sizes="(max-width: 1081px) 100vw, 1081px" srcset="{{ 'LOGO-CRÈME-p-500.png' | asset_url }} 500w, {{ 'LOGO-CRÈME-p-800.png' | asset_url }} 800w, {{ 'logo_panier_a_cafe-creme.png' | asset_url }} 1081w" alt="" class="footer_logo">
 </a><div id="w-node-_9f03d986-c081-15a4-3bbe-f98ead028943-ad028921" class="footer_icon-block"><ul role="list" class="footer_payment-list w-list-unstyled">{% for type in shop.enabled_payment_types %}    <li li-for="type in shop.enabled_payment_types" class="footer_payment-item">
                                     
@@ -68,4 +68,4 @@
 }
 customElements.define('localization-form', LocalizationForm);
 </script></div>    </localization-form>
-{% endif %}</div></div></div></div> {% schema %} {"tag":"footer","name":"footer","class":"section_footer","blocks":[{"name":"icone","type":"icone","settings":[{"id":"image_icone","type":"image_picker","label":"icone"},{"id":"text_heading","type":"text","label":"Heading","default":"Livraison en 48h"}]},{"type":"@app"}],"presets":[{"name":"footer","category":"Liquify","blocks":[{"type":"icone"}]}]} {% endschema %}
+{% endif %}</div></div></div></div> {% schema %} {"tag":"footer","name":"footer","class":"section_footer","blocks":[{"name":"icone","type":"icone","settings":[{"id":"image_icone","type":"image_picker","label":"icone"},{"id":"text_heading","type":"text","label":"Heading","default":"Livraison en 48h"}]},{"type":"@app"}],"settings":[{"id":"image_soutien_1","type":"image_picker","label":"Soutien-1"},{"id":"image_soutien_2","type":"image_picker","label":"Soutien-2"},{"id":"image_soutien_3","type":"image_picker","label":"Soutien-3"},{"id":"image_soutien_4","type":"image_picker","label":"Soutien-4"}],"presets":[{"name":"footer","category":"Liquify","blocks":[{"type":"icone"}]}]} {% endschema %}

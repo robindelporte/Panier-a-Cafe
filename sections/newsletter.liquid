@@ -1,0 +1,13 @@
+<div class="padding-global"><div class="padding-section-small"><div class="container-large"><div class="max-width-medium align-center"><div class="newsletter_component"><h2 class="heading-style-h4 align-center">
+{{ section.settings.text_headline }}
+</h2>
+<div class="newsletter_form-block w-form">{% form 'customer', return_to: '/', class: 'newsletter_form' %}
+<div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[email]" data-name="Email" placeholder="contact@lepanieracafe.fr" type="email" id="Email" required="">
+</div><div li-object="form.errors | default_errors" class="text-size-regular">{{ form.errors | default_errors }}</div><div id="w-node-_66598b5f-ecd4-5721-1ff8-f7da33d1acf0-27196079" class="hide w-embed"><input type="hidden" name="contact[accepts_marketing]" value="false">
+</div><label id="w-node-_66598b5f-ecd4-5721-1ff8-f7da33d1acf1-27196079" class="w-checkbox form_checkbox" name="contact[accepts_marketing]"><input type="checkbox" name="Accepts-Marketing" id="Accepts-Marketing" data-name="Accepts Marketing" class="w-checkbox-input form_checkbox-icon">
+<span class="form_checkbox-label text-size-tiny w-form-label" for="Accepts-Marketing">
+{{ section.settings.text_checkbox }}
+</span>
+</label><input type="submit" data-wait="" id="w-node-_66598b5f-ecd4-5721-1ff8-f7da33d1acf9-27196079" class="button w-button" value="Subscribe to Newsletter">
+{% endform %}
+<div class="hide w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="hide w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div></div> {% schema %} {"tag":"div","name":"Newsletter","class":"section_newsletter","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"S'inscrire \u00e0 la newsletter"},{"id":"text_checkbox","type":"text","label":"Checkbox","default":"En vous inscrivant, vous acceptez notre <a href=\"#\" li-settings:url=\"Politique de confidentialite\">politique de confidentialit\u00e9<\/a> et consentez \u00e0 recevoir des emails."},{"id":"url_politique_de_confidentialite","type":"url","label":"Politique de confidentialite"}],"presets":[{"name":"Newsletter","category":"Liquify","blocks":[]}]} {% endschema %}
