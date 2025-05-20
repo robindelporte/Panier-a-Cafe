@@ -21,10 +21,30 @@
               "product_produit_en_avant_2": "cafe-cascara-cascarita",
               "menu": "menu-test"
             }
+          },
+          "menu_ffmedx": {
+            "type": "menu",
+            "settings": {
+              "text_menu": "Thés",
+              "product_produit_en_avant_1": "the-breakfast",
+              "product_produit_en_avant_2": "balance-timemore",
+              "menu": "thes"
+            }
+          },
+          "menu_agy9aX": {
+            "type": "menu",
+            "settings": {
+              "text_menu": "Cafés",
+              "product_produit_en_avant_1": "",
+              "product_produit_en_avant_2": "",
+              "menu": ""
+            }
           }
         },
         "block_order": [
-          "menu_g3UKBc"
+          "menu_g3UKBc",
+          "menu_ffmedx",
+          "menu_agy9aX"
         ],
         "settings": {
           "richtext_banner_content": "<p> Livraison offerte pour toute commande de +80€</p>",
