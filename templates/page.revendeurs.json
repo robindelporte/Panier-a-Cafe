@@ -1,36 +1,306 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "header_landing": {
-            "type": "header_landing"
+  "sections": {
+    "header_landing": {
+      "type": "header_landing",
+      "blocks": {
+        "headline_UEqP7g": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Épiceries, magasins : une sélection de cafés engagés à proposer à vos clients !"
+          }
         },
-        "content": {
-            "type": "content"
-        },
-        "selection_manuel": {
-            "type": "selection_manuel"
-        },
-        "logo_defilants": {
-            "type": "logo_defilants"
-        },
-        "bandeau": {
-            "type": "bandeau"
-        },
-        "faq": {
-            "type": "faq"
-        },
-        "reseaux": {
-            "type": "reseaux"
+        "text_fLHqQX": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Au Panier à Café, on torréfie des cafés de spécialité. Si vous avez une boutique, une épicerie fine, un concept store ou un magasin bio… et que vous souhaitez proposer un café qui a du sens, vous êtes au bon endroit !Que ce soit en grain ou moulu, on vous accompagne pour trouver la meilleure formule, selon votre espace, vos clients et votre rythme de vente.Vous avez juste à faire découvrir, on s’occupe du reste !</p>"
+          }
         }
+      },
+      "block_order": [
+        "headline_UEqP7g",
+        "text_fLHqQX"
+      ],
+      "settings": {}
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "header_landing",
-        "content",
-        "selection_manuel",
-        "logo_defilants",
-        "bandeau",
-        "faq",
-        "reseaux"
-    ]
+    "bandeau": {
+      "type": "bandeau",
+      "blocks": {
+        "icone_V3rHyX": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Grains_de_cafes_714b57cf-cfb3-435c-aae1-459827d38467.png",
+            "text_titre_icone": "Café de spécialité",
+            "text_description": "Torréfié en Haute-Savoie, avec passion et précision !"
+          }
+        },
+        "icone_Y6URV7": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Engages.png",
+            "text_titre_icone": "Engagé & traçable",
+            "text_description": "Sourcé en direct auprès de producteurs du monde entier."
+          }
+        },
+        "icone_Y6JzKM": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Sachet_de_cafe.png",
+            "text_titre_icone": "Adapté à vos besoins",
+            "text_description": "Disponible en grains ou moulu, en sachets ou en carton !"
+          }
+        },
+        "icone_3zU4we": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Bras_fort.png",
+            "text_titre_icone": "Service pro & réactif",
+            "text_description": "Une équipe à l’écoute pour vous accompagner au quotidien."
+          }
+        }
+      },
+      "block_order": [
+        "icone_V3rHyX",
+        "icone_Y6URV7",
+        "icone_Y6JzKM",
+        "icone_3zU4we"
+      ],
+      "settings": {
+        "text_heading": "Pourquoi choisir notre solution ?"
+      }
+    },
+    "contenu_H6QEKw": {
+      "type": "contenu",
+      "blocks": {
+        "headline_LePTiG": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Une sélection engagée, pour tous"
+          }
+        },
+        "text_ypW7ra": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Vous souhaitez des cafés de spécialité avec une véritable histoire ? <br/><br/>Le Panier à Café vous propose une gamme de cafés de spécialité torréfiés localement à Annecy, avec un engagement fort pour une production responsable. Cafés sourcés en direct auprès des producteurs, acheminés à la voile, issus de l’agriculture biologique ou cultivés par des coopératives de femmes : ici, chaque café a quelque chose à raconter. <br/><br/>Chaque sachet est conditionné à la main par les équipes de l’ESAT des EPANOU, pour une dimension solidaire à chaque tasse. <br/>Un café de qualité, éthique et local ? Vos clients vont adorer.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "headline_LePTiG",
+        "text_ypW7ra"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "left_right": "right"
+      }
+    },
+    "contenu_Xp4Nbt": {
+      "type": "contenu",
+      "blocks": {
+        "headline_nz4AFt": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Des formats pensés pour vos besoins"
+          }
+        },
+        "text_4UAJfn": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Chez nous, pas de minimum de commande ni de contraintes rigides : on s’adapte à votre boutique, à votre clientèle et à vos envies. Nos cafés sont disponibles en sachets de 250g, 1kg ou 5kg, en grains ou moulus, selon vos besoins, livrés dans toute la France.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "headline_nz4AFt",
+        "text_4UAJfn"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "left_right": "left"
+      }
+    },
+    "selection_manuel": {
+      "type": "selection_manuel",
+      "blocks": {
+        "selection_pxkbPc": {
+          "type": "selection",
+          "settings": {
+            "text_titre_selection": "Nos cafés prêts à prendre place",
+            "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
+            "text_texte_tag_1": "100% Arabica",
+            "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
+            "text_texte_tag_2": "Cafés engagés",
+            "text_paragraphe": "Ajoutez à votre offre une gamme de cafés de spécialité engagés, locaux et torréfiés à Annecy. Nos étiquettes colorées attirent l’œil et leur histoire fait mouche à chaque conversation client. Conditionnés avec soin, ils sont disponibles en plusieurs formats pour s’adapter à votre espace et à votre clientèle.",
+            "url_button_lien": "",
+            "text_button_texte": "Découvrir",
+            "url_link": "",
+            "image_image_produit": "shopify://shop_images/revendeurs.webp",
+            "text_etiquette": "Nos cafés à revendre"
+          }
+        }
+      },
+      "block_order": [
+        "selection_pxkbPc"
+      ],
+      "settings": {
+        "text_titre_section": "Notre offre",
+        "text_sous_titre": ""
+      }
+    },
+    "logo_defilants": {
+      "type": "logo_defilants",
+      "settings": {
+        "text_heading": "Ils nous font confiance"
+      }
+    },
+    "bandeau_hp6mre": {
+      "type": "bandeau",
+      "blocks": {
+        "icone_xgNXgx": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Enveloppe.png",
+            "text_titre_icone": "Prenez contact",
+            "text_description": "commande@lepanieracafé.fr             Expliquez-nous vos besoins, on vous guide de A à Z."
+          }
+        },
+        "icone_ETJx9U": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Grains_de_cafes_714b57cf-cfb3-435c-aae1-459827d38467.png",
+            "text_titre_icone": "Choisissez vos cafés",
+            "text_description": "Sélectionnez les références qui correspondent à votre clientèle !"
+          }
+        },
+        "icone_HDKGdG": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
+            "text_titre_icone": "Votre commande",
+            "text_description": "Livraison rapide partout en France, en sachets de 250g ou de 1kg."
+          }
+        },
+        "icone_nPjmTf": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Bras_fort.png",
+            "text_titre_icone": "On reste dispo !",
+            "text_description": "Besoin de conseils ou de mise en avant du produit ? On vous accompagne !"
+          }
+        }
+      },
+      "block_order": [
+        "icone_xgNXgx",
+        "icone_ETJx9U",
+        "icone_HDKGdG",
+        "icone_nPjmTf"
+      ],
+      "name": "bandeau",
+      "settings": {
+        "text_heading": "Comment ça marche ?"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq_item_enNk6C": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Quelle est la différence entre un café de spécialité et un café classique ?",
+            "richtext_reponse": "<p>Un café de spécialité est un café noté au-dessus de 80/100 par un Q Grader, expert certifié. Il est traçable, récolté à la main, souvent bio, et surtout torréfié avec soin pour révéler ses arômes. Rien à voir avec un café industriel souvent trop torréfié, sans origine claire, ni complexité en tasse.</p>"
+          }
+        },
+        "faq_item_KDwLyY": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Quelle quantité de café prévoir pour mon établissement ?",
+            "richtext_reponse": "<p>Tout dépend de votre débit ! Pour un coffee shop ou un restaurant qui sert 100 cafés par jour, comptez environ 3 à 4 kilos par semaine. On peut vous accompagner pour définir la bonne quantité et ajuster au fil du temps. Et si vous optez pour nos machines, on s’occupe aussi de la logistique !</p>"
+          }
+        },
+        "faq_item_zNDFX6": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Peut-on louer une machine à café pour un restaurant ou un hôtel ?",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_UHwAYP": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Qui s’occupe de l’entretien des machines à café ?",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_AVMdja": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Vos cafés sont-ils issus du commerce équitable ?",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_njwYUi": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Comment bien conserver son café en grain ?",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_ka9qzi": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Le café bio, c’est quoi exactement ?",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_9RMTc3": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Quelles différences entre un café en méthode douce et un espresso ?",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_enNk6C",
+        "faq_item_KDwLyY",
+        "faq_item_zNDFX6",
+        "faq_item_UHwAYP",
+        "faq_item_AVMdja",
+        "faq_item_njwYUi",
+        "faq_item_ka9qzi",
+        "faq_item_9RMTc3"
+      ],
+      "settings": {
+        "text_heading": "Foire aux questions",
+        "richtext_richtext": "<p><br/>                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                </p>"
+      }
+    },
+    "reseaux": {
+      "type": "reseaux",
+      "settings": {
+        "text_heading": "Suivez-nous sur nos réseaux sociaux"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "header_landing",
+    "bandeau",
+    "contenu_H6QEKw",
+    "contenu_Xp4Nbt",
+    "selection_manuel",
+    "logo_defilants",
+    "bandeau_hp6mre",
+    "faq",
+    "reseaux"
+  ]
 }
