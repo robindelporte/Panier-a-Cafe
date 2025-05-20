@@ -19,19 +19,10 @@
             "text_adresse": "Place Ste Claire (En vieille Ville)",
             "url_link": ""
           }
-        },
-        "tab_8AreXU": {
-          "type": "tab",
-          "settings": {
-            "text_horaires": "7h - 13h",
-            "text_adresse": "Place Ste Claire (En vieille Ville)",
-            "url_link": ""
-          }
         }
       },
       "block_order": [
-        "tab_ALztBd",
-        "tab_8AreXU"
+        "tab_ALztBd"
       ],
       "settings": {
         "text_heading": "Où nous trouver ?"
