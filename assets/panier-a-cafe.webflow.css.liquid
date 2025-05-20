@@ -5992,6 +5992,8 @@ figcaption {
 }
 
 .nav_dropdown-grid.is-2 {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
 }
@@ -7014,7 +7016,9 @@ figcaption {
 }
 
 .nav_dropdown-image {
-  aspect-ratio: 1;
+  aspect-ratio: 9 / 10;
+  object-fit: cover;
+  object-position: 50% 50%;
   border-radius: .25rem;
   max-height: 12rem;
 }
