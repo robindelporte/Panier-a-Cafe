@@ -95,21 +95,21 @@
                               <div class="nav_dropdown-grid is-2">
                                 <div id="w-node-_1708ebff-0ffc-cd25-ecef-fcae6629e00c-eddd3128">
                                   <div class="nav_child-link">
-                                    {% assign product = all_products[block.settings.product_produit_en_avant_1] %}
-                                    <a li-object:href="product.url" href="{{ product.url }}" class="w-inline-block"
+                                    {% assign product_1 = all_products[block.settings.product_produit_en_avant_1] %}
+                                    <a li-object:href="product.url" href="{{ product_1.url }}" class="w-inline-block"
                                       ><img
                                         alt=""
-                                        src="{{ product.featured_image }}"
+                                        src="{{ product_1.featured_image }}"
                                         li-object:src="product.featured_image"
                                         loading="lazy"
                                       > </a
                                     ><a
                                       li-object:href="product.url"
-                                      href="{{ product.url }}"
+                                      href="{{ product_1.url }}"
                                       class="nav_dropdown-link w-inline-block"
                                     >
                                       <div li-object:text="product.title">
-                                        {{ product.title }}
+                                        {{ product_1.title }}
                                       </div>
                                     </a>
                                   </div>
