@@ -274,6 +274,26 @@
     },
     "selection": {
       "type": "selection",
+      "blocks": {
+        "product_qzc7Fy": {
+          "type": "product",
+          "settings": {
+            "product_product": "cafe-bio-amore",
+            "text_etiquette": "Café du mois"
+          }
+        },
+        "product_Paq6Ww": {
+          "type": "product",
+          "settings": {
+            "product_product": "cafe-aymara",
+            "text_etiquette": "Café de saison"
+          }
+        }
+      },
+      "block_order": [
+        "product_qzc7Fy",
+        "product_Paq6Ww"
+      ],
       "settings": {
         "text_titre": "Un café pour chaque mois, une ambiance pour chaque saison",
         "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
