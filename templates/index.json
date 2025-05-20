@@ -301,6 +301,40 @@
     },
     "pages": {
       "type": "pages",
+      "blocks": {
+        "carte_JPWpQB": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/histoire.webp",
+            "text_heading": "Notre histoire",
+            "url_link": "shopify://pages/a-propos",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_wrYq68": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/atelier.webp",
+            "text_heading": "Professionnels",
+            "url_link": "shopify://pages/professionnels",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_XhXpF4": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/association_0c2478a2-02cb-49a2-96e7-77834aad3dad.webp",
+            "text_heading": "L'association",
+            "url_link": "shopify://pages/lassociation",
+            "text_text": "Découvrir"
+          }
+        }
+      },
+      "block_order": [
+        "carte_JPWpQB",
+        "carte_wrYq68",
+        "carte_XhXpF4"
+      ],
       "settings": {}
     },
     "contenu_2": {
