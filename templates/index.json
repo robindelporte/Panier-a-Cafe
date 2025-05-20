@@ -95,6 +95,34 @@
     },
     "contenu": {
       "type": "contenu",
+      "blocks": {
+        "headline_QNqbNP": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Bien plus qu’un café"
+          }
+        },
+        "text_T38Lxw": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Au Panier à Café, chaque grain raconte une histoire. Celle d’un produit sourcé avec soin, qui tient compte de l’humain et de l’environnement.<br/><br/>Derrière chaque tasse, il y a un engagement ! Nous travaillons avec des producteurs rémunérés justement, soutenons des coopératives de femmes, favorisons les circuits courts et confions la préparation de nos sachets aux travailleurs de l’ESAT des EPANOU du Parmelan.<br/><br/>Notre objectif est simple : proposer un café qui a du goût, du sens, et un impact positif !</p>"
+          }
+        },
+        "buttons_DWggAF": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "shopify://collections/cafes",
+            "text_button_text": "Découvrir les cafés",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
+        }
+      },
+      "block_order": [
+        "headline_QNqbNP",
+        "text_T38Lxw",
+        "buttons_DWggAF"
+      ],
       "settings": {
         "left_right": "left"
       }
@@ -147,6 +175,55 @@
     },
     "liste_collections": {
       "type": "liste_collections",
+      "blocks": {
+        "collection_yM6Fwz": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/cafes-en-grain",
+            "image_image_collection": "shopify://shop_images/Cafe_en_grain.png",
+            "text_nom_collection": "Café en grain"
+          }
+        },
+        "collection_KneG98": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/equipements",
+            "image_image_collection": "shopify://shop_images/Accessoires.png",
+            "text_nom_collection": "Équipements"
+          }
+        },
+        "collection_MJJhph": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/les-thes",
+            "image_image_collection": "shopify://shop_images/Thes.png",
+            "text_nom_collection": "Thès"
+          }
+        },
+        "collection_fNy9T8": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/cafetiere-a-filtre",
+            "image_image_collection": "shopify://shop_images/Cafetiere_a_filtre.png",
+            "text_nom_collection": "Cafetière à filtre"
+          }
+        },
+        "collection_g38kbR": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/machines-a-cafe-a-grain",
+            "image_image_collection": "shopify://shop_images/Machines.png",
+            "text_nom_collection": "Machines"
+          }
+        }
+      },
+      "block_order": [
+        "collection_yM6Fwz",
+        "collection_KneG98",
+        "collection_MJJhph",
+        "collection_fNy9T8",
+        "collection_g38kbR"
+      ],
       "settings": {}
     },
     "chiffres": {
