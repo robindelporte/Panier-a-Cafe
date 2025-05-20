@@ -28,44 +28,7 @@
 {% endif %}
                             
                         </div>
-{% endfor %}{% for block in section.blocks %}
-    {% if block.type == "menu" %}
-                    <div li-block="Menu">
-                                    
-                                    {% for link in linklists[section.settings.menu].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.menu].links" class="nav_menu-dropdown w-dropdown">
-                                    
-                            <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
-    <svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg>    </div>
-{% endif %}<div class="nav_link-block"><div><div li-object="link.title">{{ link.title }}</div></div></div></div>
-                            
-                            {% if link.links.size > 0  %}    <nav li-if="link.links.size > 0 " class="nav_dropdown-list w-dropdown-list">
-    <div class="padding-global max-width-full not-mobile"><div class="container-large"><div class="nav_dropdown-grid-wrapper"><div class="nav_dropdown-grid">{% for child_link in link.links %}    <div li-for="child_link in link.links" id="w-node-ac3b8bb4-217f-911a-0fbe-a5b381adfdd8-eddd3128" class="nav_child-link">
-                                    
-                            <div li-object="child_link.title" class="nav_dropdown-link">{{ child_link.title }}</div>
-                            
-                            {% if child_link.links.size > 0 %}    <div li-if="child_link.links.size > 0" class="nav_dropdown-links-wrapper">
-    {% for grandchild_link in child_link.links %}    <div li-for="grandchild_link in child_link.links" class="nav_dropdown-link-item">
-                                    
-                            <a li-object:href="grandchild_link.url" href="{{ grandchild_link.url }}" class="nav_dropdown-link_child w-inline-block">{% if collection_object.metafields.custom.pays_d_origine %}    <img class="country_icon" src="collection_object.metafields.custom.pays_d_origine.drapeau_icone" alt="collection_object.metafields.custom.pays_d_origine.pays" li-if="collection_object.metafields.custom.pays_d_origine" li-object:src="collection_object.metafields.custom.pays_d_origine.drapeau_icone" loading="lazy" li-object:alt="collection_object.metafields.custom.pays_d_origine.pays">
-{% endif %}{% if collection_object.metafields.custom.certification %}    <img class="certification_icon" src="collection_object.metafields.custom.certification.icone" alt="collection_object.metafields.custom.certification.nom" li-if="collection_object.metafields.custom.certification" li-object:src="collection_object.metafields.custom.certification.icone" loading="lazy" li-object:alt="collection_object.metafields.custom.certification.nom">
-{% endif %}<div li-object="grandchild_link.title">{{ grandchild_link.title }}</div></a>
-                            
-                        </div>
-{% endfor %}    </div>
-{% endif %}
-                            
-                        </div>
-{% endfor %}</div><div class="nav_dropdown-grid is-2"><div id="w-node-ac3b8bb4-217f-911a-0fbe-a5b381adfde3-eddd3128" class="nav_child-link"><img alt="" src="{{ 'image.svg' | asset_url }}" loading="lazy">
-<a href="#" class="nav_dropdown-link w-dropdown-link">Child Link</a></div></div></div></div></div>    </nav>
-{% endif %}
-                            
-                        </div>
-{% endfor %}
-                                    
-                            </div>
-            {% endif %}
-{% endfor %}
-{% for link in linklists[section.settings.menu_handle].links %}    <div li-for="link in linklists[section.settings.menu_handle].links">
+{% endfor %}{% for link in linklists[section.settings.menu_handle].links %}    <div li-for="link in linklists[section.settings.menu_handle].links">
                                     
                             <a li-object:href="link.url" href="{{ link.url }}" class="nav_link-item w-inline-block"><div><div li-object="link.title">{{ link.title }}</div></div></a>
                             
@@ -537,4 +500,4 @@
     </template>
 <div li-js-price="total.price" class="text-size-regular text-weight-bold" x-text="LiquifyHelper.moneyFormat(total.price, true, '{{ shop.money_with_currency_format }}')">14,99 $</div></div></div><div li-element="mini-cart-api-response" class="mini-cart_footer-message hide"><div class="mini-cart_footer-message-item"><div class="text-size-regular text-weight-bold">Message</div><div li-js-object="cartApiResponse?.result?.message" class="text-size-regular text-weight-bold" x-text="cartApiResponse?.result?.message">14,99 $</div></div></div><div class="button-group is-full-width"><a x-bind:href="'/checkout'" href="#" class="button max-width-full w-button">Valider ma commande</a></div><div class="text-size-tiny text-color-grey text-align-center">Les modalités de livraison définitives et codes promotionnels s'appliquent lors du paiement</div></div></div><div li-cloak="hide" li-element="mini-cart-empty" class="mini-cart_empty" :style="total.items && { display: 'none' }"><div class="mini-cart_header"><div class="heading-style-h3">Panier</div><button fs-modal-element="close-2" role="button" tabindex="0" aria-label="Close modal" aria-controls="fs-modal-3-popup" aria-roledescription="close-modal-trigger" class="nav_dropdown-close-button"><div aria-roledescription="close-modal-trigger" class="nav_cart-close" fs-modal-animation="fade" aria-label="Close modal" role="role" aria-controls="fs-modal-3-popup" fs-modal-element="close-2" aria-expanded="false" tabindex="0"></div><div class="nav_dropdown-close-icon w-embed"><svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.84775 14.178L0.447754 12.778L6.04775 7.17798L0.447754 1.57798L1.84775 0.177979L7.44775 5.77798L13.0478 0.177979L14.4478 1.57798L8.84775 7.17798L14.4478 12.778L13.0478 14.178L7.44775 8.57798L1.84775 14.178Z" fill="currentColor"></path></svg></div></button></div><div class="mini-cart_empty-content"><div class="heading-style-h2 text-font-heading">Votre panier est vide.</div><a href="{{ section.settings.url_routesroot_url }}" class="button w-button"> Retourner à l'accueil </a>
 </div></div></div></div></div></div></div><div class="navbar9_menu-button w-nav-button"><div class="menu-icon5"><div class="menu-icon1_line-top"></div><div class="menu-icon1_line-middle"><div class="menu-icon1_line-middle-inner"></div></div><div class="menu-icon1_line-bottom"></div></div></div></div></div><div class="li-custom w-embed"></div>
- {% schema %} {"tag":"section","name":"header","class":"section_navbar","blocks":[{"name":"Menu","type":"menu","settings":null},{"type":"@app"}],"settings":[{"id":"richtext_banner_content","type":"richtext","label":"banner_content","default":"<p>\n                Livraison offerte pour toute commande de +80\u20ac\n              <\/p>"},{"id":"collection_search_bestseller","type":"collection","label":"Search - Bestseller"},{"type":"range","id":"collection_search_bestseller_limit","min":1,"max":99,"step":1,"label":"Limit: Search - Bestseller","default":6},{"type":"header","content":"free_shipping"},{"type":"text","id":"free_shipping","label":"Free Shipping","default":"100"},{"id":"url_routesroot_url","type":"url","label":"routes.root_url"},{"type":"header","content":"Navigation"},{"type":"link_list","id":"menu","label":"Menu"},{"type":"link_list","id":"small","label":"Small Menu"}],"presets":[{"name":"header","category":"Liquify","blocks":[{"type":"menu"}]}]} {% endschema %}
+ {% schema %} {"tag":"section","name":"header","class":"section_navbar","settings":[{"id":"richtext_banner_content","type":"richtext","label":"banner_content","default":"<p>\n                Livraison offerte pour toute commande de +80\u20ac\n              <\/p>"},{"id":"collection_search_bestseller","type":"collection","label":"Search - Bestseller"},{"type":"range","id":"collection_search_bestseller_limit","min":1,"max":99,"step":1,"label":"Limit: Search - Bestseller","default":6},{"type":"header","content":"free_shipping"},{"type":"text","id":"free_shipping","label":"Free Shipping","default":"100"},{"id":"url_routesroot_url","type":"url","label":"routes.root_url"},{"type":"header","content":"Navigation"},{"type":"link_list","id":"menu","label":"Menu"},{"type":"link_list","id":"small","label":"Small Menu"}],"presets":[{"name":"header","category":"Liquify","blocks":[]}]} {% endschema %}
