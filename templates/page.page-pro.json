@@ -1,32 +1,180 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "professionnels": {
-            "type": "professionnels"
+  "sections": {
+    "professionnels": {
+      "type": "professionnels",
+      "blocks": {
+        "bloc_KLYxXm": {
+          "type": "bloc",
+          "settings": {
+            "image_image": "shopify://shop_images/revendeurs-image.webp",
+            "text_titre": "Revendeurs",
+            "url_lien": "shopify://pages/revendeurs"
+          }
         },
-        "logo_defilants": {
-            "type": "logo_defilants"
+        "bloc_h7wAaX": {
+          "type": "bloc",
+          "settings": {
+            "image_image": "shopify://shop_images/chr-image.webp",
+            "text_titre": "CHR",
+            "url_lien": "shopify://pages/chr"
+          }
         },
-        "content": {
-            "type": "content"
-        },
-        "bandeau": {
-            "type": "bandeau"
-        },
-        "faq": {
-            "type": "faq"
-        },
-        "reseaux": {
-            "type": "reseaux"
+        "bloc_BgbMLE": {
+          "type": "bloc",
+          "settings": {
+            "image_image": "shopify://shop_images/PME.webp",
+            "text_titre": "PME",
+            "url_lien": "shopify://pages/pme"
+          }
         }
+      },
+      "block_order": [
+        "bloc_KLYxXm",
+        "bloc_h7wAaX",
+        "bloc_BgbMLE"
+      ],
+      "settings": {}
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "professionnels",
-        "logo_defilants",
-        "content",
-        "bandeau",
-        "faq",
-        "reseaux"
-    ]
+    "logo_defilants": {
+      "type": "logo_defilants",
+      "settings": {
+        "text_heading": "Ils nous font confiance"
+      }
+    },
+    "contenu_QbRp9z": {
+      "type": "contenu",
+      "blocks": {
+        "headline_Tr9n9E": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Du café de spécialité pour tous"
+          }
+        },
+        "text_yb97id": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Vous êtes restaurateur, hôtelier, artisan, gérant d’un concept store ou responsable d’une entreprise ? Au Panier à Café, on torréfie des cafés d’exception pour toutes les structures (petites ou grandes) qui souhaitent proposer un café de qualité à leur équipe ou leur clientèle.Pas besoin d’être expert en café : on vous accompagne à chaque étape, que ce soit pour choisir votre machine ou renouveler vos stocks automatiquement !</p>"
+          }
+        }
+      },
+      "block_order": [
+        "headline_Tr9n9E",
+        "text_yb97id"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "left_right": "right"
+      }
+    },
+    "contenu_Pz8x47": {
+      "type": "contenu",
+      "blocks": {
+        "headline_qyiVrT": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Une torréfaction artisanale engagée"
+          }
+        },
+        "text_qVCGyR": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Chez nous, pas de café standardisé. Chaque grain est soigneusement sélectionné, directement chez les producteurs quand c’est possible, puis torréfié en Haute-Savoie avec amour (et précision).Nos cafés voyagent parfois à la voile pour réduire leur empreinte carbone. Ils sont ensuite préparés et emballés avec soin par les travailleurs de l’ESAT du Parmelan.Résultat ? Un café sincère, traçable, éthique, et surtout : vraiment bon.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "headline_qyiVrT",
+        "text_qVCGyR"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "left_right": "left"
+      }
+    },
+    "bandeau": {
+      "type": "bandeau",
+      "blocks": {
+        "icone_nKa9Mq": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Enveloppe.png",
+            "text_titre_icone": "Prenez contact",
+            "text_description": "Un simple mail ou appel suffit pour démarrer notre collaboration."
+          }
+        },
+        "icone_ybtpc7": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Grains_de_cafes_714b57cf-cfb3-435c-aae1-459827d38467.png",
+            "text_titre_icone": "Découvrez notre gamme",
+            "text_description": "On vous guide pour choisir les cafés qui matchent avec votre clientèle."
+          }
+        },
+        "icone_pfHTrQ": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Sachet_de_cafe.png",
+            "text_titre_icone": "Selon vos besoins",
+            "text_description": "Petites ou grosses quantités, en grain ou moulu, on s’adapte à votre rythme."
+          }
+        },
+        "icone_9CyNHy": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
+            "text_titre_icone": "Recevez votre café",
+            "text_description": "Livraison rapide partout en France avec des cafés fraîchement torréfiés."
+          }
+        }
+      },
+      "block_order": [
+        "icone_nKa9Mq",
+        "icone_ybtpc7",
+        "icone_pfHTrQ",
+        "icone_9CyNHy"
+      ],
+      "settings": {
+        "text_heading": "Comment ça marche ?"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "text_heading": "Foire aux questions",
+        "richtext_richtext": "<p>\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                </p>"
+      }
+    },
+    "reseaux": {
+      "type": "reseaux",
+      "settings": {
+        "text_heading": "Suivez-nous sur nos réseaux sociaux",
+        "image_image_1": "shopify://shop_images/panier-a-cafe_2.png",
+        "image_image_2": "shopify://shop_images/panier-a-cafe_3.png",
+        "image_image_3": "shopify://shop_images/panier-a-cafe_4.png",
+        "image_image_4": "shopify://shop_images/panier-a-cafe_5.png",
+        "image_image_5": "shopify://shop_images/panier-a-cafe_1.png",
+        "image_image_6_mobile": "shopify://shop_images/chr-image.webp"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "professionnels",
+    "logo_defilants",
+    "contenu_QbRp9z",
+    "contenu_Pz8x47",
+    "bandeau",
+    "faq",
+    "reseaux"
+  ]
 }
