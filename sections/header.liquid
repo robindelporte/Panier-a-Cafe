@@ -14,7 +14,7 @@
                                     
                             <div li-object="link.title" class="nav_dropdown-link">{{ link.title }}</div>
                             
-                            {% if ink.links.size > 0 %}    <div li-if="ink.links.size > 0" class="nav_dropdown-links-wrapper">
+                            {% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="nav_dropdown-links-wrapper">
     {% for child_link in menu_links %}    <div li-for="child_link in menu_links" class="nav_dropdown-link-item">
                                     
                             <a li-object="child_link.title" li-object:href="child_link.url" href="{{ child_link.url }}" class="nav_dropdown-link_child">{{ child_link.title }}</a>
