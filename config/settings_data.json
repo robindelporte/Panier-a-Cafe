@@ -12,21 +12,6 @@
     "sections": {
       "header": {
         "type": "header",
-        "blocks": {
-          "menu_PJUKEx": {
-            "type": "menu",
-            "name": "menu",
-            "settings": {
-              "menu": "menu-test",
-              "product_1": "cafe-bio-amore",
-              "product_2": "cafe-bio-amore"
-            },
-            "blocks": {}
-          }
-        },
-        "block_order": [
-          "menu_PJUKEx"
-        ],
         "settings": {
           "richtext_banner_content": "<p> Livraison offerte pour toute commande de +80€</p>",
           "collection_search_bestseller": "cafes",
