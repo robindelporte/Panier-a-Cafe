@@ -7000,6 +7000,17 @@ figcaption {
   display: grid;
 }
 
+.nav_link-column {
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+  flex-direction: column;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  grid-auto-columns: 100%;
+  place-items: flex-start start;
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 3.25rem;
@@ -8312,6 +8323,11 @@ figcaption {
     justify-content: flex-start;
     align-items: flex-start;
     max-width: none;
+  }
+
+  .nav_link-column {
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
   }
 }
 

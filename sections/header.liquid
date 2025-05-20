@@ -10,26 +10,21 @@
     <div class="nav_dropdown-toggle w-dropdown-toggle"><div class="dropdown-icon w-embed"><svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div><div class="nav_link-block"><div><div>
 {{ block.settings.text_menu }}
 </div>
-</div></div></div><nav class="nav_dropdown-list w-dropdown-list"><div class="padding-global max-width-full not-mobile"><div class="container-large"><div class="nav_dropdown-grid-wrapper">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="nav_dropdown-grid">
-    {% for link in menu_links %}    <div li-for="link in menu_links" class="nav_child-link">
+</div></div></div><nav class="nav_dropdown-list w-dropdown-list"><div class="padding-global max-width-full not-mobile"><div class="container-large"><div class="nav_dropdown-grid-wrapper"><div class="nav_dropdown-grid">{% for link in menu_links %}    <div li-for="link in menu_links" class="nav_link-column">
                                     
                             <div li-object="link.title" class="nav_dropdown-link">{{ link.title }}</div>
                             
-                            {% for child_link in link.links %}    <div li-for="child_link in link.links" class="nav_dropdown-links-wrapper">
+                            {% if ink.links.size > 0 %}    <div li-if="ink.links.size > 0" class="nav_dropdown-links-wrapper">
+    {% for child_link in link.links %}    <div li-for="child_link in link.links" class="nav_dropdown-link-item">
                                     
-                            {% for child_link in link.links %}    <div li-for="child_link in link.links" class="nav_dropdown-link-item">
-                                    
-                            <a li-object:href="child_link.url" href="{{ child_link.url }}" class="nav_dropdown-link_child w-inline-block"><div li-object="child_link.title">{{ child_link.title }}</div></a>
-                            
-                        </div>
-{% endfor %}
-                            
-                        </div>
-{% endfor %}
+                            <a li-object="child_link.title" li-object:href="child_link.url" href="{{ child_link.url }}" class="nav_dropdown-link_child">{{ child_link.title }}</a>
                             
                         </div>
 {% endfor %}    </div>
-{% endif %}<div class="nav_dropdown-grid is-2"><div id="w-node-_1708ebff-0ffc-cd25-ecef-fcae6629e00c-eddd3128"><div class="nav_child-link">{% assign product = all_products[block.settings.product_produit_en_avant_1] %} <a li-object:href="product.url" href="{{ product.url }}" class="w-inline-block"><img alt="" src="{{ product.featured_image }}" li-object:src="product.featured_image" loading="lazy">
+{% endif %}
+                            
+                        </div>
+{% endfor %}</div><div class="nav_dropdown-grid is-2"><div id="w-node-_1708ebff-0ffc-cd25-ecef-fcae6629e00c-eddd3128"><div class="nav_child-link">{% assign product = all_products[block.settings.product_produit_en_avant_1] %} <a li-object:href="product.url" href="{{ product.url }}" class="w-inline-block"><img alt="" src="{{ product.featured_image }}" li-object:src="product.featured_image" loading="lazy">
 </a><a li-object:href="product.url" href="{{ product.url }}" class="nav_dropdown-link w-inline-block"><div li-object:text="product.title">
 {{ product.title }}
 </div></a></div></div><div id="w-node-a345eaaf-6dfc-cafc-2f50-f834e8a43885-eddd3128"><div class="nav_child-link">{% assign product = all_products[block.settings.product_produit_en_avant_2] %} <a li-object:href="product.url" href="{{ product.url }}" class="w-inline-block"><img alt="" src="{{ product.featured_image }}" li-object:src="product.featured_image" loading="lazy">
