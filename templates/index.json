@@ -197,29 +197,41 @@
         "collection_JD78jq": {
           "type": "collection",
           "settings": {
-            "collection_collection": "cafes",
-            "collection_collection_limit": 1
+            "url_lien_collection": "shopify://collections/cafes",
+            "image_image_collection": "shopify://shop_images/Cafe_en_grain.png",
+            "text_nom_collection": "Café en grain"
           }
         },
         "collection_rFCwLB": {
           "type": "collection",
           "settings": {
-            "collection_collection": "accessoires",
-            "collection_collection_limit": 1
+            "url_lien_collection": "shopify://collections/accessoires",
+            "image_image_collection": "shopify://shop_images/Accessoires.png",
+            "text_nom_collection": "Accessoires"
           }
         },
         "collection_WQmVzN": {
           "type": "collection",
           "settings": {
-            "collection_collection": "les-thes",
-            "collection_collection_limit": 1
+            "url_lien_collection": "shopify://collections/les-thes",
+            "image_image_collection": "shopify://shop_images/Thes.png",
+            "text_nom_collection": "Thés"
           }
         },
         "collection_AHGHNG": {
           "type": "collection",
           "settings": {
-            "collection_collection": "cafetiere-a-filtre",
-            "collection_collection_limit": 1
+            "url_lien_collection": "shopify://collections/cafetiere-a-filtre",
+            "image_image_collection": "shopify://shop_images/Cafetiere_a_filtre.png",
+            "text_nom_collection": "Cafetière à filtre"
+          }
+        },
+        "collection_bxA7Wj": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/machines-a-cafe-a-grain",
+            "image_image_collection": "shopify://shop_images/Machines.png",
+            "text_nom_collection": "Machines"
           }
         }
       },
@@ -227,7 +239,8 @@
         "collection_JD78jq",
         "collection_rFCwLB",
         "collection_WQmVzN",
-        "collection_AHGHNG"
+        "collection_AHGHNG",
+        "collection_bxA7Wj"
       ],
       "settings": {}
     },
