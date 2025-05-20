@@ -34,7 +34,7 @@
         <div li-content-for-theme-blocks="">
           {% content_for 'blocks' %}
         </div>
-        {% for link in linklists[section.settings.menu_handle].links %}
+        {% for link in linklists[section.settings.menu_block].links %}
           <div li-for="link in linklists[section.settings.menu_handle].links">
             <a li-object:href="link.url" href="{{ link.url }}" class="nav_link-item w-inline-block">
               <div>
