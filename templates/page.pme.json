@@ -172,13 +172,13 @@
         "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
       }
     },
-    "1747682149541c87b9": {
+    "1747736933cbdb30f3": {
       "type": "apps",
       "blocks": {
-        "forms_inline_Kg7A9k": {
+        "forms_inline_KL9Fd3": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "",
+            "form_id": "473013",
             "text_color": "#202020",
             "button_background_color": "#202020",
             "button_label_color": "#FFFFFF",
@@ -186,15 +186,15 @@
             "errors_color": "#E02229",
             "text_alignment": "center",
             "form_alignment": "center",
-            "padding_top": 0,
+            "padding_top": 64,
             "padding_bottom": 0,
             "padding_right": 0,
-            "padding_left": 0
+            "padding_left": 64
           }
         }
       },
       "block_order": [
-        "forms_inline_Kg7A9k"
+        "forms_inline_KL9Fd3"
       ],
       "settings": {}
     },
@@ -321,7 +321,7 @@
     "contenu_rmNcje",
     "contenu_gDW33K",
     "selection_manuel",
-    "1747682149541c87b9",
+    "1747736933cbdb30f3",
     "logo_defilants",
     "bandeau_HqpdQH",
     "faq",
