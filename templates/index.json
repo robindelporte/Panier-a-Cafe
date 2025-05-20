@@ -91,6 +91,18 @@
         "text_headline": "Nouveautés du blog"
       }
     },
+    "collection_tabs_marr_6khPpp": {
+      "type": "collection_tabs_marr",
+      "name": "Collection Tabs Marr",
+      "settings": {
+        "text_titre": "Nos équipements",
+        "collection_list": [
+          "machines-et-cafetieres",
+          "accessoires",
+          "equipements"
+        ]
+      }
+    },
     "logo_defilants": {
       "type": "logo_defilants",
       "settings": {
@@ -132,6 +144,7 @@
     "pages",
     "contenu_2",
     "related_articles",
+    "collection_tabs_marr_6khPpp",
     "logo_defilants",
     "collection_2",
     "reseaux",
