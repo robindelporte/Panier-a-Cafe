@@ -13,18 +13,18 @@
       "header": {
         "type": "header",
         "blocks": {
-          "menu_NgEecf": {
+          "menu_g3UKBc": {
             "type": "menu",
             "settings": {
               "text_menu": "Cafés",
-              "product_produit_en_avant_1": "cafe-el-volcano",
-              "product_produit_en_avant_2": "cafe-el-volcano",
+              "product_produit_en_avant_1": "cafe-aymara",
+              "product_produit_en_avant_2": "cafe-cascara-cascarita",
               "menu": "menu-test"
             }
           }
         },
         "block_order": [
-          "menu_NgEecf"
+          "menu_g3UKBc"
         ],
         "settings": {
           "richtext_banner_content": "<p> Livraison offerte pour toute commande de +80€</p>",
