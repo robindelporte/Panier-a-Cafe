@@ -15,14 +15,56 @@
         "tab_ALztBd": {
           "type": "tab",
           "settings": {
+            "text_horaires": "9h – 12h30 / 14h - 18h",
+            "text_adresse": "805 Rte des Futaies, 74370 Villaz",
+            "url_link": "https://maps.app.goo.gl/enZGcH1krATK18sa9",
+            "image_image_carte": "shopify://shop_images/Capture_d_ecran_2025-05-20_120029.png",
+            "text_tab_label": "L’atelier boutique"
+          }
+        },
+        "tab_Yk8JbQ": {
+          "type": "tab",
+          "settings": {
             "text_horaires": "7h - 13h",
             "text_adresse": "Place Ste Claire (En vieille Ville)",
-            "url_link": ""
+            "url_link": "",
+            "text_tab_label": "Marché du mardi"
+          }
+        },
+        "tab_bdNJHF": {
+          "type": "tab",
+          "settings": {
+            "text_horaires": "7h - 13h",
+            "text_adresse": "Place Ste Claire (En vieille Ville)",
+            "url_link": "",
+            "text_tab_label": "Marché du mercredi"
+          }
+        },
+        "tab_D4y8NM": {
+          "type": "tab",
+          "settings": {
+            "text_horaires": "7h - 13h",
+            "text_adresse": "Place Ste Claire (En vieille Ville)",
+            "url_link": "",
+            "text_tab_label": "Marché du vendredi"
+          }
+        },
+        "tab_A3HaG3": {
+          "type": "tab",
+          "settings": {
+            "text_horaires": "7h - 13h",
+            "text_adresse": "Place Ste Claire (En vieille Ville)",
+            "url_link": "",
+            "text_tab_label": "Marché du samedi"
           }
         }
       },
       "block_order": [
-        "tab_ALztBd"
+        "tab_ALztBd",
+        "tab_Yk8JbQ",
+        "tab_bdNJHF",
+        "tab_D4y8NM",
+        "tab_A3HaG3"
       ],
       "settings": {
         "text_heading": "Où nous trouver ?"
