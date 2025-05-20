@@ -13,6 +13,16 @@
       "header": {
         "type": "header",
         "blocks": {
+          "menu_PJUKEx": {
+            "type": "menu",
+            "name": "menu",
+            "settings": {
+              "menu": "customer-account-main-menu",
+              "product_1": "cafe-akela",
+              "product_2": "cafe-bio-amore"
+            },
+            "blocks": {}
+          },
           "menu_9ktF9N": {
             "type": "menu",
             "name": "menu",
@@ -25,6 +35,7 @@
           }
         },
         "block_order": [
+          "menu_PJUKEx",
           "menu_9ktF9N"
         ],
         "settings": {
