@@ -34,10 +34,10 @@
           "menu_agy9aX": {
             "type": "menu",
             "settings": {
-              "text_menu": "Cafés",
-              "product_produit_en_avant_1": "",
-              "product_produit_en_avant_2": "",
-              "menu": ""
+              "text_menu": "Équipements",
+              "product_produit_en_avant_1": "jura-c8",
+              "product_produit_en_avant_2": "chemex",
+              "menu": "equipements"
             }
           }
         },
