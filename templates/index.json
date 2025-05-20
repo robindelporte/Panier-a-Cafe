@@ -407,12 +407,6 @@
         "text_button_text": "Je veux un sac"
       }
     },
-    "related_articles": {
-      "type": "related_articles",
-      "settings": {
-        "text_headline": "Nouveautés du blog"
-      }
-    },
     "collection_tabs_marr_6khPpp": {
       "type": "collection_tabs_marr",
       "name": "Collection Tabs Marr",
@@ -425,18 +419,6 @@
         ]
       }
     },
-    "logo_defilants": {
-      "type": "logo_defilants",
-      "settings": {
-        "text_heading": "Ils nous font confiance"
-      }
-    },
-    "collection_2": {
-      "type": "collection_2",
-      "settings": {
-        "text_heading": "Nos nouveautés"
-      }
-    },
     "reseaux": {
       "type": "reseaux",
       "settings": {
@@ -447,8 +429,8 @@
       "type": "newsletter",
       "settings": {
         "text_headline": "S'inscrire à la newsletter",
-        "text_checkbox": "En vous inscrivant, vous acceptez notre <a href=\"#\" li-settings:url=\"Politique de confidentialite\">politique de confidentialité</a> et consentez à recevoir des emails.",
-        "url_politique_de_confidentialite": ""
+        "text_checkbox": "En vous inscrivant, vous acceptez notre politique de confidentialité et consentez à recevoir des emails.",
+        "url_politique_de_confidentialite": "shopify://policies/privacy-policy"
       }
     }
   },
@@ -466,10 +448,7 @@
     "pages",
     "contenu_kbV9Uz",
     "contenu_2",
-    "related_articles",
     "collection_tabs_marr_6khPpp",
-    "logo_defilants",
-    "collection_2",
     "reseaux",
     "newsletter"
   ]
