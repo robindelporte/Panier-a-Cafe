@@ -1,36 +1,155 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "header_landing": {
-            "type": "header_landing"
+  "sections": {
+    "header_landing": {
+      "type": "header_landing",
+      "blocks": {
+        "headline_UBWR6M": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Restaurants, hôtels, coffee shops : un café à la hauteur de votre établissement !"
+          }
         },
-        "bandeau": {
-            "type": "bandeau"
-        },
-        "content": {
-            "type": "content"
-        },
-        "selection_manuel": {
-            "type": "selection_manuel"
-        },
-        "logo_defilants": {
-            "type": "logo_defilants"
-        },
-        "faq": {
-            "type": "faq"
-        },
-        "reseaux": {
-            "type": "reseaux"
+        "text_CEqHk3": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Dans la restauration et l’hôtellerie, chaque détail compte et le café que vous servez ne fait pas exception.<br/><br/></p>"
+          }
         }
+      },
+      "block_order": [
+        "headline_UBWR6M",
+        "text_CEqHk3"
+      ],
+      "settings": {
+        "image_image": "shopify://shop_images/chr.webp"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "header_landing",
-        "bandeau",
-        "content",
-        "selection_manuel",
-        "logo_defilants",
-        "faq",
-        "reseaux"
-    ]
+    "bandeau": {
+      "type": "bandeau",
+      "blocks": {
+        "icone_T8CJHf": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Grains_de_cafes_714b57cf-cfb3-435c-aae1-459827d38467.png",
+            "text_titre_icone": "Café de qualité",
+            "text_description": "Café sélectionné et livré automatiquement !"
+          }
+        },
+        "icone_pnk9Fr": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/machine.png",
+            "text_titre_icone": "Location adaptée",
+            "text_description": "Machines modernes et performantes."
+          }
+        },
+        "icone_pJytbr": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/maintenance.png",
+            "text_titre_icone": "Maintenance incluse",
+            "text_description": "Aucun souci technique, on s’occupe de tout !"
+          }
+        },
+        "icone_VcXqDy": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
+            "text_titre_icone": "Installation rapide",
+            "text_description": "Mise en service express pour votre confort."
+          }
+        }
+      },
+      "block_order": [
+        "icone_T8CJHf",
+        "icone_pnk9Fr",
+        "icone_pJytbr",
+        "icone_VcXqDy"
+      ],
+      "settings": {
+        "text_heading": "Pourquoi choisir notre solution ?"
+      }
+    },
+    "contenu_Y76T8e": {
+      "type": "contenu",
+      "blocks": {
+        "headline_3xeGCQ": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy."
+          }
+        },
+        "text_PEYa7L": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>"
+          }
+        },
+        "buttons_eUhnpD": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "",
+            "text_button_text": "Button",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
+        }
+      },
+      "block_order": [
+        "headline_3xeGCQ",
+        "text_PEYa7L",
+        "buttons_eUhnpD"
+      ],
+      "name": "Contenu",
+      "settings": {
+        "left_right": "left"
+      }
+    },
+    "selection_manuel": {
+      "type": "selection_manuel",
+      "settings": {
+        "text_titre_section": "Un café pour chaque mois, une ambiance pour chaque saison",
+        "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
+      }
+    },
+    "logo_defilants": {
+      "type": "logo_defilants",
+      "settings": {
+        "text_heading": "Ils nous font confiance"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "text_heading": "Foire aux questions",
+        "richtext_richtext": "<p>\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                </p>"
+      }
+    },
+    "reseaux": {
+      "type": "reseaux",
+      "settings": {
+        "text_heading": "Suivez-nous sur nos réseaux sociaux"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "header_landing",
+    "bandeau",
+    "contenu_Y76T8e",
+    "selection_manuel",
+    "logo_defilants",
+    "faq",
+    "reseaux"
+  ]
 }
