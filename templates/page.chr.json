@@ -85,13 +85,13 @@
         "headline_3xeGCQ": {
           "type": "headline",
           "settings": {
-            "text_headline": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy."
+            "text_headline": "Notre engagement :"
           }
         },
         "text_PEYa7L": {
           "type": "text",
           "settings": {
-            "richtext_paragraph": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>"
+            "richtext_paragraph": "<p>Au Panier à Café, nous vous fournissons des cafés de spécialité, sélectionnés avec soin et torréfiés avec passion. Le tout, pour garantir une extraction parfaite, nous vous équipons des meilleures machines du marché : Jura pour l’automatique, Simonelli et Victoria Arduino pour les percolateurs professionnels. Vente, location, conseils : nous vous accompagnons pour que le café devienne une véritable signature de votre établissement.</p>"
           }
         },
         "buttons_eUhnpD": {
@@ -111,11 +111,84 @@
       ],
       "name": "Contenu",
       "settings": {
+        "left_right": "right"
+      }
+    },
+    "contenu_Cp9UAD": {
+      "type": "contenu",
+      "blocks": {
+        "headline_nCTkwD": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Et plus encore !"
+          }
+        },
+        "text_GxriJY": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>On ne se contente pas de vous livrer une machine, on vous accompagne pour qu’elle devienne un atout. On vous aide à affiner vos réglages et à entretenir votre matériel pour qu’il dure le plus longtemps possible.</p>"
+          }
+        },
+        "buttons_amq9B3": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "",
+            "text_button_text": "Button",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
+        }
+      },
+      "block_order": [
+        "headline_nCTkwD",
+        "text_GxriJY",
+        "buttons_amq9B3"
+      ],
+      "name": "Contenu",
+      "settings": {
         "left_right": "left"
       }
     },
     "selection_manuel": {
       "type": "selection_manuel",
+      "blocks": {
+        "selection_hqgtNg": {
+          "type": "selection",
+          "settings": {
+            "text_titre_selection": "Chaque grain a une histoire",
+            "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
+            "text_texte_tag_1": "Torréfaction artisanale",
+            "image_icone_tag_2": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
+            "text_texte_tag_2": "Sourcing direct producteur",
+            "text_paragraphe": "Nos cafés sont sourcés à la ferme, souvent bio, parfois importés à la voile et toujours traçables. On travaille main dans la main avec des producteurs, on torréfie en Haute-Savoie, et on sélectionne le meilleur pour ton établissement. Résultat : un café bon, juste, et vraiment différent !",
+            "url_button_lien": "shopify://collections/cafes",
+            "text_button_texte": "Découvrir",
+            "url_link": "shopify://collections/cafes",
+            "image_image_produit": "shopify://shop_images/cafe.webp",
+            "text_etiquette": "Nos cafés"
+          }
+        },
+        "selection_9PtfVf": {
+          "type": "selection",
+          "settings": {
+            "text_titre_selection": "Des machines pensées pour les pros",
+            "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
+            "text_texte_tag_1": "Location adaptée à vos besoins",
+            "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
+            "text_texte_tag_2": "Installation & SAV inclus",
+            "text_paragraphe": "Machine à grains automatique ou machine expresso avec moulin : on t’équipe en fonction de ton débit et de tes besoins. Installation rapide, formation de ton équipe, maintenance assurée… Tu restes focus sur ton service, on gère le reste !",
+            "url_button_lien": "shopify://collections/machines-a-cafe-a-grain",
+            "text_button_texte": "Découvrir",
+            "url_link": "shopify://collections/machines-a-cafe-a-grain",
+            "image_image_produit": "shopify://shop_images/machines.webp",
+            "text_etiquette": "Nos machines"
+          }
+        }
+      },
+      "block_order": [
+        "selection_hqgtNg",
+        "selection_9PtfVf"
+      ],
       "settings": {
         "text_titre_section": "Un café pour chaque mois, une ambiance pour chaque saison",
         "text_sous_titre": "Chaque mois, on met en lumière un café d’exception : souvent issu d’un microlot, sourcé lors de nos voyages, il vous permet de découvrir des profils rares, parfois surprenants, toujours passionnants. En parallèle, on vous propose aussi un café par saison : un estival, un printanier, un automnal ou un hivernal,  pensés pour s’accorder aux humeurs météo du moment. Parce que le café, c’est aussi une affaire de sensations, de climat… et d’envie !"
@@ -147,6 +220,7 @@
     "header_landing",
     "bandeau",
     "contenu_Y76T8e",
+    "contenu_Cp9UAD",
     "selection_manuel",
     "logo_defilants",
     "faq",
