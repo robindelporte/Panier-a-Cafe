@@ -12,13 +12,26 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "menu_NgEecf": {
+            "type": "menu",
+            "settings": {
+              "text_menu": "Cafés",
+              "product_produit_en_avant_1": "cafe-el-volcano",
+              "product_produit_en_avant_2": "cafe-el-volcano",
+              "menu": "menu-test"
+            }
+          }
+        },
+        "block_order": [
+          "menu_NgEecf"
+        ],
         "settings": {
           "richtext_banner_content": "<p> Livraison offerte pour toute commande de +80€</p>",
           "collection_search_bestseller": "cafes",
           "collection_search_bestseller_limit": 4,
           "free_shipping": "8000",
-          "url_routesroot_url": "/",
-          "small": "small-menu"
+          "url_routesroot_url": "/"
         }
       },
       "footer": {
