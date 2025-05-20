@@ -24,6 +24,50 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "icone_KT7pHJ": {
+            "type": "icone",
+            "settings": {
+              "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
+              "text_heading": "Livraison en 48h"
+            }
+          },
+          "icone_tQ4Cg7": {
+            "type": "icone",
+            "settings": {
+              "image_icone": "shopify://shop_images/Carte_bleu.png",
+              "text_heading": "Paiement sécurisé"
+            }
+          },
+          "icone_WtEjFJ": {
+            "type": "icone",
+            "settings": {
+              "image_icone": "shopify://shop_images/Colis.png",
+              "text_heading": "Livraison offerte à partir de 80€ d'achat"
+            }
+          },
+          "icone_474D9D": {
+            "type": "icone",
+            "settings": {
+              "image_icone": "shopify://shop_images/Grains_de_cafes.png",
+              "text_heading": "Abonnement"
+            }
+          },
+          "icone_nUeJVb": {
+            "type": "icone",
+            "settings": {
+              "image_icone": "shopify://shop_images/Localisation.png",
+              "text_heading": "805 route des Futaies 74370 Villaz."
+            }
+          }
+        },
+        "block_order": [
+          "icone_KT7pHJ",
+          "icone_tQ4Cg7",
+          "icone_WtEjFJ",
+          "icone_474D9D",
+          "icone_nUeJVb"
+        ],
         "settings": {}
       }
     },
