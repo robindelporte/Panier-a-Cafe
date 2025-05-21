@@ -8,7 +8,7 @@
 {{ section.settings.text_titre }}
 </h2>
 <div class="category_top"><div role="tablist" li-for:inside="collection in section.settings.collection_list" class="tab_menu">
-        {% for collection in section.settings.collection_list %}                            <button role="tab" x-on:click="tab = {{section.index}}{{forloop.index}}" aria-controls="collection-tab-{{section.index}}{{forloop.index}}" id="collection-button-{{section.index}}{{forloop.index}}" x-bind:aria-selected="tab === {{section.index}}{{forloop.index}} ? 'true' : 'false'" x-bind:class="tab === {{section.index}}{{forloop.index}} ? 'is-active' : ''" class="button is-tab-button is-alternate is-active"><div li-object="collection.title">{{ collection.title }}</div></button>
+        {% for collection in section.settings.collection_list %}                            <button role="tab" x-on:click="tab = {{section.index}}{{forloop.index}}" aria-controls="collection-tab-{{section.index}}{{forloop.index}}" id="collection-button-{{section.index}}{{forloop.index}}" x-bind:aria-selected="tab === {{section.index}}{{forloop.index}} ? 'true' : 'false'" x-bind:class="tab === {{section.index}}{{forloop.index}} ? 'is-active' : ''" class="button is-tab-button is-alternate"><div li-object="collection.title">{{ collection.title }}</div></button>
                     {% endfor %}    </div>
 </div><div li-for:inside="collection in section.settings.collection_list" class="tab_body">
         {% for collection in section.settings.collection_list %}                            
