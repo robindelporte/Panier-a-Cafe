@@ -422,7 +422,13 @@
     "reseaux": {
       "type": "reseaux",
       "settings": {
-        "text_heading": "Suivez-nous sur nos réseaux sociaux"
+        "text_heading": "Suivez-nous sur nos réseaux sociaux",
+        "image_image_1": "shopify://shop_images/panier-a-cafe_2.png",
+        "image_image_2": "shopify://shop_images/panier-a-cafe_3.png",
+        "image_image_3": "shopify://shop_images/panier-a-cafe_4.png",
+        "image_image_4": "shopify://shop_images/panier-a-cafe_5.png",
+        "image_image_5": "shopify://shop_images/panier-a-cafe_1.png",
+        "image_image_6_mobile": "shopify://shop_images/revendeurs-image.webp"
       }
     },
     "newsletter": {
