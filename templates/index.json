@@ -41,22 +41,6 @@
     "bandeau": {
       "type": "bandeau",
       "blocks": {
-        "icone_8LbbGd": {
-          "type": "icone",
-          "settings": {
-            "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
-            "text_titre_icone": "Livraison en 48h",
-            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
-          }
-        },
-        "icone_BKFwGF": {
-          "type": "icone",
-          "settings": {
-            "image_icone": "shopify://shop_images/Carte_bleu.png",
-            "text_titre_icone": "Paiement sécurisé",
-            "text_description": "Visa, PayPal, Apple Pay, Mastercard."
-          }
-        },
         "icone_Ui7Fzr": {
           "type": "icone",
           "settings": {
@@ -65,12 +49,28 @@
             "text_description": "Pour toute commande de plus de 80€."
           }
         },
+        "icone_8LbbGd": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        },
         "icone_z9TWcX": {
           "type": "icone",
           "settings": {
             "image_icone": "shopify://shop_images/Grains_de_cafes.png",
             "text_titre_icone": "Abonnement",
             "text_description": "Café sélectionné et livré automatiquement !"
+          }
+        },
+        "icone_BKFwGF": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Carte_bleu.png",
+            "text_titre_icone": "Paiement sécurisé",
+            "text_description": "Visa, PayPal, Apple Pay, Mastercard."
           }
         },
         "icone_xqMpjy": {
@@ -83,10 +83,10 @@
         }
       },
       "block_order": [
-        "icone_8LbbGd",
-        "icone_BKFwGF",
         "icone_Ui7Fzr",
+        "icone_8LbbGd",
         "icone_z9TWcX",
+        "icone_BKFwGF",
         "icone_xqMpjy"
       ],
       "settings": {
