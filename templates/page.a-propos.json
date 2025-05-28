@@ -52,6 +52,71 @@
         "left_right": "right"
       }
     },
+    "badges_cDDfKL": {
+      "type": "badges",
+      "blocks": {
+        "badge_PgyWRY": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/direct.png",
+            "text_heading": "CAFÉ EN DIRECT",
+            "text_texte": "Nous achetons une grande partie de nos cafés en direct."
+          }
+        },
+        "badge_HkD4fR": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/voilier.png",
+            "text_heading": "CAFÉ VOILIER",
+            "text_texte": "Certains de nos cafés viennent à la voile, pour un transport bas carbone."
+          }
+        },
+        "badge_XABPx4": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/women.png",
+            "text_heading": "CAFÉ DE FEMME",
+            "text_texte": "Nous mettons à l’honneur des cafés produits par des femmes engagées."
+          }
+        },
+        "badge_mArQ8E": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/formation.png",
+            "text_heading": "VERS L’AVENIR",
+            "text_texte": "Notre équipe est composée de plusieurs alternants."
+          }
+        },
+        "badge_qJHipX": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/bio.png",
+            "text_heading": "CAFÉ BIO",
+            "text_texte": "Certains cafés issus de l’agriculture biologique."
+          }
+        },
+        "badge_6wnTCQ": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/epanou.png",
+            "text_heading": "INCLUSION",
+            "text_texte": "Nous travaillons main dans la main avec les EPANOU (ESAT du Parmelan)."
+          }
+        }
+      },
+      "block_order": [
+        "badge_PgyWRY",
+        "badge_HkD4fR",
+        "badge_XABPx4",
+        "badge_mArQ8E",
+        "badge_qJHipX",
+        "badge_6wnTCQ"
+      ],
+      "name": "Badges",
+      "settings": {
+        "text_titre": "La vérité du grain à la tasse"
+      }
+    },
     "team": {
       "type": "team",
       "settings": {
@@ -62,7 +127,7 @@
       "type": "faq",
       "settings": {
         "text_heading": "Foire aux questions",
-        "richtext_richtext": "<p>\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                </p>"
+        "richtext_richtext": "<p><br/>                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                </p>"
       }
     }
   },
@@ -72,6 +137,7 @@
     "hero",
     "contenu_avec_titre",
     "contenu_UhVyzY",
+    "badges_cDDfKL",
     "team",
     "faq"
   ]
