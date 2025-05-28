@@ -47,7 +47,8 @@
         "text_AeEqxG"
       ],
       "settings": {
-        "image_image": "shopify://shop_images/Z10S-2.jpg"
+        "image_image": "shopify://shop_images/association-epanou.webp",
+        "image_stickers": "shopify://shop_images/stickers.png"
       }
     },
     "selection_manuel_DVdGBb": {
@@ -84,7 +85,6 @@
         "selection_gg9rJi",
         "selection_phUfQA"
       ],
-      "name": "Selection manuel",
       "settings": {
         "text_titre_section": "Soutiens l’asso… avec du style !",
         "text_sous_titre": "On ne va pas te mentir, pour les emmener avec nous, on a besoin de sous… mais pour la bonne cause ! Alors, si tu achètes un kilo ou un joli sac en toile, tu fais kiffer ton intérieur et notre asso. Gagnant-gagnant, non ?"
@@ -95,23 +95,33 @@
       "blocks": {
         "card_69NwWX": {
           "type": "card",
-          "settings": {}
+          "settings": {
+            "image_card_image": "shopify://shop_images/epanou_45d52ee2-ac9f-4d12-b50a-2560160fe549.png"
+          }
         },
         "card_VtyHfV": {
           "type": "card",
-          "settings": {}
+          "settings": {
+            "image_card_image": "shopify://shop_images/epanou-1.png"
+          }
         },
         "card_qL8wzE": {
           "type": "card",
-          "settings": {}
+          "settings": {
+            "image_card_image": "shopify://shop_images/epanou-2.png"
+          }
         },
         "card_JeMNxQ": {
           "type": "card",
-          "settings": {}
+          "settings": {
+            "image_card_image": "shopify://shop_images/epanou-3.png"
+          }
         },
         "card_xyepVC": {
           "type": "card",
-          "settings": {}
+          "settings": {
+            "image_card_image": "shopify://shop_images/association-epanou.webp"
+          }
         }
       },
       "block_order": [
@@ -153,8 +163,8 @@
         "text_8nKQED",
         "buttons_Tq7YHg"
       ],
-      "name": "Contenu",
       "settings": {
+        "image_image": "shopify://shop_images/epanou-4.webp",
         "left_right": "right"
       }
     },

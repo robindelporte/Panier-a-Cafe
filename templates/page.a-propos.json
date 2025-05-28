@@ -117,6 +117,18 @@
         "text_titre": "La vérité du grain à la tasse"
       }
     },
+    "animation_produit_zR93AN": {
+      "type": "animation_produit",
+      "name": "Animation-Produit",
+      "settings": {
+        "text_animation_titre_1": "De la ferme à votre tasse, chaque étape compte",
+        "richtext_animation_texte_1": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>",
+        "text_animation_titre_2": "De la ferme à votre tasse, chaque étape compte",
+        "richtext_animation_texte_2": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>",
+        "text_animation_titre_3": "De la ferme à votre tasse, chaque étape compte",
+        "richtext_animation_texte_3": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>"
+      }
+    },
     "team": {
       "type": "team",
       "settings": {
@@ -129,6 +141,118 @@
         "text_heading": "Foire aux questions",
         "richtext_richtext": "<p><br/>                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                </p>"
       }
+    },
+    "liste_collections_FdJHPj": {
+      "type": "liste_collections",
+      "blocks": {
+        "collection_ffBDgG": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/cafes-en-grain",
+            "image_image_collection": "shopify://shop_images/Cafe_en_grain.png",
+            "text_nom_collection": "Café en grain"
+          }
+        },
+        "collection_rDFXd3": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/equipements",
+            "image_image_collection": "shopify://shop_images/Accessoires.png",
+            "text_nom_collection": "Équipements"
+          }
+        },
+        "collection_jkrVXX": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/les-thes",
+            "image_image_collection": "shopify://shop_images/Thes.png",
+            "text_nom_collection": "Thès"
+          }
+        },
+        "collection_QBNCYx": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/cafetiere-a-filtre",
+            "image_image_collection": "shopify://shop_images/Cafetiere_a_filtre.png",
+            "text_nom_collection": "Cafetière à filtre"
+          }
+        },
+        "collection_yzA6kp": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/machines-a-cafe-a-grain",
+            "image_image_collection": "shopify://shop_images/Machines.png",
+            "text_nom_collection": "Machines"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ffBDgG",
+        "collection_rDFXd3",
+        "collection_jkrVXX",
+        "collection_QBNCYx",
+        "collection_yzA6kp"
+      ],
+      "settings": {}
+    },
+    "pages_PLch7t": {
+      "type": "pages",
+      "blocks": {
+        "carte_M8X3DE": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/histoire.webp",
+            "text_heading": "Notre histoire",
+            "url_link": "shopify://pages/a-propos",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_DdYjAw": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/atelier.webp",
+            "text_heading": "Professionnels",
+            "url_link": "shopify://pages/professionnels",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_kmtBbx": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/association_0c2478a2-02cb-49a2-96e7-77834aad3dad.webp",
+            "text_heading": "L'association",
+            "url_link": "shopify://pages/lassociation",
+            "text_text": "Découvrir"
+          }
+        }
+      },
+      "block_order": [
+        "carte_M8X3DE",
+        "carte_DdYjAw",
+        "carte_kmtBbx"
+      ],
+      "settings": {}
+    },
+    "reseaux_PEeYPG": {
+      "type": "reseaux",
+      "settings": {
+        "text_heading": "Suivez-nous sur nos réseaux sociaux",
+        "image_image_1": "shopify://shop_images/panier-a-cafe_2.png",
+        "image_image_2": "shopify://shop_images/panier-a-cafe_3.png",
+        "image_image_3": "shopify://shop_images/panier-a-cafe_4.png",
+        "image_image_4": "shopify://shop_images/panier-a-cafe_5.png",
+        "image_image_5": "shopify://shop_images/panier-a-cafe_1.png",
+        "image_image_6_mobile": "shopify://shop_images/revendeurs-image.webp"
+      }
+    },
+    "newsletter_TGbQ4W": {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "settings": {
+        "text_headline": "S'inscrire à la newsletter",
+        "text_checkbox": "En vous inscrivant, vous acceptez notre <a href=\"#\" li-settings:url=\"Politique de confidentialite\">politique de confidentialité</a> et consentez à recevoir des emails.",
+        "url_politique_de_confidentialite": ""
+      }
     }
   },
   "layout": "theme",
@@ -138,7 +262,12 @@
     "contenu_avec_titre",
     "contenu_UhVyzY",
     "badges_cDDfKL",
+    "animation_produit_zR93AN",
     "team",
-    "faq"
+    "faq",
+    "liste_collections_FdJHPj",
+    "pages_PLch7t",
+    "reseaux_PEeYPG",
+    "newsletter_TGbQ4W"
   ]
 }
