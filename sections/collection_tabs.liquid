@@ -59,205 +59,137 @@
   // Map pour stocker les instances Splide
   const splideInstances = new Map();
   
-  function initSplideSliders(forceAll = false) {
+  // Fonction pour traiter une instance de slider individuelle
+  function processSliderInstance(sliderEl) {
     const isMobileOrTablet = window.innerWidth < 992;
     
-    // Sélectionner tous les sliders
-    const sliders = document.querySelectorAll('.splide.slider');
-    const currentSliders = new Set();
+    // Créer une clé unique pour ce slider
+    if (!sliderEl.dataset.splideId) {
+      sliderEl.dataset.splideId = 'splide_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    }
     
-    sliders.forEach((sliderEl) => {
-      // Créer une clé unique
-      if (!sliderEl.dataset.splideId) {
-        sliderEl.dataset.splideId = 'splide_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-      }
-      
-      const sliderId = sliderEl.dataset.splideId;
-      currentSliders.add(sliderId);
-      
-      const existingInstance = splideInstances.get(sliderId);
-      
-      // Vérifier si le slider est dans un tab panel visible OU si on force l'initialisation
-      const tabPanel = sliderEl.closest('.category_tab-panel');
-      const isInActiveTab = !tabPanel || !tabPanel.hasAttribute('style') || 
-                           tabPanel.style.display !== 'none' || forceAll;
-      
-      // Si mobile/tablette, pas encore monté, et dans un tab actif
-      if (isMobileOrTablet && !existingInstance && isInActiveTab) {
-        try {
-          const splide = new Splide(sliderEl, {
-            perPage: 4,
-            perMove: 1,
-            focus: 0,
-            type: 'slide',
-            gap: '40px',
-            arrows: false,
-            pagination: true,
-            speed: 600,
-            dragAngleThreshold: 30,
-            autoWidth: false,
-            rewind: false,
-            rewindSpeed: 400,
-            waitForTransition: false,
-            updateOnMove: true,
-            trimSpace: false,
-            breakpoints: {
-              991: {
-                perPage: 2,
-                gap: '32px',
-              },
-              767: {
-                perPage: 1.5,
-                gap: '20px',
-              },
-              479: {
-                perPage: 1,
-                gap: '16px',
-              }
+    const sliderId = sliderEl.dataset.splideId;
+    const existingInstance = splideInstances.get(sliderId);
+    
+    console.log(`Processing slider ${sliderId}: mobile=${isMobileOrTablet}, hasInstance=${!!existingInstance}`);
+    
+    // Si mobile/tablette et pas encore monté
+    if (isMobileOrTablet && !existingInstance) {
+      try {
+        const splide = new Splide(sliderEl, {
+          perPage: 4,
+          perMove: 1,
+          focus: 0,
+          type: 'slide',
+          gap: '40px',
+          arrows: false,
+          pagination: true,
+          speed: 600,
+          dragAngleThreshold: 30,
+          autoWidth: false,
+          rewind: false,
+          rewindSpeed: 400,
+          waitForTransition: false,
+          updateOnMove: true,
+          trimSpace: false,
+          breakpoints: {
+            991: {
+              perPage: 2,
+              gap: '32px',
+            },
+            767: {
+              perPage: 1.5,
+              gap: '20px',
+            },
+            479: {
+              perPage: 1,
+              gap: '16px',
             }
-          });
-          
-          splide.mount();
-          splideInstances.set(sliderId, splide);
-          
-          console.log(`Splide monté pour ${sliderId}`);
-        } catch (error) {
-          console.error(`Erreur lors du montage de Splide pour ${sliderId}:`, error);
-        }
-      }
-      
-      // Si desktop et slider existant → détruire
-      if (!isMobileOrTablet && existingInstance) {
-        try {
-          existingInstance.destroy();
-          splideInstances.delete(sliderId);
-          console.log(`Splide détruit pour ${sliderId}`);
-        } catch (error) {
-          console.error(`Erreur lors de la destruction de Splide pour ${sliderId}:`, error);
-        }
-      }
-    });
-    
-    // Nettoyer les instances orphelines
-    splideInstances.forEach((instance, sliderId) => {
-      if (!currentSliders.has(sliderId)) {
-        try {
-          instance.destroy();
-          splideInstances.delete(sliderId);
-          console.log(`Instance orpheline nettoyée: ${sliderId}`);
-        } catch (error) {
-          console.error(`Erreur lors du nettoyage de l'instance ${sliderId}:`, error);
-        }
-      }
-    });
-  }
-  
-  // Fonction pour initialiser un slider spécifique quand son tab devient actif
-  function initSliderInTab(tabPanel) {
-    const isMobileOrTablet = window.innerWidth < 992;
-    if (!isMobileOrTablet) return;
-    
-    const slidersInTab = tabPanel.querySelectorAll('.splide.slider');
-    
-    slidersInTab.forEach((sliderEl) => {
-      if (!sliderEl.dataset.splideId) {
-        sliderEl.dataset.splideId = 'splide_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-      }
-      
-      const sliderId = sliderEl.dataset.splideId;
-      const existingInstance = splideInstances.get(sliderId);
-      
-      if (!existingInstance) {
-        try {
-          const splide = new Splide(sliderEl, {
-            perPage: 4,
-            perMove: 1,
-            focus: 0,
-            type: 'slide',
-            gap: '40px',
-            arrows: false,
-            pagination: true,
-            speed: 600,
-            dragAngleThreshold: 30,
-            autoWidth: false,
-            rewind: false,
-            rewindSpeed: 400,
-            waitForTransition: false,
-            updateOnMove: true,
-            trimSpace: false,
-            breakpoints: {
-              991: {
-                perPage: 2,
-                gap: '32px',
-              },
-              767: {
-                perPage: 1.5,
-                gap: '20px',
-              },
-              479: {
-                perPage: 1,
-                gap: '16px',
-              }
-            }
-          });
-          
-          splide.mount();
-          splideInstances.set(sliderId, splide);
-          
-          console.log(`Splide monté dans tab pour ${sliderId}`);
-        } catch (error) {
-          console.error(`Erreur lors du montage de Splide dans tab pour ${sliderId}:`, error);
-        }
-      }
-    });
-  }
-  
-  // Observer les changements de tabs Alpine.js
-  function observeAlpineTabChanges() {
-    // Observer les changements d'attribut style sur les tab panels
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
-          const target = mutation.target;
-          
-          // Si c'est un tab panel qui devient visible (style.display !== 'none' ou pas de style)
-          if (target.classList.contains('category_tab-panel') && 
-              (!target.hasAttribute('style') || target.style.display !== 'none')) {
-            
-            setTimeout(() => {
-              console.log('Tab devenu actif, initialisation des sliders...');
-              initSliderInTab(target);
-            }, 100); // Petit délai pour s'assurer que le tab est bien visible
           }
-        }
-      });
-    });
+        });
+        
+        splide.mount();
+        splideInstances.set(sliderId, {
+          instance: splide,
+          element: sliderEl
+        });
+        
+        console.log(`✅ Splide monté pour ${sliderId}`);
+        
+        // Refresh au cas où le slider devient visible plus tard
+        setTimeout(() => {
+          try {
+            splide.refresh();
+            console.log(`🔄 Splide refresh pour ${sliderId}`);
+          } catch (e) {
+            console.log(`Refresh failed for ${sliderId}:`, e);
+          }
+        }, 100);
+        
+      } catch (error) {
+        console.error(`❌ Erreur lors du montage de Splide pour ${sliderId}:`, error);
+      }
+    }
     
-    // Observer tous les tab panels
-    const tabPanels = document.querySelectorAll('.category_tab-panel');
-    tabPanels.forEach((tabPanel) => {
-      observer.observe(tabPanel, {
-        attributes: true,
-        attributeFilter: ['style']
-      });
-    });
-    
-    return observer;
+    // Si desktop et slider existant → détruire
+    if (!isMobileOrTablet && existingInstance) {
+      try {
+        existingInstance.instance.destroy();
+        splideInstances.delete(sliderId);
+        console.log(`🗑️ Splide détruit pour ${sliderId}`);
+      } catch (error) {
+        console.error(`❌ Erreur lors de la destruction de Splide pour ${sliderId}:`, error);
+      }
+    }
   }
   
-  // Alternative : Observer les clics sur les boutons de tabs
-  function observeTabButtons() {
-    // Rechercher les boutons qui déclenchent les tabs (ils ont généralement x-on:click ou @click)
-    const tabButtons = document.querySelectorAll('[id*="collection-button"]');
+  // Fonction principale pour traiter tous les sliders
+  function initSplideSliders() {
+    console.log('🚀 Initialisation des sliders...');
     
-    tabButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        setTimeout(() => {
-          console.log('Clic sur tab détecté, vérification des sliders...');
-          // Réinitialiser seulement les sliders visibles
-          initSplideSliders();
-        }, 150); // Délai pour laisser Alpine.js faire le changement
-      });
+    // Sélectionner tous les sliders et les traiter individuellement
+    const sliders = document.querySelectorAll('.splide.slider');
+    console.log(`Found ${sliders.length} sliders`);
+    
+    // Traiter chaque slider individuellement
+    sliders.forEach((sliderEl, index) => {
+      console.log(`Processing slider ${index + 1}/${sliders.length}`);
+      processSliderInstance(sliderEl);
+    });
+    
+    // Nettoyer les instances orphelines (sliders qui n'existent plus dans le DOM)
+    const currentSliderIds = new Set();
+    sliders.forEach(slider => {
+      if (slider.dataset.splideId) {
+        currentSliderIds.add(slider.dataset.splideId);
+      }
+    });
+    
+    splideInstances.forEach((data, sliderId) => {
+      if (!currentSliderIds.has(sliderId)) {
+        try {
+          data.instance.destroy();
+          splideInstances.delete(sliderId);
+          console.log(`🧹 Instance orpheline nettoyée: ${sliderId}`);
+        } catch (error) {
+          console.error(`❌ Erreur lors du nettoyage de l'instance ${sliderId}:`, error);
+        }
+      }
+    });
+    
+    console.log(`📊 Total instances actives: ${splideInstances.size}`);
+  }
+  
+  // Fonction pour rafraîchir tous les sliders actifs (utile quand les tabs changent)
+  function refreshAllSliders() {
+    console.log('🔄 Refresh de tous les sliders...');
+    splideInstances.forEach((data, sliderId) => {
+      try {
+        data.instance.refresh();
+        console.log(`🔄 Refreshed ${sliderId}`);
+      } catch (error) {
+        console.log(`⚠️ Refresh failed for ${sliderId}:`, error);
+      }
     });
   }
   
@@ -275,35 +207,41 @@
   }
   
   const debouncedInit = debounce(initSplideSliders, 200);
+  const debouncedRefresh = debounce(refreshAllSliders, 300);
   
   // Initialisation
   document.addEventListener('DOMContentLoaded', () => {
-    // Initialiser les sliders visibles
+    console.log('🎯 DOM loaded, initialisation...');
     initSplideSliders();
-    
-    // Observer les changements de tabs (deux méthodes pour être sûr)
-    observeAlpineTabChanges();
-    observeTabButtons();
-    
-    // Observer aussi les changements Alpine.js généraux
-    document.addEventListener('alpine:updated', () => {
-      setTimeout(() => {
-        console.log('Alpine updated, vérification des sliders...');
-        initSplideSliders();
-      }, 100);
-    });
   });
   
   // Gérer le resize
   window.addEventListener('resize', debouncedInit);
   
-  // Fonction utilitaire pour forcer la réinitialisation
-  window.reinitSplideSliders = () => initSplideSliders(true);
-  
-  // Debug : log quand Alpine.js est prêt
-  document.addEventListener('alpine:init', () => {
-    console.log('Alpine.js initialisé');
+  // Observer les clics sur les éléments (potentiels changements de tabs)
+  document.addEventListener('click', (e) => {
+    // Si c'est un bouton de tab ou un élément qui pourrait changer l'affichage
+    if (e.target.matches('[id*="button"]') || 
+        e.target.closest('[id*="button"]') ||
+        e.target.matches('[x-on\\:click]') ||
+        e.target.matches('[@click]')) {
+      
+      console.log('🖱️ Clic détecté, refresh dans 300ms...');
+      setTimeout(debouncedRefresh, 300);
+    }
   });
+  
+  // Fonctions utilitaires disponibles globalement
+  window.reinitSplideSliders = initSplideSliders;
+  window.refreshAllSliders = refreshAllSliders;
+  window.debugSplideInstances = () => {
+    console.log('📋 Instances Splide actives:');
+    splideInstances.forEach((data, sliderId) => {
+      console.log(`- ${sliderId}:`, data.element);
+    });
+  };
+  
+  console.log('📜 Script Splide chargé. Fonctions disponibles: reinitSplideSliders(), refreshAllSliders(), debugSplideInstances()');
   </script>
 </div>
 {% schema %} {"tag":"section","name":"Collection Tabs","class":"section_category","settings":[{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs","category":"Liquify","blocks":[]}]} {% endschema %}
