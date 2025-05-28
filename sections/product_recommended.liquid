@@ -1,13 +1,31 @@
 <div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium product-recommendations"><div class="container-large"><div class="headline-wrapper"><h2 class="heading-style-h2">
 {{ section.settings.text_titre }}
 </h2>
-</div><div class="product_list-wrapper"><ul role="list" class="product_list w-list-unstyled">{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="product_list-item">
+</div><div class="splide slider"><div class="splide__track"><ul role="list" class="splide__list w-list-unstyled">{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="splide__slide">
                                     
                             {% render 'product_item', product: product %}
 
                             
                         </li>
-{% endfor %}</ul></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener('DOMContentLoaded', function() {
+{% endfor %}{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="splide__slide">
+                                    
+                            {% render 'product_item', product: product %}
+
+                            
+                        </li>
+{% endfor %}{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="splide__slide">
+                                    
+                            {% render 'product_item', product: product %}
+
+                            
+                        </li>
+{% endfor %}{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="splide__slide">
+                                    
+                            {% render 'product_item', product: product %}
+
+                            
+                        </li>
+{% endfor %}</ul></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener('DOMContentLoaded', function() {
     const productRecommendationsSection = document.querySelector('.product-recommendations');
     const url = productRecommendationsSection.dataset.url;
     fetch(url)
@@ -23,5 +41,57 @@
       .catch(e => {
       console.error(e);
     });
+  });
+</script></div><div class="hide w-embed w-script"><script>let splideInstances = [];
+  function initSplideSliders() {
+    const isMobileOrTablet = window.innerWidth < 992;
+    const sliders = document.querySelectorAll('.splide.slider');
+    sliders.forEach((sliderEl, index) => {
+      const existing = splideInstances[index];
+      if (isMobileOrTablet && !existing) {
+        const splide = new Splide(sliderEl, {
+          perPage: 4,
+          perMove: 1,
+          focus: 0,
+          type: 'slide',
+          gap: '40px',
+          arrows: false,
+          pagination: true,
+          speed: 600,
+          dragAngleThreshold: 30,
+          autoWidth: false,
+          rewind: false,
+          rewindSpeed: 400,
+          waitForTransition: false,
+          updateOnMove: true,
+          trimSpace: false,
+          breakpoints: {
+            991: {
+              perPage: 2,
+              gap: '32px',
+            },
+            767: {
+              perPage: 1.5,
+              gap: '20px',
+            },
+            479: {
+              perPage: 1,
+              gap: '16px',
+            }
+          }
+        });
+        splide.mount();
+        splideInstances[index] = splide;
+      }
+      if (!isMobileOrTablet && existing) {
+        existing.destroy();
+        splideInstances[index] = null;
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initSplideSliders);
+  window.addEventListener('resize', () => {
+    clearTimeout(window.__splideResizeTimer);
+    window.__splideResizeTimer = setTimeout(initSplideSliders, 200);
   });
 </script></div> {% schema %} {"tag":"section","name":"Product-Recommended","class":"section_product-recommended","settings":[{"id":"text_titre","type":"text","label":"Titre","default":"Achetez avec"}],"presets":[{"name":"Product-Recommended","category":"Liquify","blocks":[]}]} {% endschema %}
