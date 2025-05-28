@@ -96,25 +96,25 @@
         "card_69NwWX": {
           "type": "card",
           "settings": {
-            "image_card_image": "shopify://shop_images/epanou_45d52ee2-ac9f-4d12-b50a-2560160fe549.png"
+            "image_card_image": "shopify://shop_images/epanou.webp"
           }
         },
         "card_VtyHfV": {
           "type": "card",
           "settings": {
-            "image_card_image": "shopify://shop_images/epanou-1.png"
+            "image_card_image": "shopify://shop_images/epanou-1.webp"
           }
         },
         "card_qL8wzE": {
           "type": "card",
           "settings": {
-            "image_card_image": "shopify://shop_images/epanou-2.png"
+            "image_card_image": "shopify://shop_images/epanou-2.webp"
           }
         },
         "card_JeMNxQ": {
           "type": "card",
           "settings": {
-            "image_card_image": "shopify://shop_images/epanou-3.png"
+            "image_card_image": "shopify://shop_images/epanou-3.webp"
           }
         },
         "card_xyepVC": {
@@ -168,45 +168,54 @@
         "left_right": "right"
       }
     },
-    "pages": {
+    "pages_zhn4RK": {
       "type": "pages",
       "blocks": {
-        "carte_dwGbUF": {
+        "carte_R4jMJM": {
           "type": "carte",
           "settings": {
+            "image_image": "shopify://shop_images/histoire.webp",
             "text_heading": "Notre histoire",
-            "url_link": "",
+            "url_link": "shopify://pages/a-propos",
             "text_text": "Découvrir"
           }
         },
-        "carte_nmNmAT": {
+        "carte_hmc4rx": {
           "type": "carte",
           "settings": {
-            "text_heading": "Notre histoire",
-            "url_link": "",
+            "image_image": "shopify://shop_images/atelier.webp",
+            "text_heading": "Professionnels",
+            "url_link": "shopify://pages/professionnels",
             "text_text": "Découvrir"
           }
         },
-        "carte_FNhQ6p": {
+        "carte_e4iTER": {
           "type": "carte",
           "settings": {
-            "text_heading": "Notre histoire",
-            "url_link": "",
+            "image_image": "shopify://shop_images/association_0c2478a2-02cb-49a2-96e7-77834aad3dad.webp",
+            "text_heading": "L'association",
+            "url_link": "shopify://pages/lassociation",
             "text_text": "Découvrir"
           }
         }
       },
       "block_order": [
-        "carte_dwGbUF",
-        "carte_nmNmAT",
-        "carte_FNhQ6p"
+        "carte_R4jMJM",
+        "carte_hmc4rx",
+        "carte_e4iTER"
       ],
       "settings": {}
     },
-    "reseaux": {
+    "reseaux_kCjQPx": {
       "type": "reseaux",
       "settings": {
-        "text_heading": "Suivez-nous sur nos réseaux sociaux"
+        "text_heading": "Suivez-nous sur nos réseaux sociaux",
+        "image_image_1": "shopify://shop_images/panier-a-cafe_2.png",
+        "image_image_2": "shopify://shop_images/panier-a-cafe_3.png",
+        "image_image_3": "shopify://shop_images/panier-a-cafe_4.png",
+        "image_image_4": "shopify://shop_images/panier-a-cafe_5.png",
+        "image_image_5": "shopify://shop_images/panier-a-cafe_1.png",
+        "image_image_6_mobile": "shopify://shop_images/revendeurs-image.webp"
       }
     }
   },
@@ -218,7 +227,7 @@
     "selection_manuel_DVdGBb",
     "card_swiper",
     "contenu_7FfWwj",
-    "pages",
-    "reseaux"
+    "pages_zhn4RK",
+    "reseaux_kCjQPx"
   ]
 }
