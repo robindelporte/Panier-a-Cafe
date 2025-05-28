@@ -12,14 +12,58 @@
                     {% endfor %}    </div>
 </div><div li-for:inside="collection in section.settings.collection_list" class="tab_body">
         {% for collection in section.settings.collection_list %}                            
-                            <div id="collection-tab-{{section.index}}{{forloop.index}}" role="tabpanel" aria-labelledby="collection-button-{{section.index}}{{forloop.index}}" x-show="tab === {{section.index}}{{forloop.index}}" class="category_tab-panel"><div class="splide slider"><div class="splide__track"><div li-for:inside="product in collection.products limit: 4" class="splide__list">
+                            <div id="collection-tab-{{section.index}}{{forloop.index}}" role="tabpanel" aria-labelledby="collection-button-{{section.index}}{{forloop.index}}" x-show="tab === {{section.index}}{{forloop.index}}" class="category_tab-panel"><div class="swiper_component is-product-swiper"><div class="swiper is-product-swiper"><div li-for:inside="product in collection.products limit: 4" class="swiper-wrapper is-product-swiper">
         {% for product in collection.products limit: 4 %}                            
-                            <div class="splide__slide">{% render 'product_item', product: product %}
+                            <div class="swiper-slide is-product-swiper">{% render 'product_item', product: product %}
 </div>
                             
                     {% endfor %}    </div>
-</div></div><a li-object:href="collection.url" href="{{ collection.url }}" class="button is-white w-button">En voir plus</a></div>
+</div><div class="swiper_pagination is-mixed"><div class="swiper_bullet"></div><div class="swiper_bullet is-active"></div></div></div><a li-object:href="collection.url" href="{{ collection.url }}" class="button is-white w-button">En voir plus</a></div>
                             
                     {% endfor %}    </div>
 </div></div></div><div class="hide w-embed"></div>
- {% schema %} {"tag":"section","name":"Collection Tabs Marr","class":"section_category-marron","settings":[{"id":"text_titre","type":"text","label":"Titre","default":"Heading"},{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs Marr","category":"Liquify","blocks":[]}]} {% endschema %}
+<div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() {
+  $(".swiper_component").each(function(index) {
+    const swiper = new Swiper($(this).find(".swiper")[0], {
+      autoHeight: false,
+      followFinger: true,
+      freeMode: false,
+      slideToClickedSlide: true,
+      centeredSlides: false,
+      speed: 600,
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      mousewheel: {
+        forceToAxis: true
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      pagination: {
+        el: $(this).find('.swiper_pagination')[0],
+        clickable: true,
+        bulletClass: 'swiper_bullet',
+        bulletActiveClass: 'is-active',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '">';
+        }
+      },
+      breakpoints: {
+        479: {
+          spaceBetween: 16
+        },
+        767: {
+          spaceBetween: 20
+        },
+        991: {
+          spaceBetween: 32
+        },
+        992: {
+          spaceBetween: 40
+        }
+      }
+    });
+  });
+});
+</script></div> {% schema %} {"tag":"section","name":"Collection Tabs Marr","class":"section_category-marron","settings":[{"id":"text_titre","type":"text","label":"Titre","default":"Heading"},{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs Marr","category":"Liquify","blocks":[]}]} {% endschema %}
