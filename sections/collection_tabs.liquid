@@ -56,102 +56,79 @@
 <div class="hide w-embed"></div>
 <div class="hide w-embed w-script">
   <script>
-  let splideInstances = [];
+    document.addEventListener("DOMContentLoaded", function() {
+      let splideInstances = [];
 
-  function initSplideSliders() {
-    const isMobileOrTablet = window.innerWidth < 992;
-    
-    // Détruire toutes les instances existantes
-    splideInstances.forEach(splide => {
-      try {
-        splide.destroy();
-      } catch (e) {}
-    });
-    splideInstances = [];
-    
-    if (isMobileOrTablet) {
-      // Trouver tous les sliders et leur donner des IDs uniques
-      const sliders = document.querySelectorAll('.splide.slider');
-      
-      sliders.forEach((sliderEl, index) => {
-        // Donner un ID unique si il n'en a pas
-        if (!sliderEl.id) {
-          sliderEl.id = `splide-slider-${index}-${Date.now()}`;
-        }
-        
-        try {
-          // Initialiser avec l'ID unique
-          const splide = new Splide(`#${sliderEl.id}`, {
-            perPage: 4,
-            perMove: 1,
-            focus: 0,
-            type: 'slide',
-            gap: '40px',
-            arrows: false,
-            pagination: true,
-            speed: 600,
-            dragAngleThreshold: 30,
-            autoWidth: false,
-            rewind: false,
-            rewindSpeed: 400,
-            waitForTransition: false,
-            updateOnMove: true,
-            trimSpace: false,
-            breakpoints: {
-              991: {
-                perPage: 2,
-                gap: '32px',
-              },
-              767: {
-                perPage: 1.5,
-                gap: '20px',
-              },
-              479: {
-                perPage: 1,
-                gap: '16px',
-              }
+      function initSplideSliders() {
+        const isMobileOrTablet = window.innerWidth < 992;
+
+        // Détruire toutes les instances existantes
+        splideInstances.forEach(splide => {
+          try {
+            splide.destroy();
+          } catch (e) {}
+        });
+        splideInstances = [];
+
+        if (isMobileOrTablet) {
+          // Utiliser la même approche que Swiper avec .each()
+          $(".splide.slider").each(function(index) {
+            try {
+              const splide = new Splide(this, {
+                perPage: 4,
+                perMove: 1,
+                focus: 0,
+                type: 'slide',
+                gap: '40px',
+                arrows: false,
+                pagination: true,
+                speed: 600,
+                dragAngleThreshold: 30,
+                autoWidth: false,
+                rewind: false,
+                rewindSpeed: 400,
+                waitForTransition: false,
+                updateOnMove: true,
+                trimSpace: false,
+                breakpoints: {
+                  991: {
+                    perPage: 2,
+                    gap: '32px',
+                  },
+                  767: {
+                    perPage: 1.5,
+                    gap: '20px',
+                  },
+                  479: {
+                    perPage: 1,
+                    gap: '16px',
+                  }
+                }
+              });
+
+              splide.mount();
+              splideInstances.push(splide);
+            } catch (error) {
+              console.error('Erreur Splide slider ' + index + ':', error);
             }
           });
-          
-          splide.mount();
-          splideInstances.push(splide);
-        } catch (error) {
-          console.error('Erreur Splide:', error);
         }
-      });
-    }
-  }
+      }
 
-  // Forcer l'exécution dès que possible
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSplideSliders);
-  } else {
-    initSplideSliders();
-  }
-  
-  // Au resize
-  window.addEventListener('resize', () => {
-    clearTimeout(window.splideTimer);
-    window.splideTimer = setTimeout(initSplideSliders, 200);
-  });
-  
-  // Lors des changements de tabs - être plus spécifique
-  document.addEventListener('click', (e) => {
-    if (e.target.closest('[id*="collection-button"]') || e.target.matches('[id*="collection-button"]')) {
-      setTimeout(initSplideSliders, 200);
-    }
-  });
-  
-  // Force init toutes les 2 secondes au début (au cas où)
-  let retryCount = 0;
-  const retryInit = setInterval(() => {
-    if (retryCount < 5) {
+      // Initialiser au chargement
       initSplideSliders();
-      retryCount++;
-    } else {
-      clearInterval(retryInit);
-    }
-  }, 2000);
+
+      // Réinitialiser au resize
+      window.addEventListener('resize', function() {
+        clearTimeout(window.splideTimer);
+        window.splideTimer = setTimeout(initSplideSliders, 200);
+      });
+
+      // Réinitialiser lors des changements de tabs
+      $(document).on('click', '[id*="collection-button"]', function() {
+        setTimeout(initSplideSliders, 100);
+      });
+    });
   </script>
 </div>
 {% schema %} {"tag":"section","name":"Collection Tabs","class":"section_category","settings":[{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs","category":"Liquify","blocks":[]}]} {% endschema %}
