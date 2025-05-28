@@ -56,192 +56,79 @@
 <div class="hide w-embed"></div>
 <div class="hide w-embed w-script">
   <script>
-  // Map pour stocker les instances Splide
-  const splideInstances = new Map();
-  
-  // Fonction pour traiter une instance de slider individuelle
-  function processSliderInstance(sliderEl) {
-    const isMobileOrTablet = window.innerWidth < 992;
-    
-    // Créer une clé unique pour ce slider
-    if (!sliderEl.dataset.splideId) {
-      sliderEl.dataset.splideId = 'splide_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    }
-    
-    const sliderId = sliderEl.dataset.splideId;
-    const existingInstance = splideInstances.get(sliderId);
-    
-    console.log(`Processing slider ${sliderId}: mobile=${isMobileOrTablet}, hasInstance=${!!existingInstance}`);
-    
-    // Si mobile/tablette et pas encore monté
-    if (isMobileOrTablet && !existingInstance) {
-      try {
-        const splide = new Splide(sliderEl, {
-          perPage: 4,
-          perMove: 1,
-          focus: 0,
-          type: 'slide',
-          gap: '40px',
-          arrows: false,
-          pagination: true,
-          speed: 600,
-          dragAngleThreshold: 30,
-          autoWidth: false,
-          rewind: false,
-          rewindSpeed: 400,
-          waitForTransition: false,
-          updateOnMove: true,
-          trimSpace: false,
-          breakpoints: {
-            991: {
-              perPage: 2,
-              gap: '32px',
-            },
-            767: {
-              perPage: 1.5,
-              gap: '20px',
-            },
-            479: {
-              perPage: 1,
-              gap: '16px',
-            }
-          }
-        });
-        
-        splide.mount();
-        splideInstances.set(sliderId, {
-          instance: splide,
-          element: sliderEl
-        });
-        
-        console.log(`✅ Splide monté pour ${sliderId}`);
-        
-        // Refresh au cas où le slider devient visible plus tard
-        setTimeout(() => {
-          try {
-            splide.refresh();
-            console.log(`🔄 Splide refresh pour ${sliderId}`);
-          } catch (e) {
-            console.log(`Refresh failed for ${sliderId}:`, e);
-          }
-        }, 100);
-        
-      } catch (error) {
-        console.error(`❌ Erreur lors du montage de Splide pour ${sliderId}:`, error);
-      }
-    }
-    
-    // Si desktop et slider existant → détruire
-    if (!isMobileOrTablet && existingInstance) {
-      try {
-        existingInstance.instance.destroy();
-        splideInstances.delete(sliderId);
-        console.log(`🗑️ Splide détruit pour ${sliderId}`);
-      } catch (error) {
-        console.error(`❌ Erreur lors de la destruction de Splide pour ${sliderId}:`, error);
-      }
-    }
-  }
-  
-  // Fonction principale pour traiter tous les sliders
-  function initSplideSliders() {
-    console.log('🚀 Initialisation des sliders...');
-    
-    // Sélectionner tous les sliders et les traiter individuellement
-    const sliders = document.querySelectorAll('.splide.slider');
-    console.log(`Found ${sliders.length} sliders`);
-    
-    // Traiter chaque slider individuellement
-    sliders.forEach((sliderEl, index) => {
-      console.log(`Processing slider ${index + 1}/${sliders.length}`);
-      processSliderInstance(sliderEl);
-    });
-    
-    // Nettoyer les instances orphelines (sliders qui n'existent plus dans le DOM)
-    const currentSliderIds = new Set();
-    sliders.forEach(slider => {
-      if (slider.dataset.splideId) {
-        currentSliderIds.add(slider.dataset.splideId);
-      }
-    });
-    
-    splideInstances.forEach((data, sliderId) => {
-      if (!currentSliderIds.has(sliderId)) {
+    let splideInstances = [];
+
+    function initSplideSliders() {
+      const isMobileOrTablet = window.innerWidth < 992;
+
+      // Détruire toutes les instances existantes
+      splideInstances.forEach(splide => {
         try {
-          data.instance.destroy();
-          splideInstances.delete(sliderId);
-          console.log(`🧹 Instance orpheline nettoyée: ${sliderId}`);
-        } catch (error) {
-          console.error(`❌ Erreur lors du nettoyage de l'instance ${sliderId}:`, error);
-        }
+          splide.destroy();
+        } catch (e) {}
+      });
+      splideInstances = [];
+
+      if (isMobileOrTablet) {
+        // Initialiser tous les sliders
+        const sliders = document.querySelectorAll('.splide.slider');
+
+        sliders.forEach(sliderEl => {
+          try {
+            const splide = new Splide(sliderEl, {
+              perPage: 4,
+              perMove: 1,
+              focus: 0,
+              type: 'slide',
+              gap: '40px',
+              arrows: false,
+              pagination: true,
+              speed: 600,
+              dragAngleThreshold: 30,
+              autoWidth: false,
+              rewind: false,
+              rewindSpeed: 400,
+              waitForTransition: false,
+              updateOnMove: true,
+              trimSpace: false,
+              breakpoints: {
+                991: {
+                  perPage: 2,
+                  gap: '32px',
+                },
+                767: {
+                  perPage: 1.5,
+                  gap: '20px',
+                },
+                479: {
+                  perPage: 1,
+                  gap: '16px',
+                }
+              }
+            });
+
+            splide.mount();
+            splideInstances.push(splide);
+          } catch (error) {
+            console.error('Erreur Splide:', error);
+          }
+        });
       }
-    });
-    
-    console.log(`📊 Total instances actives: ${splideInstances.size}`);
-  }
-  
-  // Fonction pour rafraîchir tous les sliders actifs (utile quand les tabs changent)
-  function refreshAllSliders() {
-    console.log('🔄 Refresh de tous les sliders...');
-    splideInstances.forEach((data, sliderId) => {
-      try {
-        data.instance.refresh();
-        console.log(`🔄 Refreshed ${sliderId}`);
-      } catch (error) {
-        console.log(`⚠️ Refresh failed for ${sliderId}:`, error);
-      }
-    });
-  }
-  
-  // Fonction de debounce
-  function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  }
-  
-  const debouncedInit = debounce(initSplideSliders, 200);
-  const debouncedRefresh = debounce(refreshAllSliders, 300);
-  
-  // Initialisation
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log('🎯 DOM loaded, initialisation...');
-    initSplideSliders();
-  });
-  
-  // Gérer le resize
-  window.addEventListener('resize', debouncedInit);
-  
-  // Observer les clics sur les éléments (potentiels changements de tabs)
-  document.addEventListener('click', (e) => {
-    // Si c'est un bouton de tab ou un élément qui pourrait changer l'affichage
-    if (e.target.matches('[id*="button"]') || 
-        e.target.closest('[id*="button"]') ||
-        e.target.matches('[x-on\\:click]') ||
-        e.target.matches('[@click]')) {
-      
-      console.log('🖱️ Clic détecté, refresh dans 300ms...');
-      setTimeout(debouncedRefresh, 300);
     }
-  });
-  
-  // Fonctions utilitaires disponibles globalement
-  window.reinitSplideSliders = initSplideSliders;
-  window.refreshAllSliders = refreshAllSliders;
-  window.debugSplideInstances = () => {
-    console.log('📋 Instances Splide actives:');
-    splideInstances.forEach((data, sliderId) => {
-      console.log(`- ${sliderId}:`, data.element);
+
+    // Initialiser au chargement
+    document.addEventListener('DOMContentLoaded', initSplideSliders);
+
+    // Réinitialiser au resize
+    window.addEventListener('resize', () => {
+      clearTimeout(window.splideTimer);
+      window.splideTimer = setTimeout(initSplideSliders, 200);
     });
-  };
-  
-  console.log('📜 Script Splide chargé. Fonctions disponibles: reinitSplideSliders(), refreshAllSliders(), debugSplideInstances()');
+
+    // Réinitialiser lors des clics (changement de tabs)
+    document.addEventListener('click', () => {
+      setTimeout(initSplideSliders, 100);
+    });
   </script>
 </div>
 {% schema %} {"tag":"section","name":"Collection Tabs","class":"section_category","settings":[{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs","category":"Liquify","blocks":[]}]} {% endschema %}
