@@ -1,8 +1,8 @@
 <div li-block="Tabs Component" class="tabs_component">
                     
-                    <div x-data="{tab: 1}" class="tabs_element is-team"><div li-for:inside="block in section.blocks" class="tabs_menu is-team">
-        {% for block in section.blocks %}                            {% if block.type == 'tab' %}    <button x-bind:class="tab === {{forloop.index}} ? 'is-active' : ''" x-on:click="tab = {{forloop.index}}" role="tab" aria-controls="panel-{{section.index}}-{{forloop.index}}" tabindex="0" id="tab-{{section.index}}-{{forloop.index}}" x-bind:aria-selected="tab === {{forloop.index}} ? 'true' : 'false'" li-if="block.type == 'tab'" class="button is-team-tab">
-    <div li-object="block.settings.text_tab_label">{{ block.settings.text_tab_label }}</div>    </button>
+                    <div x-data="{tab: 1}" class="tabs_element is-team"><div li-for:inside="nested_block in block.blocks" class="tabs_menu is-team">
+        {% for nested_block in block.blocks %}                            {% if block.type == 'tab' %}    <button x-bind:class="tab === {{forloop.index}} ? 'is-active' : ''" x-on:click="tab = {{forloop.index}}" role="tab" aria-controls="panel-{{section.index}}-{{forloop.index}}" tabindex="0" id="tab-{{section.index}}-{{forloop.index}}" x-bind:aria-selected="tab === {{forloop.index}} ? 'true' : 'false'" li-if="block.type == 'tab'" class="button is-team-tab">
+    <div li-object="nested_block.settings.tab_label">{{ nested_block.settings.tab_label }}</div>    </button>
 {% endif %}
                     {% endfor %}    </div>
 <div class="tabs_body"><div li-content-for-theme-blocks="">
