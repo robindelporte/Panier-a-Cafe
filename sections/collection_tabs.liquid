@@ -71,10 +71,6 @@
           speed: 600,
           slidesPerView: 'auto',
           spaceBetween: 16,
-          threshold: 30,
-          touchRatio: 1.2,
-          shortSwipes: true,
-          longSwipesRatio: 0.3,
           mousewheel: {
             forceToAxis: true
           },
@@ -86,7 +82,10 @@
             el: $(this).find('.swiper_pagination')[0],
             clickable: true,
             bulletClass: 'swiper_bullet',
-            bulletActiveClass: 'is-active'
+            bulletActiveClass: 'is-active',
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '"></span>';
+            }
           },
           breakpoints: {
             479: {
