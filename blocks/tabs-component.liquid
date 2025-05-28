@@ -1,0 +1,14 @@
+<div li-block="Tabs Component" class="tabs_component">
+                    
+                    <div x-data="{tab_{{block.id}}: 1}" class="tabs_element is-team"><div li-for:inside="nested_blocks in block.blocks" class="tabs_menu is-team">
+        {% for nested_blocks in block.blocks %}                            {% if nested_block.type == 'tab_panel' %}    <button x-bind:class="tab_{{block.id}} === {{forloop.index}} ? 'is-active' : ''" x-on:click="tab_{{block.id}} = {{forloop.index}}" role="tab" aria-controls="panel-{{block.id}}-{{nested_block.id}}" tabindex="0" id="tab-{{block.id}}-{{nested_block.id}}" x-bind:aria-selected="tab_{{block.id}} === {{forloop.index}} ? 'true' : 'false'" li-if="nested_block.type == 'tab_panel'" class="button is-team-tab">
+    <div li-object="nested_block.settings.tab_label">{{ nested_block.settings.tab_label }}</div>    </button>
+{% endif %}
+                    {% endfor %}    </div>
+<div class="tabs_body"><div li-content-for-theme-blocks="">
+{% content_for 'blocks' %}
+</div>
+</div></div>
+                    
+                </div>
+     {% schema %} {"name":"Tabs Component","blocks":[{"type":"tab"},{"type":"@app"}],"presets":[{"name":"Tabs Component"}]} {% endschema %}
