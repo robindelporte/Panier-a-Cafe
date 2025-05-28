@@ -1,79 +1,309 @@
-<style>.button.is-tab-button {
-  opacity: 60%;
-}
-.button.is-tab-button.is-active {
-  opacity: 100%;
-}
-</style><div class="padding-global padding-section-medium"><div class="container-large"><div x-data="{tab: {{section.index}}1}" class="category_wrapper"><div class="category_top"><div role="tablist" li-for:inside="collection in section.settings.collection_list" class="tab_menu">
-        {% for collection in section.settings.collection_list %}                            <button role="tab" x-on:click="tab = {{section.index}}{{forloop.index}}" aria-controls="collection-tab-{{section.index}}{{forloop.index}}" id="collection-button-{{section.index}}{{forloop.index}}" x-bind:aria-selected="tab === {{section.index}}{{forloop.index}} ? 'true' : 'false'" x-bind:class="tab === {{section.index}}{{forloop.index}} ? 'is-active' : ''" class="button is-tab-button"><div li-object="collection.title">{{ collection.title }}</div></button>
-                    {% endfor %}    </div>
-</div><div li-for:inside="collection in section.settings.collection_list" class="tab_body">
-        {% for collection in section.settings.collection_list %}                            
-                            <div id="collection-tab-{{section.index}}{{forloop.index}}" role="tabpanel" aria-labelledby="collection-button-{{section.index}}{{forloop.index}}" x-show="tab === {{section.index}}{{forloop.index}}" class="category_tab-panel"><div class="splide slider"><div class="splide__track"><div li-for:inside="product in collection.products limit: 4" class="splide__list">
-        {% for product in collection.products limit: 4 %}                            
-                            <div class="splide__slide">{% render 'product_item', product: product %}
+<style>
+  .button.is-tab-button {
+    opacity: 60%;
+  }
+  .button.is-tab-button.is-active {
+    opacity: 100%;
+  }
+</style>
+<div class="padding-global padding-section-medium">
+  <div class="container-large">
+    <div x-data="{tab: {{section.index}}1}" class="category_wrapper">
+      <div class="category_top">
+        <div role="tablist" li-for:inside="collection in section.settings.collection_list" class="tab_menu">
+          {% for collection in section.settings.collection_list %}
+            <button
+              role="tab"
+              x-on:click="tab = {{section.index}}{{forloop.index}}"
+              aria-controls="collection-tab-{{section.index}}{{forloop.index}}"
+              id="collection-button-{{section.index}}{{forloop.index}}"
+              x-bind:aria-selected="tab === {{section.index}}{{forloop.index}} ? 'true' : 'false'"
+              x-bind:class="tab === {{section.index}}{{forloop.index}} ? 'is-active' : ''"
+              class="button is-tab-button"
+            >
+              <div li-object="collection.title">{{ collection.title }}</div>
+            </button>
+          {% endfor %}
+        </div>
+      </div>
+      <div li-for:inside="collection in section.settings.collection_list" class="tab_body">
+        {% for collection in section.settings.collection_list %}
+          <div
+            id="collection-tab-{{section.index}}{{forloop.index}}"
+            role="tabpanel"
+            aria-labelledby="collection-button-{{section.index}}{{forloop.index}}"
+            x-show="tab === {{section.index}}{{forloop.index}}"
+            class="category_tab-panel"
+          >
+            <div class="splide slider">
+              <div class="splide__track">
+                <div li-for:inside="product in collection.products limit: 4" class="splide__list">
+                  {% for product in collection.products limit: 4 %}
+                    <div class="splide__slide">{% render 'product_item', product: product %}</div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <a li-object:href="collection.url" href="{{ collection.url }}" class="button is-secondary w-button"
+              >En voir plus</a
+            >
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
-                            
-                    {% endfor %}    </div>
-</div></div><a li-object:href="collection.url" href="{{ collection.url }}" class="button is-secondary w-button">En voir plus</a></div>
-                            
-                    {% endfor %}    </div>
-</div></div></div><div class="hide w-embed"></div>
-<div class="hide w-embed w-script"><script>// Tableau pour stocker les instances Splide
-  let splideInstances = [];
-  function initSplideSliders() {
+<div class="hide w-embed"></div>
+<div class="hide w-embed w-script">
+  <script>
+  // Map pour stocker les instances Splide
+  const splideInstances = new Map();
+  
+  function initSplideSliders(forceAll = false) {
     const isMobileOrTablet = window.innerWidth < 992;
-    const sliders = document.querySelectorAll('.splide.slider'); // &larr; ton s&eacute;lecteur
-    sliders.forEach((sliderEl, index) => {
-      const existing = splideInstances[index];
-      // Si mobile/tablette et pas encore mont&eacute;
-      if (isMobileOrTablet && !existing) {
-        const splide = new Splide(sliderEl, {
-          perPage: 4,
-          perMove: 1,
-          focus: 0,
-          type: 'slide',
-          gap: '40px',
-          arrows: false,
-          pagination: true,
-          speed: 600,
-          dragAngleThreshold: 30,
-          autoWidth: false,
-          rewind: false,
-          rewindSpeed: 400,
-          waitForTransition: false,
-          updateOnMove: true,
-          trimSpace: false,
-          breakpoints: {
-            991: {
-              perPage: 2,
-              gap: '32px',
-            },
-            767: {
-              perPage: 1.5,
-              gap: '20px',
-            },
-            479: {
-              perPage: 1,
-              gap: '16px',
-            }
-          }
-        });
-        splide.mount();
-        splideInstances[index] = splide;
+    
+    // Sélectionner tous les sliders
+    const sliders = document.querySelectorAll('.splide.slider');
+    const currentSliders = new Set();
+    
+    sliders.forEach((sliderEl) => {
+      // Créer une clé unique
+      if (!sliderEl.dataset.splideId) {
+        sliderEl.dataset.splideId = 'splide_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
       }
-      // Si desktop et slider existant &rarr; d&eacute;truire
-      if (!isMobileOrTablet && existing) {
-        existing.destroy();
-        splideInstances[index] = null;
+      
+      const sliderId = sliderEl.dataset.splideId;
+      currentSliders.add(sliderId);
+      
+      const existingInstance = splideInstances.get(sliderId);
+      
+      // Vérifier si le slider est dans un tab panel visible OU si on force l'initialisation
+      const tabPanel = sliderEl.closest('.category_tab-panel');
+      const isInActiveTab = !tabPanel || !tabPanel.hasAttribute('style') || 
+                           tabPanel.style.display !== 'none' || forceAll;
+      
+      // Si mobile/tablette, pas encore monté, et dans un tab actif
+      if (isMobileOrTablet && !existingInstance && isInActiveTab) {
+        try {
+          const splide = new Splide(sliderEl, {
+            perPage: 4,
+            perMove: 1,
+            focus: 0,
+            type: 'slide',
+            gap: '40px',
+            arrows: false,
+            pagination: true,
+            speed: 600,
+            dragAngleThreshold: 30,
+            autoWidth: false,
+            rewind: false,
+            rewindSpeed: 400,
+            waitForTransition: false,
+            updateOnMove: true,
+            trimSpace: false,
+            breakpoints: {
+              991: {
+                perPage: 2,
+                gap: '32px',
+              },
+              767: {
+                perPage: 1.5,
+                gap: '20px',
+              },
+              479: {
+                perPage: 1,
+                gap: '16px',
+              }
+            }
+          });
+          
+          splide.mount();
+          splideInstances.set(sliderId, splide);
+          
+          console.log(`Splide monté pour ${sliderId}`);
+        } catch (error) {
+          console.error(`Erreur lors du montage de Splide pour ${sliderId}:`, error);
+        }
+      }
+      
+      // Si desktop et slider existant → détruire
+      if (!isMobileOrTablet && existingInstance) {
+        try {
+          existingInstance.destroy();
+          splideInstances.delete(sliderId);
+          console.log(`Splide détruit pour ${sliderId}`);
+        } catch (error) {
+          console.error(`Erreur lors de la destruction de Splide pour ${sliderId}:`, error);
+        }
+      }
+    });
+    
+    // Nettoyer les instances orphelines
+    splideInstances.forEach((instance, sliderId) => {
+      if (!currentSliders.has(sliderId)) {
+        try {
+          instance.destroy();
+          splideInstances.delete(sliderId);
+          console.log(`Instance orpheline nettoyée: ${sliderId}`);
+        } catch (error) {
+          console.error(`Erreur lors du nettoyage de l'instance ${sliderId}:`, error);
+        }
       }
     });
   }
-  // Ex&eacute;cuter au chargement
-  document.addEventListener('DOMContentLoaded', initSplideSliders);
-  // Ex&eacute;cuter au resize (avec debounce)
-  window.addEventListener('resize', () => {
-    clearTimeout(window.__splideResizeTimer);
-    window.__splideResizeTimer = setTimeout(initSplideSliders, 200);
+  
+  // Fonction pour initialiser un slider spécifique quand son tab devient actif
+  function initSliderInTab(tabPanel) {
+    const isMobileOrTablet = window.innerWidth < 992;
+    if (!isMobileOrTablet) return;
+    
+    const slidersInTab = tabPanel.querySelectorAll('.splide.slider');
+    
+    slidersInTab.forEach((sliderEl) => {
+      if (!sliderEl.dataset.splideId) {
+        sliderEl.dataset.splideId = 'splide_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      }
+      
+      const sliderId = sliderEl.dataset.splideId;
+      const existingInstance = splideInstances.get(sliderId);
+      
+      if (!existingInstance) {
+        try {
+          const splide = new Splide(sliderEl, {
+            perPage: 4,
+            perMove: 1,
+            focus: 0,
+            type: 'slide',
+            gap: '40px',
+            arrows: false,
+            pagination: true,
+            speed: 600,
+            dragAngleThreshold: 30,
+            autoWidth: false,
+            rewind: false,
+            rewindSpeed: 400,
+            waitForTransition: false,
+            updateOnMove: true,
+            trimSpace: false,
+            breakpoints: {
+              991: {
+                perPage: 2,
+                gap: '32px',
+              },
+              767: {
+                perPage: 1.5,
+                gap: '20px',
+              },
+              479: {
+                perPage: 1,
+                gap: '16px',
+              }
+            }
+          });
+          
+          splide.mount();
+          splideInstances.set(sliderId, splide);
+          
+          console.log(`Splide monté dans tab pour ${sliderId}`);
+        } catch (error) {
+          console.error(`Erreur lors du montage de Splide dans tab pour ${sliderId}:`, error);
+        }
+      }
+    });
+  }
+  
+  // Observer les changements de tabs Alpine.js
+  function observeAlpineTabChanges() {
+    // Observer les changements d'attribut style sur les tab panels
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+          const target = mutation.target;
+          
+          // Si c'est un tab panel qui devient visible (style.display !== 'none' ou pas de style)
+          if (target.classList.contains('category_tab-panel') && 
+              (!target.hasAttribute('style') || target.style.display !== 'none')) {
+            
+            setTimeout(() => {
+              console.log('Tab devenu actif, initialisation des sliders...');
+              initSliderInTab(target);
+            }, 100); // Petit délai pour s'assurer que le tab est bien visible
+          }
+        }
+      });
+    });
+    
+    // Observer tous les tab panels
+    const tabPanels = document.querySelectorAll('.category_tab-panel');
+    tabPanels.forEach((tabPanel) => {
+      observer.observe(tabPanel, {
+        attributes: true,
+        attributeFilter: ['style']
+      });
+    });
+    
+    return observer;
+  }
+  
+  // Alternative : Observer les clics sur les boutons de tabs
+  function observeTabButtons() {
+    // Rechercher les boutons qui déclenchent les tabs (ils ont généralement x-on:click ou @click)
+    const tabButtons = document.querySelectorAll('[id*="collection-button"]');
+    
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        setTimeout(() => {
+          console.log('Clic sur tab détecté, vérification des sliders...');
+          // Réinitialiser seulement les sliders visibles
+          initSplideSliders();
+        }, 150); // Délai pour laisser Alpine.js faire le changement
+      });
+    });
+  }
+  
+  // Fonction de debounce
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+  
+  const debouncedInit = debounce(initSplideSliders, 200);
+  
+  // Initialisation
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialiser les sliders visibles
+    initSplideSliders();
+    
+    // Observer les changements de tabs (deux méthodes pour être sûr)
+    observeAlpineTabChanges();
+    observeTabButtons();
+    
+    // Observer aussi les changements Alpine.js généraux
+    document.addEventListener('alpine:updated', () => {
+      setTimeout(() => {
+        console.log('Alpine updated, vérification des sliders...');
+        initSplideSliders();
+      }, 100);
+    });
   });
-</script></div> {% schema %} {"tag":"section","name":"Collection Tabs","class":"section_category","settings":[{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs","category":"Liquify","blocks":[]}]} {% endschema %}
+  
+  // Gérer le resize
+  window.addEventListener('resize', debouncedInit);
+  
+  // Fonction utilitaire pour forcer la réinitialisation
+  window.reinitSplideSliders = () => initSplideSliders(true);
+  
+  // Debug : log quand Alpine.js est prêt
+  document.addEventListener('alpine:init', () => {
+    console.log('Alpine.js initialisé');
+  });
+  </script>
+</div>
+{% schema %} {"tag":"section","name":"Collection Tabs","class":"section_category","settings":[{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs","category":"Liquify","blocks":[]}]} {% endschema %}
