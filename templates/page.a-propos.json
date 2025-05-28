@@ -48,7 +48,6 @@
       "block_order": [
         "text_k6XLNc"
       ],
-      "name": "Contenu",
       "settings": {
         "left_right": "right"
       }
@@ -56,15 +55,68 @@
     "team": {
       "type": "team",
       "blocks": {
-        "tab_8PtcDJ": {
-          "type": "tab",
-          "settings": {
-            "text_text": "Ilona, c’est l’œil graphique du Panier à Café. Future directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter."
-          }
+        "tabs_component_xXdrYh": {
+          "type": "tabs-component",
+          "name": "Tabs Component",
+          "settings": {},
+          "blocks": {
+            "tab_zmrLqb": {
+              "type": "tab",
+              "name": "Tab",
+              "settings": {
+                "text_text": "Ilona, c’est l’œil graphique du Panier à Café. Future directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter.",
+                "text_tab_label": "This is some text inside of a div block."
+              },
+              "blocks": {}
+            },
+            "tab_bhaTXJ": {
+              "type": "tab",
+              "name": "Tab",
+              "settings": {
+                "text_text": "Ilona, c’est l’œil graphique du Panier à Café. Future directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter.",
+                "text_tab_label": "This is some text inside of a div block."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "tab_zmrLqb",
+            "tab_bhaTXJ"
+          ]
+        },
+        "tabs_component_D83phB": {
+          "type": "tabs-component",
+          "name": "Tabs Component",
+          "settings": {},
+          "blocks": {
+            "tab_nPVfGi": {
+              "type": "tab",
+              "name": "Tab",
+              "settings": {
+                "text_text": "Ilona, c’est l’œil graphique du Panier à Café. Future directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter.",
+                "text_tab_label": "This is some text inside of a div block."
+              },
+              "blocks": {}
+            },
+            "tab_nKGBcL": {
+              "type": "tab",
+              "name": "Tab",
+              "settings": {
+                "text_text": "Ilona, c’est l’œil graphique du Panier à Café. Future directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter.",
+                "text_tab_label": "This is some text inside of a div block."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "tab_nPVfGi",
+            "tab_nKGBcL"
+          ]
         }
       },
       "block_order": [
-        "tab_8PtcDJ"
+        "tabs_component_xXdrYh",
+        "tabs_component_D83phB"
       ],
       "settings": {
         "text_heading": "Tabs"
