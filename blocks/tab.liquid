@@ -1,4 +1,4 @@
-<div id="panel-{{block.id}}-{{forloop.index}}" x-show="tab_{{block.id}} === {{forloop.index}}" aria-labelledby="tab-{{block.id}}-{{forloop.index}}" role="tabpanel" x-bind:aria-hidden="tab_{{block.id}} === {{forloop.index}} ? 'false' : 'true'" x-cloak="" li-block="Tab" class="tabs_panel">
+<div id="panel-{{section.index}}-{{forloop.index}}" x-show="tab === {{forloop.index}}" aria-labelledby="tab-{{section.index}}-{{forloop.index}}" role="tabpanel" x-bind:aria-hidden="tab === {{forloop.index}} ? 'false' : 'true'" x-cloak="" li-block="Tab" class="tabs_panel">
                     
                     <div class="tabs_panel-content is-team"><div class="tabs_panel-image-wrapper"><img src="{{ 'ilona.avif' | asset_url }}" loading="lazy" alt="" class="tabs_panel-image">
 </div><article class="tabs_panel-article"><h4 class="tabs_panel-article-heading">Future directrice artistique (et tornade créative)</h4><p>
