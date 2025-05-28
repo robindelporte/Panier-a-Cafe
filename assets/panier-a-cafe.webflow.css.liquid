@@ -3058,6 +3058,7 @@ figcaption {
 }
 
 .tab_menu {
+  white-space: nowrap;
   flex-flow: row;
   padding: .25rem;
   display: flex;
@@ -8786,6 +8787,11 @@ figcaption {
     width: min(19.375rem, 90vw);
   }
 
+  .swiper-slide.in-lookbook {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .swiper-slide.is-home-hero {
     padding-top: 2rem;
     padding-left: 1.75rem;
@@ -8972,6 +8978,12 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
+  .lookbook_swiper-wrapper {
+    aspect-ratio: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .contact_component {
     padding-top: 1.7rem;
     padding-bottom: 1.7rem;
@@ -9022,6 +9034,10 @@ figcaption {
   .footer_soutien-image {
     width: 100%;
     height: 100%;
+  }
+
+  .lookbook-product {
+    max-width: 14rem;
   }
 
   .section_home-hero {
