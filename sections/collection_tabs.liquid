@@ -56,78 +56,69 @@
 <div class="hide w-embed"></div>
 <div class="hide w-embed w-script">
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      let splideInstances = [];
+    // Tableau pour stocker les instances Splide
+    let splideInstances = [];
 
-      function initSplideSliders() {
-        const isMobileOrTablet = window.innerWidth < 992;
+    function initSplideSliders() {
+      const isMobileOrTablet = window.innerWidth < 992;
+      const sliders = document.querySelectorAll('.splide.slider'); // ← ton sélecteur
 
-        // Détruire toutes les instances existantes
-        splideInstances.forEach(splide => {
-          try {
-            splide.destroy();
-          } catch (e) {}
-        });
-        splideInstances = [];
+      sliders.forEach((sliderEl, index) => {
+        const existing = splideInstances[index];
 
-        if (isMobileOrTablet) {
-          // Utiliser la même approche que Swiper avec .each()
-          $(".splide.slider").each(function(index) {
-            try {
-              const splide = new Splide(this, {
-                perPage: 4,
-                perMove: 1,
-                focus: 0,
-                type: 'slide',
-                gap: '40px',
-                arrows: false,
-                pagination: true,
-                speed: 600,
-                dragAngleThreshold: 30,
-                autoWidth: false,
-                rewind: false,
-                rewindSpeed: 400,
-                waitForTransition: false,
-                updateOnMove: true,
-                trimSpace: false,
-                breakpoints: {
-                  991: {
-                    perPage: 2,
-                    gap: '32px',
-                  },
-                  767: {
-                    perPage: 1.5,
-                    gap: '20px',
-                  },
-                  479: {
-                    perPage: 1,
-                    gap: '16px',
-                  }
-                }
-              });
-
-              splide.mount();
-              splideInstances.push(splide);
-            } catch (error) {
-              console.error('Erreur Splide slider ' + index + ':', error);
+        // Si mobile/tablette et pas encore monté
+        if (isMobileOrTablet && !existing) {
+          const splide = new Splide(sliderEl, {
+            perPage: 4,
+            perMove: 1,
+            focus: 0,
+            type: 'slide',
+            gap: '40px',
+            arrows: false,
+            pagination: true,
+            speed: 600,
+            dragAngleThreshold: 30,
+            autoWidth: false,
+            rewind: false,
+            rewindSpeed: 400,
+            waitForTransition: false,
+            updateOnMove: true,
+            trimSpace: false,
+            breakpoints: {
+              991: {
+                perPage: 2,
+                gap: '32px',
+              },
+              767: {
+                perPage: 1.5,
+                gap: '20px',
+              },
+              479: {
+                perPage: 1,
+                gap: '16px',
+              }
             }
           });
+
+          splide.mount();
+          splideInstances[index] = splide;
         }
-      }
 
-      // Initialiser au chargement
-      initSplideSliders();
-
-      // Réinitialiser au resize
-      window.addEventListener('resize', function() {
-        clearTimeout(window.splideTimer);
-        window.splideTimer = setTimeout(initSplideSliders, 200);
+        // Si desktop et slider existant → détruire
+        if (!isMobileOrTablet && existing) {
+          existing.destroy();
+          splideInstances[index] = null;
+        }
       });
+    }
 
-      // Réinitialiser lors des changements de tabs
-      $(document).on('click', '[id*="collection-button"]', function() {
-        setTimeout(initSplideSliders, 100);
-      });
+    // Exécuter au chargement
+    document.addEventListener('DOMContentLoaded', initSplideSliders);
+
+    // Exécuter au resize (avec debounce)
+    window.addEventListener('resize', () => {
+      clearTimeout(window.__splideResizeTimer);
+      window.__splideResizeTimer = setTimeout(initSplideSliders, 200);
     });
   </script>
 </div>
