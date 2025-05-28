@@ -56,79 +56,115 @@
 <div class="hide w-embed"></div>
 <div class="hide w-embed w-script">
   <script>
-    let splideInstances = [];
+  let splideInstances = [];
 
-    function initSplideSliders() {
-      const isMobileOrTablet = window.innerWidth < 992;
-
-      // Détruire toutes les instances existantes
-      splideInstances.forEach(splide => {
-        try {
-          splide.destroy();
-        } catch (e) {}
-      });
-      splideInstances = [];
-
-      if (isMobileOrTablet) {
-        // Initialiser tous les sliders
-        const sliders = document.querySelectorAll('.splide.slider');
-
-        sliders.forEach(sliderEl => {
-          try {
-            const splide = new Splide(sliderEl, {
-              perPage: 4,
-              perMove: 1,
-              focus: 0,
-              type: 'slide',
-              gap: '40px',
-              arrows: false,
-              pagination: true,
-              speed: 600,
-              dragAngleThreshold: 30,
-              autoWidth: false,
-              rewind: false,
-              rewindSpeed: 400,
-              waitForTransition: false,
-              updateOnMove: true,
-              trimSpace: false,
-              breakpoints: {
-                991: {
-                  perPage: 2,
-                  gap: '32px',
-                },
-                767: {
-                  perPage: 1.5,
-                  gap: '20px',
-                },
-                479: {
-                  perPage: 1,
-                  gap: '16px',
-                }
-              }
-            });
-
-            splide.mount();
-            splideInstances.push(splide);
-          } catch (error) {
-            console.error('Erreur Splide:', error);
-          }
-        });
+  function initSplideSliders() {
+    console.log('=== DEBUT INIT SPLIDE ===');
+    
+    const isMobileOrTablet = window.innerWidth < 992;
+    console.log('Window width:', window.innerWidth, 'isMobileOrTablet:', isMobileOrTablet);
+    
+    // Détruire toutes les instances existantes
+    console.log('Destruction des instances existantes:', splideInstances.length);
+    splideInstances.forEach(splide => {
+      try {
+        splide.destroy();
+      } catch (e) {
+        console.log('Erreur destruction:', e);
       }
+    });
+    splideInstances = [];
+    
+    if (isMobileOrTablet) {
+      // Chercher tous les sliders
+      const sliders = document.querySelectorAll('.splide.slider');
+      console.log('Sliders trouvés:', sliders.length);
+      
+      sliders.forEach((sliderEl, index) => {
+        console.log(`Processing slider ${index + 1}:`, sliderEl);
+        
+        // Vérifier si Splide est disponible
+        if (typeof Splide === 'undefined') {
+          console.error('Splide n\'est pas défini ! Vérifiez que la librairie est chargée.');
+          return;
+        }
+        
+        try {
+          const splide = new Splide(sliderEl, {
+            perPage: 4,
+            perMove: 1,
+            focus: 0,
+            type: 'slide',
+            gap: '40px',
+            arrows: false,
+            pagination: true,
+            speed: 600,
+            dragAngleThreshold: 30,
+            autoWidth: false,
+            rewind: false,
+            rewindSpeed: 400,
+            waitForTransition: false,
+            updateOnMove: true,
+            trimSpace: false,
+            breakpoints: {
+              991: {
+                perPage: 2,
+                gap: '32px',
+              },
+              767: {
+                perPage: 1.5,
+                gap: '20px',
+              },
+              479: {
+                perPage: 1,
+                gap: '16px',
+              }
+            }
+          });
+          
+          console.log('Splide créé pour slider', index + 1, '- mounting...');
+          splide.mount();
+          console.log('Splide monté avec succès pour slider', index + 1);
+          
+          splideInstances.push(splide);
+        } catch (error) {
+          console.error('Erreur création Splide pour slider', index + 1, ':', error);
+        }
+      });
+      
+      console.log('Total instances créées:', splideInstances.length);
+    } else {
+      console.log('Mode desktop - pas d\'initialisation Splide');
     }
+    
+    console.log('=== FIN INIT SPLIDE ===');
+  }
 
-    // Initialiser au chargement
-    document.addEventListener('DOMContentLoaded', initSplideSliders);
+  // Test immédiat pour vérifier si Splide est chargé
+  console.log('Splide disponible ?', typeof Splide !== 'undefined');
+  console.log('Sliders présents ?', document.querySelectorAll('.splide.slider').length);
 
-    // Réinitialiser au resize
-    window.addEventListener('resize', () => {
-      clearTimeout(window.splideTimer);
-      window.splideTimer = setTimeout(initSplideSliders, 200);
-    });
-
-    // Réinitialiser lors des clics (changement de tabs)
-    document.addEventListener('click', () => {
-      setTimeout(initSplideSliders, 100);
-    });
+  // Initialiser au chargement
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded - init Splide');
+    initSplideSliders();
+  });
+  
+  // Réinitialiser au resize
+  window.addEventListener('resize', () => {
+    console.log('Resize détecté');
+    clearTimeout(window.splideTimer);
+    window.splideTimer = setTimeout(initSplideSliders, 200);
+  });
+  
+  // Réinitialiser lors des clics (changement de tabs)
+  document.addEventListener('click', (e) => {
+    console.log('Clic détecté sur:', e.target);
+    setTimeout(initSplideSliders, 100);
+  });
+  
+  // Fonction debug accessible globalement
+  window.debugSplide = initSplideSliders;
   </script>
 </div>
 {% schema %} {"tag":"section","name":"Collection Tabs","class":"section_category","settings":[{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs","category":"Liquify","blocks":[]}]} {% endschema %}
