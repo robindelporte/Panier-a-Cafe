@@ -2,7 +2,7 @@
                     
                     <div x-data="{tab: 1}" class="tabs_element is-team"><div li-for:inside="nested_block in block.blocks" class="tabs_menu is-team">
         {% for nested_block in block.blocks %}                            {% if nested_block.type == 'tab_panel' %}    <button x-bind:class="tab === {{forloop.index}} ? 'is-active' : ''" x-on:click="tab = {{forloop.index}}" role="tab" aria-controls="panel-{{section.index}}-{{forloop.index}}" tabindex="0" id="tab-{{section.index}}-{{forloop.index}}" x-bind:aria-selected="tab === {{forloop.index}} ? 'true' : 'false'" li-if="nested_block.type == 'tab_panel'" class="button is-team-tab">
-    <div li-object="nested_block.type == 'tab_panel'">{{ nested_block.type == 'tab_panel' }}</div>    </button>
+    <div li-object="nested_block.settings.tab_label">{{ nested_block.settings.tab_label }}</div>    </button>
 {% endif %}
                     {% endfor %}    </div>
 <div class="tabs_body"><div li-content-for-theme-blocks="">
