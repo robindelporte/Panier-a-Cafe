@@ -12,8 +12,13 @@
                     {% endfor %}    </div>
 </div><div li-for:inside="collection in section.settings.collection_list" class="tab_body">
         {% for collection in section.settings.collection_list %}                            
-                            <div id="collection-tab-{{section.index}}{{forloop.index}}" role="tabpanel" aria-labelledby="collection-button-{{section.index}}{{forloop.index}}" x-show="tab === {{section.index}}{{forloop.index}}" class="category_tab-panel"><div class="splide slider"><div class="splide__track"><div class="splide__list"><div class="splide__slide">{% render 'product_item', product: product %}
-</div></div></div></div><a li-object:href="collection.url" href="{{ collection.url }}" class="button is-white w-button">En voir plus</a></div>
+                            <div id="collection-tab-{{section.index}}{{forloop.index}}" role="tabpanel" aria-labelledby="collection-button-{{section.index}}{{forloop.index}}" x-show="tab === {{section.index}}{{forloop.index}}" class="category_tab-panel"><div class="splide slider"><div class="splide__track"><div li-for:inside="product in collection.products limit: 4" class="splide__list">
+        {% for product in collection.products limit: 4 %}                            
+                            <div class="splide__slide">{% render 'product_item', product: product %}
+</div>
+                            
+                    {% endfor %}    </div>
+</div></div><a li-object:href="collection.url" href="{{ collection.url }}" class="button is-white w-button">En voir plus</a></div>
                             
                     {% endfor %}    </div>
 </div></div></div><div class="hide w-embed"></div>
