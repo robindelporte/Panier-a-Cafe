@@ -55,12 +55,12 @@
     "team": {
       "type": "team",
       "blocks": {
-        "tabs_component_kixdtk": {
+        "tabs_component_wKa44E": {
           "type": "tabs-component",
           "name": "Tabs Component",
           "settings": {},
           "blocks": {
-            "tab_Hedn7a": {
+            "tab_jCkfU9": {
               "type": "tab",
               "name": "Tab",
               "settings": {
@@ -69,7 +69,7 @@
               },
               "blocks": {}
             },
-            "tab_WNcLGk": {
+            "tab_RFEDTL": {
               "type": "tab",
               "name": "Tab",
               "settings": {
@@ -80,13 +80,13 @@
             }
           },
           "block_order": [
-            "tab_Hedn7a",
-            "tab_WNcLGk"
+            "tab_jCkfU9",
+            "tab_RFEDTL"
           ]
         }
       },
       "block_order": [
-        "tabs_component_kixdtk"
+        "tabs_component_wKa44E"
       ],
       "settings": {
         "text_heading": "Tabs"
