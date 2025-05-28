@@ -59,38 +59,29 @@
   let splideInstances = [];
 
   function initSplideSliders() {
-    console.log('=== DEBUT INIT SPLIDE ===');
-    
     const isMobileOrTablet = window.innerWidth < 992;
-    console.log('Window width:', window.innerWidth, 'isMobileOrTablet:', isMobileOrTablet);
     
     // Détruire toutes les instances existantes
-    console.log('Destruction des instances existantes:', splideInstances.length);
     splideInstances.forEach(splide => {
       try {
         splide.destroy();
-      } catch (e) {
-        console.log('Erreur destruction:', e);
-      }
+      } catch (e) {}
     });
     splideInstances = [];
     
     if (isMobileOrTablet) {
-      // Chercher tous les sliders
+      // Trouver tous les sliders et leur donner des IDs uniques
       const sliders = document.querySelectorAll('.splide.slider');
-      console.log('Sliders trouvés:', sliders.length);
       
       sliders.forEach((sliderEl, index) => {
-        console.log(`Processing slider ${index + 1}:`, sliderEl);
-        
-        // Vérifier si Splide est disponible
-        if (typeof Splide === 'undefined') {
-          console.error('Splide n\'est pas défini ! Vérifiez que la librairie est chargée.');
-          return;
+        // Donner un ID unique si il n'en a pas
+        if (!sliderEl.id) {
+          sliderEl.id = `splide-slider-${index}-${Date.now()}`;
         }
         
         try {
-          const splide = new Splide(sliderEl, {
+          // Initialiser avec l'ID unique
+          const splide = new Splide(`#${sliderEl.id}`, {
             perPage: 4,
             perMove: 1,
             focus: 0,
@@ -122,49 +113,45 @@
             }
           });
           
-          console.log('Splide créé pour slider', index + 1, '- mounting...');
           splide.mount();
-          console.log('Splide monté avec succès pour slider', index + 1);
-          
           splideInstances.push(splide);
         } catch (error) {
-          console.error('Erreur création Splide pour slider', index + 1, ':', error);
+          console.error('Erreur Splide:', error);
         }
       });
-      
-      console.log('Total instances créées:', splideInstances.length);
-    } else {
-      console.log('Mode desktop - pas d\'initialisation Splide');
     }
-    
-    console.log('=== FIN INIT SPLIDE ===');
   }
 
-  // Test immédiat pour vérifier si Splide est chargé
-  console.log('Splide disponible ?', typeof Splide !== 'undefined');
-  console.log('Sliders présents ?', document.querySelectorAll('.splide.slider').length);
-
-  // Initialiser au chargement
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded - init Splide');
+  // Forcer l'exécution dès que possible
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSplideSliders);
+  } else {
     initSplideSliders();
-  });
+  }
   
-  // Réinitialiser au resize
+  // Au resize
   window.addEventListener('resize', () => {
-    console.log('Resize détecté');
     clearTimeout(window.splideTimer);
     window.splideTimer = setTimeout(initSplideSliders, 200);
   });
   
-  // Réinitialiser lors des clics (changement de tabs)
+  // Lors des changements de tabs - être plus spécifique
   document.addEventListener('click', (e) => {
-    console.log('Clic détecté sur:', e.target);
-    setTimeout(initSplideSliders, 100);
+    if (e.target.closest('[id*="collection-button"]') || e.target.matches('[id*="collection-button"]')) {
+      setTimeout(initSplideSliders, 200);
+    }
   });
   
-  // Fonction debug accessible globalement
-  window.debugSplide = initSplideSliders;
+  // Force init toutes les 2 secondes au début (au cas où)
+  let retryCount = 0;
+  const retryInit = setInterval(() => {
+    if (retryCount < 5) {
+      initSplideSliders();
+      retryCount++;
+    } else {
+      clearInterval(retryInit);
+    }
+  }, 2000);
   </script>
 </div>
 {% schema %} {"tag":"section","name":"Collection Tabs","class":"section_category","settings":[{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs","category":"Liquify","blocks":[]}]} {% endschema %}
