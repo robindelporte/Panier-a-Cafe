@@ -7659,8 +7659,13 @@ figcaption {
     padding-right: 2rem;
   }
 
-  .tabs_element.is-locale {
+  .tabs_element.is-team, .tabs_element.is-locale {
     display: none;
+  }
+
+  .tabs_panel-content.is-team {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
   }
 
   .faq_list.is-locale {
@@ -8806,6 +8811,10 @@ figcaption {
     min-width: 10rem;
   }
 
+  .text-size-large.text-font-heading {
+    font-family: var(--_typography---font-styles--heading);
+  }
+
   .display-inlineflex.space-beetween.stack-children {
     flex-flow: wrap;
   }
@@ -9071,6 +9080,9 @@ figcaption {
 
   .tabs_panel-content.is-team {
     grid-template-columns: 1fr;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .faq_list.is-locale {
