@@ -112,14 +112,12 @@
         "badge_qJHipX",
         "badge_6wnTCQ"
       ],
-      "name": "Badges",
       "settings": {
         "text_titre": "La vérité du grain à la tasse"
       }
     },
     "animation_produit_zR93AN": {
       "type": "animation_produit",
-      "name": "Animation-Produit",
       "settings": {
         "text_animation_titre_1": "De la ferme à votre tasse, chaque étape compte",
         "richtext_animation_texte_1": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>",
@@ -131,9 +129,63 @@
     },
     "team": {
       "type": "team",
+      "blocks": {
+        "tab_4Xxmqm": {
+          "type": "tab",
+          "settings": {
+            "text_text": "Ilona, c’est l’œil graphique du Panier à Café. Future directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter.",
+            "text_tab_label": "Ilona"
+          }
+        },
+        "tab_ickjWL": {
+          "type": "tab",
+          "settings": {
+            "text_text": "Ilona, c’est l’œil graphique du Panier à Café. Future directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter.",
+            "text_tab_label": "Ilona"
+          }
+        }
+      },
+      "block_order": [
+        "tab_4Xxmqm",
+        "tab_ickjWL"
+      ],
       "settings": {
         "text_heading": "Tabs"
       }
+    },
+    "team_3_QJygzt": {
+      "type": "team_3",
+      "blocks": {
+        "tab_YHtiET": {
+          "type": "tab",
+          "settings": {
+            "text_text": "Ilona, c’est l’œil graphique du Panier à Café. Future directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter.",
+            "text_tab_label": "This is some text inside of a div block."
+          }
+        }
+      },
+      "block_order": [
+        "tab_YHtiET"
+      ],
+      "name": "Team-3",
+      "settings": {}
+    },
+    "team_2_QQUTcQ": {
+      "type": "team_2",
+      "blocks": {
+        "tab_THm3hc": {
+          "type": "tab",
+          "settings": {
+            "text_text": "Ilona, c’est l’œil graphique du Panier à Café. Future directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter.",
+            "text_tab_label": "This is some text inside of a div block."
+          }
+        }
+      },
+      "block_order": [
+        "tab_THm3hc"
+      ],
+      "name": "Team-2",
+      "settings": {}
     },
     "faq": {
       "type": "faq",
@@ -247,7 +299,6 @@
     },
     "newsletter_TGbQ4W": {
       "type": "newsletter",
-      "name": "Newsletter",
       "settings": {
         "text_headline": "S'inscrire à la newsletter",
         "text_checkbox": "En vous inscrivant, vous acceptez notre <a href=\"#\" li-settings:url=\"Politique de confidentialite\">politique de confidentialité</a> et consentez à recevoir des emails.",
@@ -264,6 +315,8 @@
     "badges_cDDfKL",
     "animation_produit_zR93AN",
     "team",
+    "team_2_QQUTcQ",
+    "team_3_QJygzt",
     "faq",
     "liste_collections_FdJHPj",
     "pages_PLch7t",
