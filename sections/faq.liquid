@@ -2,9 +2,9 @@
 {{ section.settings.text_heading }}
 </h2>
 <div class="text-rich-text max-width-medium w-richtext"> {{ section.settings.richtext_richtext }} </div>
-</div><ul x-data="{open: 1}" role="list" class="faq_list">{% for block in section.blocks %}
+</div><ul x-data="{open: 1}" role="list" class="faq_faq-list">{% for block in section.blocks %}
     {% if block.type == "faq-item" %}
-                    <li li-block="FAQ Item" role="button" tabindex="0" aria-controls="faq-body-{{forloop.index}}" x-on:click="open = (open === {{forloop.index}} ? 0 : {{forloop.index}}); $el.setAttribute('aria-expanded', open === {{forloop.index}} ? 'true' : 'false')" id="w-node-a01a4a82-b5f1-97cf-4b8c-d67b1fb8a436-1fb8a42b" class="faq_item">
+                    <li li-block="FAQ Item" role="button" tabindex="0" aria-controls="faq-body-{{forloop.index}}" x-on:click="open = (open === {{forloop.index}} ? 0 : {{forloop.index}}); $el.setAttribute('aria-expanded', open === {{forloop.index}} ? 'true' : 'false')" id="w-node-a01a4a82-b5f1-97cf-4b8c-d67b1fb8a436-1fb8a42b" class="faq-faq_item">
                                     
                                     <div class="faq_item-heading"><h3 id="faq-heading-{{forloop.index}}" class="text-size-medium">
 {{ block.settings.text_question }}
