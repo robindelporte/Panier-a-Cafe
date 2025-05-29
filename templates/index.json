@@ -19,7 +19,8 @@
             "text_text": "",
             "url_button_1_link": "shopify://collections/cafes",
             "text_button_1_text": "Découvrir",
-            "video_desktop": "shopify://files/videos/panier-a-cafe.mp4"
+            "video_desktop": "shopify://files/videos/panier-a-cafe.mp4",
+            "video_mobile": "shopify://files/videos/panier-a-cafe.mp4"
           }
         }
       },
@@ -77,7 +78,7 @@
           "type": "icone",
           "settings": {
             "image_icone": "shopify://shop_images/Localisation.png",
-            "text_titre_icone": "Boutique",
+            "text_titre_icone": "Atelier boutique",
             "text_description": "805 route des Futaies 74370 Villaz."
           }
         }
@@ -367,7 +368,6 @@
         "text_KyFDdw",
         "buttons_NDrikW"
       ],
-      "name": "Contenu",
       "settings": {
         "image_image": "shopify://shop_images/chr-image.webp",
         "left_right": "right"
@@ -400,6 +400,7 @@
         "carte_f4wAfh",
         "carte_Ln8jFn"
       ],
+      "disabled": true,
       "settings": {
         "text_heading": "Recycle ton café, sans te prendre la tête",
         "text_paragraph": "Si ton marc de café avait une seconde vie ? Grâce à notre sac de collecte, on te propose de recycler ton marc pour le transformer en pellets pour poêles à granulés via notre partenariat avec Environ Alpes. Pour les pros (PME, restaurateurs), on récupère le sac directement lors de nos livraisons de café. Pour les particuliers, il suffit de nous le rapporter sur les marchés ou à l’atelier lors de ta prochaine visite. Simple, utile… et bien plus écolo que de le jeter à la poubelle !",
@@ -409,7 +410,6 @@
     },
     "collection_tabs_marr_6khPpp": {
       "type": "collection_tabs_marr",
-      "name": "Collection Tabs Marr",
       "settings": {
         "text_titre": "Nos équipements",
         "collection_list": [
