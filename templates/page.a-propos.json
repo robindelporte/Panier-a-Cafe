@@ -253,6 +253,26 @@
     },
     "faq": {
       "type": "faq",
+      "blocks": {
+        "faq_item_hQGeYe": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_JmzrXN": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p>\n                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                    </p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_hQGeYe",
+        "faq_item_JmzrXN"
+      ],
       "settings": {
         "text_heading": "Foire aux questions",
         "richtext_richtext": "<p><br/>                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                </p>"
