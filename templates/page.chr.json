@@ -111,6 +111,7 @@
       ],
       "name": "Contenu",
       "settings": {
+        "image_image": "shopify://shop_images/cafe_85ba8f87-0e16-4fe3-989f-fe5cd49596dc.webp",
         "left_right": "right"
       }
     },
@@ -146,6 +147,7 @@
       ],
       "name": "Contenu",
       "settings": {
+        "image_image": "shopify://shop_images/le-panier-a-cafe.webp",
         "left_right": "left"
       }
     },
@@ -222,15 +224,57 @@
     },
     "logo_defilants": {
       "type": "logo_defilants",
+      "blocks": {
+        "logo_defilants_3Pw6Yp": {
+          "type": "logo-defilants",
+          "settings": {}
+        },
+        "logo_defilants_inverses_gHWRDx": {
+          "type": "logo-defilants-inverses",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "logo_defilants_3Pw6Yp",
+        "logo_defilants_inverses_gHWRDx"
+      ],
       "settings": {
         "text_heading": "Ils nous font confiance"
       }
     },
     "faq": {
       "type": "faq",
+      "blocks": {
+        "faq_item_kBweMN": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        },
+        "faq_item_QNPQna": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p>\n                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                    </p>"
+          }
+        },
+        "faq_item_kWAn9m": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Heading",
+            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_kBweMN",
+        "faq_item_QNPQna",
+        "faq_item_kWAn9m"
+      ],
       "settings": {
         "text_heading": "Foire aux questions",
-        "richtext_richtext": "<p>\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                </p>"
+        "richtext_richtext": "<p><br/>                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                </p>"
       }
     },
     "reseaux": {
