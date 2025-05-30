@@ -207,10 +207,6 @@
     "logo_defilants": {
       "type": "logo_defilants",
       "blocks": {
-        "logo_defilants_kzKBjj": {
-          "type": "logo-defilants",
-          "settings": {}
-        },
         "logo_defilants_ANXHEj": {
           "type": "logo-defilants",
           "settings": {
@@ -221,16 +217,10 @@
             "image_logo_5": "shopify://shop_images/epanou.webp",
             "image_logo_6": "shopify://shop_images/epanou-3.webp"
           }
-        },
-        "logo_defilants_DW4MKf": {
-          "type": "logo-defilants",
-          "settings": {}
         }
       },
       "block_order": [
-        "logo_defilants_kzKBjj",
-        "logo_defilants_ANXHEj",
-        "logo_defilants_DW4MKf"
+        "logo_defilants_ANXHEj"
       ],
       "settings": {
         "text_heading": "Ils nous font confiance"
