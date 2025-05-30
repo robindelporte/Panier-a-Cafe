@@ -12,32 +12,41 @@
     "header_landing": {
       "type": "header_landing",
       "blocks": {
-        "headline_jHg3qc": {
-          "type": "headline",
+        "titre_E7eMJm": {
+          "type": "titre",
           "settings": {
             "text_headline": "Faites plaisir à vos équipes avec du vrai bon café !"
           }
         },
-        "text_Ht3eAx": {
-          "type": "text",
+        "paragrpahe_Qqefz6": {
+          "type": "paragrpahe",
           "settings": {
-            "richtext_paragraph": "<p>Au Panier à Café, on torréfie localement des cafés de spécialité pensés pour les entreprises qui veulent offrir plus qu’un simple café. <br/>On vous équipe avec des machines simples d’utilisation et on vous livre régulièrement du café fraîchement torréfié, sans que vous ayez à y penser.<br/>Mais encore ? Pour vos salarié·es qui veulent prolonger l’expérience à la maison ? <br/>Ils peuvent commander directement sur notre site et être livrés au bureau, sans frais supplémentaires !<br/><br/></p>"
+            "richtext_paragraph": "<p>Au Panier à Café, on torréfie localement des cafés de spécialité pensés pour les entreprises qui veulent offrir plus qu’un simple café. On vous équipe avec des machines simples d’utilisation et on vous livre régulièrement du café fraîchement torréfié, sans que vous ayez à y penser.Mais encore ? Pour vos salarié·es qui veulent prolonger l’expérience à la maison ?</p>"
           }
         },
-        "buttons_z6Q83p": {
-          "type": "buttons",
+        "bouttons_nprMeU": {
+          "type": "bouttons",
           "settings": {
-            "url_button_link": "",
-            "text_button_text": "Button",
+            "url_button_link": "shopify://pages/contact",
+            "text_button_text": "Obtenir un devis",
             "url_button_link_2": "",
             "text_button_text_2": "Button 2"
+          }
+        },
+        "logos_4zenFb": {
+          "type": "logos",
+          "settings": {
+            "image_logo_1": "shopify://shop_images/vinci.png",
+            "image_logo_2": "shopify://shop_images/pilot.png",
+            "image_logo_3": "shopify://shop_images/salomon.png"
           }
         }
       },
       "block_order": [
-        "headline_jHg3qc",
-        "text_Ht3eAx",
-        "buttons_z6Q83p"
+        "titre_E7eMJm",
+        "paragrpahe_Qqefz6",
+        "bouttons_nprMeU",
+        "logos_4zenFb"
       ],
       "settings": {}
     },
