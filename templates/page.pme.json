@@ -131,6 +131,7 @@
       ],
       "name": "Contenu",
       "settings": {
+        "image_image": "shopify://shop_images/cafe-pme.webp",
         "left_right": "right"
       }
     },
@@ -156,6 +157,7 @@
       ],
       "name": "Contenu",
       "settings": {
+        "image_image": "shopify://shop_images/cafe-pme-1.webp",
         "left_right": "left"
       }
     },
