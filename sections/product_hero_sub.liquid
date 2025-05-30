@@ -171,7 +171,14 @@
                         <path d="M8.00747 16C6.90696 16 5.87048 15.7918 4.89802 15.3754C3.92557 14.959 3.07443 14.386 2.34462 13.6565C1.6148 12.927 1.04154 12.0765 0.624835 11.1051C0.208278 10.1338 0 9.0959 0 7.99143C0 6.88696 0.208205 5.85216 0.624615 4.88703C1.04103 3.9219 1.61399 3.07443 2.34352 2.34462C3.07304 1.6148 3.92352 1.04154 4.89495 0.624835C5.86623 0.208278 6.9041 0 8.00857 0C9.11304 0 10.1478 0.208205 11.113 0.624615C12.0781 1.04103 12.9256 1.61399 13.6554 2.34352C14.3852 3.07304 14.9585 3.92176 15.3752 4.88967C15.7917 5.85773 16 6.89201 16 7.99253C16 9.09304 15.7918 10.1295 15.3754 11.102C14.959 12.0744 14.386 12.9256 13.6565 13.6554C12.927 14.3852 12.0782 14.9585 11.1103 15.3752C10.1423 15.7917 9.10799 16 8.00747 16Z" fill="#34C759" fill-opacity="0.3"></path><path d="M8.00534 13.7137C7.21926 13.7137 6.47891 13.565 5.7843 13.2676C5.08969 12.9701 4.48174 12.5609 3.96044 12.0398C3.43914 11.5187 3.02967 10.9112 2.73202 10.2173C2.43448 9.52356 2.28571 8.78222 2.28571 7.99332C2.28571 7.20441 2.43443 6.46527 2.73187 5.77589C3.0293 5.08652 3.43856 4.48118 3.95965 3.95988C4.48074 3.43858 5.08822 3.02911 5.7821 2.73147C6.47587 2.43393 7.21721 2.28516 8.00612 2.28516C8.79503 2.28516 9.53417 2.43387 10.2235 2.73131C10.9129 3.02875 11.5183 3.43801 12.0396 3.9591C12.5609 4.48018 12.9703 5.08641 13.268 5.77778C13.5655 6.46925 13.7143 7.20802 13.7143 7.9941C13.7143 8.78018 13.5656 9.52053 13.2681 10.2151C12.9707 10.9097 12.5614 11.5177 12.0403 12.039C11.5193 12.5603 10.913 12.9698 10.2217 13.2674C9.53019 13.565 8.79142 13.7137 8.00534 13.7137Z" fill="#34C759"></path>
                       </svg>
                     </div>
-                    <div><span id="inventory-quantity">Chargement du stock…</span></div>
+                    <div>
+                      <span
+                        id="inventory-quantity"
+                        li-js-object="product.selected_variant.inventory_quantity"
+                        x-text="product.selected_variant.inventory_quantity"
+                        >6</span
+                      >en stock
+                    </div>
                   </div>
                 </template>
                 <template x-if="selected_or_first_available_variant.available == false">
@@ -1420,79 +1427,3 @@
   </div>
 </div>
 {% schema %} {"tag":"section","name":"Product-Hero-Sub","class":"section_product-header","settings":[{"id":"image_settingsimage","type":"image_picker","label":"settings.image"},{"id":"image_badges_variete_cafe_image","type":"image_picker","label":"Badges - Variete Cafe - Image"},{"id":"text_badges_variete_cafe_texte","type":"text","label":"Badges - Variete Cafe - Texte","default":"100% Arabica"},{"id":"image_badges_certification_cafe_image","type":"image_picker","label":"Badges - Certification Cafe - Image"},{"id":"text_badges_certification_cafe_texte","type":"text","label":"Badges - Certification Cafe - Texte","default":"100% Arabica"},{"id":"image_badges_type_de_the_image","type":"image_picker","label":"Badges - Type de The - Image"},{"id":"text_badges_type_de_the_texte","type":"text","label":"Badges - Type de The - Texte","default":"100% Arabica"},{"id":"image_badge_origine_the_image","type":"image_picker","label":"Badge - Origine The - Image"},{"id":"text_badge_origine_the_texte","type":"text","label":"Badge - Origine The - Texte","default":"100% Arabica"},{"id":"text_without_subscription","type":"text","label":"without Subscription","default":"Commande ponctuelle"},{"id":"text_with_subscription","type":"text","label":"with Subscription","default":"Livraison r\u00e9currente"}],"presets":[{"name":"Product-Hero-Sub","category":"Liquify","blocks":[]}]} {% endschema %}
-<span id="inventory-quantity">Chargement du stock…</span>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    console.log('🟢 Script inventaire chargé');
-
-    const inventorySpan = document.getElementById('inventory-quantity');
-    if (!inventorySpan) {
-      console.warn('❌ Élement #inventory-quantity introuvable');
-      return;
-    } else {
-      console.log('✅ Élément #inventory-quantity trouvé');
-    }
-
-    const variantForm = document.querySelector('form[action^="/cart/add"]');
-    if (!variantForm) {
-      console.warn('❌ Formulaire variante introuvable');
-      return;
-    } else {
-      console.log('✅ Formulaire trouvé');
-    }
-
-    function updateInventoryDisplay(variantId) {
-      console.log('📦 Requête pour le variant ID :', variantId);
-
-      fetch(`${window.location.pathname}.js`)
-        .then(res => {
-          console.log('📡 Requête réussie, parsing JSON...');
-          return res.json();
-        })
-        .then(product => {
-          console.log('📋 Produit reçu :', product);
-          const variant = product.variants.find(v => v.id == variantId);
-          if (!variant) {
-            console.warn('❌ Aucune variante trouvée avec cet ID');
-            return;
-          }
-
-          console.log('✅ Variante trouvée :', variant);
-
-          if (variant.inventory_management) {
-            console.log('📦 Inventaire actif');
-            console.log('🔢 Quantité en stock :', variant.inventory_quantity);
-
-            if (variant.inventory_quantity > 0) {
-              inventorySpan.textContent = `${variant.inventory_quantity} en stock`;
-            } else {
-              inventorySpan.textContent = 'Rupture de stock';
-            }
-          } else {
-            console.log('ℹ️ Pas de gestion d’inventaire active');
-            inventorySpan.textContent = '';
-          }
-        })
-        .catch(error => {
-          console.error('❌ Erreur de requête :', error);
-        });
-    }
-
-    // Initialisation
-    const initialVariantId = variantForm.querySelector('[name="id"]')?.value;
-    console.log('🔍 ID de la variante initiale :', initialVariantId);
-    if (initialVariantId) {
-      updateInventoryDisplay(initialVariantId);
-    }
-
-    // Mise à jour sur changement
-    variantForm.addEventListener('change', () => {
-      const selectedVariantId = variantForm.querySelector('[name="id"]')?.value;
-      console.log('🔁 Changement de variante, ID sélectionné :', selectedVariantId);
-      if (selectedVariantId) {
-        updateInventoryDisplay(selectedVariantId);
-      }
-    });
-  });
-</script>
