@@ -667,16 +667,16 @@
                             </div>
                             <div>Matériel recommandé</div>
                           </div>
-                          {% assign machine_recommandee = product.metafields.custom.materiel_recommande %}
-                          {% if materiel_recommande %}
-                            <div li-if="materiel_recommande">
+                          {% assign machine_recommandee = product.metafields.custom.materiel_recommandee %}
+                          {% if machine_recommandee %}
+                            <div li-if="machine_recommandee">
                               <a
-                                li-object:src="materiel_recommande.url"
+                                li-object:src="machine_recommandee.url"
                                 href="#"
                                 class="w-inline-block"
-                                src="{{ materiel_recommande.url }}"
+                                src="{{ machine_recommandee.url }}"
                               >
-                                <div li-object="materiel_recommande.title">{{ materiel_recommande.title }}</div>
+                                <div li-object="machine_recommandee.title">{{ machine_recommandee.title }}</div>
                               </a>
                             </div>
                           {% endif %}
