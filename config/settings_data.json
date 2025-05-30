@@ -115,7 +115,7 @@
           "image_image_6_mobile": "shopify://shop_images/epanou-4.webp",
           "text_headline": "S'inscrire à la newsletter",
           "text_checkbox": "En vous inscrivant, vous acceptez notre <a href=\"#\" li-settings:url=\"Politique de confidentialite\">politique de confidentialité</a> et consentez à recevoir des emails.",
-          "url_politique_de_confidentialite": ""
+          "url_politique_de_confidentialite": "shopify://policies/privacy-policy"
         }
       }
     },
