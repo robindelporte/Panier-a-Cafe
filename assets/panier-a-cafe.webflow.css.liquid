@@ -1270,8 +1270,8 @@ figcaption {
   cursor: pointer;
 }
 
-.icon-embed-xsmall.is-contain {
-  object-fit: contain;
+.icon-embed-xsmall.is-cover {
+  object-fit: cover;
   border-radius: 5rem;
 }
 
@@ -3876,6 +3876,7 @@ figcaption {
   background-color: #77634f0d;
   border-radius: 6px;
   flex-flow: column;
+  justify-content: flex-start;
   padding: 1rem;
   display: flex;
   position: relative;
@@ -3959,11 +3960,12 @@ figcaption {
 }
 
 .product_subscription-tag-wrapper {
+  z-index: 1001;
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
   display: flex;
   position: absolute;
-  inset: 1rem 1rem auto auto;
+  inset: 1.25rem 1rem auto auto;
 }
 
 .tooltip_component {
@@ -7325,6 +7327,44 @@ figcaption {
   align-items: center;
   display: flex;
   position: relative;
+}
+
+.tooltip_alpine {
+  width: 15rem;
+  padding-bottom: .75rem;
+  position: absolute;
+  bottom: 100%;
+}
+
+.tooltip_alpine.is-1st {
+  inset: -200% -450% auto auto;
+}
+
+.tooltiip_alpine-card {
+  z-index: 2;
+  background-color: var(--_primitives---brand--camel);
+  color: var(--_primitives---colors--white);
+  border-radius: 3px;
+  padding: .75rem;
+}
+
+.tooltip_alpine-pointer {
+  z-index: 2;
+  background-color: var(--_primitives---brand--camel);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: .75rem;
+  height: .75rem;
+  margin-bottom: .375rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  transform: rotate(45deg);
 }
 
 @media screen and (max-width: 991px) {
