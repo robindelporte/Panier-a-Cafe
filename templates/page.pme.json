@@ -59,29 +59,33 @@
         "icone_EMbxwq": {
           "type": "icone",
           "settings": {
-            "text_titre_icone": "Livraison en 48h",
-            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+            "image_icone": "shopify://shop_images/Grains_de_cafes_714b57cf-cfb3-435c-aae1-459827d38467.png",
+            "text_titre_icone": "Café de spécialité",
+            "text_description": "Torréfié à Annecy et livré automatiquement à votre entreprise."
           }
         },
         "icone_bTn9Qc": {
           "type": "icone",
           "settings": {
-            "text_titre_icone": "Livraison en 48h",
-            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+            "image_icone": "shopify://shop_images/machine.png",
+            "text_titre_icone": "Nos machines",
+            "text_description": "Des machines modernes, performantes et faciles à utiliser !"
           }
         },
         "icone_Cn4Ftq": {
           "type": "icone",
           "settings": {
-            "text_titre_icone": "Livraison en 48h",
-            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+            "image_icone": "shopify://shop_images/maintenance.png",
+            "text_titre_icone": "Maintenance incluse",
+            "text_description": "On s’occupe de tout, pour que vos pauses café restent un plaisir."
           }
         },
         "icone_4aXzcR": {
           "type": "icone",
           "settings": {
-            "text_titre_icone": "Livraison en 48h",
-            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+            "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
+            "text_titre_icone": "Livraison groupée",
+            "text_description": "Vos salarié·es peuvent commander leurs cafés sans frais de port !"
           }
         }
       },
@@ -92,7 +96,7 @@
         "icone_4aXzcR"
       ],
       "settings": {
-        "text_heading": "Titre"
+        "text_heading": "Pourquoi choisir notre solution ?"
       }
     },
     "contenu_rmNcje": {
