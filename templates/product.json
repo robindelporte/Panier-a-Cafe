@@ -13,7 +13,7 @@
       "type": "product_hero_sub",
       "settings": {
         "image_settingsimage": "{{ product.metafields.custom.pays_d_origine.value.drapeau.value }}",
-        "image_badges_variete_cafe_image": "{{ product.metafields.custom.pays_d_origine.value.drapeau.value }}",
+        "image_badges_variete_cafe_image": "{{ product.metafields.custom.pays_d_origine.value.drapeau_icone.value }}",
         "text_badges_variete_cafe_texte": "{{ product.metafields.custom.pays_d_origine.value.pays.value }}",
         "text_badges_certification_cafe_texte": "",
         "text_badges_type_de_the_texte": "{{ product.metafields.custom.the.value.types_de_the.value }}",
@@ -51,7 +51,6 @@
         "text_2530s": "{{ product.metafields.custom.temps_d_extraction.value }}",
         "text_info_temps_extraction": "{{ product.metafields.custom.info_temps_d_extraction.value }}",
         "text_conseil_mouture": "{{ product.metafields.custom.conseil_de_mouture.value }}",
-        "text_materiel": "{{ product.metafields.custom.mat_riel_recommand_.value }}",
         "text_type_extraction": "{{ product.metafields.custom.type_d_extraction_id_al.value }}",
         "text_animation_titre_1": "De la ferme à votre tasse, chaque étape compte",
         "richtext_animation_texte_1": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>",
