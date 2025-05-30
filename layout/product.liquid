@@ -234,18 +234,6 @@
     clearTimeout(window.__splideResizeTimer);
     window.__splideResizeTimer = setTimeout(initSplideSliders, 200);
   });
-</script><script>document.addEventListener('DOMContentLoaded', () => {
-  const inventorySpan = document.getElementById('inventory-quantity');
-  document.addEventListener('variant:change', function(event) {
-    const variant = event.detail.variant;
-    if (!variant) return;
-    if (variant.inventory_management) {
-      inventorySpan.textContent = `${variant.inventory_quantity} en stock`;
-    } else {
-      inventorySpan.textContent = '';
-    }
-  });
-});
 </script>
 </body>
 </html>
