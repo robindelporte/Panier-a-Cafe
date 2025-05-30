@@ -206,6 +206,32 @@
     },
     "logo_defilants": {
       "type": "logo_defilants",
+      "blocks": {
+        "logo_defilants_kzKBjj": {
+          "type": "logo-defilants",
+          "settings": {}
+        },
+        "logo_defilants_ANXHEj": {
+          "type": "logo-defilants",
+          "settings": {
+            "image_logo_1": "shopify://shop_images/kevin.webp",
+            "image_logo_2": "shopify://shop_images/benjamin.webp",
+            "image_logo_3": "shopify://shop_images/fabien.webp",
+            "image_logo_4": "shopify://shop_images/alexis.webp",
+            "image_logo_5": "shopify://shop_images/epanou.webp",
+            "image_logo_6": "shopify://shop_images/epanou-3.webp"
+          }
+        },
+        "logo_defilants_DW4MKf": {
+          "type": "logo-defilants",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "logo_defilants_kzKBjj",
+        "logo_defilants_ANXHEj",
+        "logo_defilants_DW4MKf"
+      ],
       "settings": {
         "text_heading": "Ils nous font confiance"
       }
