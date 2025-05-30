@@ -3315,7 +3315,7 @@ figcaption {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
-  display: flex;
+  display: grid;
 }
 
 .swiper-slide {
@@ -3968,6 +3968,10 @@ figcaption {
   padding-bottom: .75rem;
   position: absolute;
   bottom: 100%;
+}
+
+.tooltip_tooltip-wrapper.is-1st {
+  inset: -200% -450% auto auto;
 }
 
 .tooltip_card-wrapper {
@@ -7290,6 +7294,13 @@ figcaption {
   color: var(--_primitives---colors--full-white);
 }
 
+.tooltip {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 3.25rem;
@@ -7717,8 +7728,8 @@ figcaption {
     border-right: 1px solid var(--_primitives---opacity--neutral-darkest-10);
     border-bottom: 1px solid var(--_primitives---opacity--neutral-darkest-10);
     border-left: 1px solid var(--_primitives---opacity--neutral-darkest-10);
-    background-color: var(--_primitives---brand--charbon);
-    color: var(--_primitives---colors--full-white);
+    background-color: var(--_primitives---colors--full-white);
+    color: var(--_primitives---brand--chocolat);
     border-radius: 0;
     width: 100%;
   }
@@ -7728,8 +7739,8 @@ figcaption {
     border-right-color: var(--_primitives---opacity--transparent);
     border-bottom-color: var(--_primitives---opacity--transparent);
     border-left-color: var(--_primitives---opacity--transparent);
-    background-color: var(--_primitives---colors--full-white);
-    color: var(--_primitives---brand--chocolat);
+    background-color: var(--_primitives---brand--charbon);
+    color: var(--_primitives---colors--full-white);
   }
 
   .blog_component {
@@ -8120,7 +8131,6 @@ figcaption {
     border-right: 1px solid var(--_primitives---opacity--neutral-darkest-10);
     border-bottom: 1px solid var(--_primitives---opacity--neutral-darkest-10);
     border-left: 1px solid var(--_primitives---opacity--neutral-darkest-10);
-    border-radius: 0;
     width: 100%;
   }
 

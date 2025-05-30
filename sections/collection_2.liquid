@@ -12,13 +12,10 @@
 </style><div class="padding-global padding-section-medium"><div class="container-large"><div class="collection_grid-wrapper"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h2>
-<div li-for:inside="product in collection.products" class="splide slider">
-        {% for product in collection.products %}                            
-                            <div class="splide__track"><div class="splide__list"><div class="splide__slide">{% render 'product_item', product: product %}
-</div><div class="splide__slide">{% render 'product_item', product: product %}
-</div><div class="splide__slide">{% render 'product_item', product: product %}
-</div><div class="splide__slide">{% render 'product_item', product: product %}
-</div></div></div>
+<div class="swiper_component is-product-swiper"><div class="swiper is-product-swiper"><div li-for:inside="product in collection.products limit: 4" class="swiper-wrapper is-product-swiper">
+        {% for product in collection.products limit: 4 %}                            
+                            <div class="swiper-slide is-product-swiper">{% render 'product_item', product: product %}
+</div>
                             
                     {% endfor %}    </div>
-</div></div></div> <script> document.addEventListener('DOMContentLoaded', () =>{const swiper = new Swiper('.swiper_component.is-collections .swiper',{// Options de base slidesPerView: 3, spaceBetween: 24, // 1.5rem loop: true, // Pagination pagination:{el: '.swiper_component.is-collections .swiper_pagination', clickable: true, bulletActiveClass: 'is-active', bulletClass: 'swiper_bullet', bulletElement: 'button'}, // Navigation navigation:{nextEl: '.swiper_component.is-collections .swiper_button.swiper-next', prevEl: '.swiper_component.is-collections .swiper_button.swiper-prev'}, // Responsive breakpoints breakpoints:{320:{slidesPerView: 1}, 576:{slidesPerView: 2}, 992:{slidesPerView: 3}, 1200:{slidesPerView: 4}}});}); </script>  {% schema %} {"tag":"section","name":"Collection-2","class":"section_collections is-dark","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Nos nouveaut\u00e9s"}],"presets":[{"name":"Collection-2","category":"Liquify","blocks":[]}]} {% endschema %}
+</div><div class="swiper_pagination"></div></div></div></div></div> <script> document.addEventListener('DOMContentLoaded', () =>{const swiper = new Swiper('.swiper_component.is-collections .swiper',{// Options de base slidesPerView: 3, spaceBetween: 24, // 1.5rem loop: true, // Pagination pagination:{el: '.swiper_component.is-collections .swiper_pagination', clickable: true, bulletActiveClass: 'is-active', bulletClass: 'swiper_bullet', bulletElement: 'button'}, // Navigation navigation:{nextEl: '.swiper_component.is-collections .swiper_button.swiper-next', prevEl: '.swiper_component.is-collections .swiper_button.swiper-prev'}, // Responsive breakpoints breakpoints:{320:{slidesPerView: 1}, 576:{slidesPerView: 2}, 992:{slidesPerView: 3}, 1200:{slidesPerView: 4}}});}); </script>  {% schema %} {"tag":"section","name":"Collection-2","class":"section_collections is-dark","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Nos nouveaut\u00e9s"}],"presets":[{"name":"Collection-2","category":"Liquify","blocks":[]}]} {% endschema %}
