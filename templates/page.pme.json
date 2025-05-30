@@ -23,11 +23,21 @@
           "settings": {
             "richtext_paragraph": "<p>Au Panier à Café, on torréfie localement des cafés de spécialité pensés pour les entreprises qui veulent offrir plus qu’un simple café. <br/>On vous équipe avec des machines simples d’utilisation et on vous livre régulièrement du café fraîchement torréfié, sans que vous ayez à y penser.<br/>Mais encore ? Pour vos salarié·es qui veulent prolonger l’expérience à la maison ? <br/>Ils peuvent commander directement sur notre site et être livrés au bureau, sans frais supplémentaires !<br/><br/></p>"
           }
+        },
+        "buttons_z6Q83p": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "",
+            "text_button_text": "Button",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
         }
       },
       "block_order": [
         "headline_jHg3qc",
-        "text_Ht3eAx"
+        "text_Ht3eAx",
+        "buttons_z6Q83p"
       ],
       "settings": {}
     },
@@ -217,10 +227,22 @@
             "image_logo_5": "shopify://shop_images/epanou.webp",
             "image_logo_6": "shopify://shop_images/epanou-3.webp"
           }
+        },
+        "logo_defilants_inverses_k76DcB": {
+          "type": "logo-defilants-inverses",
+          "settings": {
+            "image_logo_1": "shopify://shop_images/kevin.webp",
+            "image_logo_2": "shopify://shop_images/benjamin.webp",
+            "image_logo_3": "shopify://shop_images/fabien.webp",
+            "image_logo_4": "shopify://shop_images/clement.webp",
+            "image_logo_5": "shopify://shop_images/ilona.webp",
+            "image_logo_6": "shopify://shop_images/epanou.webp"
+          }
         }
       },
       "block_order": [
-        "logo_defilants_ANXHEj"
+        "logo_defilants_ANXHEj",
+        "logo_defilants_inverses_k76DcB"
       ],
       "settings": {
         "text_heading": "Ils nous font confiance"

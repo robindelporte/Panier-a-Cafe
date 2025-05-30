@@ -155,6 +155,32 @@
         "text_sous_titre": ""
       }
     },
+    "1748597324bacaf247": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_TwXD7c": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "488178",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_TwXD7c"
+      ],
+      "settings": {}
+    },
     "logo_defilants": {
       "type": "logo_defilants",
       "settings": {
@@ -298,6 +324,7 @@
     "contenu_H6QEKw",
     "contenu_Xp4Nbt",
     "selection_manuel",
+    "1748597324bacaf247",
     "logo_defilants",
     "bandeau_hp6mre",
     "faq",
