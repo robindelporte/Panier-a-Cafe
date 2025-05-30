@@ -20,7 +20,7 @@
 </h2>
 <div class="marquees_wrapper">{% for block in section.blocks %}
     {% if block.type == "logo-defilants" %}
-                    <div li-block="Logo defilants" class="marquee is-1">
+                    <div li-block="Logo defilants" class="marquee">
                                     
                                     <div class="marquee-content scroll reverse"><img loading="eager" alt="{{ block.settings.image_logo_1.alt }}" src="{{ block.settings.image_logo_1 | img_url: 'master' }}" class="marquee-image">
 <img loading="eager" alt="{{ block.settings.image_logo_2.alt }}" src="{{ block.settings.image_logo_2 | img_url: 'master' }}" class="marquee-image">
@@ -41,4 +41,27 @@
                             </div>
             {% endif %}
 {% endfor %}
-</div></div></div> {% schema %} {"tag":"section","name":"Logo defilants","class":"section_marquee","blocks":[{"name":"Logo defilants","type":"logo-defilants","settings":[{"id":"image_logo_1","type":"image_picker","label":"Logo-1"},{"id":"image_logo_2","type":"image_picker","label":"Logo-2"},{"id":"image_logo_3","type":"image_picker","label":"Logo-3"},{"id":"image_logo_4","type":"image_picker","label":"Logo-4"},{"id":"image_logo_5","type":"image_picker","label":"Logo-5"},{"id":"image_logo_6","type":"image_picker","label":"Logo-6"}]},{"type":"@app"}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Ils nous font confiance"}],"presets":[{"name":"Logo defilants","category":"Liquify","blocks":[{"type":"logo-defilants"}]}]} {% endschema %}
+{% for block in section.blocks %}
+    {% if block.type == "logo-defilants-inverses" %}
+                    <div li-block="Logo defilants / Inversés" class="marquee">
+                                    
+                                    <div class="marquee-content scroll"><img loading="eager" alt="{{ block.settings.image_logo_1.alt }}" src="{{ block.settings.image_logo_1 | img_url: 'master' }}" class="marquee-image">
+<img loading="eager" alt="{{ block.settings.image_logo_2.alt }}" src="{{ block.settings.image_logo_2 | img_url: 'master' }}" class="marquee-image">
+<img loading="eager" alt="{{ block.settings.image_logo_3.alt }}" src="{{ block.settings.image_logo_3 | img_url: 'master' }}" class="marquee-image">
+<img loading="eager" alt="{{ block.settings.image_logo_4.alt }}" src="{{ block.settings.image_logo_4 | img_url: 'master' }}" class="marquee-image">
+<img loading="eager" alt="{{ block.settings.image_logo_5.alt }}" src="{{ block.settings.image_logo_5 | img_url: 'master' }}" class="marquee-image">
+<img loading="eager" alt="{{ block.settings.image_logo_6.alt }}" src="{{ block.settings.image_logo_6 | img_url: 'master' }}" class="marquee-image">
+</div>
+                                    
+                                    <div class="marquee-content scroll"><img li-object:src="block.settings.image_Logo-1 | img_url: 'master'" loading="eager" alt="" src="{{ block.settings.image_Logo-1 | img_url: 'master' }}" class="marquee-image">
+<img li-object:src="block.settings.image_Logo-2 | img_url: 'master'" loading="eager" alt="" src="{{ block.settings.image_Logo-2 | img_url: 'master' }}" class="marquee-image">
+<img li-object:src="block.settings.image_Logo-3 | img_url: 'master'" loading="eager" alt="" src="{{ block.settings.image_Logo-3 | img_url: 'master' }}" class="marquee-image">
+<img li-object:src="block.settings.image_Logo-4 | img_url: 'master'" loading="eager" alt="" src="{{ block.settings.image_Logo-4 | img_url: 'master' }}" class="marquee-image">
+<img li-object:src="block.settings.image_Logo-5 | img_url: 'master'" loading="eager" alt="" src="{{ block.settings.image_Logo-5 | img_url: 'master' }}" class="marquee-image">
+<img li-object:src="block.settings.image_Logo-6 | img_url: 'master'" loading="eager" alt="" src="{{ block.settings.image_Logo-6 | img_url: 'master' }}" class="marquee-image">
+</div>
+                                    
+                            </div>
+            {% endif %}
+{% endfor %}
+</div></div></div> {% schema %} {"tag":"section","name":"Logo defilants","class":"section_marquee","blocks":[{"name":"Logo defilants","type":"logo-defilants","settings":[{"id":"image_logo_1","type":"image_picker","label":"Logo 1"},{"id":"image_logo_2","type":"image_picker","label":"Logo 2"},{"id":"image_logo_3","type":"image_picker","label":"Logo 3"},{"id":"image_logo_4","type":"image_picker","label":"Logo 4"},{"id":"image_logo_5","type":"image_picker","label":"Logo 5"},{"id":"image_logo_6","type":"image_picker","label":"Logo 6"}]},{"name":"Logo defilants \/ Invers\u00e9s","type":"logo-defilants-inverses","settings":[{"id":"image_logo_1","type":"image_picker","label":"Logo 1"},{"id":"image_logo_2","type":"image_picker","label":"Logo 2"},{"id":"image_logo_3","type":"image_picker","label":"Logo 3"},{"id":"image_logo_4","type":"image_picker","label":"Logo 4"},{"id":"image_logo_5","type":"image_picker","label":"Logo 5"},{"id":"image_logo_6","type":"image_picker","label":"Logo 6"}]},{"type":"@app"}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Ils nous font confiance"}],"presets":[{"name":"Logo defilants","category":"Liquify","blocks":[{"type":"logo-defilants"},{"type":"logo-defilants-inverses"}]}]} {% endschema %}
