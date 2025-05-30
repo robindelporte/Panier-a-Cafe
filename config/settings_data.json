@@ -101,7 +101,22 @@
           "icone_474D9D",
           "icone_nUeJVb"
         ],
-        "settings": {}
+        "settings": {
+          "text_heading": "Suivez-nous sur nos réseaux sociaux",
+          "url_linkedin": "https://www.linkedin.com/company/le-panier-%C3%A0-caf%C3%A9/",
+          "url_instagram": "https://www.instagram.com/lepanieracafe/",
+          "url_facebook": "https://www.facebook.com/Lepanieracafe/?locale=fr_FR",
+          "url_youtube": "https://www.youtube.com/channel/UCOJiGoV8kO1XrrCBHIMHdtQ",
+          "image_image_1": "shopify://shop_images/panier-a-cafe_2.png",
+          "image_image_2": "shopify://shop_images/panier-a-cafe_3.png",
+          "image_image_3": "shopify://shop_images/panier-a-cafe_4.png",
+          "image_image_4": "shopify://shop_images/panier-a-cafe_5.png",
+          "image_image_5": "shopify://shop_images/panier-a-cafe_1.png",
+          "image_image_6_mobile": "shopify://shop_images/epanou-4.webp",
+          "text_headline": "S'inscrire à la newsletter",
+          "text_checkbox": "En vous inscrivant, vous acceptez notre <a href=\"#\" li-settings:url=\"Politique de confidentialite\">politique de confidentialité</a> et consentez à recevoir des emails.",
+          "url_politique_de_confidentialite": ""
+        }
       }
     },
     "content_for_index": [],
