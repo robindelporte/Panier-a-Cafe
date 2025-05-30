@@ -1420,36 +1420,79 @@
   </div>
 </div>
 {% schema %} {"tag":"section","name":"Product-Hero-Sub","class":"section_product-header","settings":[{"id":"image_settingsimage","type":"image_picker","label":"settings.image"},{"id":"image_badges_variete_cafe_image","type":"image_picker","label":"Badges - Variete Cafe - Image"},{"id":"text_badges_variete_cafe_texte","type":"text","label":"Badges - Variete Cafe - Texte","default":"100% Arabica"},{"id":"image_badges_certification_cafe_image","type":"image_picker","label":"Badges - Certification Cafe - Image"},{"id":"text_badges_certification_cafe_texte","type":"text","label":"Badges - Certification Cafe - Texte","default":"100% Arabica"},{"id":"image_badges_type_de_the_image","type":"image_picker","label":"Badges - Type de The - Image"},{"id":"text_badges_type_de_the_texte","type":"text","label":"Badges - Type de The - Texte","default":"100% Arabica"},{"id":"image_badge_origine_the_image","type":"image_picker","label":"Badge - Origine The - Image"},{"id":"text_badge_origine_the_texte","type":"text","label":"Badge - Origine The - Texte","default":"100% Arabica"},{"id":"text_without_subscription","type":"text","label":"without Subscription","default":"Commande ponctuelle"},{"id":"text_with_subscription","type":"text","label":"with Subscription","default":"Livraison r\u00e9currente"}],"presets":[{"name":"Product-Hero-Sub","category":"Liquify","blocks":[]}]} {% endschema %}
+<span id="inventory-quantity">Chargement du stock…</span>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    console.log('🟢 Script inventaire chargé');
+
     const inventorySpan = document.getElementById('inventory-quantity');
+    if (!inventorySpan) {
+      console.warn('❌ Élement #inventory-quantity introuvable');
+      return;
+    } else {
+      console.log('✅ Élément #inventory-quantity trouvé');
+    }
+
+    const variantForm = document.querySelector('form[action^="/cart/add"]');
+    if (!variantForm) {
+      console.warn('❌ Formulaire variante introuvable');
+      return;
+    } else {
+      console.log('✅ Formulaire trouvé');
+    }
 
     function updateInventoryDisplay(variantId) {
-      fetch(`${window.location.pathname}.js`)
-        .then(res => res.json())
-        .then(product => {
-          const variant = product.variants.find(v => v.id == variantId);
-          if (!variant) return;
+      console.log('📦 Requête pour le variant ID :', variantId);
 
-          if (variant.inventory_management && variant.inventory_quantity > 0) {
-            inventorySpan.textContent = `${variant.inventory_quantity} en stock`;
-          } else if (variant.inventory_management && variant.inventory_quantity == 0) {
-            inventorySpan.textContent = 'Rupture de stock';
+      fetch(`${window.location.pathname}.js`)
+        .then(res => {
+          console.log('📡 Requête réussie, parsing JSON...');
+          return res.json();
+        })
+        .then(product => {
+          console.log('📋 Produit reçu :', product);
+          const variant = product.variants.find(v => v.id == variantId);
+          if (!variant) {
+            console.warn('❌ Aucune variante trouvée avec cet ID');
+            return;
+          }
+
+          console.log('✅ Variante trouvée :', variant);
+
+          if (variant.inventory_management) {
+            console.log('📦 Inventaire actif');
+            console.log('🔢 Quantité en stock :', variant.inventory_quantity);
+
+            if (variant.inventory_quantity > 0) {
+              inventorySpan.textContent = `${variant.inventory_quantity} en stock`;
+            } else {
+              inventorySpan.textContent = 'Rupture de stock';
+            }
           } else {
+            console.log('ℹ️ Pas de gestion d’inventaire active');
             inventorySpan.textContent = '';
           }
+        })
+        .catch(error => {
+          console.error('❌ Erreur de requête :', error);
         });
     }
 
-    const initialVariantId = document.querySelector('[name="id"]')?.value;
-    if (initialVariantId) updateInventoryDisplay(initialVariantId);
-
-    const variantForm = document.querySelector('form[action^="/cart/add"]');
-    if (variantForm) {
-      variantForm.addEventListener('change', () => {
-        const selectedVariantId = variantForm.querySelector('[name="id"]')?.value;
-        if (selectedVariantId) updateInventoryDisplay(selectedVariantId);
-      });
+    // Initialisation
+    const initialVariantId = variantForm.querySelector('[name="id"]')?.value;
+    console.log('🔍 ID de la variante initiale :', initialVariantId);
+    if (initialVariantId) {
+      updateInventoryDisplay(initialVariantId);
     }
+
+    // Mise à jour sur changement
+    variantForm.addEventListener('change', () => {
+      const selectedVariantId = variantForm.querySelector('[name="id"]')?.value;
+      console.log('🔁 Changement de variante, ID sélectionné :', selectedVariantId);
+      if (selectedVariantId) {
+        updateInventoryDisplay(selectedVariantId);
+      }
+    });
   });
 </script>
