@@ -3,27 +3,51 @@
 {% case block.type %}
 {% when '@app' %}
 {% render block %}
-<h1>
-{{ section.settings.text_headline }}
+{% when 'titre' %}
+            <div li-block="Titre">
+                    
+                    <h1>
+{{ block.settings.text_headline }}
 </h1>
-<div> {{ section.settings.richtext_paragraph }} </div>
-<div class="button-group">{% if block.settings.url_button_link %}    <div li-if="block.settings.url_button_link">
-    <a href="{{ section.settings.url_button_link }}" class="button w-button"> {{ section.settings.text_button_text }} </a>
+
+                    
+                </div>
+    {% when 'paragrpahe' %}
+            <div li-block="Paragrpahe">
+                    
+                    <div> {{ block.settings.richtext_paragraph }} </div>
+
+                    
+                </div>
+    {% when 'bouttons' %}
+            <div li-block="Bouttons">
+                    
+                    <div class="button-group">{% if block.settings.url_button_link %}    <div li-if="block.settings.url_button_link">
+    <a href="{{ block.settings.url_button_link }}" class="button w-button"> {{ block.settings.text_button_text }} </a>
     </div>
 {% endif %}{% if block.settings.url_button_link_2 %}    <div li-if="block.settings.url_button_link_2">
-    <a href="{{ section.settings.url_button_link_2 }}" class="button is-secondary w-button"> {{ section.settings.text_button_text_2 }} </a>
+    <a href="{{ block.settings.url_button_link_2 }}" class="button is-secondary w-button"> {{ block.settings.text_button_text_2 }} </a>
     </div>
-{% endif %}</div>{% if block.settings.image_logo_3 %}    <div li-if="block.settings.image_logo_3" class="margin-top margin-small">
-    <div class="marquees_wrapper"><div><div>Ils nous font confiance</div></div><div class="marquee is-hero"><div class="marquee-content scroll reverse"><img loading="eager" alt="{{ section.settings.image_logo_1.alt }}" src="{{ section.settings.image_logo_1 | img_url: 'master' }}" class="marquee-image">
-<img loading="eager" alt="{{ section.settings.image_logo_2.alt }}" src="{{ section.settings.image_logo_2 | img_url: 'master' }}" class="marquee-image">
-<img loading="eager" alt="{{ section.settings.image_logo_3.alt }}" src="{{ section.settings.image_logo_3 | img_url: 'master' }}" class="marquee-image">
+{% endif %}</div>
+                    
+                </div>
+    {% when 'logos' %}
+            <div li-block="Logos">
+                    
+                    {% if block.settings.image_logo_3 %}    <div li-if="block.settings.image_logo_3" class="margin-top margin-small">
+    <div class="marquees_wrapper"><div><div>Ils nous font confiance</div></div><div class="marquee is-hero"><div class="marquee-content scroll reverse"><img loading="eager" alt="{{ block.settings.image_logo_1.alt }}" src="{{ block.settings.image_logo_1 | img_url: 'master' }}" class="marquee-image">
+<img loading="eager" alt="{{ block.settings.image_logo_2.alt }}" src="{{ block.settings.image_logo_2 | img_url: 'master' }}" class="marquee-image">
+<img loading="eager" alt="{{ block.settings.image_logo_3.alt }}" src="{{ block.settings.image_logo_3 | img_url: 'master' }}" class="marquee-image">
 </div><div class="marquee-content scroll reverse"><img li-object:src="block.settings.image_logo_1 | img_url: 'master'" loading="eager" alt="" src="{{ block.settings.image_logo_1 | img_url: 'master' }}" class="marquee-image">
 <img li-object:src="block.settings.image_logo_2 | img_url: 'master'" loading="eager" alt="" src="{{ block.settings.image_logo_2 | img_url: 'master' }}" class="marquee-image">
 <img li-object:src="block.settings.image_logo_3 | img_url: 'master'" loading="eager" alt="" src="{{ block.settings.image_logo_3 | img_url: 'master' }}" class="marquee-image">
 </div></div></div>    </div>
-{% endif %}{% endcase %}
+{% endif %}
+                    
+                </div>
+    {% endcase %}
 {% endfor %}
 
     </div>
 <div id="w-node-_3e23d5bd-2ea4-a5ca-019d-bc1127cfb34e-27cfb330" class="card_img-wrapper"><img loading="lazy" alt="{{ section.settings.image_image.alt }}" src="{{ section.settings.image_image | img_url: 'master' }}" class="card_img">
-</div></div></div></div> {% schema %} {"tag":"section","name":"Header landing","class":"section_content","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy."},{"id":"richtext_paragraph","type":"richtext","label":"Paragraph","default":"<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.<\/p>"},{"id":"url_button_link","type":"url","label":"Button Link"},{"id":"text_button_text","type":"text","label":"Button Text","default":"Button"},{"id":"url_button_link_2","type":"url","label":"Button Link 2"},{"id":"text_button_text_2","type":"text","label":"Button Text 2","default":"Button 2"},{"id":"image_logo_1","type":"image_picker","label":"logo_1"},{"id":"image_logo_2","type":"image_picker","label":"logo_2"},{"id":"image_logo_3","type":"image_picker","label":"logo_3"},{"id":"image_image","type":"image_picker","label":"Image"}],"presets":[{"name":"Header landing","category":"Liquify","blocks":[]}]} {% endschema %}
+</div></div></div></div> {% schema %} {"tag":"section","name":"Header landing","class":"section_content","blocks":[{"name":"Titre","type":"titre","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy."}]},{"name":"Paragrpahe","type":"paragrpahe","settings":[{"id":"richtext_paragraph","type":"richtext","label":"Paragraph","default":"<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.<\/p>"}]},{"name":"Bouttons","type":"bouttons","settings":[{"id":"url_button_link","type":"url","label":"Button Link"},{"id":"text_button_text","type":"text","label":"Button Text","default":"Button"},{"id":"url_button_link_2","type":"url","label":"Button Link 2"},{"id":"text_button_text_2","type":"text","label":"Button Text 2","default":"Button 2"}]},{"name":"Logos","type":"logos","settings":[{"id":"image_logo_1","type":"image_picker","label":"logo_1"},{"id":"image_logo_2","type":"image_picker","label":"logo_2"},{"id":"image_logo_3","type":"image_picker","label":"logo_3"}]},{"type":"@app"}],"settings":[{"id":"image_image","type":"image_picker","label":"Image"}],"presets":[{"name":"Header landing","category":"Liquify","blocks":[{"type":"titre"},{"type":"paragrpahe"},{"type":"bouttons"},{"type":"logos"}]}]} {% endschema %}
