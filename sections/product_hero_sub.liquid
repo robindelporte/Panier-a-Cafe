@@ -172,12 +172,7 @@
                       </svg>
                     </div>
                     <div>
-                      <span
-                        id="inventory-quantity"
-                        li-js-object="product.selected_variant.inventory_quantity"
-                        x-text="product.selected_variant.inventory_quantity"
-                        >6</span
-                      >en stock
+                      <span>{{ product.selected_or_first_available_variant.inventory_quantity }}</span>en stock
                     </div>
                   </div>
                 </template>
