@@ -667,7 +667,7 @@
                             </div>
                             <div>Matériel recommandé</div>
                           </div>
-                          {% assign materiel_recommande = product.metafields.custom.materiel_recommande %}
+                          {% assign materiel_recommande = product.metafields.custom.materiel_recommande.value %}
                           {% if materiel_recommande %}
                             <div li-if="materiel_recommande">
                               <a
