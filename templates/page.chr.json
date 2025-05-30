@@ -12,22 +12,32 @@
     "header_landing": {
       "type": "header_landing",
       "blocks": {
-        "headline_UBWR6M": {
-          "type": "headline",
+        "titre_UkEbbh": {
+          "type": "titre",
           "settings": {
             "text_headline": "Restaurants, hôtels, coffee shops : un café à la hauteur de votre établissement !"
           }
         },
-        "text_CEqHk3": {
-          "type": "text",
+        "paragrpahe_C89RtL": {
+          "type": "paragrpahe",
           "settings": {
             "richtext_paragraph": "<p>Dans la restauration et l’hôtellerie, chaque détail compte et le café que vous servez ne fait pas exception.<br/><br/></p>"
+          }
+        },
+        "bouttons_xwqqWd": {
+          "type": "bouttons",
+          "settings": {
+            "url_button_link": "shopify://pages/contact",
+            "text_button_text": "Obtenir un devis",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
           }
         }
       },
       "block_order": [
-        "headline_UBWR6M",
-        "text_CEqHk3"
+        "titre_UkEbbh",
+        "paragrpahe_C89RtL",
+        "bouttons_xwqqWd"
       ],
       "settings": {
         "image_image": "shopify://shop_images/chr.webp"
@@ -205,9 +215,9 @@
             "form_id": "488177",
             "text_color": "#202020",
             "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "center",
             "padding_top": 0,
