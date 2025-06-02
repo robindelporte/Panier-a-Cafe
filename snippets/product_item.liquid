@@ -72,7 +72,7 @@
                       ><input
                         type="radio"
                         li-element="product-option-input"
-                        x-model="optionValue"
+                        x-on:click="setVariant"
                         class="product-atc_radio-button hide"
                         x-on:click="setVariant"
                         :name="option"
@@ -81,7 +81,6 @@
                         :id="variantName.toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-')"
                         :checked="selected_or_first_available_variant?.options.includes(variantName)"
                         data-selectorType="radio"
-                        :class="firstOptionHasAvailableChildren[variantName] ? '' : 'data-disabled'"
                       >
                       <div
                         li-element="product-option-name"
