@@ -107,7 +107,24 @@
           }{% if forloop.last == false %},{% endif %}{% endfor %}
           ]
         }
-    </script><script src="{{ '_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
+    </script><script>document.addEventListener('DOMContentLoaded', function() {
+  const deliveryElement = document.querySelector('.delivery-estimate');
+  if (deliveryElement) {
+    const minDays = parseInt(deliveryElement.dataset.minDays) || 4;
+    const maxDays = parseInt(deliveryElement.dataset.maxDays) || 6;
+    const today = new Date();
+    const deliveryStart = new Date(today);
+    const deliveryEnd = new Date(today);
+    deliveryStart.setDate(today.getDate() + minDays);
+    deliveryEnd.setDate(today.getDate() + maxDays);
+    const options = { day: 'numeric', month: 'long' };
+    const startDate = deliveryStart.toLocaleDateString('fr-FR', options);
+    const endDate = deliveryEnd.toLocaleDateString('fr-FR', options);
+    document.querySelector('.delivery-start').textContent = startDate;
+    document.querySelector('.delivery-end').textContent = endDate;
+  }
+});
+</script><script src="{{ '_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
 <body li-page="product">
 
 <div class="page-wrapper">{% render 'global_styles' %}
