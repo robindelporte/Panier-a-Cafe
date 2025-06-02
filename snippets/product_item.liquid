@@ -12,7 +12,7 @@
     {% assign certification = product.metafields.custom.certification.value %}
 <img src="{{ certification.logo| img_url: 'large' }}" loading="lazy" li-object:src="certification.logo| img_url: 'large'" alt="" class="flag_icon">
 <div li-object="certification.nom" class="product-item_tag-text">{{ certification.nom }}</div>    </div>
-{% endif %}</div>{% form 'product', product %}
+{% endif %}</div><div class="product_atc-form">{% form 'product', product %}
 {% if product.has_only_default_variant != true %}    <div li-if="product.has_only_default_variant != true" class="product_quick-atc-wrapper">
     <template x-for="(option, optionKey) in product.options" :key="optionKey">
     <div li-element="product-options-loop" class="product-header_radio-list is-quick-atc" data-ProductVariantsLoop="true"><template x-for="(variantName, variantKey) in options_by_name[option].option.values" :key="variantName">
@@ -21,6 +21,6 @@
 </div></template>
 <div class="product_quick-atc"><div>Ajout rapide</div></div>    </div>
 {% endif %}{% endform %}
-</div><div class="spacer-xxsmall"></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link w-inline-block"><div class="product-item_left"><div li-object="product.title" class="product_name">{{ product.title }}</div><div>Gourmand & Malté</div></div><div class="product-item_price">{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="padding-bottom padding-xxxsmall">
+</div></div><div class="spacer-xxsmall"></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link w-inline-block"><div class="product-item_left"><div li-object="product.title" class="product_name">{{ product.title }}</div><div>Gourmand & Malté</div></div><div class="product-item_price">{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="padding-bottom padding-xxxsmall">
     <div li-object="product.compare_at_price | money" class="text-size-small">{{ product.compare_at_price | money }}</div>    </div>
 {% endif %}<div li-object="product.price | money" class="text-size-regular text-weight-bold">{{ product.price | money }}</div></div></a></div>
