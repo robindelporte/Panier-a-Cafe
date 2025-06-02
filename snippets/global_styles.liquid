@@ -229,6 +229,27 @@
   appearance: none;
   -webkit-appearance: none; /* pour Safari */
 }
+/* Position initiale de product_atc-form */
+.product_atc-form {
+  transform: translateY(3rem);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+/* Au hover du parent product-item_component */
+.product-item_component:hover .product_atc-form {
+  transform: translateY(0rem);
+}
+/* &Eacute;tat initial de product_quick-atc */
+.product_quick-atc {
+  opacity: 1;
+  display: flex;
+  transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+/* Au hover de product_atc-form - opacity puis display none apr&egrave;s */
+.product_atc-form:hover .product_quick-atc {
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), display 0s 0.35s;
+  display: none;
+}
 </style></div><div class="color-schemes w-embed"><style>/* Color Schemes Controls*/
 <meta name="relume-color-schemes" content="false"/>
   .color-scheme-1 {
