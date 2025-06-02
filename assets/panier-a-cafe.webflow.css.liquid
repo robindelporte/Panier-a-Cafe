@@ -140,6 +140,15 @@
   box-shadow: 0 0 3px 1px #3898ec;
 }
 
+.w-layout-grid {
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
 .w-form-formradioinput--inputType-custom {
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -154,15 +163,6 @@
 .w-form-formradioinput--inputType-custom.w--redirected-checked {
   border-width: 4px;
   border-color: #3898ec;
-}
-
-.w-layout-grid {
-  grid-row-gap: 16px;
-  grid-column-gap: 16px;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: 1fr;
-  display: grid;
 }
 
 .w-layout-vflex {
@@ -7449,9 +7449,13 @@ figcaption {
 .product-atc_radio {
   color: var(--_primitives---brand--charbon);
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
   margin-bottom: 0;
-  padding: .2rem 1rem .125rem;
+  padding: .2rem 1rem;
   font-weight: 400;
+  display: flex;
   position: relative;
 }
 
@@ -7526,6 +7530,28 @@ figcaption {
 
 .quick_atc:active {
   transform: scale(.99);
+}
+
+.product-atc_radio-button {
+  background-color: var(--_primitives---opacity--transparent);
+}
+
+.product-atc_radio-bg {
+  border: 1px solid var(--_primitives---opacity--transparent);
+  border-radius: var(--_ui-styles---radius--small);
+  background-color: #77634f00;
+  padding: .25rem;
+  position: absolute;
+  inset: 0%;
+}
+
+.product-atc_radio-bg.is-active {
+  border-color: var(--_primitives---brand--chocolat);
+  background-color: #77634f24;
+}
+
+.variant-price {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 991px) {
