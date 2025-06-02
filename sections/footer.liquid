@@ -24,7 +24,7 @@
 </span>
 </label><input type="submit" data-wait="" id="w-node-c1e5e1ea-5da9-4c61-f6f5-7cb0794ab8a5-ad028921" class="button w-button" value="S'incrire à la newsletter">
 {% endform %}
-<div class="hide w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="hide w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div></div><div class="padding-global padding-section-xsmall"><div class="container-large"><div class="icon_list-wrapper">{% for block in section.blocks %}
+<div class="hide w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="hide w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div></div><div class="padding-global padding-section-small"><div class="container-large"><div class="icon_list-wrapper">{% for block in section.blocks %}
     {% if block.type == "icone" %}
                     <div li-block="icone" class="icon-wrapper">
                                     <img src="{{ block.settings.image_icone | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_icone.alt }}" class="icon">
