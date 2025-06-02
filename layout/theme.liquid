@@ -56,15 +56,15 @@
     <meta name="theme-color" content="#000" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#fff" media="(prefers-color-scheme: dark)">
     <script>
-      (function () {
+      document.addEventListener('DOMContentLoaded', function() {
         var links = document.links;
-        for (let i = 0, linksLength = links.length ; i < linksLength ; i++) {
+        for (let i = 0, linksLength = links.length; i < linksLength; i++) {
           if (links[i].hostname !== window.location.hostname) {
             links[i].target = '_blank';
             links[i].rel = 'noreferrer noopener';
           }
         }
-      })();
+      });
     </script>
     <script defer="" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
