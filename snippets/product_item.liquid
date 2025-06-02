@@ -93,6 +93,11 @@
                         x-text="variantName"
                         :for="variantName"
                         >XS</span
+                      >
+                      <span
+                        class="variant-price"
+                        x-text="(variants.find(v => v.title === variantName)?.price / 100).toFixed(2) + '€'"
+                        >13,90€</span
                       ></label
                     ></template
                   >
