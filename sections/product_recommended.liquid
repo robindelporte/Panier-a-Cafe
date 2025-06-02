@@ -1,7 +1,7 @@
 <div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium product-recommendations"><div class="container-large"><div class="headline-wrapper"><h2 class="heading-style-h2">
 {{ section.settings.text_titre }}
 </h2>
-</div><div class="swiper_component is-product-swiper"><div class="swiper is-product-swiper"><div class="swiper-wrapper is-product-swiper">{% for product in recommendations.products %}    <div li-for="product in recommendations.products" class="swiper-slide is-product-swiper">
+</div><div class="swiper_component is-recommended"><div class="swiper is-recommended"><div class="swiper-wrapper is-recommended">{% for product in recommendations.products %}    <div li-for="product in recommendations.products" class="swiper-slide is-recommended">
                                     
                             {% render 'product_item', product: product %}
 
@@ -29,7 +29,7 @@
   function isMobile() {
     return window.innerWidth < 992; // D&eacute;sactive sur &eacute;crans >= 992px
   }
-  $(".swiper_component").each(function(index) {
+  $(".swiper_component.is-recommended").each(function(index) {
     // N'initialise le swiper que sur mobile/tablette
     if (isMobile()) {
       const swiper = new Swiper($(this).find(".swiper")[0], {
