@@ -1,13 +1,18 @@
 <div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium product-recommendations"><div class="container-large"><div class="headline-wrapper"><h2 class="heading-style-h2">
 {{ section.settings.text_titre }}
 </h2>
-</div><div class="splide slider"><div class="splide__track"><div class="splide__list">{% for product in recommendations.products %}    <div li-for="product in recommendations.products" class="splide__slide">
+</div><div class="splide slider"><div class="splide__track">{% for  %}    <div li-for="" class="splide__list">
+                                    
+                            {% for product in recommendations.products %}    <div li-for="product in recommendations.products" class="splide__slide">
                                     
                             {% render 'product_item', product: product %}
 
                             
                         </div>
-{% endfor %}</div></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener('DOMContentLoaded', function() {
+{% endfor %}
+                            
+                        </div>
+{% endfor %}</div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener('DOMContentLoaded', function() {
     const productRecommendationsSection = document.querySelector('.product-recommendations');
     const url = productRecommendationsSection.dataset.url;
     fetch(url)
