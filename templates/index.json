@@ -181,7 +181,7 @@
           "type": "collection",
           "settings": {
             "url_lien_collection": "shopify://collections/cafes-en-grain",
-            "image_image_collection": "shopify://shop_images/Cafe_en_grain.png",
+            "image_image_collection": "shopify://shop_images/Sachet_marron.svg",
             "text_nom_collection": "Café en grain"
           }
         },
@@ -189,7 +189,7 @@
           "type": "collection",
           "settings": {
             "url_lien_collection": "shopify://collections/equipements",
-            "image_image_collection": "shopify://shop_images/Accessoires.png",
+            "image_image_collection": "shopify://shop_images/Moulin_marron.svg",
             "text_nom_collection": "Équipements"
           }
         },
@@ -197,7 +197,7 @@
           "type": "collection",
           "settings": {
             "url_lien_collection": "shopify://collections/les-thes",
-            "image_image_collection": "shopify://shop_images/Thes.png",
+            "image_image_collection": "shopify://shop_images/The_marron.svg",
             "text_nom_collection": "Thès"
           }
         },
@@ -205,7 +205,7 @@
           "type": "collection",
           "settings": {
             "url_lien_collection": "shopify://collections/cafetiere-a-filtre",
-            "image_image_collection": "shopify://shop_images/Cafetiere_a_filtre.png",
+            "image_image_collection": "shopify://shop_images/Chemex_marron_1.svg",
             "text_nom_collection": "Cafetière à filtre"
           }
         },
@@ -213,7 +213,7 @@
           "type": "collection",
           "settings": {
             "url_lien_collection": "shopify://collections/machines-a-cafe-a-grain",
-            "image_image_collection": "shopify://shop_images/Machines.png",
+            "image_image_collection": "shopify://shop_images/Machine_marron_721bd5fe-4675-4e66-9e97-7b772400d6cd.svg",
             "text_nom_collection": "Machines"
           }
         }
@@ -259,7 +259,7 @@
           "settings": {
             "text_valeur_gauche": "15",
             "text_valeur_droite": "‎ Pays",
-            "text_texte": "Nous mettons à l’honneud’origine représentés dans notre sélectionr des cafés produits par des femmes engagées."
+            "text_texte": "producteurs sélectionnés pour la richesse de leurs terroirs"
           }
         }
       },

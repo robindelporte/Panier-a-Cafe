@@ -58,25 +58,18 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "icone_KT7pHJ": {
-            "type": "icone",
-            "settings": {
-              "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
-              "text_heading": "Livraison en 48h"
-            }
-          },
-          "icone_tQ4Cg7": {
-            "type": "icone",
-            "settings": {
-              "image_icone": "shopify://shop_images/Carte_bleu.png",
-              "text_heading": "Paiement sécurisé"
-            }
-          },
           "icone_WtEjFJ": {
             "type": "icone",
             "settings": {
               "image_icone": "shopify://shop_images/Colis.png",
               "text_heading": "Livraison offerte à partir de 80€ d'achat"
+            }
+          },
+          "icone_KT7pHJ": {
+            "type": "icone",
+            "settings": {
+              "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
+              "text_heading": "Livraison en 48h"
             }
           },
           "icone_474D9D": {
@@ -86,19 +79,26 @@
               "text_heading": "Abonnement"
             }
           },
+          "icone_tQ4Cg7": {
+            "type": "icone",
+            "settings": {
+              "image_icone": "shopify://shop_images/Carte_bleu.png",
+              "text_heading": "Paiement sécurisé"
+            }
+          },
           "icone_nUeJVb": {
             "type": "icone",
             "settings": {
               "image_icone": "shopify://shop_images/Localisation.png",
-              "text_heading": "805 route des Futaies 74370 Villaz."
+              "text_heading": "805 route des Futaies 74370 Villaz"
             }
           }
         },
         "block_order": [
-          "icone_KT7pHJ",
-          "icone_tQ4Cg7",
           "icone_WtEjFJ",
+          "icone_KT7pHJ",
           "icone_474D9D",
+          "icone_tQ4Cg7",
           "icone_nUeJVb"
         ],
         "settings": {
@@ -115,7 +115,10 @@
           "image_image_6_mobile": "shopify://shop_images/epanou-4.webp",
           "text_headline": "S'inscrire à la newsletter",
           "text_checkbox": "En vous inscrivant, vous acceptez notre <a href=\"#\" li-settings:url=\"Politique de confidentialite\">politique de confidentialité</a> et consentez à recevoir des emails.",
-          "url_politique_de_confidentialite": "shopify://policies/privacy-policy"
+          "url_politique_de_confidentialite": "shopify://policies/privacy-policy",
+          "image_soutien_1": "shopify://shop_images/image012.png",
+          "image_soutien_2": "shopify://shop_images/image010.png",
+          "image_soutien_3": "shopify://shop_images/europe.jpg"
         }
       }
     },

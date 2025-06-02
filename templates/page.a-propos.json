@@ -251,56 +251,56 @@
         "richtext_richtext": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                </p>"
       }
     },
-    "liste_collections_FdJHPj": {
+    "liste_collections_fYdDw8": {
       "type": "liste_collections",
       "blocks": {
-        "collection_ffBDgG": {
+        "collection_JBC6CF": {
           "type": "collection",
           "settings": {
             "url_lien_collection": "shopify://collections/cafes-en-grain",
-            "image_image_collection": "shopify://shop_images/Cafe_en_grain.png",
+            "image_image_collection": "shopify://shop_images/Sachet_marron.svg",
             "text_nom_collection": "Café en grain"
           }
         },
-        "collection_rDFXd3": {
+        "collection_3cei4U": {
           "type": "collection",
           "settings": {
             "url_lien_collection": "shopify://collections/equipements",
-            "image_image_collection": "shopify://shop_images/Accessoires.png",
+            "image_image_collection": "shopify://shop_images/Moulin_marron.svg",
             "text_nom_collection": "Équipements"
           }
         },
-        "collection_jkrVXX": {
+        "collection_JGPFRB": {
           "type": "collection",
           "settings": {
             "url_lien_collection": "shopify://collections/les-thes",
-            "image_image_collection": "shopify://shop_images/Thes.png",
+            "image_image_collection": "shopify://shop_images/The_marron.svg",
             "text_nom_collection": "Thès"
           }
         },
-        "collection_QBNCYx": {
+        "collection_t3eTFR": {
           "type": "collection",
           "settings": {
             "url_lien_collection": "shopify://collections/cafetiere-a-filtre",
-            "image_image_collection": "shopify://shop_images/Cafetiere_a_filtre.png",
+            "image_image_collection": "shopify://shop_images/Chemex_marron_1.svg",
             "text_nom_collection": "Cafetière à filtre"
           }
         },
-        "collection_yzA6kp": {
+        "collection_tBKgPC": {
           "type": "collection",
           "settings": {
             "url_lien_collection": "shopify://collections/machines-a-cafe-a-grain",
-            "image_image_collection": "shopify://shop_images/Machines.png",
+            "image_image_collection": "shopify://shop_images/Machine_marron_721bd5fe-4675-4e66-9e97-7b772400d6cd.svg",
             "text_nom_collection": "Machines"
           }
         }
       },
       "block_order": [
-        "collection_ffBDgG",
-        "collection_rDFXd3",
-        "collection_jkrVXX",
-        "collection_QBNCYx",
-        "collection_yzA6kp"
+        "collection_JBC6CF",
+        "collection_3cei4U",
+        "collection_JGPFRB",
+        "collection_t3eTFR",
+        "collection_tBKgPC"
       ],
       "settings": {}
     },
@@ -374,7 +374,7 @@
     "team",
     "team_3_QJygzt",
     "faq",
-    "liste_collections_FdJHPj",
+    "liste_collections_fYdDw8",
     "pages_PLch7t",
     "reseaux_PEeYPG",
     "newsletter_TGbQ4W"
