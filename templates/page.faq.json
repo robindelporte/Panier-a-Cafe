@@ -1,0 +1,12 @@
+{
+    "sections": {
+        "faq_page": {
+            "type": "faq_page"
+        }
+    },
+    "layout": "Theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "faq_page"
+    ]
+}
