@@ -495,7 +495,7 @@
             <div li-js-if="product.selling_plan_allocation != null">
         <div li-js-object="product.selling_plan_allocation.selling_plan.name" class="text-size-small text-color-secondary" x-text="product.selling_plan_allocation.selling_plan.name">Abonnement</div>        </div>
     </template>
-<div li-js-object="product.variant.title" class="text-size-small text-color-secondary" x-text="product.variant.title">250g</div></div><div class="mini-cart_line-item_price"><template x-if="product.price < product.original_price">
+<div li-js-object="product.variant_title" class="text-size-small text-color-secondary" x-text="product.variant_title">250g</div></div><div class="mini-cart_line-item_price"><template x-if="product.price < product.original_price">
             <div li-js-if="product.price < product.original_price">
         <div li-js-price="product.original_price" class="text-size-small text-style-strikethrough text-style-muted" x-text="LiquifyHelper.moneyFormat(product.original_price, true, '{{ shop.money_with_currency_format }}')">14,99 $</div>        </div>
     </template>
