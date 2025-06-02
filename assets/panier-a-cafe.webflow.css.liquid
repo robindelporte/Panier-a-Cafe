@@ -4202,10 +4202,10 @@ figcaption {
 
 .product-header_radio-list.is-quick-atc {
   z-index: 1;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   min-height: 2.5rem;
-  position: absolute;
+  position: relative;
   inset: 0%;
 }
 
@@ -6496,7 +6496,7 @@ figcaption {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
 }
@@ -7489,6 +7489,32 @@ figcaption {
   min-height: 2.5rem;
   position: relative;
   overflow: hidden;
+}
+
+.product-header_radio-list-wrapper {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: .75fr;
+  grid-auto-columns: 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: .125rem .5rem;
+  display: flex;
+}
+
+.quick_atc {
+  border-radius: var(--_ui-styles---radius--small);
+  padding: .5rem 1rem;
+  transition: all .25s;
+}
+
+.quick_atc:hover {
+  background-color: #77634f24;
+}
+
+.quick_atc:active {
+  transform: scale(.99);
 }
 
 @media screen and (max-width: 991px) {
