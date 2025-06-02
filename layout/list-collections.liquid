@@ -42,16 +42,7 @@
 }
 </style><script>(()=>{var t="https://cdn.jsdelivr.net/npm/@finsweet/attributes-modal@1/modal.js",e=document.querySelector(`script[src="${t}"]`);e||(e=document.createElement("script"),e.async=!0,e.src=t,document.head.append(e));})();</script><meta name="theme-color" content="#000" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#fff" media="(prefers-color-scheme: dark)">
-<script>(function () {
-  var links = document.links;
-  for (let i = 0, linksLength = links.length ; i < linksLength ; i++) {
-    if (links[i].hostname !== window.location.hostname) {
-      links[i].target = '_blank';
-      links[i].rel = 'noreferrer noopener';
-    }
-  }
-})();
-</script><script src="{{ '_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
+<script src="{{ '_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
 <body li-page="list-collections">
 
 <div class="page-wrapper">{% section 'header' %}

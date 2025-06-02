@@ -1,13 +1,13 @@
 <div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium product-recommendations"><div class="container-large"><div class="headline-wrapper"><h2 class="heading-style-h2">
 {{ section.settings.text_titre }}
 </h2>
-</div><div class="splide slider"><div class="splide__track"><ul li-render-recommended="target" role="list" class="splide__list w-list-unstyled">{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="splide__slide">
+</div><div class="swiper_component is-product-swiper"><div class="swiper is-product-swiper"><div class="swiper-wrapper is-product-swiper">{% for product in recommendations.products %}    <div li-for="product in recommendations.products" class="swiper-slide is-product-swiper">
                                     
                             {% render 'product_item', product: product %}
 
                             
-                        </li>
-{% endfor %}</ul></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener('DOMContentLoaded', function() {
+                        </div>
+{% endfor %}</div></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener('DOMContentLoaded', function() {
     const productRecommendationsSection = document.querySelector('.product-recommendations');
     const url = productRecommendationsSection.dataset.url;
     fetch(url)
@@ -24,56 +24,52 @@
       console.error(e);
     });
   });
-</script></div><div class="hide w-embed w-script"><script>let splideInstances = [];
-  function initSplideSliders() {
-    const isMobileOrTablet = window.innerWidth < 992;
-    const sliders = document.querySelectorAll('.splide.slider');
-    sliders.forEach((sliderEl, index) => {
-      const existing = splideInstances[index];
-      if (isMobileOrTablet && !existing) {
-        const splide = new Splide(sliderEl, {
-          perPage: 4,
-          perMove: 1,
-          focus: 0,
-          type: 'slide',
-          gap: '40px',
-          arrows: false,
-          pagination: true,
-          speed: 600,
-          dragAngleThreshold: 30,
-          autoWidth: false,
-          rewind: false,
-          rewindSpeed: 400,
-          waitForTransition: false,
-          updateOnMove: true,
-          trimSpace: false,
-          breakpoints: {
-            991: {
-              perPage: 2,
-              gap: '32px',
-            },
-            767: {
-              perPage: 1.5,
-              gap: '20px',
-            },
-            479: {
-              perPage: 1,
-              gap: '16px',
-            }
-          }
-        });
-        splide.mount();
-        splideInstances[index] = splide;
-      }
-      if (!isMobileOrTablet && existing) {
-        existing.destroy();
-        splideInstances[index] = null;
-      }
-    });
+</script></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() {
+  // Fonction pour v&eacute;rifier si on est sur mobile/tablette
+  function isMobile() {
+    return window.innerWidth < 992; // D&eacute;sactive sur &eacute;crans >= 992px
   }
-  document.addEventListener('DOMContentLoaded', initSplideSliders);
-  window.addEventListener('resize', () => {
-    clearTimeout(window.__splideResizeTimer);
-    window.__splideResizeTimer = setTimeout(initSplideSliders, 200);
+  $(".swiper_component").each(function(index) {
+    // N'initialise le swiper que sur mobile/tablette
+    if (isMobile()) {
+      const swiper = new Swiper($(this).find(".swiper")[0], {
+        autoHeight: false,
+        followFinger: true,
+        freeMode: false,
+        slideToClickedSlide: true,
+        centeredSlides: false,
+        speed: 600,
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        mousewheel: {
+          forceToAxis: true
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true
+        },
+        pagination: {
+          el: $(this).find('.swiper_pagination')[0],
+          clickable: true,
+          bulletClass: 'swiper_bullet',
+          bulletActiveClass: 'is-active',
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '">';
+          }
+        },
+        breakpoints: {
+          479: {
+            spaceBetween: 16
+          },
+          767: {
+            spaceBetween: 20
+          },
+          991: {
+            spaceBetween: 32
+          }
+        }
+      });
+    }
   });
+});
 </script></div> {% schema %} {"tag":"section","name":"Product-Recommended","class":"section_product-recommended","settings":[{"id":"text_titre","type":"text","label":"Titre","default":"Achetez avec"}],"presets":[{"name":"Product-Recommended","category":"Liquify","blocks":[]}]} {% endschema %}
