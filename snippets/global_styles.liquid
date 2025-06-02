@@ -250,6 +250,29 @@
   transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), display 0s 0.35s;
   display: none;
 }
+/* Animation de background au hover */
+.product-atc_radio:hover .product-atc_radio-bg {
+  background-color: rgba(119, 99, 79, 0.14);
+  transition: background-color 0.3s ease;
+}
+/* Masquer le texte original au hover */
+.product-atc_radio .text-size-regular.text-weight-semibold.is-quick-atc {
+  display: block;
+}
+.product-atc_radio:hover .text-size-regular.text-weight-semibold.is-quick-atc {
+  display: none;
+}
+/* Afficher le prix au hover */
+.variant-price {
+  display: none;
+}
+.product-atc_radio:hover .variant-price {
+  display: block;
+}
+/* &Eacute;tats par d&eacute;faut pour les transitions fluides */
+.product-atc_radio-bg {
+  transition: background-color 0.3s ease;
+}
 </style></div><div class="color-schemes w-embed"><style>/* Color Schemes Controls*/
 <meta name="relume-color-schemes" content="false"/>
   .color-scheme-1 {
