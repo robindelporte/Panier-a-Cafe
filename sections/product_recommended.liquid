@@ -7,7 +7,25 @@
 
                             
                         </div>
-{% endfor %}</div><div class="swiper_pagination is-mixed"><div class="swiper_bullet"></div><div class="swiper_bullet is-active"></div></div></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener('DOMContentLoaded', function() {
+{% endfor %}{% for product in recommendations.products %}    <div li-for="product in recommendations.products" class="splide__slide">
+                                    
+                            {% render 'product_item', product: product %}
+
+                            
+                        </div>
+{% endfor %}{% for product in recommendations.products %}    <div li-for="product in recommendations.products" class="splide__slide">
+                                    
+                            {% render 'product_item', product: product %}
+
+                            
+                        </div>
+{% endfor %}{% for product in recommendations.products %}    <div li-for="product in recommendations.products" class="splide__slide">
+                                    
+                            {% render 'product_item', product: product %}
+
+                            
+                        </div>
+{% endfor %}</div></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener('DOMContentLoaded', function() {
     const productRecommendationsSection = document.querySelector('.product-recommendations');
     const url = productRecommendationsSection.dataset.url;
     fetch(url)
