@@ -7,7 +7,7 @@
 
                             
                         </div>
-{% endfor %}</div></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener('DOMContentLoaded', function() {
+{% endfor %}</div><div class="swiper_pagination is-mixed"><div class="swiper_bullet"></div><div class="swiper_bullet is-active"></div></div></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener('DOMContentLoaded', function() {
     const productRecommendationsSection = document.querySelector('.product-recommendations');
     const url = productRecommendationsSection.dataset.url;
     fetch(url)
@@ -32,7 +32,7 @@
   $(".swiper_component.is-recommended").each(function(index) {
     // N'initialise le swiper que sur mobile/tablette
     if (isMobile()) {
-      const swiper = new Swiper($(this).find(".swiper")[0], {
+      const swiper = new Swiper($(this).find(".swiper.is-recommended")[0], {
         autoHeight: false,
         followFinger: true,
         freeMode: false,
