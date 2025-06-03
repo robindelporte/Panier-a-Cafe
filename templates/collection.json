@@ -17,10 +17,59 @@
       "type": "collection_produits",
       "settings": {}
     },
-    "bandeau": {
+    "bandeau_nppjaR": {
       "type": "bandeau",
+      "blocks": {
+        "icone_dhQtjc": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Colis.png",
+            "text_titre_icone": "Livraison offerte",
+            "text_description": "Pour toute commande de plus de 80€."
+          }
+        },
+        "icone_YMpmPr": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/logo-panier-a-cafe.png",
+            "text_titre_icone": "Livraison en 48h",
+            "text_description": "Grâce à Colissimo, votre colis arrive rapidement !"
+          }
+        },
+        "icone_EXLxQX": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Grains_de_cafes.png",
+            "text_titre_icone": "Abonnement",
+            "text_description": "Café sélectionné et livré automatiquement !"
+          }
+        },
+        "icone_9hf7Yp": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Carte_bleu.png",
+            "text_titre_icone": "Paiement sécurisé",
+            "text_description": "Visa, PayPal, Apple Pay, Mastercard."
+          }
+        },
+        "icone_FJ9Vkc": {
+          "type": "icone",
+          "settings": {
+            "image_icone": "shopify://shop_images/Localisation.png",
+            "text_titre_icone": "Atelier boutique",
+            "text_description": "805 route des Futaies 74370 Villaz."
+          }
+        }
+      },
+      "block_order": [
+        "icone_dhQtjc",
+        "icone_YMpmPr",
+        "icone_EXLxQX",
+        "icone_9hf7Yp",
+        "icone_FJ9Vkc"
+      ],
       "settings": {
-        "text_heading": "Heading"
+        "text_heading": ""
       }
     },
     "faq_RKicC7": {
@@ -89,6 +138,17 @@
         "text_heading": "Foire aux questions",
         "richtext_richtext": "<p><br/>                </p>"
       }
+    },
+    "collection_tabs_marr_MhEJEh": {
+      "type": "collection_tabs_marr",
+      "settings": {
+        "text_titre": "Nos équipements",
+        "collection_list": [
+          "accessoires",
+          "machines-et-cafetieres",
+          "equipements"
+        ]
+      }
     }
   },
   "layout": "collection",
@@ -96,7 +156,8 @@
   "order": [
     "collection_hero",
     "collection_produits",
-    "bandeau",
-    "faq_RKicC7"
+    "bandeau_nppjaR",
+    "faq_RKicC7",
+    "collection_tabs_marr_MhEJEh"
   ]
 }
