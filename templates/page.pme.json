@@ -168,10 +168,7 @@
           "type": "selection",
           "settings": {
             "text_titre_selection": "Une sélection de café personnalisé",
-            "afficher_tag_1": false,
-            "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
             "text_texte_tag_1": "100% Arabica",
-            "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
             "text_texte_tag_2": "Selon vos goûts",
             "text_paragraphe": "Vous aimez les cafés fruités, ronds ou plus corsés ? On vous guide pour choisir la torréfaction qui plaira à vos équipes. Côté prix ? On s’adapte à votre consommation et à vos contraintes.Un vrai bon café, livré automatiquement tous les mois.",
             "url_button_lien": "",
@@ -185,10 +182,7 @@
           "type": "selection",
           "settings": {
             "text_titre_selection": "Des machines pensées pour vous",
-            "afficher_tag_1": false,
-            "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
             "text_texte_tag_1": "Location adaptée à vos besoins",
-            "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
             "text_texte_tag_2": "Installation & SAV inclus",
             "text_paragraphe": "Que vous soyez une petite structure ou une entreprise plus large, nous vous proposons une formule adaptée à vos besoins :  → La location de machines à café professionnelles performantes et simples d’utilisation  → Une sélection de cafés de spécialité en fonction de vos goûts et de votre budget",
             "url_button_lien": "",
@@ -251,12 +245,12 @@
         "logo_defilants_inverses_k76DcB": {
           "type": "logo-defilants-inverses",
           "settings": {
-            "image_logo_1": "shopify://shop_images/kevin.webp",
-            "image_logo_2": "shopify://shop_images/benjamin.webp",
-            "image_logo_3": "shopify://shop_images/fabien.webp",
-            "image_logo_4": "shopify://shop_images/clement.webp",
-            "image_logo_5": "shopify://shop_images/ilona.webp",
-            "image_logo_6": "shopify://shop_images/epanou.webp"
+            "image_logo_1": "shopify://shop_images/ONIKA-logo-retina-no-baseline_png.webp",
+            "image_logo_2": "shopify://shop_images/3G_IMMO.png",
+            "image_logo_3": "shopify://shop_images/logo.jpg",
+            "image_logo_4": "shopify://shop_images/Logo-INGEOS-web.png",
+            "image_logo_5": "shopify://shop_images/logo-bms-seul.png",
+            "image_logo_6": "shopify://shop_images/e7bfdf_d03c7b1097594c4fa03097654ce58050_mv2.png"
           }
         }
       },
