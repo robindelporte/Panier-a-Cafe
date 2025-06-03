@@ -12,7 +12,7 @@
     {% assign certification = product.metafields.custom.certification.value %}
 <img src="{{ certification.logo| img_url: 'large' }}" loading="lazy" li-object:src="certification.logo| img_url: 'large'" alt="" class="flag_icon">
 <div li-object="certification.nom" class="product-item_tag-text">{{ certification.nom }}</div>    </div>
-{% endif %}</div>{% if product.has_only_default_variant != true and product.options.size == 1 and product.options.first.values.size <= 2 %}    <div li-if="product.has_only_default_variant != true and product.options.size == 1 and product.options.first.values.size <= 2" class="product_atc-form">
+{% endif %}</div>{% if product.has_only_default_variant != true and product.options.size == 1 and product.variants.size == 2 %}    <div li-if="product.has_only_default_variant != true and product.options.size == 1 and product.variants.size == 2" class="product_atc-form">
     {% form 'product', product %}
 {% if product.has_only_default_variant != true %}    <div li-if="product.has_only_default_variant != true" class="product_quick-atc-wrapper">
     <div class="product-header_radio-list-wrapper"><template x-for="(option, optionKey) in product.options" :key="optionKey">
