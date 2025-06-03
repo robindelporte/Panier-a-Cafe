@@ -420,6 +420,13 @@
           "equipements"
         ]
       }
+    },
+    "related_articles_Wpfw4A": {
+      "type": "related_articles",
+      "name": "Related Articles",
+      "settings": {
+        "text_headline": "Nouveautés du blog"
+      }
     }
   },
   "layout": "theme",
@@ -436,6 +443,7 @@
     "pages",
     "contenu_kbV9Uz",
     "contenu_2",
-    "collection_tabs_marr_6khPpp"
+    "collection_tabs_marr_6khPpp",
+    "related_articles_Wpfw4A"
   ]
 }
