@@ -231,17 +231,6 @@
     "logo_defilants": {
       "type": "logo_defilants",
       "blocks": {
-        "logo_defilants_inverses_gHWRDx": {
-          "type": "logo-defilants-inverses",
-          "settings": {
-            "image_logo_1": "shopify://shop_images/1er_Mets.png",
-            "image_logo_2": "shopify://shop_images/Canailles.png",
-            "image_logo_3": "shopify://shop_images/logomgm_720.png",
-            "image_logo_4": "shopify://shop_images/Logo-CB-light-gris-120.png",
-            "image_logo_5": "shopify://shop_images/Poco_A_Poco_1.png",
-            "image_logo_6": "shopify://shop_images/L_ecuelle.png"
-          }
-        },
         "logo_defilants_3Pw6Yp": {
           "type": "logo-defilants",
           "settings": {
@@ -251,16 +240,30 @@
             "image_logo_4": "shopify://shop_images/Barbich_1.png",
             "image_logo_5": "shopify://shop_images/ATOME.png",
             "image_logo_6": "shopify://shop_images/ALEXPERIENCE.png"
-          }
+          },
+          "blocks": {}
+        },
+        "logo_defilants_inverses_gHWRDx": {
+          "type": "logo-defilants-inverses",
+          "settings": {
+            "image_logo_1": "shopify://shop_images/1er_Mets.png",
+            "image_logo_2": "shopify://shop_images/Canailles.png",
+            "image_logo_3": "shopify://shop_images/logomgm_720.png",
+            "image_logo_4": "shopify://shop_images/Logo-CB-light-gris-120.png",
+            "image_logo_5": "shopify://shop_images/Poco_A_Poco_1.png",
+            "image_logo_6": "shopify://shop_images/L_ecuelle.png"
+          },
+          "blocks": {}
         },
         "logo_defilants_hVhbrA": {
           "type": "logo-defilants",
-          "settings": {}
+          "settings": {},
+          "blocks": {}
         }
       },
       "block_order": [
-        "logo_defilants_inverses_gHWRDx",
         "logo_defilants_3Pw6Yp",
+        "logo_defilants_inverses_gHWRDx",
         "logo_defilants_hVhbrA"
       ],
       "settings": {
