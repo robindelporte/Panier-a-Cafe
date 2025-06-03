@@ -116,9 +116,9 @@
           "text_headline": "S'inscrire à la newsletter",
           "text_checkbox": "En vous inscrivant, vous acceptez notre <a href=\"#\" li-settings:url=\"Politique de confidentialite\">politique de confidentialité</a> et consentez à recevoir des emails.",
           "url_politique_de_confidentialite": "shopify://policies/privacy-policy",
-          "image_soutien_1": "shopify://shop_images/image012.png",
-          "image_soutien_2": "shopify://shop_images/image010.png",
-          "image_soutien_3": "shopify://shop_images/europe.jpg"
+          "image_soutien_1": "shopify://shop_images/logo_bleu_clair.png",
+          "image_soutien_2": "shopify://shop_images/logo_region.png",
+          "image_soutien_3": "shopify://shop_images/logo_europe.png"
         }
       }
     },
