@@ -360,7 +360,7 @@
           "type": "carte",
           "settings": {
             "image_image": "shopify://shop_images/atelier.webp",
-            "text_heading": "Professionnels",
+            "text_heading": "Les ateliers",
             "url_link": "shopify://pages/professionnels",
             "text_text": "Découvrir"
           }
@@ -380,7 +380,9 @@
         "carte_DdYjAw",
         "carte_kmtBbx"
       ],
-      "settings": {}
+      "settings": {
+        "text_titre": ""
+      }
     },
     "reseaux_PEeYPG": {
       "type": "reseaux",
