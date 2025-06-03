@@ -140,13 +140,10 @@
 .tippy-box[data-placement^='right'] > .tippy-arrow::before {
   border-right-color: #77634F !important;
 }
-</style><script>// &Eacute;couter les changements de variantes Liquify
-document.addEventListener('DOMContentLoaded', function() {
-    // Hook sur la fonction updateVariantStatuses de Liquify
+</style><script>document.addEventListener('DOMContentLoaded', function() {
     const originalConsoleLog = console.log;
     console.log = function(...args) {
         if (args[0] === "Liquify - Set active variant") {
-            // R&eacute;initialiser fs-modal apr&egrave;s changement de variante
             setTimeout(() => {
                 if (window.fsAttributes && window.fsAttributes.modal && window.fsAttributes.modal.destroy) {
                     window.fsAttributes.modal.destroy();
