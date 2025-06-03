@@ -253,22 +253,15 @@
             "image_logo_6": "shopify://shop_images/L_ecuelle.png"
           }
         },
-        "logo_defilants_EGjqCw": {
+        "logo_defilants_hVhbrA": {
           "type": "logo-defilants",
-          "settings": {
-            "image_logo_1": "shopify://shop_images/Clos_des_sens.png",
-            "image_logo_2": "shopify://shop_images/Bistro-Savage.webp",
-            "image_logo_3": "shopify://shop_images/belabris.webp",
-            "image_logo_4": "shopify://shop_images/Barbich_1.png",
-            "image_logo_5": "shopify://shop_images/ATOME.png",
-            "image_logo_6": "shopify://shop_images/ALEXPERIENCE.png"
-          }
+          "settings": {}
         }
       },
       "block_order": [
         "logo_defilants_3Pw6Yp",
         "logo_defilants_inverses_gHWRDx",
-        "logo_defilants_EGjqCw"
+        "logo_defilants_hVhbrA"
       ],
       "settings": {
         "text_heading": "Ils nous font confiance"
