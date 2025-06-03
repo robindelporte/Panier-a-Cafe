@@ -73,18 +73,11 @@
       "settings": {
         "text_heading": "Où nous trouver ?"
       }
-    },
-    "reseaux": {
-      "type": "reseaux",
-      "settings": {
-        "text_heading": "Suivez-nous sur nos réseaux sociaux"
-      }
     }
   },
   "layout": "page.marche",
   "wrapper": "main.main-wrapper",
   "order": [
-    "marche",
-    "reseaux"
+    "marche"
   ]
 }
