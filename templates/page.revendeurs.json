@@ -144,6 +144,7 @@
           "type": "selection",
           "settings": {
             "text_titre_selection": "Nos cafés prêts à prendre place",
+            "afficher_tag_1": false,
             "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
             "text_texte_tag_1": "100% Arabica",
             "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
@@ -310,12 +311,6 @@
         "text_heading": "Foire aux questions",
         "richtext_richtext": "<p><br/>                </p>"
       }
-    },
-    "reseaux": {
-      "type": "reseaux",
-      "settings": {
-        "text_heading": "Suivez-nous sur nos réseaux sociaux"
-      }
     }
   },
   "layout": "theme",
@@ -329,7 +324,6 @@
     "1748597324bacaf247",
     "logo_defilants",
     "bandeau_hp6mre",
-    "faq_HgMAbi",
-    "reseaux"
+    "faq_HgMAbi"
   ]
 }
