@@ -140,15 +140,22 @@
 .tippy-box[data-placement^='right'] > .tippy-arrow::before {
   border-right-color: #77634F !important;
 }
-</style><script>document.addEventListener('change', function(e) {
-    if (e.target.matches('[li-element="product-option-input"]')) {
-        setTimeout(() => {
-            if (window.fsAttributes && window.fsAttributes.modal) {
-                window.fsAttributes.modal.destroy();
-                window.fsAttributes.modal.init();
-            }
-        }, 100);
-    }
+</style><script>// &Eacute;couter les changements de variantes Liquify
+document.addEventListener('DOMContentLoaded', function() {
+    // Hook sur la fonction updateVariantStatuses de Liquify
+    const originalConsoleLog = console.log;
+    console.log = function(...args) {
+        if (args[0] === "Liquify - Set active variant") {
+            // R&eacute;initialiser fs-modal apr&egrave;s changement de variante
+            setTimeout(() => {
+                if (window.fsAttributes && window.fsAttributes.modal && window.fsAttributes.modal.destroy) {
+                    window.fsAttributes.modal.destroy();
+                    window.fsAttributes.modal.init();
+                }
+            }, 100);
+        }
+        originalConsoleLog.apply(console, args);
+    };
 });
 </script><script src="{{ '_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
 <body li-page="product">

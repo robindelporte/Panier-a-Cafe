@@ -5,7 +5,10 @@
 	.benefits_card_mask_wrap { grid-template-rows: 0fr; }
 	.benefits_layout { flex-direction: row; }
 }
-</style></div><div class="benefits_wrap"><div role="list" class="benefits_layout">{% for block in section.blocks %}
+</style></div><div class="benefits_wrap"><div class="margin-bottom margin-medium"><h2 class="text-align-center">
+{{ section.settings.text_titre }}
+</h2>
+</div><div role="list" class="benefits_layout">{% for block in section.blocks %}
     {% if block.type == "carte" %}
                     <div li-block="Carte" role="listitem" class="benefits_card_wrap">
                                     <img src="{{ block.settings.image_image | img_url: 'master' }}" alt="{{ block.settings.image_image.alt }}" loading="lazy" class="benefits_card_img">
@@ -20,4 +23,4 @@
                             </div>
             {% endif %}
 {% endfor %}
-</div></div></div></div></div> {% schema %} {"tag":"section","name":"Pages","class":"section_pages","blocks":[{"name":"Carte","type":"carte","settings":[{"id":"image_image","type":"image_picker","label":"Image"},{"id":"text_heading","type":"text","label":"Heading","default":"Notre histoire"},{"id":"url_link","type":"url","label":"Link"},{"id":"text_text","type":"text","label":"Text","default":"D\u00e9couvrir"}]},{"type":"@app"}],"presets":[{"name":"Pages","category":"Liquify","blocks":[{"type":"carte"}]}]} {% endschema %}
+</div></div></div></div></div> {% schema %} {"tag":"section","name":"Pages","class":"section_pages","blocks":[{"name":"Carte","type":"carte","settings":[{"id":"image_image","type":"image_picker","label":"Image"},{"id":"text_heading","type":"text","label":"Heading","default":"Notre histoire"},{"id":"url_link","type":"url","label":"Link"},{"id":"text_text","type":"text","label":"Text","default":"D\u00e9couvrir"}]},{"type":"@app"}],"settings":[{"id":"text_titre","type":"text","label":"Titre","default":"Heading"}],"presets":[{"name":"Pages","category":"Liquify","blocks":[{"type":"carte"}]}]} {% endschema %}
