@@ -168,10 +168,7 @@
           "type": "selection",
           "settings": {
             "text_titre_selection": "Chaque grain a une histoire",
-            "afficher_tag_1": false,
-            "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
             "text_texte_tag_1": "Torréfaction artisanale",
-            "image_icone_tag_2": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
             "text_texte_tag_2": "Sourcing direct producteur",
             "text_paragraphe": "Nos cafés sont sourcés à la ferme, souvent bio, parfois importés à la voile et toujours traçables. On travaille main dans la main avec des producteurs, on torréfie en Haute-Savoie, et on sélectionne le meilleur pour ton établissement. Résultat : un café bon, juste, et vraiment différent !",
             "url_button_lien": "shopify://collections/cafes",
@@ -185,10 +182,7 @@
           "type": "selection",
           "settings": {
             "text_titre_selection": "Des machines pensées pour les pros",
-            "afficher_tag_1": false,
-            "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
             "text_texte_tag_1": "Location adaptée à vos besoins",
-            "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
             "text_texte_tag_2": "Installation & SAV inclus",
             "text_paragraphe": "Machine à grains automatique ou machine expresso avec moulin : on t’équipe en fonction de ton débit et de tes besoins. Installation rapide, formation de ton équipe, maintenance assurée… Tu restes focus sur ton service, on gère le reste !",
             "url_button_lien": "shopify://collections/machines-a-cafe-a-grain",
@@ -239,16 +233,42 @@
       "blocks": {
         "logo_defilants_3Pw6Yp": {
           "type": "logo-defilants",
-          "settings": {}
+          "settings": {
+            "image_logo_1": "shopify://shop_images/Clos_des_sens.png",
+            "image_logo_2": "shopify://shop_images/Bistro-Savage.webp",
+            "image_logo_3": "shopify://shop_images/belabris.webp",
+            "image_logo_4": "shopify://shop_images/Barbich_1.png",
+            "image_logo_5": "shopify://shop_images/ATOME.png",
+            "image_logo_6": "shopify://shop_images/ALEXPERIENCE.png"
+          }
         },
         "logo_defilants_inverses_gHWRDx": {
           "type": "logo-defilants-inverses",
-          "settings": {}
+          "settings": {
+            "image_logo_1": "shopify://shop_images/1er_Mets.png",
+            "image_logo_2": "shopify://shop_images/Canailles.png",
+            "image_logo_3": "shopify://shop_images/logomgm_720.png",
+            "image_logo_4": "shopify://shop_images/Logo-CB-light-gris-120.png",
+            "image_logo_5": "shopify://shop_images/Poco_A_Poco_1.png",
+            "image_logo_6": "shopify://shop_images/L_ecuelle.png"
+          }
+        },
+        "logo_defilants_EGjqCw": {
+          "type": "logo-defilants",
+          "settings": {
+            "image_logo_1": "shopify://shop_images/Clos_des_sens.png",
+            "image_logo_2": "shopify://shop_images/Bistro-Savage.webp",
+            "image_logo_3": "shopify://shop_images/belabris.webp",
+            "image_logo_4": "shopify://shop_images/Barbich_1.png",
+            "image_logo_5": "shopify://shop_images/ATOME.png",
+            "image_logo_6": "shopify://shop_images/ALEXPERIENCE.png"
+          }
         }
       },
       "block_order": [
         "logo_defilants_3Pw6Yp",
-        "logo_defilants_inverses_gHWRDx"
+        "logo_defilants_inverses_gHWRDx",
+        "logo_defilants_EGjqCw"
       ],
       "settings": {
         "text_heading": "Ils nous font confiance"
