@@ -11,13 +11,13 @@
                                     <div class="highlight_content"><div class="highlight_item-heading"><h3 class="heading-style-h2">
 {{ block.settings.text_titre_selection }}
 </h3>
-</div><div class="highlight_tag-wrapper is-in-content">{% if section.settings.texte_tag_1 != blank %}    <div li-if="section.settings.texte_tag_1 != blank" class="highlight_tag">
+</div><div class="highlight_tag-wrapper is-in-content">{% if section.settings.text.texte_tag_1 != blank %}    <div li-if="section.settings.text.texte_tag_1 != blank" class="highlight_tag">
     <img loading="lazy" alt="{{ block.settings.image_icone_tag_1.alt }}" src="{{ block.settings.image_icone_tag_1 | img_url: 'master' }}" class="tag_flag">
 <div>
 {{ block.settings.text_texte_tag_1 }}
 </div>
     </div>
-{% endif %}{% if section.settings.texte_tag_2 != blank %}    <div li-if="section.settings.texte_tag_2 != blank" class="highlight_tag">
+{% endif %}{% if section.settings.text.texte_tag_2 != blank %}    <div li-if="section.settings.text.texte_tag_2 != blank" class="highlight_tag">
     <img loading="lazy" alt="{{ block.settings.image_icone_tag_2.alt }}" src="{{ block.settings.image_icone_tag_2 | img_url: 'master' }}" class="tag_flag">
 <div>
 {{ block.settings.text_texte_tag_2 }}
