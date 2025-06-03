@@ -51,7 +51,9 @@
         "bouttons_nprMeU",
         "logos_4zenFb"
       ],
-      "settings": {}
+      "settings": {
+        "image_image": "shopify://shop_images/P5A4558_1.webp"
+      }
     },
     "bandeau": {
       "type": "bandeau",
