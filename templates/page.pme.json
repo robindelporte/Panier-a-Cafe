@@ -168,6 +168,7 @@
           "type": "selection",
           "settings": {
             "text_titre_selection": "Une sélection de café personnalisé",
+            "afficher_tag_1": false,
             "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
             "text_texte_tag_1": "100% Arabica",
             "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
@@ -184,6 +185,7 @@
           "type": "selection",
           "settings": {
             "text_titre_selection": "Des machines pensées pour vous",
+            "afficher_tag_1": false,
             "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
             "text_texte_tag_1": "Location adaptée à vos besoins",
             "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
@@ -379,12 +381,6 @@
         "text_heading": "Foire aux questions",
         "richtext_richtext": "<p><br/>                </p>"
       }
-    },
-    "reseaux": {
-      "type": "reseaux",
-      "settings": {
-        "text_heading": "Suivez-nous sur nos réseaux sociaux"
-      }
     }
   },
   "layout": "page.pme",
@@ -398,7 +394,6 @@
     "1747736933cbdb30f3",
     "logo_defilants",
     "bandeau_HqpdQH",
-    "faq_gQcrmX",
-    "reseaux"
+    "faq_gQcrmX"
   ]
 }
