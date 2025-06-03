@@ -33,7 +33,8 @@
         "text_bXX7Q6"
       ],
       "settings": {
-        "text_heading": "L’histoire du Panier à Café"
+        "text_heading": "L’histoire du Panier à Café",
+        "image_image": "shopify://shop_images/LCO-PKFE-FB.webp"
       }
     },
     "contenu_UhVyzY": {
@@ -42,7 +43,7 @@
         "text_k6XLNc": {
           "type": "text",
           "settings": {
-            "richtext_paragraph": "<p>Au Panier à Café, le café c’est sacré. On ne rigole pas avec les arômes, la traçabilité ou la façon dont il est torréfié. Ce n’est pas juste une boisson du matin, c’est une histoire de passion, de rencontres et d’engagement.<br/><br/>Pourtant, il y a encore quelques années, Fabien travaillait dans l’horlogerie de luxe. Puis un jour, il a dit stop. Il voulait du sens, du concret, de l’humain. Alors il a tout plaqué, s’est formé à la torréfaction, a acheté une machine, un coffee truck… et le Panier à Café est né !<br/><br/>Depuis 8 ans, on sourit, on torréfie, on part en voyage, on forme des jeunes, on travaille avec des personnes en situation de handicap… et surtout, on vous fait découvrir des cafés comme vous n’en avez jamais goûtés. Le café mérite mieux que d’être avalé à la va-vite : c’est un grand cru à part entière.<br/><br/>Et nous, on est là pour vous le prouver !<br/><br/></p>"
+            "richtext_paragraph": "<p>Si on vous disait que notre histoire, c’est surtout celle d’une équipe ?<br/><br/>De gens passionnés, de profils différents, mais rassemblés autour d’une idée simple : faire du bon, faire du vrai, faire du café qui a du sens.</p><p>Chez nous, on ne recrute pas juste des bras. On forme, on accompagne, on fait grandir.<br/><br/>Certains membres de l’équipe n’avaient jamais imaginé travailler dans le café… et aujourd’hui, ils en parlent avec autant de passion que Fabien.</p><p>On aime les projets un peu fous, les idées qui font du bruit (du bon), les rencontres qui changent tout.<br/><br/>Alors on voyage, on source nous-mêmes les grains, on discute avec les producteurs, on raconte leurs histoires… et on fait en sorte que vous puissiez les goûter, tout simplement.</p><p>Parce qu’un bon café, c’est d’abord une aventure humaine. On est ravis de vous embarquer avec nous.</p>"
           }
         }
       },
