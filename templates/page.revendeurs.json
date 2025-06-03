@@ -39,7 +39,9 @@
         "paragrpahe_HmyCH8",
         "bouttons_mDRm4L"
       ],
-      "settings": {}
+      "settings": {
+        "image_image": "shopify://shop_images/V1A4928-2_1.webp"
+      }
     },
     "bandeau": {
       "type": "bandeau",
@@ -109,6 +111,7 @@
       ],
       "name": "Contenu",
       "settings": {
+        "image_image": "shopify://shop_images/V1A2569.webp",
         "left_right": "right"
       }
     },
@@ -134,6 +137,7 @@
       ],
       "name": "Contenu",
       "settings": {
+        "image_image": "shopify://shop_images/V1A2485.webp",
         "left_right": "left"
       }
     },
@@ -144,16 +148,13 @@
           "type": "selection",
           "settings": {
             "text_titre_selection": "Nos cafés prêts à prendre place",
-            "afficher_tag_1": false,
-            "image_icone_tag_1": "shopify://shop_images/new_releases_5889fc2c-1ff9-4298-a6bb-3bde1efdc269.png",
             "text_texte_tag_1": "100% Arabica",
-            "image_icone_tag_2": "shopify://shop_images/local_cafe_4c9f1951-cd9a-4643-b46e-f07923ca94ae.png",
             "text_texte_tag_2": "Cafés engagés",
             "text_paragraphe": "Ajoutez à votre offre une gamme de cafés de spécialité engagés, locaux et torréfiés à Annecy. Nos étiquettes colorées attirent l’œil et leur histoire fait mouche à chaque conversation client. Conditionnés avec soin, ils sont disponibles en plusieurs formats pour s’adapter à votre espace et à votre clientèle.",
             "url_button_lien": "",
             "text_button_texte": "Découvrir",
             "url_link": "",
-            "image_image_produit": "shopify://shop_images/revendeurs.webp",
+            "image_image_produit": "shopify://shop_images/V1A4902.webp",
             "text_etiquette": "Nos cafés à revendre"
           }
         }
@@ -194,6 +195,34 @@
     },
     "logo_defilants": {
       "type": "logo_defilants",
+      "blocks": {
+        "logo_defilants_inverses_kie68U": {
+          "type": "logo-defilants-inverses",
+          "settings": {
+            "image_logo_1": "shopify://shop_images/6657156564c0cc4a0d25a731_Otera_logo.webp",
+            "image_logo_2": "shopify://shop_images/Le_Bon_Wagon.jpg",
+            "image_logo_3": "shopify://shop_images/LPC4.webp",
+            "image_logo_4": "shopify://shop_images/Poco_A_Poco.png",
+            "image_logo_5": "shopify://shop_images/logo_source.jpg",
+            "image_logo_6": "shopify://shop_images/LOGO_MENTHON_Blason_only.png"
+          }
+        },
+        "logo_defilants_6jkfFC": {
+          "type": "logo-defilants",
+          "settings": {
+            "image_logo_1": "shopify://shop_images/Logo_1.png",
+            "image_logo_2": "shopify://shop_images/LOGO_LES_FINES_BOUCHES_FOND_TRANSPARANT.png",
+            "image_logo_3": "shopify://shop_images/logos_confiance_fournil_villaz.png",
+            "image_logo_4": "shopify://shop_images/Haven.png",
+            "image_logo_5": "shopify://shop_images/Barbich.png",
+            "image_logo_6": "shopify://shop_images/logo_client.png"
+          }
+        }
+      },
+      "block_order": [
+        "logo_defilants_inverses_kie68U",
+        "logo_defilants_6jkfFC"
+      ],
       "settings": {
         "text_heading": "Ils nous font confiance"
       }
