@@ -413,8 +413,8 @@
       "settings": {
         "text_titre": "Nos équipements",
         "collection_list": [
-          "machines-et-cafetieres",
           "accessoires",
+          "machines-et-cafetieres",
           "equipements"
         ]
       }
