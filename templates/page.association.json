@@ -79,11 +79,26 @@
             "url_link": "shopify://collections/cafes",
             "text_etiquette": "Sachet de 1 kilo"
           }
+        },
+        "selection_3jF7xt": {
+          "type": "selection",
+          "settings": {
+            "text_titre_selection": "Un don pour nous, un impact pour eux !",
+            "text_texte_tag_1": "Costa Rica",
+            "text_texte_tag_2": "Costa Rica",
+            "text_paragraphe": "Tu veux soutenir notre asso sans forcément craquer pour un sac ou un kilo de café ? Bonne nouvelle : tu peux faire un don du montant de ton choix, quand tu veux et comme tu veux ! Chaque euro récolté nous permet d’aller plus loin dans notre mission : créer du lien entre le monde du café et celui du handicap, ici comme ailleurs. Pas besoin de filtre pour être solidaire (ni de cafetière, promis). Juste un petit geste, mais un grand effet !",
+            "url_button_lien": "https://www.helloasso.com/associations/nos-trucs-z-en-plus",
+            "text_button_texte": "Faire un don",
+            "url_link": "",
+            "image_image_produit": "shopify://shop_images/V1A2627_2_2.jpg",
+            "text_etiquette": "Un don"
+          }
         }
       },
       "block_order": [
         "selection_gg9rJi",
-        "selection_phUfQA"
+        "selection_phUfQA",
+        "selection_3jF7xt"
       ],
       "settings": {
         "text_titre_section": "Soutiens l’asso… avec du style !",
