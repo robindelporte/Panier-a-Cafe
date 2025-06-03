@@ -244,79 +244,71 @@
         "text_heading": "Comment ça marche ?"
       }
     },
-    "faq": {
+    "faq_HgMAbi": {
       "type": "faq",
       "blocks": {
-        "faq_item_enNk6C": {
+        "faq_item_jkkDGH": {
           "type": "faq-item",
           "settings": {
             "text_question": "Quelle est la différence entre un café de spécialité et un café classique ?",
             "richtext_reponse": "<p>Un café de spécialité est un café noté au-dessus de 80/100 par un Q Grader, expert certifié. Il est traçable, récolté à la main, souvent bio, et surtout torréfié avec soin pour révéler ses arômes. Rien à voir avec un café industriel souvent trop torréfié, sans origine claire, ni complexité en tasse.</p>"
           }
         },
-        "faq_item_KDwLyY": {
+        "faq_item_KXXzny": {
           "type": "faq-item",
           "settings": {
             "text_question": "Quelle quantité de café prévoir pour mon établissement ?",
             "richtext_reponse": "<p>Tout dépend de votre débit ! Pour un coffee shop ou un restaurant qui sert 100 cafés par jour, comptez environ 3 à 4 kilos par semaine. On peut vous accompagner pour définir la bonne quantité et ajuster au fil du temps. Et si vous optez pour nos machines, on s’occupe aussi de la logistique !</p>"
           }
         },
-        "faq_item_zNDFX6": {
+        "faq_item_imV4z4": {
           "type": "faq-item",
           "settings": {
             "text_question": "Peut-on louer une machine à café pour un restaurant ou un hôtel ?",
-            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+            "richtext_reponse": "<p>Nous proposons la location de machines à café professionnelles pour les restaurants, hôtels, bureaux et autres établissements. Nos machines s’adaptent à vos besoins (volume, design, usage) et sont livrées prêtes à l’emploi. En prime, on s’occupe de tout : installation, entretien, livraison du café et accompagnement sur-mesure.<br/><br/>Une solution simple, locale et clé en main pour offrir un café de qualité à vos clients !</p>"
           }
         },
-        "faq_item_UHwAYP": {
-          "type": "faq-item",
-          "settings": {
-            "text_question": "Qui s’occupe de l’entretien des machines à café ?",
-            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
-          }
-        },
-        "faq_item_AVMdja": {
+        "faq_item_PJfQtL": {
           "type": "faq-item",
           "settings": {
             "text_question": "Vos cafés sont-ils issus du commerce équitable ?",
-            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+            "richtext_reponse": "<p>Nous sélectionnons des cafés issus de relations directes avec les producteurs, ce qu’on appelle le \"direct trade\". Cela nous permet de rémunérer les producteurs à leur juste valeur, souvent au-dessus des standards du commerce équitable.<br/><br/>Certains de nos cafés sont également labellisés, mais notre priorité reste la traçabilité, la qualité humaine des échanges et un prix juste pour chacun. Chez nous, chaque grain a une histoire… et une vraie valeur !</p>"
           }
         },
-        "faq_item_njwYUi": {
-          "type": "faq-item",
-          "settings": {
-            "text_question": "Comment bien conserver son café en grain ?",
-            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
-          }
-        },
-        "faq_item_ka9qzi": {
+        "faq_item_QpKWac": {
           "type": "faq-item",
           "settings": {
             "text_question": "Le café bio, c’est quoi exactement ?",
-            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+            "richtext_reponse": "<p>Le café bio, c’est un café cultivé sans produits chimiques de synthèse.<br/>Concrètement, cela signifie pas de pesticides, pas d'engrais chimiques, pas d'OGM dans les plantations. Les cafés bio poussent souvent sous ombrage naturel, dans des environnements respectueux de la biodiversité.<br/><br/>Au Panier à Café, on sélectionne des cafés certifiés bio, mais aussi des cafés produits selon des pratiques durables, même sans label. Parce que pour nous, ce qui compte, c’est le respect de la terre, des producteurs… et de vos papilles.</p>"
           }
         },
-        "faq_item_9RMTc3": {
+        "faq_item_Lb8eCU": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Comment bien conserver son café en grain ?",
+            "richtext_reponse": "<p>Pour préserver tous les arômes de ton café, garde-le à l’abri de ses pires ennemis : l’air, la lumière, l’humidité et la chaleur.<br/><br/>Le mieux ? Un contenant hermétique, opaque et à température ambiante, pas dans le frigo ni dans un placard au-dessus du four.<br/><br/>Nos sachets sont déjà pensés pour une bonne conservation, alors referme-les bien après usage. Mais surtout, mouds ton café au fur et à mesure, pour en savourer toute la fraîcheur !</p>"
+          }
+        },
+        "faq_item_wGPXp9": {
           "type": "faq-item",
           "settings": {
             "text_question": "Quelles différences entre un café en méthode douce et un espresso ?",
-            "richtext_reponse": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>"
+            "richtext_reponse": "<p>Tout est une question d’extraction !<br/><br/>L’espresso, c’est un café préparé sous haute pression, en 25 à 30 secondes. Résultat : un café court, intense, avec du corps et une belle crème.<br/><br/>La méthode douce (comme la V60, la Chemex ou la cafetière à piston), utilise l’infusion par gravité. L’extraction est plus lente, ce qui donne une tasse plus légère, plus aromatique, parfaite pour savourer toutes les subtilités d’un café de spécialité.</p><p>Pour résumé : espresso = punchy / méthode douce = tout en finesse.</p>"
           }
         }
       },
       "block_order": [
-        "faq_item_enNk6C",
-        "faq_item_KDwLyY",
-        "faq_item_zNDFX6",
-        "faq_item_UHwAYP",
-        "faq_item_AVMdja",
-        "faq_item_njwYUi",
-        "faq_item_ka9qzi",
-        "faq_item_9RMTc3"
+        "faq_item_jkkDGH",
+        "faq_item_KXXzny",
+        "faq_item_imV4z4",
+        "faq_item_PJfQtL",
+        "faq_item_QpKWac",
+        "faq_item_Lb8eCU",
+        "faq_item_wGPXp9"
       ],
       "settings": {
         "text_heading": "Foire aux questions",
-        "richtext_richtext": "<p><br/>                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                </p>"
+        "richtext_richtext": "<p><br/>                </p>"
       }
     },
     "reseaux": {
@@ -337,7 +329,7 @@
     "1748597324bacaf247",
     "logo_defilants",
     "bandeau_hp6mre",
-    "faq",
+    "faq_HgMAbi",
     "reseaux"
   ]
 }
