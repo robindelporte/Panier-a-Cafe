@@ -46,6 +46,25 @@
     },
     "logo_defilants": {
       "type": "logo_defilants",
+      "blocks": {
+        "logo_defilants_mqBcX9": {
+          "type": "logo-defilants",
+          "settings": {}
+        },
+        "logo_defilants_inverses_z7nY84": {
+          "type": "logo-defilants-inverses",
+          "settings": {}
+        },
+        "logo_defilants_mifAer": {
+          "type": "logo-defilants",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "logo_defilants_mqBcX9",
+        "logo_defilants_inverses_z7nY84",
+        "logo_defilants_mifAer"
+      ],
       "settings": {
         "text_heading": "Ils nous font confiance"
       }
@@ -150,19 +169,7 @@
       "type": "faq",
       "settings": {
         "text_heading": "Foire aux questions",
-        "richtext_richtext": "<p>\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                </p>"
-      }
-    },
-    "reseaux": {
-      "type": "reseaux",
-      "settings": {
-        "text_heading": "Suivez-nous sur nos réseaux sociaux",
-        "image_image_1": "shopify://shop_images/panier-a-cafe_2.png",
-        "image_image_2": "shopify://shop_images/panier-a-cafe_3.png",
-        "image_image_3": "shopify://shop_images/panier-a-cafe_4.png",
-        "image_image_4": "shopify://shop_images/panier-a-cafe_5.png",
-        "image_image_5": "shopify://shop_images/panier-a-cafe_1.png",
-        "image_image_6_mobile": "shopify://shop_images/chr-image.webp"
+        "richtext_richtext": "<p><br/>                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                </p>"
       }
     }
   },
@@ -174,7 +181,6 @@
     "contenu_QbRp9z",
     "contenu_Pz8x47",
     "bandeau",
-    "faq",
-    "reseaux"
+    "faq"
   ]
 }
