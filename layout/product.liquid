@@ -140,7 +140,13 @@
 .tippy-box[data-placement^='right'] > .tippy-arrow::before {
   border-right-color: #77634F !important;
 }
-</style><script src="{{ '_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
+</style><script>document.querySelectorAll("form_input is-select").forEach(input => {
+    input.addEventListener("change", () => {
+        window.fsAttributes.modal.destroy();
+        window.fsAttributes.modal.init();
+    })
+})
+</script><script src="{{ '_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
 <body li-page="product">
 
 <div class="page-wrapper">{% render 'global_styles' %}
