@@ -336,7 +336,9 @@
         "carte_wrYq68",
         "carte_XhXpF4"
       ],
-      "settings": {}
+      "settings": {
+        "text_titre": ""
+      }
     },
     "contenu_kbV9Uz": {
       "type": "contenu",
