@@ -12,10 +12,11 @@
     "hero": {
       "type": "hero",
       "settings": {
+        "image_bild": "shopify://shop_images/Fabien_Roguet-7.webp",
         "text_headline": "Notre Histoire",
         "richtext_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
         "url_button_link": "",
-        "text_button_text": "More Information"
+        "text_button_text": "Découvrir"
       }
     },
     "contenu_avec_titre": {
