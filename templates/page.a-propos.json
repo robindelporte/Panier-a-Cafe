@@ -51,6 +51,7 @@
         "text_k6XLNc"
       ],
       "settings": {
+        "image_image": "shopify://shop_images/Sumatrasourcing-72.webp",
         "left_right": "right"
       }
     },
@@ -293,6 +294,46 @@
         "richtext_richtext": "<p><br/>                </p>"
       }
     },
+    "pages_PLch7t": {
+      "type": "pages",
+      "blocks": {
+        "carte_M8X3DE": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/histoire.webp",
+            "text_heading": "Notre histoire",
+            "url_link": "shopify://pages/a-propos",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_DdYjAw": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/atelier.webp",
+            "text_heading": "Les ateliers",
+            "url_link": "shopify://pages/professionnels",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_kmtBbx": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/association_0c2478a2-02cb-49a2-96e7-77834aad3dad.webp",
+            "text_heading": "L'association",
+            "url_link": "shopify://pages/lassociation",
+            "text_text": "Découvrir"
+          }
+        }
+      },
+      "block_order": [
+        "carte_M8X3DE",
+        "carte_DdYjAw",
+        "carte_kmtBbx"
+      ],
+      "settings": {
+        "text_titre": ""
+      }
+    },
     "liste_collections_fYdDw8": {
       "type": "liste_collections",
       "blocks": {
@@ -345,66 +386,6 @@
         "collection_tBKgPC"
       ],
       "settings": {}
-    },
-    "pages_PLch7t": {
-      "type": "pages",
-      "blocks": {
-        "carte_M8X3DE": {
-          "type": "carte",
-          "settings": {
-            "image_image": "shopify://shop_images/histoire.webp",
-            "text_heading": "Notre histoire",
-            "url_link": "shopify://pages/a-propos",
-            "text_text": "Découvrir"
-          }
-        },
-        "carte_DdYjAw": {
-          "type": "carte",
-          "settings": {
-            "image_image": "shopify://shop_images/atelier.webp",
-            "text_heading": "Les ateliers",
-            "url_link": "shopify://pages/professionnels",
-            "text_text": "Découvrir"
-          }
-        },
-        "carte_kmtBbx": {
-          "type": "carte",
-          "settings": {
-            "image_image": "shopify://shop_images/association_0c2478a2-02cb-49a2-96e7-77834aad3dad.webp",
-            "text_heading": "L'association",
-            "url_link": "shopify://pages/lassociation",
-            "text_text": "Découvrir"
-          }
-        }
-      },
-      "block_order": [
-        "carte_M8X3DE",
-        "carte_DdYjAw",
-        "carte_kmtBbx"
-      ],
-      "settings": {
-        "text_titre": ""
-      }
-    },
-    "reseaux_PEeYPG": {
-      "type": "reseaux",
-      "settings": {
-        "text_heading": "Suivez-nous sur nos réseaux sociaux",
-        "image_image_1": "shopify://shop_images/panier-a-cafe_2.png",
-        "image_image_2": "shopify://shop_images/panier-a-cafe_3.png",
-        "image_image_3": "shopify://shop_images/panier-a-cafe_4.png",
-        "image_image_4": "shopify://shop_images/panier-a-cafe_5.png",
-        "image_image_5": "shopify://shop_images/panier-a-cafe_1.png",
-        "image_image_6_mobile": "shopify://shop_images/revendeurs-image.webp"
-      }
-    },
-    "newsletter_TGbQ4W": {
-      "type": "newsletter",
-      "settings": {
-        "text_headline": "S'inscrire à la newsletter",
-        "text_checkbox": "En vous inscrivant, vous acceptez notre <a href=\"#\" li-settings:url=\"Politique de confidentialite\">politique de confidentialité</a> et consentez à recevoir des emails.",
-        "url_politique_de_confidentialite": ""
-      }
     }
   },
   "layout": "theme",
@@ -418,9 +399,7 @@
     "team",
     "team_3_QJygzt",
     "faq",
-    "liste_collections_fYdDw8",
     "pages_PLch7t",
-    "reseaux_PEeYPG",
-    "newsletter_TGbQ4W"
+    "liste_collections_fYdDw8"
   ]
 }
