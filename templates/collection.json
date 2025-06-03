@@ -19,19 +19,22 @@
     },
     "bandeau": {
       "type": "bandeau",
-      "settings": {}
+      "settings": {
+        "text_heading": "Heading"
+      }
     },
     "faq": {
       "type": "faq",
-      "settings": {}
+      "settings": {
+        "text_heading": "Foire aux questions",
+        "richtext_richtext": "<p>\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                </p>"
+      }
     },
     "collection_tabs": {
       "type": "collection_tabs",
-      "settings": {}
-    },
-    "reseaux": {
-      "type": "reseaux",
-      "settings": {}
+      "settings": {
+        "collection_list": []
+      }
     }
   },
   "layout": "collection",
@@ -41,7 +44,6 @@
     "collection_produits",
     "bandeau",
     "faq",
-    "collection_tabs",
-    "reseaux"
+    "collection_tabs"
   ]
 }

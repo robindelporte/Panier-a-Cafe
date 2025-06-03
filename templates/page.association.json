@@ -205,18 +205,6 @@
         "carte_e4iTER"
       ],
       "settings": {}
-    },
-    "reseaux_kCjQPx": {
-      "type": "reseaux",
-      "settings": {
-        "text_heading": "Suivez-nous sur nos réseaux sociaux",
-        "image_image_1": "shopify://shop_images/panier-a-cafe_2.png",
-        "image_image_2": "shopify://shop_images/panier-a-cafe_3.png",
-        "image_image_3": "shopify://shop_images/panier-a-cafe_4.png",
-        "image_image_4": "shopify://shop_images/panier-a-cafe_5.png",
-        "image_image_5": "shopify://shop_images/panier-a-cafe_1.png",
-        "image_image_6_mobile": "shopify://shop_images/revendeurs-image.webp"
-      }
     }
   },
   "layout": "page.association",
@@ -227,7 +215,6 @@
     "selection_manuel_DVdGBb",
     "card_swiper",
     "contenu_7FfWwj",
-    "pages_zhn4RK",
-    "reseaux_kCjQPx"
+    "pages_zhn4RK"
   ]
 }
