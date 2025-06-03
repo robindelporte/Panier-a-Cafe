@@ -244,8 +244,8 @@
   display: flex;
   transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-/* Au hover de product_atc-form - opacity puis display none apr&egrave;s */
-.product_atc-form:hover .product_quick-atc {
+/* Au hover de product_atc-form - opacity puis display none apr&egrave;s SEULEMENT si pas .is-no-variant */
+.product_atc-form:hover .product_quick-atc:not(.is-no-variant) {
   opacity: 0;
   transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), display 0s 0.35s;
   display: none;
