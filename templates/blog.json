@@ -1,12 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "blog_articles": {
-            "type": "blog_articles"
-        }
+  "sections": {
+    "blog_articles": {
+      "type": "blog_articles",
+      "settings": {
+        "text_headline": "Nouveautés du blog"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "blog_articles"
-    ]
+    "pages_9Afe6Y": {
+      "type": "pages",
+      "blocks": {
+        "carte_Jiq8wB": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/Cafe_El_Moustacho_4.webp",
+            "text_heading": "Cafés",
+            "url_link": "shopify://collections/cafes",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_HE3RYT": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/FILTRE_CHEMEX_4.jpg",
+            "text_heading": "Équipements",
+            "url_link": "shopify://collections/accessoires",
+            "text_text": "Découvrir"
+          }
+        },
+        "carte_fmUFCK": {
+          "type": "carte",
+          "settings": {
+            "image_image": "shopify://shop_images/Cafetiere_italienne_M_-_1_f06a513b-11e9-4780-b43f-6d3c2eb10c1d.webp",
+            "text_heading": "Machines",
+            "url_link": "shopify://collections/machines-et-cafetieres",
+            "text_text": "Découvrir"
+          }
+        }
+      },
+      "block_order": [
+        "carte_Jiq8wB",
+        "carte_HE3RYT",
+        "carte_fmUFCK"
+      ],
+      "settings": {
+        "text_titre": "Retrouvez nos produits"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "blog_articles",
+    "pages_9Afe6Y"
+  ]
 }
