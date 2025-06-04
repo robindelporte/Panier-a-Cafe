@@ -6112,10 +6112,16 @@ figcaption {
 
 .nav_menu-dropdown {
   z-index: 1;
+  border-radius: .5rem;
   align-items: stretch;
   height: 3rem;
+  transition: all .25s;
   display: flex;
   position: static;
+}
+
+.nav_menu-dropdown:hover {
+  background-color: #77634f1a;
 }
 
 .nav_dropdown-toggle {
@@ -9115,6 +9121,10 @@ figcaption {
 
   .pro_layout {
     display: flex;
+  }
+
+  .nav_menu-dropdown:hover {
+    background-color: var(--_primitives---opacity--transparent);
   }
 
   .nav_dropdown-link_child {
