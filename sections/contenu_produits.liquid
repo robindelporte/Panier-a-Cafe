@@ -47,7 +47,11 @@
                                 </div>
                               </li>
                               {% assign machine = product.metafields.custom.machine.value %}
-                              {% assign specialites_raw = machine.specialites | strip_newlines %}
+                              {% assign specialites_raw = machine.specialites
+                                | strip_newlines
+                                | remove: '['
+                                | remove: ']'
+                              %}
                               {% assign specialites = specialites_raw | split: '","' %}
 
                               {%- for specialite in specialites -%}
