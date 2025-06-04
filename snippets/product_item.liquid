@@ -204,7 +204,9 @@
       <div li-object="product.title" class="product_name">{{ product.title }}</div>
       <div>
         {% assign arome = product.metafields.custom.famille_aromatique.value %}
-        <div li-object="arome_famille_aromatique.nom.fist">{{ arome.nom }}</div>
+        {% for item in arome %}
+          <div li-object="arome_famille_aromatique.nom.fist">{{ arome.nom }}</div>
+        {% endfor %}
       </div>
     </div>
     <div class="product-item_price">
@@ -221,4 +223,3 @@
     </div>
   </a>
 </div>
-{{ product.metafields.custom.famille_aromatique | json }}
