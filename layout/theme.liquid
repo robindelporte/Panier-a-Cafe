@@ -86,6 +86,38 @@
        });
    });
 });
+</script><script>document.addEventListener('DOMContentLoaded', function() {
+    // 1. Auto-reload apr&egrave;s ajout du don au panier
+    const donButton = document.querySelector('[data-donation="true"] [li-element="add-to-cart"]');
+    if (donButton) {
+        donButton.addEventListener('click', function() {
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
+        });
+    }
+    // 2. Affichage &euro; dans l'input quantit&eacute; du don
+    const donQuantityInput = document.querySelector('[data-donation="true"] [li-element="add-to-cart-quantity"]');
+    if (donQuantityInput) {
+        // Afficher &euro; quand on sort du champ
+        donQuantityInput.addEventListener('blur', function() {
+            if (!this.value.includes('&euro;')) {
+                this.value = this.value + '&euro;';
+            }
+        });
+        // Enlever &euro; quand on entre dans le champ
+        donQuantityInput.addEventListener('focus', function() {
+            this.value = this.value.replace('&euro;', '');
+        });
+        // S'assurer que la valeur reste num&eacute;rique pour Alpine
+        donQuantityInput.addEventListener('input', function() {
+            const numericValue = this.value.replace('&euro;', '');
+            if (isNaN(numericValue)) {
+                this.value = '1';
+            }
+        });
+    }
+});
 </script>
 </body>
 </html>
