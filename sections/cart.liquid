@@ -82,6 +82,7 @@
                     placeholder="1"
                     type="number"
                     id="updates[]"
+                    x-on:change="$el.closest('form').submit()"
                     required=""
                     value="{{ item.quantity }}"
                   >
