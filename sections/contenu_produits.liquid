@@ -46,36 +46,26 @@
                                   {{ section.settings.text_6 }}
                                 </div>
                               </li>
-                              {% assign machine = product.metafields.custom.machine.value %}
-                              {% assign specialites_raw = machine.specialites
-                                | strip_newlines
-                                | remove: '['
-                                | remove: ']'
-                              %}
-                              {% assign specialites = specialites_raw | split: '","' %}
+                              <li li-for="specialite in specialites" class="tableau_list-item">
+                                <div class="display-inlineflex display-align-center gap-0-75">
+                                  <div li-object="specialite">{{ specialite | remove: '"' | strip }}</div>
+                                </div>
 
-                              {%- for specialite in specialites -%}
-                                <li li-for="specialite in specialites" class="tableau_list-item">
-                                  <div class="display-inlineflex display-align-center gap-0-75">
-                                    <div li-object="specialite">{{ specialite | remove: '"' | strip }}</div>
-                                  </div>
-
-                                  <div class="icon-embed-xsmall w-embed">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      width="100%"
-                                      height="100%"
-                                      viewbox="0 0 24 24"
-                                      fill="none"
-                                      preserveaspectratio="xMidYMid meet"
-                                      aria-hidden="true"
-                                      role="img"
-                                    >
-                                      <mask id="mask0_7952_15246" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_7952_15246)"><path d="M9.54976 15.515L18.1883 6.87653C18.3369 6.7277 18.5109 6.6517 18.7103 6.64853C18.9096 6.64537 19.0868 6.72137 19.242 6.87653C19.3972 7.0317 19.4748 7.20987 19.4748 7.41103C19.4748 7.61237 19.3972 7.79061 19.242 7.94578L10.1825 17.0208C10.0017 17.2014 9.79076 17.2918 9.54976 17.2918C9.30876 17.2918 9.09785 17.2014 8.91701 17.0208L4.74201 12.8458C4.59335 12.6969 4.52001 12.5203 4.52201 12.3158C4.52385 12.1114 4.60235 11.9317 4.75751 11.7765C4.91268 11.6214 5.09085 11.5438 5.29201 11.5438C5.49335 11.5438 5.6716 11.6214 5.82676 11.7765L9.54976 15.515Z" fill="#1C1B1F"></path></g>
-                                    </svg>
-                                  </div>
-                                </li>
-                              {% endfor %}
+                                <div class="icon-embed-xsmall w-embed">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="100%"
+                                    height="100%"
+                                    viewbox="0 0 24 24"
+                                    fill="none"
+                                    preserveaspectratio="xMidYMid meet"
+                                    aria-hidden="true"
+                                    role="img"
+                                  >
+                                    <mask id="mask0_7952_15246" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_7952_15246)"><path d="M9.54976 15.515L18.1883 6.87653C18.3369 6.7277 18.5109 6.6517 18.7103 6.64853C18.9096 6.64537 19.0868 6.72137 19.242 6.87653C19.3972 7.0317 19.4748 7.20987 19.4748 7.41103C19.4748 7.61237 19.3972 7.79061 19.242 7.94578L10.1825 17.0208C10.0017 17.2014 9.79076 17.2918 9.54976 17.2918C9.30876 17.2918 9.09785 17.2014 8.91701 17.0208L4.74201 12.8458C4.59335 12.6969 4.52001 12.5203 4.52201 12.3158C4.52385 12.1114 4.60235 11.9317 4.75751 11.7765C4.91268 11.6214 5.09085 11.5438 5.29201 11.5438C5.49335 11.5438 5.6716 11.6214 5.82676 11.7765L9.54976 15.515Z" fill="#1C1B1F"></path></g>
+                                  </svg>
+                                </div>
+                              </li>
                             </ul>
                           </div>
                           <div class="tableau_wrapper">
