@@ -31,19 +31,9 @@
     <div class="product_quick-atc-wrapper"><a li-object:href="product.url" href="{{ product.url }}" class="product_quick-atc is-no-variant w-inline-block"><div>Voir le produit</div></a></div>    </div>
 {% endif %}</div><div class="spacer-xxsmall"></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link w-inline-block"><div li-case="" class="product-item_left">
 {% case  %}
-<div li-object="product.title" class="product_name">{{ product.title }}</div><div li-case="product.type">
-{% case product.type %}
-{% when 'Cafe' %} 
-<div li-when="'Cafe'">
-{% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' | slice: 0, 2 %}<div li-object="aromeNames">{{ aromeNames }}</div></div>
-{% when 'The' %} 
-<div li-when="'The'">
-{% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' | slice: 0, 2 %}
-<div li-object="aromeNames">{{ aromeNames }}</div></div>
-{% endcase %}
-</div>
-
-{% endcase %}
+<div li-object="product.title" class="product_name">{{ product.title }}</div><div>{% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' | slice: 0, 2 %}{% if aromeNames and aromeNames.size > 0 %}    <div li-if="aromeNames and aromeNames.size > 0">
+    <div li-object="aromeNames">{{ aromeNames }}</div>    </div>
+{% endif %}</div>{% endcase %}
 </div>
 
 <div class="product-item_price">{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="padding-bottom padding-xxxsmall">
