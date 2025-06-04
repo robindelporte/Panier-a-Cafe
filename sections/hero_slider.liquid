@@ -2,7 +2,7 @@
     {% if block.type == "slide" %}
                     <div li-block="Slide" class="swiper-slide is-home-hero">
                                     
-                                    <div class="container-large"><div class="swiper_content"><h1 class="heading-style-h1"> {{ block.settings.textarea_heading }} </h1>
+                                    <div class="container-large"><div class="swiper_content"><div class="heading-style-h1"> {{ block.settings.richtext_heading }} </div>
 <div class="text-size-regular">
 {{ block.settings.text_text }}
 </div>
@@ -70,4 +70,4 @@
     });
   });
 });
-</script></div> {% schema %} {"tag":"section","name":"Hero Slider","class":"section_home-hero","blocks":[{"name":"Slide","type":"slide","settings":[{"id":"textarea_heading","type":"textarea","label":"Heading","default":"Heading"},{"id":"text_text","type":"text","label":"Text","default":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. "},{"id":"url_button_1_link","type":"url","label":"Button 1 Link"},{"id":"text_button_1_text","type":"text","label":"Button 1 Text","default":"Button Text"},{"id":"image_image_desktop","type":"image_picker","label":"Image Desktop"},{"id":"image_image_mobile","type":"image_picker","label":"Image Mobile"},{"type":"header","content":"Video"},{"type":"video","id":"video_desktop","label":"Video Desktop"},{"type":"video","id":"video_mobile","label":"Video Mobile"}]}],"presets":[{"name":"Hero Slider","category":"Liquify","blocks":[{"type":"slide"}]}]} {% endschema %}
+</script></div> {% schema %} {"tag":"section","name":"Hero Slider","class":"section_home-hero","blocks":[{"name":"Slide","type":"slide","settings":[{"id":"richtext_heading","type":"richtext","label":"Heading","default":"<p>Heading<\/p>"},{"id":"text_text","type":"text","label":"Text","default":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. "},{"id":"url_button_1_link","type":"url","label":"Button 1 Link"},{"id":"text_button_1_text","type":"text","label":"Button 1 Text","default":"Button Text"},{"id":"image_image_desktop","type":"image_picker","label":"Image Desktop"},{"id":"image_image_mobile","type":"image_picker","label":"Image Mobile"},{"type":"header","content":"Video"},{"type":"video","id":"video_desktop","label":"Video Desktop"},{"type":"video","id":"video_mobile","label":"Video Mobile"}]}],"presets":[{"name":"Hero Slider","category":"Liquify","blocks":[{"type":"slide"}]}]} {% endschema %}
