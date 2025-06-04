@@ -17,8 +17,8 @@
             "type": "menu",
             "settings": {
               "text_menu": "Cafés",
-              "product_produit_en_avant_1": "cafe-aymara",
-              "product_produit_en_avant_2": "cafe-cascara-cascarita",
+              "product_produit_en_avant_1": "cafe-el-moustacho",
+              "product_produit_en_avant_2": "cafe-el-viento",
               "menu": "menu-test"
             }
           },
