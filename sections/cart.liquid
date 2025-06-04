@@ -76,26 +76,6 @@
                   <input
                     class="cart_quantity w-input"
                     li-object:value="item.quantity"
-                    x-data="
-                      {
-                        updateCart() {
-                          fetch('/cart/change.js', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                              id: '{{ item.variant_id }}',
-                              quantity: parseInt(this.value)
-                            })
-                          }).then(() => {
-                            // Mettre à jour juste les totaux sans reload
-                            fetch('/cart.js').then(r => r.json()).then(cart => {
-                              // Mettre à jour l'affichage
-                            });
-                          });
-                        }
-                      }
-                    "
-                    x-on:change="updateCart()"
                     maxlength="256"
                     name="updates[]"
                     data-name="Updates"
