@@ -204,6 +204,7 @@
       <div li-object="product.title" class="product_name">{{ product.title }}</div>
       <div>
         {% assign arome = product.metafields.custom.famille_aromatique.value %}
+        {{ product.metafields.custom.famille_aromatique | json }}
         <div li-object="arome_famille_aromatique.nom.fist">{{ arome.famille_aromatique.nom.fist }}</div>
       </div>
     </div>
