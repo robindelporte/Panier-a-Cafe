@@ -94,17 +94,33 @@
             setTimeout(() => location.reload(), 1000);
         });
     }
-    // 2. Affichage &euro; simple
-    const donQuantityInput = document.querySelector('[data-donation="true"] [li-element="add-to-cart-quantity"]');
-    if (donQuantityInput) {
-        donQuantityInput.addEventListener('blur', function() {
-            if (this.value && !this.value.includes('&euro;')) {
-                this.value = this.value + '&euro;';
+    // 2. Gestion compl&egrave;te quantit&eacute; + currency
+    const donContainer = document.querySelector('[data-donation="true"]');
+    if (donContainer) {
+        const input = donContainer.querySelector('.quantity-display.is-don');
+        const decreaseBtn = donContainer.querySelector('[data-action="decrease"]');
+        const increaseBtn = donContainer.querySelector('[data-action="increase"]');
+        let quantity = 1;
+        function updateDisplay() {
+            input.value = quantity + '&euro;';
+            // Synchroniser avec Alpine si n&eacute;cessaire
+            const alpineContainer = input.closest('[x-data]');
+            if (alpineContainer && alpineContainer.__x) {
+                alpineContainer.__x.$data.quantity = quantity;
             }
-        });
-        donQuantityInput.addEventListener('focus', function() {
-            this.value = this.value.replace('&euro;', '');
-        });
+        }
+        function updateQuantity(change) {
+            const newQuantity = quantity + change;
+            if (newQuantity >= 1 && newQuantity <= 99) {
+                quantity = newQuantity;
+                updateDisplay();
+            }
+        }
+        // Events
+        decreaseBtn.addEventListener('click', () => updateQuantity(-1));
+        increaseBtn.addEventListener('click', () => updateQuantity(1));
+        // Initialiser l'affichage
+        updateDisplay();
     }
 });
 </script>
