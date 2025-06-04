@@ -30,11 +30,11 @@
                         </div>
                       </div>
                       {% assign machine = product.metafields.custom.machine.value %}
-                      {% assign specialites = machine.specialites %}
-                      DEBUG: {{ specialites }}
+                      {% assign liste_specialites = machine.specialites %}
+                      DEBUG: {{ liste_specialites }}
 
-                      {% for specialite in specialites %}
-                        <p>{{ specialite }}</p>
+                      {% for item in liste_specialites %}
+                        <p>{{ item }}</p>
                       {% endfor %}
                       <div class="caracteristiques_tabs-pane-content">
                         <div class="caracteristiques_tabs-pane-column">
