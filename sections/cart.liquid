@@ -76,6 +76,7 @@
                   <input
                     class="cart_quantity w-input"
                     li-object:value="item.quantity"
+                    x-on:change="$el.closest('form').submit()"
                     maxlength="256"
                     name="updates[]"
                     data-name="Updates"
