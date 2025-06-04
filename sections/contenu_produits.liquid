@@ -32,8 +32,6 @@
                       <div class="caracteristiques_tabs-pane-content">
                         <div class="caracteristiques_tabs-pane-column">
                           <div class="tableau_wrapper">
-                            {% assign machine = product.metafields.custom.machine.value %}
-                            {% assign specialites = machine.specialites %}
                             <ul role="list" class="tableau_list w-list-unstyled">
                               <li class="tableau_list-item is-heading">
                                 <h3 class="text-size-large text-font-body text-weight-bold">
@@ -48,7 +46,9 @@
                                   {{ section.settings.text_6 }}
                                 </div>
                               </li>
-                              {% for specialites in specialites %}
+                              {% assign machine = product.metafields.custom.machine.value %}
+                              {% assign specialites = machine.specialites %}
+                              {% for specialite in specialites %}
                                 <li li-for="specialite in specialites" class="tableau_list-item">
                                   <div class="display-inlineflex display-align-center gap-0-75">
                                     <div li-object="specialite">{{ specialites }}</div>
