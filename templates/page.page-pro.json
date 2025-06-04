@@ -49,15 +49,39 @@
       "blocks": {
         "logo_defilants_mqBcX9": {
           "type": "logo-defilants",
-          "settings": {}
+          "settings": {
+            "image_logo_1": "shopify://shop_images/L_ecuelle.png",
+            "image_logo_2": "shopify://shop_images/logoOK-noirFondTransparent_1.webp",
+            "image_logo_3": "shopify://shop_images/Haven.png",
+            "image_logo_4": "shopify://shop_images/Clos_des_sens.png",
+            "image_logo_5": "shopify://shop_images/logos_confiance_fournil_villaz.png",
+            "image_logo_6": "shopify://shop_images/Barbich_1.png"
+          },
+          "blocks": {}
         },
         "logo_defilants_inverses_z7nY84": {
           "type": "logo-defilants-inverses",
-          "settings": {}
+          "settings": {
+            "image_logo_1": "shopify://shop_images/Poco_A_Poco.png",
+            "image_logo_2": "shopify://shop_images/6657156564c0cc4a0d25a731_Otera_logo.webp",
+            "image_logo_3": "shopify://shop_images/LPC4.webp",
+            "image_logo_4": "shopify://shop_images/Logo_1.png",
+            "image_logo_5": "shopify://shop_images/logo_client.png",
+            "image_logo_6": "shopify://shop_images/LOGO_LES_FINES_BOUCHES_FOND_TRANSPARANT.png"
+          },
+          "blocks": {}
         },
         "logo_defilants_mifAer": {
           "type": "logo-defilants",
-          "settings": {}
+          "settings": {
+            "image_logo_1": "shopify://shop_images/salomon.png",
+            "image_logo_2": "shopify://shop_images/vinci.png",
+            "image_logo_3": "shopify://shop_images/pilot.png",
+            "image_logo_4": "shopify://shop_images/ixina.png",
+            "image_logo_5": "shopify://shop_images/in-motion.png",
+            "image_logo_6": "shopify://shop_images/geometre.png"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
