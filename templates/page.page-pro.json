@@ -115,6 +115,7 @@
       ],
       "name": "Contenu",
       "settings": {
+        "image_image": "shopify://shop_images/Torref_pour_impression_1.webp",
         "left_right": "right"
       }
     },
@@ -140,6 +141,7 @@
       ],
       "name": "Contenu",
       "settings": {
+        "image_image": "shopify://shop_images/V1A2466_1.webp",
         "left_right": "left"
       }
     },
