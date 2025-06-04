@@ -102,27 +102,40 @@
         const input = donContainer.querySelector('.quantity-display.is-don');
         const decreaseBtn = donContainer.querySelector('[data-action="decrease"]');
         const increaseBtn = donContainer.querySelector('[data-action="increase"]');
-        let quantity = 1;
-        function updateDisplay() {
-            input.value = quantity + '&euro;';
+        function getCurrentQuantity() {
+            // R&eacute;cup&eacute;rer la valeur actuelle de l'input
+            return parseInt(input.value.replace('&euro;', '')) || 1;
+        }
+        function updateDisplay(newQuantity) {
+            input.value = newQuantity + '&euro;';
             // Synchroniser avec Alpine si n&eacute;cessaire
             const alpineContainer = input.closest('[x-data]');
             if (alpineContainer && alpineContainer.__x) {
-                alpineContainer.__x.$data.quantity = quantity;
+                alpineContainer.__x.$data.quantity = newQuantity;
             }
         }
         function updateQuantity(change) {
-            const newQuantity = quantity + change;
+            const currentQuantity = getCurrentQuantity(); // R&eacute;cup&eacute;rer la valeur actuelle
+            const newQuantity = currentQuantity + change;
             if (newQuantity >= 1 && newQuantity <= 99) {
-                quantity = newQuantity;
-                updateDisplay();
+                updateDisplay(newQuantity);
             }
         }
         // Events
-        decreaseBtn.addEventListener('click', () => updateQuantity(-1));
-        increaseBtn.addEventListener('click', () => updateQuantity(1));
+        if (decreaseBtn) {
+            decreaseBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                updateQuantity(-1);
+            });
+        }
+        if (increaseBtn) {
+            increaseBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                updateQuantity(1);
+            });
+        }
         // Initialiser l'affichage
-        updateDisplay();
+        updateDisplay(1);
     }
 });
 </script>
