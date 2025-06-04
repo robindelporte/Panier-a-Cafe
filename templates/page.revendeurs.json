@@ -193,9 +193,10 @@
             "image_logo_2": "shopify://shop_images/Le_Bon_Wagon.jpg",
             "image_logo_3": "shopify://shop_images/LPC4.webp",
             "image_logo_4": "shopify://shop_images/Poco_A_Poco.png",
-            "image_logo_5": "shopify://shop_images/logo_source.jpg",
+            "image_logo_5": "shopify://shop_images/La_Source_LOGO.png",
             "image_logo_6": "shopify://shop_images/LOGO_MENTHON_Blason_only.png"
-          }
+          },
+          "blocks": {}
         },
         "logo_defilants_6jkfFC": {
           "type": "logo-defilants",
@@ -206,7 +207,8 @@
             "image_logo_4": "shopify://shop_images/Haven.png",
             "image_logo_5": "shopify://shop_images/Barbich.png",
             "image_logo_6": "shopify://shop_images/logo_client.png"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
