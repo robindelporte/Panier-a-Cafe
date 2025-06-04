@@ -203,10 +203,8 @@
     <div class="product-item_left">
       <div li-object="product.title" class="product_name">{{ product.title }}</div>
       <div>
-        {% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' %}
-        {% for nom in aromeNames %}
-          <p li-object="nom">{{ nom }}</p>
-        {% endfor %}
+        {% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' | slice: 0, 2 %}
+        <p li-object="aromeNames">{{ aromeNames | join: ', ' }}</p>
       </div>
     </div>
     <div class="product-item_price">
