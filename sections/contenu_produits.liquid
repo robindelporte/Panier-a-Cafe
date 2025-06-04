@@ -46,9 +46,10 @@
                                   {{ section.settings.text_6 }}
                                 </div>
                               </li>
-                              {{ product.metafields.custom.machine.value.specialites | json }}
                               {% assign machine = product.metafields.custom.machine.value %}
-                              {% assign specialites = machine.specialites %}
+                              {% assign liste_specialites = machine.specialites %}
+                              DEBUG:
+                              {{ liste_specialites }}
                               {% for specialite in specialites %}
                                 <li li-for="specialite in specialites" class="tableau_list-item">
                                   <div class="display-inlineflex display-align-center gap-0-75">
