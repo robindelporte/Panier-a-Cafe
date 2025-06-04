@@ -127,8 +127,7 @@
 });
     </script>
     <script>
-            document.addEventListener('DOMContentLoaded', function() {
-          // Attendre qu'Alpine soit initialisé
+      document.addEventListener('DOMContentLoaded', function() {
           setTimeout(() => {
               // 1. Auto-reload après ajout du don
               const donButton = document.querySelector('[data-donation="true"] [li-element="add-to-cart"]');
@@ -138,27 +137,47 @@
                   });
               }
 
-              // 2. Gestion €
+              // 2. Gestion € avec synchronisation Alpine
               const donQuantityInput = document.querySelector('[data-donation="true"] [li-element="add-to-cart-quantity"]');
-              if (donQuantityInput) {
-                  console.log('Input trouvé:', donQuantityInput); // Debug
+              const donContainer = document.querySelector('[data-donation="true"]');
 
+              if (donQuantityInput && donContainer) {
+                  // Intercepter les clics sur les boutons +/-
+                  const incrementBtn = donContainer.querySelector('.quantity-btn.increment');
+                  const decrementBtn = donContainer.querySelector('.quantity-btn.decrement');
+
+                  // Fonction pour nettoyer et synchroniser
+                  function syncValue() {
+                      const numericValue = parseInt(donQuantityInput.value.replace('€', '')) || 1;
+                      donQuantityInput.value = numericValue; // Enlever € temporairement
+
+                      // Laisser Alpine traiter le clic
+                      setTimeout(() => {
+                          // Récupérer la nouvelle valeur après Alpine
+                          const alpineContainer = donQuantityInput.closest('[x-data]');
+                          if (alpineContainer && alpineContainer.__x) {
+                              const newValue = alpineContainer.__x.$data.quantity;
+                              donQuantityInput.value = newValue;
+                          }
+                      }, 100);
+                  }
+
+                  // Écouter les clics sur +/-
+                  if (incrementBtn) incrementBtn.addEventListener('click', syncValue);
+                  if (decrementBtn) decrementBtn.addEventListener('click', syncValue);
+
+                  // Gestion focus/blur
                   donQuantityInput.addEventListener('blur', function() {
-                      console.log('Blur déclenché, valeur:', this.value); // Debug
                       if (!this.value.includes('€')) {
                           this.value = this.value + '€';
-                          console.log('Nouvelle valeur:', this.value); // Debug
                       }
                   });
 
                   donQuantityInput.addEventListener('focus', function() {
-                      console.log('Focus déclenché'); // Debug
                       this.value = this.value.replace('€', '');
                   });
-              } else {
-                  console.log('Input non trouvé !'); // Debug
               }
-          }, 1000); // Attendre 1 seconde après le DOM
+          }, 1000);
       });
     </script>
   </body>
