@@ -47,11 +47,12 @@
                                 </div>
                               </li>
                               {% assign machine = product.metafields.custom.machine.value %}
-                              {% assign specialites = machine.specialites | split: ',' %}
+                              {% assign specialites = machine.specialites %}
+
                               {% for specialite in specialites %}
                                 <li li-for="specialite in specialites" class="tableau_list-item">
                                   <div class="display-inlineflex display-align-center gap-0-75">
-                                    <div li-object="specialite">{{ specialite | strip }}</div>
+                                    <div li-object="specialite">{{ specialite }}</div>
                                   </div>
 
                                   <div class="icon-embed-xsmall w-embed">
