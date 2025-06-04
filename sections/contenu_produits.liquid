@@ -3,13 +3,13 @@
 {% when 'Machine' %} 
 <div li-when="'Machine'">
 <section class="section_caracteristiques"><div class="padding-global"><div class="padding-section-medium"><div class="container-large"><div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="caracteristiques_component w-tabs"><div class="caracteristiques_tabs-menu w-tab-menu"><a data-w-tab="Tab 1" class="button is-tab-button w-inline-block w-tab-link w--current"><div>Données techniques</div></a><a data-w-tab="Tab 2" class="button is-tab-button w-inline-block w-tab-link"><div>Avantages</div></a></div><div class="caracteristiques_tabs-content w-tab-content"><div data-w-tab="Tab 1" class="caracteristiques_tabs-pane w-tab-pane w--tab-active"><div class="margin-bottom margin-medium"><div class="button-group is-center"><a href="{{ section.settings.url_button_link }}" class="button is-secondary w-button"> {{ section.settings.text_button_text }} </a>
-</div></div><div class="caracteristiques_tabs-pane-content"><div class="caracteristiques_tabs-pane-column"><div class="tableau_wrapper"><ul role="list" class="tableau_list w-list-unstyled"><li class="tableau_list-item is-heading"><h3 class="text-size-large text-font-body text-weight-bold">
+</div></div><div class="caracteristiques_tabs-pane-content"><div class="caracteristiques_tabs-pane-column"><div class="tableau_wrapper">{% assign machine = product.metafields.custom.machine.value %}{% assign specialites = machine.machine_a_cafe.specialites.value | map: 'nom' %}<ul role="list" class="tableau_list w-list-unstyled"><li class="tableau_list-item is-heading"><h3 class="text-size-large text-font-body text-weight-bold">
 {{ section.settings.text_tableau_1 }}
 </h3>
 </li><li class="tableau_list-item"><div class="display-inlineflex display-align-center gap-0-75"><div>Nombre de spécialité</div></div><div>
 {{ section.settings.text_6 }}
 </div>
-</li>{% for specialite in product.metafields.custom.machine_a_cafe.specialites %}    <li li-for="specialite in product.metafields.custom.machine_a_cafe.specialites" class="tableau_list-item">
+</li>{% for specialite in specialites %}    <li li-for="specialite in specialites" class="tableau_list-item">
                                     
                             <div class="display-inlineflex display-align-center gap-0-75"><div li-object="specialite">{{ specialite }}</div></div>
                             
