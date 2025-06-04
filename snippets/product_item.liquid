@@ -29,13 +29,8 @@
     <div class="product_quick-atc-wrapper"><a li-object:href="product.url" href="{{ product.url }}" class="product_quick-atc is-no-variant w-inline-block"><div>Voir le produit</div></a></div>    </div>
 {% endif %}{% if product.has_only_default_variant != true and product.options.size == 1 and product.options.first.values.size > 2 %}    <div li-if="product.has_only_default_variant != true and product.options.size == 1 and product.options.first.values.size > 2" class="product_atc-form">
     <div class="product_quick-atc-wrapper"><a li-object:href="product.url" href="{{ product.url }}" class="product_quick-atc is-no-variant w-inline-block"><div>Voir le produit</div></a></div>    </div>
-{% endif %}</div><div class="spacer-xxsmall"></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link w-inline-block"><div li-case="" class="product-item_left">
-{% case  %}
-<div li-object="product.title" class="product_name">{{ product.title }}</div><div>{% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' | slice: 0, 2 %}{% if aromeNames and aromeNames.size > 0 %}    <div li-if="aromeNames and aromeNames.size > 0">
+{% endif %}</div><div class="spacer-xxsmall"></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link w-inline-block"><div class="product-item_left"><div li-object="product.title" class="product_name">{{ product.title }}</div><div>{% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' | slice: 0, 2 %}{% if aromeNames and aromeNames.size > 0 %}    <div li-if="aromeNames and aromeNames.size > 0">
     <div li-object="aromeNames">{{ aromeNames }}</div>    </div>
-{% endif %}</div>{% endcase %}
-</div>
-
-<div class="product-item_price">{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="padding-bottom padding-xxxsmall">
+{% endif %}</div></div><div class="product-item_price">{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="padding-bottom padding-xxxsmall">
     <div li-object="product.compare_at_price | money" class="text-size-small">{{ product.compare_at_price | money }}</div>    </div>
 {% endif %}<div li-object="product.price | money" class="text-size-regular text-weight-bold">{{ product.price | money }}</div></div></a></div>
