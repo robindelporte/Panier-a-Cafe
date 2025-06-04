@@ -35,8 +35,7 @@
 {% case product.type %}
 {% when 'Cafe' %} 
 <div li-when="'Cafe'">
-{% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' | slice: 0, 2 %}
-<div li-object="aromeNames">{{ aromeNames }}</div></div>
+{% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' | slice: 0, 2 %}<div li-object="aromeNames">{{ aromeNames }}</div></div>
 {% when 'The' %} 
 <div li-when="'The'">
 {% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' | slice: 0, 2 %}
