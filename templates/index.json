@@ -15,7 +15,7 @@
         "slide_W8mLC8": {
           "type": "slide",
           "settings": {
-            "textarea_heading": "Le Panier à Café, \nTorréfacteur \nGastronome à Annecy",
+            "richtext_heading": "<h1>Le Panier à Café, </h1><h1>Torréfacteur Gastronome </h1><h1>à Annecy</h1>",
             "text_text": "",
             "url_button_1_link": "shopify://collections/cafes",
             "text_button_1_text": "Découvrir",
