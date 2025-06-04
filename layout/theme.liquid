@@ -127,7 +127,7 @@
 });
     </script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function() {
           // 1. Auto-reload après ajout du don
           const donButton = document.querySelector('[data-donation="true"] [li-element="add-to-cart"]');
           if (donButton) {
@@ -143,25 +143,27 @@
               const decreaseBtn = donContainer.querySelector('[data-action="decrease"]');
               const increaseBtn = donContainer.querySelector('[data-action="increase"]');
 
-              // Récupérer la valeur initiale
-              let quantity = parseInt(input.value) || 1;
+              function getCurrentQuantity() {
+                  // Récupérer la valeur actuelle de l'input
+                  return parseInt(input.value.replace('€', '')) || 1;
+              }
 
-              function updateDisplay() {
-                  // Utiliser innerHTML au lieu de value pour éviter l'encodage
-                  input.value = quantity + '€';
+              function updateDisplay(newQuantity) {
+                  input.value = newQuantity + '€';
 
                   // Synchroniser avec Alpine si nécessaire
                   const alpineContainer = input.closest('[x-data]');
                   if (alpineContainer && alpineContainer.__x) {
-                      alpineContainer.__x.$data.quantity = quantity;
+                      alpineContainer.__x.$data.quantity = newQuantity;
                   }
               }
 
               function updateQuantity(change) {
-                  const newQuantity = quantity + change;
+                  const currentQuantity = getCurrentQuantity(); // Récupérer la valeur actuelle
+                  const newQuantity = currentQuantity + change;
+
                   if (newQuantity >= 1 && newQuantity <= 99) {
-                      quantity = newQuantity;
-                      updateDisplay();
+                      updateDisplay(newQuantity);
                   }
               }
 
@@ -181,7 +183,7 @@
               }
 
               // Initialiser l'affichage
-              updateDisplay();
+              updateDisplay(1);
           }
       });
     </script>
