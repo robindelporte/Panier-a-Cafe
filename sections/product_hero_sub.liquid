@@ -48,11 +48,13 @@
 <div class="product_header-tag-text">
 {{ section.settings.text_badges_variete_cafe_texte }}
 </div>
-</div><div class="product_header-tag"><img src="{{ section.settings.image_badges_certification_cafe_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_badges_certification_cafe_image.alt }}" class="icon-embed-xsmall is-cover">
+</div>{% if product.metafields.custom.certification %}    <div li-if="product.metafields.custom.certification" class="product_header-tag">
+    <img src="{{ section.settings.image_badges_certification_cafe_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_badges_certification_cafe_image.alt }}" class="icon-embed-xsmall is-cover">
 <div class="product_header-tag-text">
 {{ section.settings.text_badges_certification_cafe_texte }}
 </div>
-</div></div>
+    </div>
+{% endif %}</div>
 {% when 'The' %} 
 <div li-when="'The'" class="product-header_tag-list">
 <div class="product_header-tag"><div class="product_header-tag-text">
