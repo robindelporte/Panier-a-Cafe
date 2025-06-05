@@ -12,6 +12,26 @@
     "hero_slider": {
       "type": "hero_slider",
       "blocks": {
+        "slide_iMn83X": {
+          "type": "slide",
+          "settings": {
+            "richtext_heading": "<h1>Le Panier à Café, </h1><h1>Torréfacteur gastronome</h1><h1>à Annecy</h1>",
+            "text_text": "",
+            "url_button_1_link": "",
+            "text_button_1_text": "Button Text",
+            "image_image_desktop": "shopify://shop_images/Sumatrasourcing-74_1.webp"
+          }
+        },
+        "slide_RNTMcM": {
+          "type": "slide",
+          "settings": {
+            "richtext_heading": "<p>Tout commence ici. Avec la nature, avec l’humain</p>",
+            "text_text": "",
+            "url_button_1_link": "",
+            "text_button_1_text": "Découvrir",
+            "image_image_desktop": "shopify://shop_images/ben_producteur.webp"
+          }
+        },
         "slide_W8mLC8": {
           "type": "slide",
           "settings": {
@@ -22,21 +42,12 @@
             "video_desktop": "shopify://files/videos/panier-a-cafe.mp4",
             "video_mobile": "shopify://files/videos/panier-a-cafe.mp4"
           }
-        },
-        "slide_iMn83X": {
-          "type": "slide",
-          "settings": {
-            "richtext_heading": "<h2>Tout commence ici,</h2><h2>avec la nature, avec l’humain</h2>",
-            "text_text": "",
-            "url_button_1_link": "shopify://collections/cafes",
-            "text_button_1_text": "Découvrir",
-            "image_image_desktop": "shopify://shop_images/Sumatrasourcing-74_1.webp"
-          }
         }
       },
       "block_order": [
-        "slide_W8mLC8",
-        "slide_iMn83X"
+        "slide_iMn83X",
+        "slide_RNTMcM",
+        "slide_W8mLC8"
       ],
       "settings": {}
     },
