@@ -254,16 +254,22 @@
     <script src="https://unpkg.com/youtube-light-player"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script>
-      $(".swiper-container").each(function (index) {
-        const thumbsSwiper = new Swiper($(this).find(".swiper.is-product-thumbnail")[0], {
+      $(".swiper-container").each(function () {
+        const $container = $(this);
+        const root = $container.closest('[li-element="product-variant-container"]')[0];
+        const alpine = root?.__x?.data;
+
+        const thumbsSwiper = new Swiper($container.find(".swiper.is-product-thumbnail")[0], {
           slidesPerView: "auto",
           rewind: false,
           loopedSlides: 8,
           slideToClickedSlide: true,
           spaceBetween: "4%",
         });
-        const swiper = new Swiper($(this).find(".swiper.is-product-gallery")[0], {
+
+        const gallerySwiper = new Swiper($container.find(".swiper.is-product-gallery")[0], {
           mousewheel: {
             forceToAxis: true
           },
@@ -276,28 +282,55 @@
             onlyInViewport: true
           },
           navigation: {
-            nextEl: $(this).find(".swiper-next")[0],
-            prevEl: $(this).find(".swiper-prev")[0],
+            nextEl: $container.find(".swiper-next")[0],
+            prevEl: $container.find(".swiper-prev")[0],
           },
           pagination: {
-            el: $(this).find(".swiper_pagination")[0],
+            el: $container.find(".swiper_pagination")[0],
             bulletActiveClass: "is-active",
             bulletClass: "swiper_bullet",
             clickable: true,
-            // Activer uniquement sur mobile
             dynamicBullets: false,
           },
           breakpoints: {
-            // Quand la largeur de la fen&ecirc;tre est >= 768px (tablette et desktop)
             768: {
               pagination: {
-                enabled: false, // D&eacute;sactive la pagination sur les &eacute;crans plus grands
+                enabled: false,
               }
             }
           }
         });
+
+        // 🔁 Synchroniser le slide avec la variante sélectionnée
+        if (alpine?.product && alpine?.selected_or_first_available_variant) {
+          const syncSlideWithVariant = () => {
+            const variant = alpine.selected_or_first_available_variant;
+            const variantImg = variant?.featured_image?.src?.replace(/^https?:/, '');
+            if (!variantImg) return;
+
+            const images = alpine.product.images || [];
+            const index = images.findIndex(img => img.replace(/^https?:/, '') === variantImg);
+            if (index !== -1) {
+              gallerySwiper.slideTo(index);
+            }
+          };
+
+          // Initial call
+          syncSlideWithVariant();
+
+          // MutationObserver pour détecter les changements Alpine
+          const observer = new MutationObserver(() => {
+            syncSlideWithVariant();
+          });
+
+          observer.observe(root, {
+            childList: true,
+            subtree: true,
+          });
+        }
       });
     </script>
+
     <script>
       let splideInstances = [];
       function initSplideSliders() {
@@ -350,43 +383,6 @@
     <script>
       document.addEventListener('alpine:initialized', () => {
           tippy('[data-tippy-content]');
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const containers = document.querySelectorAll('[li-element="product-variant-container"]');
-
-        containers.forEach(container => {
-          const swiperEl = container.querySelector(".swiper.is-product-gallery");
-          const swiper = swiperEl?.swiper;
-          if (!swiper) return;
-
-          const alpine = container.__x?.data;
-          if (!alpine?.product || !alpine.selected_or_first_available_variant) return;
-
-          // Fonction pour synchroniser slider avec variante
-          const syncSwiper = () => {
-            const variant = alpine.selected_or_first_available_variant;
-            const variantImg = variant?.featured_image?.src?.replace(/^https?:/, '');
-            if (!variantImg) return;
-
-            const images = alpine.product.images || [];
-            const index = images.findIndex(img => img.replace(/^https?:/, '') === variantImg);
-            if (index !== -1) swiper.slideTo(index);
-          };
-
-          // Surveille les logs Liquify (hack temporaire, mais efficace)
-          const originalLog = console.log;
-          console.log = function (...args) {
-            if (args[0]?.includes?.('Set active variant')) {
-              setTimeout(syncSwiper, 50); // petit délai pour Alpine à jour
-            }
-            originalLog.apply(console, args);
-          };
-
-          // Sync initial
-          syncSwiper();
-        });
       });
     </script>
   </body>
