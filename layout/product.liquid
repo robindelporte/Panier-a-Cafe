@@ -290,6 +290,17 @@ window.addEventListener('resize', () => {
 });
 </script><script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script><script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script><script>document.addEventListener('alpine:initialized', () => {
     tippy('[data-tippy-content]');
-});</script>
+});</script><script>document.addEventListener("alpine:init", () => {
+  Alpine.data("handleVariant", (productData) => ({
+    product: productData,
+    selected_or_first_available_variant: productData.variants[0],
+    swiper: null,
+    sectionId: null,
+    init() {
+      const rootEl = this.$root.closest('[data-section-id]');
+      this.sectionId = rootEl?.dataset.sectionId;
+      if (this.sectionId) {
+        const swiperEl = document.querySelec
+</script>
 </body>
 </html>
