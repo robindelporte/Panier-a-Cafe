@@ -290,25 +290,31 @@ window.addEventListener('resize', () => {
 });
 </script><script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script><script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script><script>document.addEventListener('alpine:initialized', () => {
     tippy('[data-tippy-content]');
-});</script><script>document.addEventListener('DOMContentLoaded', function () {
-  // Attente que Alpine charge
-  const checkAlpine = setInterval(() => {
-    const variantContainers = document.querySelectorAll('[li-element="product-variant-container"]');
-    variantContainers.forEach(container => {
-      const alpineData = Alpine?.closestData(container);
-      if (!alpineData?.selected_or_first_available_variant) return;
-      // Observer les changements de la variante s&eacute;lectionn&eacute;e
+});</script><script>document.addEventListener("DOMContentLoaded", () => {
+  const interval = setInterval(() => {
+    // Attendre Alpine + les containers produits
+    const containers = document.querySelectorAll('[li-element="product-variant-container"]');
+    if (!containers.length || typeof Alpine === 'undefined') return;
+    containers.forEach(container => {
+      const swiperEl = container.querySelector(".swiper.is-product-gallery");
+      const swiper = swiperEl?.swiper;
+      if (!swiper) return;
+      const alpine = Alpine.closestData(container);
+      if (!alpine?.product || !alpine.selected_or_first_available_variant) return;
+      // &Eacute;coute les changements de variante s&eacute;lectionn&eacute;e
       Alpine.effect(() => {
-        const variant = alpineData.selected_or_first_available_variant;
-        const swiperInstance = container.querySelector('.swiper.is-product-gallery')?.swiper;
-        if (!swiperInstance || !variant?.featured_image?.src) return;
-        const cleanSrc = variant.featured_image.src.replace(/^https?:/, '');
-        const images = alpineData.product?.images || [];
-        const index = images.findIndex(img => img === cleanSrc);
-        if (index !== -1) swiperInstance.slideTo(index);
+        const variant = alpine.selected_or_first_available_variant;
+        const variantImg = variant?.featured_image?.src?.replace(/^https?:/, '');
+        if (!variantImg) return;
+        const images = alpine.product.images || [];
+        const index = images.findIndex(img => img.replace(/^https?:/, '') === variantImg);
+        if (index !== -1) {
+          swiper.slideTo(index); // slide principale
+          // thumbs sync automatique via thumbs: { swiper } config
+        }
       });
     });
-    if (variantContainers.length) clearInterval(checkAlpine);
+    clearInterval(interval); // Stop une fois que tout est mont&eacute;
   }, 200);
 });
 </script>
