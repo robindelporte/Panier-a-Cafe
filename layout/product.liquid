@@ -255,49 +255,153 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <script>
-      $(".swiper-container").each(function (index) {
-        const thumbsSwiper = new Swiper($(this).find(".swiper.is-product-thumbnail")[0], {
-          slidesPerView: "auto",
-          rewind: false,
-          loopedSlides: 8,
-          slideToClickedSlide: true,
-          spaceBetween: "4%",
-        });
+    // 1. Remplacez votre script Swiper par celui-ci :
 
-        const swiper = new Swiper($(this).find(".swiper.is-product-gallery")[0], {
-          mousewheel: {
-            forceToAxis: true
-          },
-          thumbs: {
-            swiper: thumbsSwiper,
-            slideThumbActiveClass: "is-active",
-          },
-          keyboard: {
-            enabled: true,
-            onlyInViewport: true
-          },
-          navigation: {
-            nextEl: $(this).find(".swiper-next")[0],
-            prevEl: $(this).find(".swiper-prev")[0],
-          },
-          pagination: {
-            el: $(this).find(".swiper_pagination")[0],
-            bulletActiveClass: "is-active",
-            bulletClass: "swiper_bullet",
-            clickable: true,
-            // Activer uniquement sur mobile
-            dynamicBullets: false,
-          },
-          breakpoints: {
-            // Quand la largeur de la fenêtre est >= 768px (tablette et desktop)
-            768: {
+    <script>
+      let swiperInstance = null;
+      let thumbsSwiperInstance = null;
+
+      $(".swiper-container").each(function (index) {
+          thumbsSwiperInstance = new Swiper($(this).find(".swiper.is-product-thumbnail")[0], {
+              slidesPerView: "auto",
+              rewind: false,
+              loopedSlides: 8,
+              slideToClickedSlide: true,
+              spaceBetween: "4%",
+          });
+
+          swiperInstance = new Swiper($(this).find(".swiper.is-product-gallery")[0], {
+              mousewheel: {
+                  forceToAxis: true
+              },
+              thumbs: {
+                  swiper: thumbsSwiperInstance,
+                  slideThumbActiveClass: "is-active",
+              },
+              keyboard: {
+                  enabled: true,
+                  onlyInViewport: true
+              },
+              navigation: {
+                  nextEl: $(this).find(".swiper-next")[0],
+                  prevEl: $(this).find(".swiper-prev")[0],
+              },
               pagination: {
-                enabled: false, // Désactive la pagination sur les écrans plus grands
+                  el: $(this).find(".swiper_pagination")[0],
+                  bulletActiveClass: "is-active",
+                  bulletClass: "swiper_bullet",
+                  clickable: true,
+                  dynamicBullets: false,
+              },
+              breakpoints: {
+                  768: {
+                      pagination: {
+                          enabled: false,
+                      }
+                  }
               }
-            }
+          });
+      });
+
+      // Fonction de synchronisation
+      function syncSwiperWithVariant(selectedVariant) {
+          if (!swiperInstance || !selectedVariant?.featured_image) return;
+
+          const imageId = selectedVariant.featured_image.id;
+          const slides = document.querySelectorAll('.swiper-slide.is-product-gallery img');
+
+          let targetIndex = 0;
+          slides.forEach((img, index) => {
+              const imgSrc = img.getAttribute('src') || '';
+              if (imgSrc.includes(imageId)) {
+                  targetIndex = index;
+              }
+          });
+
+          swiperInstance.slideTo(targetIndex, 300);
+      }
+
+      // 2. Observer automatiquement les changements de variantes
+      document.addEventListener('DOMContentLoaded', function() {
+          // Observer les clics sur les inputs radio des variantes
+          const variantInputs = document.querySelectorAll('input[data-selectortype="radio"]');
+
+          variantInputs.forEach(input => {
+              input.addEventListener('change', function() {
+                  // Attendre un peu que Alpine.js mette à jour les données
+                  setTimeout(() => {
+                      // Récupérer les données du composant Alpine
+                      const productContainer = document.querySelector('[x-data*="handleVariant"]');
+                      if (productContainer && productContainer._x_dataStack) {
+                          const alpineData = productContainer._x_dataStack[0];
+                          if (alpineData.selected_or_first_available_variant) {
+                              syncSwiperWithVariant(alpineData.selected_or_first_available_variant);
+                          }
+                      }
+                  }, 50);
+              });
+          });
+
+          // Alternative : Observer les changements d'attributs
+          const priceElement = document.querySelector('[x-text*="price"]');
+          if (priceElement) {
+              const observer = new MutationObserver(function(mutations) {
+                  mutations.forEach(function(mutation) {
+                      if (mutation.type === 'childList' || mutation.type === 'characterData') {
+                          // Le prix a changé, donc une nouvelle variante est sélectionnée
+                          setTimeout(() => {
+                              const productContainer = document.querySelector('[x-data*="handleVariant"]');
+                              if (productContainer && productContainer._x_dataStack) {
+                                  const alpineData = productContainer._x_dataStack[0];
+                                  if (alpineData.selected_or_first_available_variant) {
+                                      syncSwiperWithVariant(alpineData.selected_or_first_available_variant);
+                                  }
+                              }
+                          }, 100);
+                      }
+                  });
+              });
+
+              observer.observe(priceElement, {
+                  childList: true,
+                  subtree: true,
+                  characterData: true
+              });
           }
-        });
+      });
+
+      // 3. Alternative plus simple : Observer directement les changements d'images
+      document.addEventListener('DOMContentLoaded', function() {
+          // Observer les changements sur les images featured
+          const featuredImages = document.querySelectorAll('img[src*="featured"]');
+
+          featuredImages.forEach(img => {
+              const observer = new MutationObserver(function(mutations) {
+                  mutations.forEach(function(mutation) {
+                      if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
+                          // Une image a changé, synchroniser le swiper
+                          const newSrc = mutation.target.src;
+                          const slides = document.querySelectorAll('.swiper-slide.is-product-gallery img');
+
+                          let targetIndex = 0;
+                          slides.forEach((slideImg, index) => {
+                              if (slideImg.src === newSrc) {
+                                  targetIndex = index;
+                              }
+                          });
+
+                          if (swiperInstance) {
+                              swiperInstance.slideTo(targetIndex, 300);
+                          }
+                      }
+                  });
+              });
+
+              observer.observe(img, {
+                  attributes: true,
+                  attributeFilter: ['src']
+              });
+          });
       });
     </script>
 
