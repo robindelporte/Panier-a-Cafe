@@ -252,17 +252,25 @@
         "chiffres_kbUWHb": {
           "type": "chiffres",
           "settings": {
-            "text_valeur_gauche": "70",
+            "text_valeur_gauche": "+ de 90",
             "text_valeur_droite": "%",
-            "text_texte": "de nos cafés sont conditionnés par des personnes en situation de handicap"
+            "text_texte": "de nos cafés sont conditionnés par des personnes en situation de handicap dans notre atelier"
           }
         },
         "chiffres_gdbbUW": {
           "type": "chiffres",
           "settings": {
-            "text_valeur_gauche": "50",
-            "text_valeur_droite": "+",
+            "text_valeur_gauche": "+20",
+            "text_valeur_droite": "",
             "text_texte": "références de cafés de spécialité disponibles à l’année"
+          }
+        },
+        "chiffres_PXD36n": {
+          "type": "chiffres",
+          "settings": {
+            "text_valeur_gauche": "100",
+            "text_valeur_droite": "%",
+            "text_texte": "Nous mettons à l’honneur des cafés produits par des femmes engagées."
           }
         },
         "chiffres_xmAE6w": {
@@ -285,6 +293,7 @@
       "block_order": [
         "chiffres_kbUWHb",
         "chiffres_gdbbUW",
+        "chiffres_PXD36n",
         "chiffres_xmAE6w",
         "chiffres_ewnQJg"
       ],
