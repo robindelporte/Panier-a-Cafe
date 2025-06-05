@@ -24,7 +24,7 @@
   function isMobile() {
     return window.innerWidth < 992; // Mobile/tablette < 992px
   }
-  $(".swiper_component").each(function(index) {
+  $(".swiper_component.is-product-swiper").each(function(index) {
     const swiper = new Swiper($(this).find(".swiper")[0], {
       autoHeight: false,
       followFinger: true,
