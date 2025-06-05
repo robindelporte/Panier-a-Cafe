@@ -12,12 +12,12 @@
     "professionnels": {
       "type": "professionnels",
       "blocks": {
-        "bloc_KLYxXm": {
+        "bloc_BgbMLE": {
           "type": "bloc",
           "settings": {
-            "image_image": "shopify://shop_images/revendeurs-image.webp",
-            "text_titre": "Revendeurs",
-            "url_lien": "shopify://pages/revendeurs"
+            "image_image": "shopify://shop_images/PME.webp",
+            "text_titre": "PME",
+            "url_lien": "shopify://pages/pme"
           }
         },
         "bloc_h7wAaX": {
@@ -28,19 +28,19 @@
             "url_lien": "shopify://pages/chr"
           }
         },
-        "bloc_BgbMLE": {
+        "bloc_KLYxXm": {
           "type": "bloc",
           "settings": {
-            "image_image": "shopify://shop_images/PME.webp",
-            "text_titre": "PME",
-            "url_lien": "shopify://pages/pme"
+            "image_image": "shopify://shop_images/revendeurs-image.webp",
+            "text_titre": "Revendeurs",
+            "url_lien": "shopify://pages/revendeurs"
           }
         }
       },
       "block_order": [
-        "bloc_KLYxXm",
+        "bloc_BgbMLE",
         "bloc_h7wAaX",
-        "bloc_BgbMLE"
+        "bloc_KLYxXm"
       ],
       "settings": {}
     },
