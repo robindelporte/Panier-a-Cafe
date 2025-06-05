@@ -15,4 +15,5 @@
 {% endif %}
                             
                     {% endfor %}    </div>
-<div class="hide w-dyn-empty"></div></div><div class="spacer-large"></div><div class="button-group is-center"><a href="#" class="button is-secondary w-button">Voir plus d'articles</a></div></div></div> {% schema %} {"tag":"section","name":"Related Articles","class":"section_related-articles","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Nouveaut\u00e9s du blog"}],"presets":[{"name":"Related Articles","category":"Liquify","blocks":[]}]} {% endschema %}
+<div class="hide w-dyn-empty"></div></div><div class="spacer-large"></div><div class="button-group is-center"><a href="{{ section.settings.url_bouton_lien }}" class="button is-secondary w-button"> {{ section.settings.text_bouton_texte }} </a>
+</div></div></div> {% schema %} {"tag":"section","name":"Related Articles","class":"section_related-articles","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Nouveaut\u00e9s du blog"},{"id":"url_bouton_lien","type":"url","label":"Bouton : Lien"},{"id":"text_bouton_texte","type":"text","label":"Bouton : Texte","default":"Voir plus d'articles"}],"presets":[{"name":"Related Articles","category":"Liquify","blocks":[]}]} {% endschema %}
