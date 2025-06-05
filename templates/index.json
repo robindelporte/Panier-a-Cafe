@@ -252,7 +252,7 @@
         "chiffres_kbUWHb": {
           "type": "chiffres",
           "settings": {
-            "text_valeur_gauche": "+ de 90",
+            "text_valeur_gauche": "+90",
             "text_valeur_droite": "%",
             "text_texte": "de nos cafés sont conditionnés par des personnes en situation de handicap dans notre atelier"
           }
@@ -268,23 +268,15 @@
         "chiffres_PXD36n": {
           "type": "chiffres",
           "settings": {
-            "text_valeur_gauche": "100",
+            "text_valeur_gauche": "+20",
             "text_valeur_droite": "%",
-            "text_texte": "Nous mettons à l’honneur des cafés produits par des femmes engagées."
-          }
-        },
-        "chiffres_xmAE6w": {
-          "type": "chiffres",
-          "settings": {
-            "text_valeur_gauche": "90",
-            "text_valeur_droite": "%",
-            "text_texte": "de nos emballages sont recyclables ou réutilisables"
+            "text_texte": "de nos références cafés viennent par voilier"
           }
         },
         "chiffres_ewnQJg": {
           "type": "chiffres",
           "settings": {
-            "text_valeur_gauche": "15",
+            "text_valeur_gauche": "+15",
             "text_valeur_droite": "‎ Pays",
             "text_texte": "producteurs sélectionnés pour la richesse de leurs terroirs"
           }
@@ -294,7 +286,6 @@
         "chiffres_kbUWHb",
         "chiffres_gdbbUW",
         "chiffres_PXD36n",
-        "chiffres_xmAE6w",
         "chiffres_ewnQJg"
       ],
       "settings": {
