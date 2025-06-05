@@ -255,187 +255,140 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    // 1. Remplacez votre script Swiper par celui-ci :
-
-    // Remplacez votre script par celui-ci avec la logique corrigée :
-
-    // Script corrigé pour gérer la vraie structure des données :
-
     <script>
-let swiperInstance = null;
-let thumbsSwiperInstance = null;
+      let swiperInstance = null;
+      let thumbsSwiperInstance = null;
 
-$(".swiper-container").each(function (index) {
-    thumbsSwiperInstance = new Swiper($(this).find(".swiper.is-product-thumbnail")[0], {
-        slidesPerView: "auto",
-        rewind: false,
-        loopedSlides: 8,
-        slideToClickedSlide: true,
-        spaceBetween: "4%",
-    });
+      $(".swiper-container").each(function (index) {
+          thumbsSwiperInstance = new Swiper($(this).find(".swiper.is-product-thumbnail")[0], {
+              slidesPerView: "auto",
+              rewind: false,
+              loopedSlides: 8,
+              slideToClickedSlide: true,
+              spaceBetween: "4%",
+          });
 
-    swiperInstance = new Swiper($(this).find(".swiper.is-product-gallery")[0], {
-        mousewheel: {
-            forceToAxis: true
-        },
-        thumbs: {
-            swiper: thumbsSwiperInstance,
-            slideThumbActiveClass: "is-active",
-        },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true
-        },
-        navigation: {
-            nextEl: $(this).find(".swiper-next")[0],
-            prevEl: $(this).find(".swiper-prev")[0],
-        },
-        pagination: {
-            el: $(this).find(".swiper_pagination")[0],
-            bulletActiveClass: "is-active",
-            bulletClass: "swiper_bullet",
-            clickable: true,
-            dynamicBullets: false,
-        },
-        breakpoints: {
-            768: {
-                pagination: {
-                    enabled: false,
-                }
-            }
-        }
-    });
-});
+          swiperInstance = new Swiper($(this).find(".swiper.is-product-gallery")[0], {
+              mousewheel: {
+                  forceToAxis: true
+              },
+              thumbs: {
+                  swiper: thumbsSwiperInstance,
+                  slideThumbActiveClass: "is-active",
+              },
+              keyboard: {
+                  enabled: true,
+                  onlyInViewport: true
+              },
+              navigation: {
+                  nextEl: $(this).find(".swiper-next")[0],
+                  prevEl: $(this).find(".swiper-prev")[0],
+              },
+              pagination: {
+                  el: $(this).find(".swiper_pagination")[0],
+                  bulletActiveClass: "is-active",
+                  bulletClass: "swiper_bullet",
+                  clickable: true,
+                  dynamicBullets: false,
+              },
+              breakpoints: {
+                  768: {
+                      pagination: {
+                          enabled: false,
+                      }
+                  }
+              }
+          });
+      });
 
-// Fonction de synchronisation corrigée pour la vraie structure
-function syncSwiperWithVariant(selectedVariant) {
-    if (!swiperInstance) return;
-    
-    console.log('Variant sélectionnée:', selectedVariant);
-    
-    const slides = document.querySelectorAll('.swiper-slide.is-product-gallery img');
-    let targetIndex = 0;
-    let found = false;
-    
-    // Récupérer l'image de la variante
-    let variantImageSrc = null;
-    
-    // Cas 1: featured_image est un objet avec src
-    if (selectedVariant.featured_image && typeof selectedVariant.featured_image === 'object') {
-        variantImageSrc = selectedVariant.featured_image.src;
-        console.log('Image variante (objet):', variantImageSrc);
-        
-        // Chercher par ID si disponible
-        if (selectedVariant.featured_image.id) {
-            const imageId = selectedVariant.featured_image.id.toString();
-            slides.forEach((img, index) => {
-                const imgSrc = img.getAttribute('src') || '';
-                if (imgSrc.includes(imageId)) {
-                    targetIndex = index;
-                    found = true;
-                    console.log(`Image trouvée par ID ${imageId} à l'index:`, index);
-                }
-            });
-        }
-    }
-    // Cas 2: featured_image est directement une URL string
-    else if (selectedVariant.featured_image && typeof selectedVariant.featured_image === 'string') {
-        variantImageSrc = selectedVariant.featured_image;
-        console.log('Image variante (string):', variantImageSrc);
-    }
-    // Cas 3: Utiliser featured_media si disponible
-    else if (selectedVariant.featured_media && selectedVariant.featured_media.preview_image) {
-        variantImageSrc = selectedVariant.featured_media.preview_image.src;
-        console.log('Image variante (featured_media):', variantImageSrc);
-    }
-    
-    // Si pas encore trouvé et qu'on a une URL, chercher par nom de fichier
-    if (!found && variantImageSrc) {
-        // Nettoyer l'URL pour extraire le nom de fichier
-        const cleanUrl = variantImageSrc.replace(/^\/\//, 'https://');
-        const fileName = cleanUrl.split('/').pop().split('?')[0];
-        
-        console.log('Recherche par nom de fichier:', fileName);
-        
-        slides.forEach((img, index) => {
-            const imgSrc = img.getAttribute('src') || '';
-            const slideFileName = imgSrc.split('/').pop().split('?')[0];
-            
-            if (slideFileName === fileName) {
-                targetIndex = index;
-                found = true;
-                console.log(`Image trouvée par nom de fichier ${fileName} à l'index:`, index);
-            }
-        });
-    }
-    
-    // Si toujours pas trouvé, chercher par URL partielle
-    if (!found && variantImageSrc) {
-        console.log('Recherche par URL partielle');
-        
-        slides.forEach((img, index) => {
-            const imgSrc = img.getAttribute('src') || '';
-            
-            // Nettoyer les URLs pour comparaison
-            const cleanImgSrc = imgSrc.replace(/^\/\//, 'https://').split('?')[0];
-            const cleanVariantSrc = variantImageSrc.replace(/^\/\//, 'https://').split('?')[0];
-            
-            if (cleanImgSrc === cleanVariantSrc) {
-                targetIndex = index;
-                found = true;
-                console.log(`Image trouvée par URL à l'index:`, index);
-            }
-        });
-    }
-    
-    // Fallback: chercher par correspondance partielle du nom
-    if (!found && variantImageSrc) {
-        console.log('Recherche par correspondance partielle');
-        
-        const fileName = variantImageSrc.split('/').pop().split('?')[0].replace('.webp', '');
-        
-        slides.forEach((img, index) => {
-            const imgSrc = img.getAttribute('src') || '';
-            
-            if (imgSrc.includes(fileName)) {
-                targetIndex = index;
-                found = true;
-                console.log(`Image trouvée par correspondance partielle ${fileName} à l'index:`, index);
-            }
-        });
-    }
-    
-    if (!found) {
-        console.warn('Image de la variante non trouvée dans le slider');
-        console.log('Image recherchée:', variantImageSrc);
-        console.log('Images disponibles:');
-        slides.forEach((img, index) => {
-            console.log(`Index ${index}:`, img.getAttribute('src'));
-        });
-    }
-    
-    console.log(`Glissement vers l'index: ${targetIndex}`);
-    swiperInstance.slideTo(targetIndex, 300);
-}
+      function syncSwiperWithVariant(selectedVariant) {
+          if (!swiperInstance) return;
 
-// Observer les changements de variantes
-document.addEventListener('DOMContentLoaded', function() {
-    const variantInputs = document.querySelectorAll('input[data-selectortype="radio"]');
-    
-    variantInputs.forEach(input => {
-        input.addEventListener('change', function() {
-            setTimeout(() => {
-                const productContainer = document.querySelector('[x-data*="handleVariant"]');
-                if (productContainer && productContainer._x_dataStack) {
-                    const alpineData = productContainer._x_dataStack[0];
-                    if (alpineData.selected_or_first_available_variant) {
-                        syncSwiperWithVariant(alpineData.selected_or_first_available_variant);
-                    }
-                }
-            }, 100);
-        });
-    });
-});
+          const slides = document.querySelectorAll('.swiper-slide.is-product-gallery img');
+          let targetIndex = 0;
+          let found = false;
+          let variantImageSrc = null;
+
+          if (selectedVariant.featured_image && typeof selectedVariant.featured_image === 'object') {
+              variantImageSrc = selectedVariant.featured_image.src;
+
+              if (selectedVariant.featured_image.id) {
+                  const imageId = selectedVariant.featured_image.id.toString();
+                  slides.forEach((img, index) => {
+                      const imgSrc = img.getAttribute('src') || '';
+                      if (imgSrc.includes(imageId)) {
+                          targetIndex = index;
+                          found = true;
+                      }
+                  });
+              }
+          } else if (selectedVariant.featured_image && typeof selectedVariant.featured_image === 'string') {
+              variantImageSrc = selectedVariant.featured_image;
+          } else if (selectedVariant.featured_media && selectedVariant.featured_media.preview_image) {
+              variantImageSrc = selectedVariant.featured_media.preview_image.src;
+          }
+
+          if (!found && variantImageSrc) {
+              const cleanUrl = variantImageSrc.replace(/^\/\//, 'https://');
+              const fileName = cleanUrl.split('/').pop().split('?')[0];
+
+              slides.forEach((img, index) => {
+                  const imgSrc = img.getAttribute('src') || '';
+                  const slideFileName = imgSrc.split('/').pop().split('?')[0];
+
+                  if (slideFileName === fileName) {
+                      targetIndex = index;
+                      found = true;
+                  }
+              });
+          }
+
+          if (!found && variantImageSrc) {
+              slides.forEach((img, index) => {
+                  const imgSrc = img.getAttribute('src') || '';
+                  const cleanImgSrc = imgSrc.replace(/^\/\//, 'https://').split('?')[0];
+                  const cleanVariantSrc = variantImageSrc.replace(/^\/\//, 'https://').split('?')[0];
+
+                  if (cleanImgSrc === cleanVariantSrc) {
+                      targetIndex = index;
+                      found = true;
+                  }
+              });
+          }
+
+          if (!found && variantImageSrc) {
+              const fileName = variantImageSrc.split('/').pop().split('?')[0].replace('.webp', '');
+
+              slides.forEach((img, index) => {
+                  const imgSrc = img.getAttribute('src') || '';
+
+                  if (imgSrc.includes(fileName)) {
+                      targetIndex = index;
+                      found = true;
+                  }
+              });
+          }
+
+          swiperInstance.slideTo(targetIndex, 300);
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+          const variantInputs = document.querySelectorAll('input[data-selectortype="radio"]');
+
+          variantInputs.forEach(input => {
+              input.addEventListener('change', function() {
+                  setTimeout(() => {
+                      const productContainer = document.querySelector('[x-data*="handleVariant"]');
+                      if (productContainer && productContainer._x_dataStack) {
+                          const alpineData = productContainer._x_dataStack[0];
+                          if (alpineData.selected_or_first_available_variant) {
+                              syncSwiperWithVariant(alpineData.selected_or_first_available_variant);
+                          }
+                      }
+                  }, 100);
+              });
+          });
+      });
     </script>
 
     <script>
