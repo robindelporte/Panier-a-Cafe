@@ -12,20 +12,20 @@
     "professionnels": {
       "type": "professionnels",
       "blocks": {
-        "bloc_BgbMLE": {
-          "type": "bloc",
-          "settings": {
-            "image_image": "shopify://shop_images/PME.webp",
-            "text_titre": "PME",
-            "url_lien": "shopify://pages/pme"
-          }
-        },
         "bloc_h7wAaX": {
           "type": "bloc",
           "settings": {
             "image_image": "shopify://shop_images/chr-image.webp",
             "text_titre": "CHR",
             "url_lien": "shopify://pages/chr"
+          }
+        },
+        "bloc_BgbMLE": {
+          "type": "bloc",
+          "settings": {
+            "image_image": "shopify://shop_images/PME.webp",
+            "text_titre": "PME",
+            "url_lien": "shopify://pages/pme"
           }
         },
         "bloc_KLYxXm": {
@@ -38,8 +38,8 @@
         }
       },
       "block_order": [
-        "bloc_BgbMLE",
         "bloc_h7wAaX",
+        "bloc_BgbMLE",
         "bloc_KLYxXm"
       ],
       "settings": {}
