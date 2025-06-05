@@ -19,6 +19,7 @@
             "text_text": "",
             "url_button_1_link": "shopify://collections/cafes",
             "text_button_1_text": "Découvrir",
+            "image_image_desktop": "shopify://shop_images/benjamin_producteur.webp",
             "video_desktop": "shopify://files/videos/panier-a-cafe.mp4",
             "video_mobile": "shopify://files/videos/panier-a-cafe.mp4"
           }
@@ -430,55 +431,6 @@
           "equipements"
         ]
       }
-    },
-    "logo_defilants_eJRReg": {
-      "type": "logo_defilants",
-      "blocks": {
-        "logo_defilants_XHWiDL": {
-          "type": "logo-defilants",
-          "settings": {
-            "image_logo_1": "shopify://shop_images/L_ecuelle.png",
-            "image_logo_2": "shopify://shop_images/Logo-CB-light-gris-120.png",
-            "image_logo_3": "shopify://shop_images/Haven.png",
-            "image_logo_4": "shopify://shop_images/Clos_des_sens.png",
-            "image_logo_5": "shopify://shop_images/logos_confiance_fournil_villaz.png",
-            "image_logo_6": "shopify://shop_images/Barbich_1.png"
-          },
-          "blocks": {}
-        },
-        "logo_defilants_inverses_xDf3MC": {
-          "type": "logo-defilants-inverses",
-          "settings": {
-            "image_logo_1": "shopify://shop_images/Poco_A_Poco.png",
-            "image_logo_2": "shopify://shop_images/6657156564c0cc4a0d25a731_Otera_logo.webp",
-            "image_logo_3": "shopify://shop_images/LPC4.webp",
-            "image_logo_4": "shopify://shop_images/Logo_1.png",
-            "image_logo_5": "shopify://shop_images/logo_client.png",
-            "image_logo_6": "shopify://shop_images/LOGO_LES_FINES_BOUCHES_FOND_TRANSPARANT.png"
-          },
-          "blocks": {}
-        },
-        "logo_defilants_bBEFDV": {
-          "type": "logo-defilants",
-          "settings": {
-            "image_logo_1": "shopify://shop_images/salomon.png",
-            "image_logo_2": "shopify://shop_images/vinci.png",
-            "image_logo_3": "shopify://shop_images/pilot.png",
-            "image_logo_4": "shopify://shop_images/ixina.png",
-            "image_logo_5": "shopify://shop_images/in-motion.png",
-            "image_logo_6": "shopify://shop_images/geometre.png"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "logo_defilants_XHWiDL",
-        "logo_defilants_inverses_xDf3MC",
-        "logo_defilants_bBEFDV"
-      ],
-      "settings": {
-        "text_heading": "Ils nous font confiance"
-      }
     }
   },
   "layout": "theme",
@@ -495,7 +447,6 @@
     "pages",
     "contenu_kbV9Uz",
     "contenu_2",
-    "collection_tabs_marr_6khPpp",
-    "logo_defilants_eJRReg"
+    "collection_tabs_marr_6khPpp"
   ]
 }
