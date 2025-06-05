@@ -18,8 +18,27 @@
             "richtext_heading": "<p>Tout commence ici. Avec la nature, avec l’humain</p>",
             "text_text": "",
             "url_button_1_link": "",
-            "text_button_1_text": "Button Text",
+            "text_button_1_text": "Découvrir",
             "image_image_desktop": "shopify://shop_images/benjamin_producteur.webp"
+          }
+        },
+        "slide_iMn83X": {
+          "type": "slide",
+          "settings": {
+            "richtext_heading": "<p>Le Panier à Café, </p><p>Torréfacteur gastronome</p><p>à Annecy</p>",
+            "text_text": "",
+            "url_button_1_link": "",
+            "text_button_1_text": "Button Text",
+            "image_image_desktop": "shopify://shop_images/Sumatrasourcing-74_1.webp"
+          }
+        },
+        "slide_pEmUmn": {
+          "type": "slide",
+          "settings": {
+            "richtext_heading": "<p>Heading</p>",
+            "text_text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "url_button_1_link": "",
+            "text_button_1_text": "Button Text"
           }
         },
         "slide_W8mLC8": {
@@ -36,6 +55,8 @@
       },
       "block_order": [
         "slide_RNTMcM",
+        "slide_iMn83X",
+        "slide_pEmUmn",
         "slide_W8mLC8"
       ],
       "settings": {}
