@@ -290,43 +290,26 @@ window.addEventListener('resize', () => {
 });
 </script><script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script><script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script><script>document.addEventListener('alpine:initialized', () => {
     tippy('[data-tippy-content]');
-});</script><script>document.addEventListener("alpine:init", () => {
-  Alpine.data("handleVariant", (productData) => ({
-    product: productData,
-    selected_or_first_available_variant: productData.variants[0],
-    swiper: null,
-    sectionId: null,
-    init() {
-      const rootEl = this.$root.closest('[data-section-id]');
-      this.sectionId = rootEl?.dataset.sectionId;
-      if (this.sectionId) {
-        const swiperEl = document.querySelector(`[data-section-id="${this.sectionId}"] .swiper.is-product-gallery`);
-        if (swiperEl && swiperEl.swiper) {
-          this.swiper = swiperEl.swiper;
-        }
-      }
-    },
-    setVariant(event) {
-      const optionName = event.target.dataset.name;
-      const optionValue = event.target.value;
-      const selectedOptions = [...this.selected_or_first_available_variant.options];
-      const optionIndex = this.product.options.indexOf(optionName);
-      selectedOptions[optionIndex] = optionValue;
-      const newVariant = this.product.variants.find((variant) =>
-        variant.options.every((opt, i) => opt === selectedOptions[i])
-      );
-      if (newVariant) {
-        this.selected_or_first_available_variant = newVariant;
-        if (newVariant.featured_image && this.swiper) {
-          const cleanSrc = newVariant.featured_image.src.replace(/^https?:/, '');
-          const imageIndex = this.product.images.findIndex(img => img === cleanSrc);
-          if (imageIndex !== -1) {
-            this.swiper.slideTo(imageIndex);
-          }
-        }
-      }
-    }
-  }));
+});</script><script>document.addEventListener('DOMContentLoaded', function () {
+  // Attente que Alpine charge
+  const checkAlpine = setInterval(() => {
+    const variantContainers = document.querySelectorAll('[li-element="product-variant-container"]');
+    variantContainers.forEach(container => {
+      const alpineData = Alpine?.closestData(container);
+      if (!alpineData?.selected_or_first_available_variant) return;
+      // Observer les changements de la variante s&eacute;lectionn&eacute;e
+      Alpine.effect(() => {
+        const variant = alpineData.selected_or_first_available_variant;
+        const swiperInstance = container.querySelector('.swiper.is-product-gallery')?.swiper;
+        if (!swiperInstance || !variant?.featured_image?.src) return;
+        const cleanSrc = variant.featured_image.src.replace(/^https?:/, '');
+        const images = alpineData.product?.images || [];
+        const index = images.findIndex(img => img === cleanSrc);
+        if (index !== -1) swiperInstance.slideTo(index);
+      });
+    });
+    if (variantContainers.length) clearInterval(checkAlpine);
+  }, 200);
 });
 </script>
 </body>
