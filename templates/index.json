@@ -260,7 +260,7 @@
         "chiffres_gdbbUW": {
           "type": "chiffres",
           "settings": {
-            "text_valeur_gauche": "+15",
+            "text_valeur_gauche": "20",
             "text_valeur_droite": "",
             "text_texte": "références de cafés de spécialité disponibles à l’année"
           }
@@ -276,7 +276,7 @@
         "chiffres_ewnQJg": {
           "type": "chiffres",
           "settings": {
-            "text_valeur_gauche": "+10",
+            "text_valeur_gauche": "15",
             "text_valeur_droite": "‎ Pays",
             "text_texte": "producteurs sélectionnés pour la richesse de leurs terroirs"
           }
