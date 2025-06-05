@@ -354,36 +354,43 @@
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const interval = setInterval(() => {
-          const containers = document.querySelectorAll('[li-element="product-variant-container"]');
+        const containers = document.querySelectorAll('[li-element="product-variant-container"]');
 
-          if (!containers.length || typeof Alpine === 'undefined') return;
+        containers.forEach(container => {
+          const swiperEl = container.querySelector(".swiper.is-product-gallery");
+          const swiper = swiperEl?.swiper;
+          if (!swiper) return;
 
-          containers.forEach(container => {
-            const swiperEl = container.querySelector(".swiper.is-product-gallery");
-            const swiper = swiperEl?.swiper;
-            if (!swiper) return;
+          // Récupère les données Alpine de ce container
+          const alpineData = container.__x?.data;
+          if (!alpineData) return;
 
-            // ✅ On récupère la data Alpine via $data
-            const alpineData = container.__x?.data;
-            if (!alpineData?.product || !alpineData.selected_or_first_available_variant) return;
+          const updateSlideToVariantImage = () => {
+            const variant = alpineData.selected_or_first_available_variant;
+            const variantImg = variant?.featured_image?.src?.replace(/^https?:/, '');
+            if (!variantImg) return;
 
-            Alpine.effect(() => {
-              const variant = alpineData.selected_or_first_available_variant;
-              const variantImg = variant?.featured_image?.src?.replace(/^https?:/, '');
-              if (!variantImg) return;
+            const images = alpineData.product?.images || [];
+            const index = images.findIndex(img => img.replace(/^https?:/, '') === variantImg);
+            if (index !== -1) {
+              swiper.slideTo(index);
+            }
+          };
 
-              const images = alpineData.product.images || [];
-              const index = images.findIndex(img => img.replace(/^https?:/, '') === variantImg);
+          // 1. Appelle au chargement initial
+          updateSlideToVariantImage();
 
-              if (index !== -1) {
-                swiper.slideTo(index);
-              }
-            });
+          // 2. Observe les changements DOM sur le container (via Liquify / Alpine)
+          const observer = new MutationObserver(() => {
+            updateSlideToVariantImage();
           });
 
-          clearInterval(interval);
-        }, 200);
+          observer.observe(container, {
+            childList: true,
+            subtree: true,
+            attributes: false
+          });
+        });
       });
     </script>
   </body>
