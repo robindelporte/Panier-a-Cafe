@@ -256,12 +256,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script>
-      $(".swiper-container").each(function () {
-        const $container = $(this);
-        const root = $container.closest('[li-element="product-variant-container"]')[0];
-        const alpine = root?.__x?.data;
-
-        const thumbsSwiper = new Swiper($container.find(".swiper.is-product-thumbnail")[0], {
+      $(".swiper-container").each(function (index) {
+        const thumbsSwiper = new Swiper($(this).find(".swiper.is-product-thumbnail")[0], {
           slidesPerView: "auto",
           rewind: false,
           loopedSlides: 8,
@@ -269,8 +265,10 @@
           spaceBetween: "4%",
         });
 
-        const gallerySwiper = new Swiper($container.find(".swiper.is-product-gallery")[0], {
-          mousewheel: { forceToAxis: true },
+        const swiper = new Swiper($(this).find(".swiper.is-product-gallery")[0], {
+          mousewheel: {
+            forceToAxis: true
+          },
           thumbs: {
             swiper: thumbsSwiper,
             slideThumbActiveClass: "is-active",
@@ -280,49 +278,26 @@
             onlyInViewport: true
           },
           navigation: {
-            nextEl: $container.find(".swiper-next")[0],
-            prevEl: $container.find(".swiper-prev")[0],
+            nextEl: $(this).find(".swiper-next")[0],
+            prevEl: $(this).find(".swiper-prev")[0],
           },
           pagination: {
-            el: $container.find(".swiper_pagination")[0],
+            el: $(this).find(".swiper_pagination")[0],
             bulletActiveClass: "is-active",
             bulletClass: "swiper_bullet",
             clickable: true,
+            // Activer uniquement sur mobile
             dynamicBullets: false,
           },
           breakpoints: {
+            // Quand la largeur de la fenêtre est >= 768px (tablette et desktop)
             768: {
               pagination: {
-                enabled: false,
+                enabled: false, // Désactive la pagination sur les écrans plus grands
               }
             }
           }
         });
-
-        // 🧠 Nouvelle stratégie : poller l'état Alpine
-        if (alpine?.product && alpine?.selected_or_first_available_variant) {
-          let lastVariantId = null;
-
-          const checkVariant = () => {
-            const variant = alpine.selected_or_first_available_variant;
-            const currentId = variant?.id;
-
-            if (currentId && currentId !== lastVariantId) {
-              lastVariantId = currentId;
-              const variantImg = variant.featured_image?.src?.replace(/^https?:/, '');
-              const images = alpine.product.images || [];
-
-              const index = images.findIndex(img => img.replace(/^https?:/, '') === variantImg);
-              if (index !== -1) {
-                gallerySwiper.slideTo(index);
-              }
-            }
-
-            requestAnimationFrame(checkVariant);
-          };
-
-          requestAnimationFrame(checkVariant);
-        }
       });
     </script>
 
