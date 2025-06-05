@@ -361,35 +361,31 @@
           const swiper = swiperEl?.swiper;
           if (!swiper) return;
 
-          // Récupère les données Alpine de ce container
-          const alpineData = container.__x?.data;
-          if (!alpineData) return;
+          const alpine = container.__x?.data;
+          if (!alpine?.product || !alpine.selected_or_first_available_variant) return;
 
-          const updateSlideToVariantImage = () => {
-            const variant = alpineData.selected_or_first_available_variant;
+          // Fonction pour synchroniser slider avec variante
+          const syncSwiper = () => {
+            const variant = alpine.selected_or_first_available_variant;
             const variantImg = variant?.featured_image?.src?.replace(/^https?:/, '');
             if (!variantImg) return;
 
-            const images = alpineData.product?.images || [];
+            const images = alpine.product.images || [];
             const index = images.findIndex(img => img.replace(/^https?:/, '') === variantImg);
-            if (index !== -1) {
-              swiper.slideTo(index);
-            }
+            if (index !== -1) swiper.slideTo(index);
           };
 
-          // 1. Appelle au chargement initial
-          updateSlideToVariantImage();
+          // Surveille les logs Liquify (hack temporaire, mais efficace)
+          const originalLog = console.log;
+          console.log = function (...args) {
+            if (args[0]?.includes?.('Set active variant')) {
+              setTimeout(syncSwiper, 50); // petit délai pour Alpine à jour
+            }
+            originalLog.apply(console, args);
+          };
 
-          // 2. Observe les changements DOM sur le container (via Liquify / Alpine)
-          const observer = new MutationObserver(() => {
-            updateSlideToVariantImage();
-          });
-
-          observer.observe(container, {
-            childList: true,
-            subtree: true,
-            attributes: false
-          });
+          // Sync initial
+          syncSwiper();
         });
       });
     </script>
