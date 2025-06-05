@@ -42,6 +42,16 @@
             "image_image_desktop": "shopify://shop_images/ben_torref.jpg"
           }
         },
+        "slide_C4JxQH": {
+          "type": "slide",
+          "settings": {
+            "richtext_heading": "<p>Naviguer pour un café plus propre</p>",
+            "text_text": "",
+            "url_button_1_link": "shopify://collections/cafe-voilier",
+            "text_button_1_text": "Nos cafés voilier !",
+            "image_image_desktop": "shopify://shop_images/20240806_-_ANEMOS_8_Ronan_Gladu_TOWT.jpg"
+          }
+        },
         "slide_W8mLC8": {
           "type": "slide",
           "settings": {
@@ -58,6 +68,7 @@
         "slide_iMn83X",
         "slide_RNTMcM",
         "slide_qJhp3m",
+        "slide_C4JxQH",
         "slide_W8mLC8"
       ],
       "settings": {}
