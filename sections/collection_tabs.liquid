@@ -14,15 +14,6 @@
                             <div class="swiper-slide is-product-swiper">{% render 'product_item', product: product %}
 </div>
                             
-                            <div class="swiper-slide is-product-swiper">{% render 'product_item', product: product %}
-</div>
-                            
-                            <div class="swiper-slide is-product-swiper">{% render 'product_item', product: product %}
-</div>
-                            
-                            <div class="swiper-slide is-product-swiper">{% render 'product_item', product: product %}
-</div>
-                            
                     {% endfor %}    </div>
 </div></div><a li-object:href="collection.url" href="{{ collection.url }}" class="button is-secondary w-button">En voir plus</a></div>
                             
@@ -31,49 +22,55 @@
 <div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() {
   // Fonction pour v&eacute;rifier si on est sur mobile/tablette
   function isMobile() {
-    return window.innerWidth < 992; // D&eacute;sactive sur &eacute;crans >= 992px
+    return window.innerWidth < 992; // Mobile/tablette < 992px
   }
   $(".swiper_component").each(function(index) {
-    // N'initialise le swiper que sur mobile/tablette
-    if (isMobile()) {
-      const swiper = new Swiper($(this).find(".swiper")[0], {
-        autoHeight: false,
-        followFinger: true,
-        freeMode: false,
-        slideToClickedSlide: true,
-        centeredSlides: false,
-        speed: 600,
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-        mousewheel: {
-          forceToAxis: true
-        },
-        keyboard: {
-          enabled: true,
-          onlyInViewport: true
-        },
-        pagination: {
-          el: $(this).find('.swiper_pagination')[0],
-          clickable: true,
-          bulletClass: 'swiper_bullet',
-          bulletActiveClass: 'is-active',
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '">';
-          }
-        },
-        breakpoints: {
-          479: {
-            spaceBetween: 16
-          },
-          767: {
-            spaceBetween: 20
-          },
-          991: {
-            spaceBetween: 32
-          }
+    const swiper = new Swiper($(this).find(".swiper")[0], {
+      autoHeight: false,
+      followFinger: true,
+      freeMode: false,
+      slideToClickedSlide: true,
+      centeredSlides: false,
+      speed: 600,
+      // Configuration pour mobile par d&eacute;faut
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      loop: false,
+      mousewheel: {
+        forceToAxis: true
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      pagination: {
+        el: $(this).find('.swiper_pagination')[0],
+        clickable: true,
+        bulletClass: 'swiper_bullet',
+        bulletActiveClass: 'is-active',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '">';
         }
-      });
-    }
+      },
+      breakpoints: {
+        479: {
+          spaceBetween: 16
+        },
+        767: {
+          spaceBetween: 20
+        },
+        991: {
+          spaceBetween: 32
+        },
+        // Configuration pour PC (&ge; 992px)
+        992: {
+          slidesPerView: 4,
+          slidesPerGroup: 1,
+          spaceBetween: 32,
+          loop: true
+        }
+      }
+    });
   });
 });
 </script></div> {% schema %} {"tag":"section","name":"Collection Tabs","class":"section_category","settings":[{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs","category":"Liquify","blocks":[]}]} {% endschema %}
