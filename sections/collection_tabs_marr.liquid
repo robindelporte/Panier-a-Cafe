@@ -27,9 +27,9 @@
   function isMobile() {
     return window.innerWidth < 992; // D&eacute;sactive sur &eacute;crans >= 992px
   }
-  $(".swiper_component").each(function(index) {
+  $(".swiper_component.is-product-swiper").each(function(index) {
+    // N'initialise le swiper que sur mobile/tablette
     if (isMobile()) {
-      // Configuration mobile/tablette
       const swiper = new Swiper($(this).find(".swiper")[0], {
         autoHeight: false,
         followFinger: true,
@@ -68,7 +68,7 @@
         }
       });
     } else {
-      // Configuration PC
+      // Configuration pour PC (&ge; 992px)
       const swiper = new Swiper($(this).find(".swiper")[0], {
         autoHeight: false,
         followFinger: true,
@@ -95,7 +95,9 @@
           clickable: true,
           bulletClass: 'swiper_bullet',
           bulletActiveClass: 'is-active',
-          bulletElement: 'button'
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '">';
+          }
         }
       });
     }
