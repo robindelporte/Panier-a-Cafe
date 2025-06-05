@@ -259,6 +259,8 @@
 
     // Remplacez votre script par celui-ci avec la logique corrigée :
 
+    // Script corrigé pour gérer la vraie structure des données :
+
     <script>
 let swiperInstance = null;
 let thumbsSwiperInstance = null;
@@ -305,36 +307,61 @@ $(".swiper-container").each(function (index) {
     });
 });
 
-// Fonction de synchronisation corrigée
+// Fonction de synchronisation corrigée pour la vraie structure
 function syncSwiperWithVariant(selectedVariant) {
-    if (!swiperInstance || !selectedVariant?.featured_image) return;
+    if (!swiperInstance) return;
     
     console.log('Variant sélectionnée:', selectedVariant);
-    console.log('Image de la variante:', selectedVariant.featured_image);
     
     const slides = document.querySelectorAll('.swiper-slide.is-product-gallery img');
-    let targetIndex = 0; // Par défaut première slide
+    let targetIndex = 0;
     let found = false;
     
-    // Méthode 1: Chercher par ID d'image
-    const imageId = selectedVariant.featured_image.id.toString();
-    slides.forEach((img, index) => {
-        const imgSrc = img.getAttribute('src') || '';
-        if (imgSrc.includes(imageId)) {
-            targetIndex = index;
-            found = true;
-            console.log(`Image trouvée par ID ${imageId} à l'index:`, index);
-        }
-    });
+    // Récupérer l'image de la variante
+    let variantImageSrc = null;
     
-    // Méthode 2: Si pas trouvé par ID, chercher par nom de fichier
-    if (!found) {
-        const imageSrc = selectedVariant.featured_image.src;
-        const fileName = imageSrc.split('/').pop().split('?')[0]; // Extraire le nom du fichier
+    // Cas 1: featured_image est un objet avec src
+    if (selectedVariant.featured_image && typeof selectedVariant.featured_image === 'object') {
+        variantImageSrc = selectedVariant.featured_image.src;
+        console.log('Image variante (objet):', variantImageSrc);
+        
+        // Chercher par ID si disponible
+        if (selectedVariant.featured_image.id) {
+            const imageId = selectedVariant.featured_image.id.toString();
+            slides.forEach((img, index) => {
+                const imgSrc = img.getAttribute('src') || '';
+                if (imgSrc.includes(imageId)) {
+                    targetIndex = index;
+                    found = true;
+                    console.log(`Image trouvée par ID ${imageId} à l'index:`, index);
+                }
+            });
+        }
+    }
+    // Cas 2: featured_image est directement une URL string
+    else if (selectedVariant.featured_image && typeof selectedVariant.featured_image === 'string') {
+        variantImageSrc = selectedVariant.featured_image;
+        console.log('Image variante (string):', variantImageSrc);
+    }
+    // Cas 3: Utiliser featured_media si disponible
+    else if (selectedVariant.featured_media && selectedVariant.featured_media.preview_image) {
+        variantImageSrc = selectedVariant.featured_media.preview_image.src;
+        console.log('Image variante (featured_media):', variantImageSrc);
+    }
+    
+    // Si pas encore trouvé et qu'on a une URL, chercher par nom de fichier
+    if (!found && variantImageSrc) {
+        // Nettoyer l'URL pour extraire le nom de fichier
+        const cleanUrl = variantImageSrc.replace(/^\/\//, 'https://');
+        const fileName = cleanUrl.split('/').pop().split('?')[0];
+        
+        console.log('Recherche par nom de fichier:', fileName);
         
         slides.forEach((img, index) => {
             const imgSrc = img.getAttribute('src') || '';
-            if (imgSrc.includes(fileName)) {
+            const slideFileName = imgSrc.split('/').pop().split('?')[0];
+            
+            if (slideFileName === fileName) {
                 targetIndex = index;
                 found = true;
                 console.log(`Image trouvée par nom de fichier ${fileName} à l'index:`, index);
@@ -342,47 +369,46 @@ function syncSwiperWithVariant(selectedVariant) {
         });
     }
     
-    // Méthode 3: Si toujours pas trouvé, chercher par URL partielle
-    if (!found) {
-        const imageSrc = selectedVariant.featured_image.src;
+    // Si toujours pas trouvé, chercher par URL partielle
+    if (!found && variantImageSrc) {
+        console.log('Recherche par URL partielle');
+        
         slides.forEach((img, index) => {
             const imgSrc = img.getAttribute('src') || '';
-            // Comparer les URLs en retirant les paramètres
-            const cleanImgSrc = imgSrc.split('?')[0];
-            const cleanVariantSrc = imageSrc.split('?')[0];
+            
+            // Nettoyer les URLs pour comparaison
+            const cleanImgSrc = imgSrc.replace(/^\/\//, 'https://').split('?')[0];
+            const cleanVariantSrc = variantImageSrc.replace(/^\/\//, 'https://').split('?')[0];
             
             if (cleanImgSrc === cleanVariantSrc) {
                 targetIndex = index;
                 found = true;
-                console.log(`Image trouvée par URL complète à l'index:`, index);
+                console.log(`Image trouvée par URL à l'index:`, index);
             }
         });
     }
     
-    // Méthode 4: Fallback - chercher par position dans le JSON
-    if (!found) {
-        // Utiliser la position de l'image dans le tableau d'images du produit
-        const productContainer = document.querySelector('[x-data*="handleVariant"]');
-        if (productContainer && productContainer._x_dataStack) {
-            const alpineData = productContainer._x_dataStack[0];
-            const productImages = alpineData.product.images || [];
+    // Fallback: chercher par correspondance partielle du nom
+    if (!found && variantImageSrc) {
+        console.log('Recherche par correspondance partielle');
+        
+        const fileName = variantImageSrc.split('/').pop().split('?')[0].replace('.webp', '');
+        
+        slides.forEach((img, index) => {
+            const imgSrc = img.getAttribute('src') || '';
             
-            const variantImageSrc = selectedVariant.featured_image.src;
-            productImages.forEach((productImageSrc, index) => {
-                if (productImageSrc.includes(selectedVariant.featured_image.id) || 
-                    productImageSrc === variantImageSrc) {
-                    targetIndex = index;
-                    found = true;
-                    console.log(`Image trouvée par position dans le produit à l'index:`, index);
-                }
-            });
-        }
+            if (imgSrc.includes(fileName)) {
+                targetIndex = index;
+                found = true;
+                console.log(`Image trouvée par correspondance partielle ${fileName} à l'index:`, index);
+            }
+        });
     }
     
     if (!found) {
         console.warn('Image de la variante non trouvée dans le slider');
-        // Lister toutes les images pour debug
-        console.log('Images disponibles dans le slider:');
+        console.log('Image recherchée:', variantImageSrc);
+        console.log('Images disponibles:');
         slides.forEach((img, index) => {
             console.log(`Index ${index}:`, img.getAttribute('src'));
         });
@@ -406,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         syncSwiperWithVariant(alpineData.selected_or_first_available_variant);
                     }
                 }
-            }, 100); // Augmenté le délai pour être sûr qu'Alpine ait mis à jour
+            }, 100);
         });
     });
 });
