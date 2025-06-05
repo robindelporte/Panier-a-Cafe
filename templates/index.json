@@ -32,6 +32,16 @@
             "image_image_desktop": "shopify://shop_images/ben_producteur.webp"
           }
         },
+        "slide_qJhp3m": {
+          "type": "slide",
+          "settings": {
+            "richtext_heading": "<p>Ici, le café est cuit avec passion, pas par hasard</p>",
+            "text_text": "",
+            "url_button_1_link": "",
+            "text_button_1_text": "Notre torréfaction",
+            "image_image_desktop": "shopify://shop_images/ben_torref_1.jpg"
+          }
+        },
         "slide_W8mLC8": {
           "type": "slide",
           "settings": {
@@ -47,6 +57,7 @@
       "block_order": [
         "slide_iMn83X",
         "slide_RNTMcM",
+        "slide_qJhp3m",
         "slide_W8mLC8"
       ],
       "settings": {}
