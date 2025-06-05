@@ -26,10 +26,10 @@
         "slide_iMn83X": {
           "type": "slide",
           "settings": {
-            "richtext_heading": "<h2>Tout commence ici, avec la nature, avec l’humain</h2>",
+            "richtext_heading": "<h2>Tout commence ici,</h2><h2>avec la nature, avec l’humain</h2>",
             "text_text": "",
-            "url_button_1_link": "",
-            "text_button_1_text": "Button Text",
+            "url_button_1_link": "shopify://collections/cafes",
+            "text_button_1_text": "Découvrir",
             "image_image_desktop": "shopify://shop_images/Sumatrasourcing-74_1.webp"
           }
         }
