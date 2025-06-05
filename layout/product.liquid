@@ -110,8 +110,8 @@
     </script><script>document.addEventListener('DOMContentLoaded', function() {
   const deliveryElement = document.querySelector('.delivery-estimate');
   if (deliveryElement) {
-    const minDays = parseInt(deliveryElement.dataset.minDays) || 4;
-    const maxDays = parseInt(deliveryElement.dataset.maxDays) || 6;
+    const minDays = parseInt(deliveryElement.dataset.minDays) || 2;
+    const maxDays = parseInt(deliveryElement.dataset.maxDays) || 4;
     const today = new Date();
     const deliveryStart = new Date(today);
     const deliveryEnd = new Date(today);
