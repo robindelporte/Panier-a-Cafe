@@ -431,14 +431,14 @@
         ]
       }
     },
-    "logo_defilants_FeGFtN": {
+    "logo_defilants_eJRReg": {
       "type": "logo_defilants",
       "blocks": {
-        "logo_defilants_aaCzCt": {
+        "logo_defilants_XHWiDL": {
           "type": "logo-defilants",
           "settings": {
             "image_logo_1": "shopify://shop_images/L_ecuelle.png",
-            "image_logo_2": "shopify://shop_images/logoOK-noirFondTransparent_1.webp",
+            "image_logo_2": "shopify://shop_images/Logo-CB-light-gris-120.png",
             "image_logo_3": "shopify://shop_images/Haven.png",
             "image_logo_4": "shopify://shop_images/Clos_des_sens.png",
             "image_logo_5": "shopify://shop_images/logos_confiance_fournil_villaz.png",
@@ -446,7 +446,7 @@
           },
           "blocks": {}
         },
-        "logo_defilants_inverses_PExhnA": {
+        "logo_defilants_inverses_xDf3MC": {
           "type": "logo-defilants-inverses",
           "settings": {
             "image_logo_1": "shopify://shop_images/Poco_A_Poco.png",
@@ -458,7 +458,7 @@
           },
           "blocks": {}
         },
-        "logo_defilants_RHq87R": {
+        "logo_defilants_bBEFDV": {
           "type": "logo-defilants",
           "settings": {
             "image_logo_1": "shopify://shop_images/salomon.png",
@@ -472,9 +472,9 @@
         }
       },
       "block_order": [
-        "logo_defilants_aaCzCt",
-        "logo_defilants_inverses_PExhnA",
-        "logo_defilants_RHq87R"
+        "logo_defilants_XHWiDL",
+        "logo_defilants_inverses_xDf3MC",
+        "logo_defilants_bBEFDV"
       ],
       "settings": {
         "text_heading": "Ils nous font confiance"
@@ -496,6 +496,6 @@
     "contenu_kbV9Uz",
     "contenu_2",
     "collection_tabs_marr_6khPpp",
-    "logo_defilants_FeGFtN"
+    "logo_defilants_eJRReg"
   ]
 }
