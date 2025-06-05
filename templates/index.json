@@ -34,9 +34,9 @@
       "settings": {
         "collection_list": [
           "cafes",
+          "capsules",
           "les-thes",
-          "machines-et-cafetieres",
-          "capsules"
+          "machines-et-cafetieres"
         ]
       }
     },
