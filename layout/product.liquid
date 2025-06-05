@@ -270,9 +270,7 @@
         });
 
         const gallerySwiper = new Swiper($container.find(".swiper.is-product-gallery")[0], {
-          mousewheel: {
-            forceToAxis: true
-          },
+          mousewheel: { forceToAxis: true },
           thumbs: {
             swiper: thumbsSwiper,
             slideThumbActiveClass: "is-active",
@@ -301,32 +299,29 @@
           }
         });
 
-        // 🔁 Synchroniser le slide avec la variante sélectionnée
+        // 🧠 Nouvelle stratégie : poller l'état Alpine
         if (alpine?.product && alpine?.selected_or_first_available_variant) {
-          const syncSlideWithVariant = () => {
-            const variant = alpine.selected_or_first_available_variant;
-            const variantImg = variant?.featured_image?.src?.replace(/^https?:/, '');
-            if (!variantImg) return;
+          let lastVariantId = null;
 
-            const images = alpine.product.images || [];
-            const index = images.findIndex(img => img.replace(/^https?:/, '') === variantImg);
-            if (index !== -1) {
-              gallerySwiper.slideTo(index);
+          const checkVariant = () => {
+            const variant = alpine.selected_or_first_available_variant;
+            const currentId = variant?.id;
+
+            if (currentId && currentId !== lastVariantId) {
+              lastVariantId = currentId;
+              const variantImg = variant.featured_image?.src?.replace(/^https?:/, '');
+              const images = alpine.product.images || [];
+
+              const index = images.findIndex(img => img.replace(/^https?:/, '') === variantImg);
+              if (index !== -1) {
+                gallerySwiper.slideTo(index);
+              }
             }
+
+            requestAnimationFrame(checkVariant);
           };
 
-          // Initial call
-          syncSlideWithVariant();
-
-          // MutationObserver pour détecter les changements Alpine
-          const observer = new MutationObserver(() => {
-            syncSlideWithVariant();
-          });
-
-          observer.observe(root, {
-            childList: true,
-            subtree: true,
-          });
+          requestAnimationFrame(checkVariant);
         }
       });
     </script>
