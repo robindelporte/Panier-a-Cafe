@@ -191,6 +191,32 @@
         "text_heading": "Comment ça marche ?"
       }
     },
+    "1749206776f613b022": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_BXMfQH": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "499171",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 64,
+            "padding_bottom": 64,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_BXMfQH"
+      ],
+      "settings": {}
+    },
     "faq_mbT4gY": {
       "type": "faq",
       "blocks": {
@@ -267,6 +293,7 @@
     "contenu_QbRp9z",
     "contenu_Pz8x47",
     "bandeau",
+    "1749206776f613b022",
     "faq_mbT4gY"
   ]
 }
