@@ -46,6 +46,7 @@
         "text_nature": "{{ product.metafields.custom.traitement.value }}",
         "text_achat_en_direct_du_producteur": "{{ product.metafields.custom.certification.value.nom.value }}",
         "text_86": "{{ product.metafields.custom.score_sca.value }}",
+        "richtext_dou_vient_mon_cafe": "<p>{{ product.metafields.custom.les_conseils_du_torrefacteur_titre.value }}</p>",
         "richtext_contenu": "<p>{{ product.metafields.custom.les_conseils_du_torrefacteur_texte | metafield_tag }}</p>",
         "text_type_extraction": "{{ product.metafields.custom.type_d_extraction_id_al.value }}",
         "text_conseil_mouture": "{{ product.metafields.custom.conseil_de_mouture.value }}",
