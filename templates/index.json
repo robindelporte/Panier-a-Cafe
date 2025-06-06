@@ -55,10 +55,10 @@
         "slide_GxDrBJ": {
           "type": "slide",
           "settings": {
-            "richtext_heading": "<p>Derrière chaque grain, une histoire vraie.</p>",
-            "text_text": "",
+            "richtext_heading": "<h2>Derrière chaque grain, une histoire vraie.</h2>",
+            "text_text": "Nos cafés ensachés par nos travailleurs de l'ESAT des EPANOU du Parmelan",
             "url_button_1_link": "shopify://collections/cafes-en-grain",
-            "text_button_1_text": "Nos cafés ensachés par nos travailleurs de l'ESAT des EPANOU du Parmelan",
+            "text_button_1_text": "",
             "image_image_desktop": "shopify://shop_images/V1A2466_1.webp"
           }
         },
