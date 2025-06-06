@@ -425,11 +425,18 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeQuantityButtons();
     
     // GESTION DES DONS
-    const donButton = document.querySelector('[data-donation="true"] button[x-on\\:click*="addToCart"]');
+    const donButton = document.querySelector('[data-donation="true"] button');
     if (donButton) {
+        console.log('Don button found!', donButton); // Debug
         donButton.addEventListener('click', function() {
-            setTimeout(() => updateCartSection(), 1000);
+            console.log('Don button clicked!'); // Debug
+            setTimeout(() => {
+                console.log('Calling updateCartSection...'); // Debug
+                updateCartSection();
+            }, 1500);
         });
+    } else {
+        console.log('Don button NOT found!'); // Debug
     }
     
     // GESTION DES BOUTONS POUBELLE
