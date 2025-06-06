@@ -306,13 +306,14 @@
   </style>
 </div>
 <div class="hide w-embed w-script">
-  <script>document.addEventListener('DOMContentLoaded', function () {
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
    const quantityInputs = document.querySelectorAll('[cart-number-input]');
    function updateInputValue(input, newValue) {
        input.value = newValue;
        input.dispatchEvent(new Event('input'));
        input.dispatchEvent(new Event('change'));
-       // 1. D'abord faire l'appel API pour changer la quantit&eacute;
+       // 1. D'abord faire l'appel API pour changer la quantité
        setTimeout(() => {
            const form = input.closest('form');
            if (form) {
@@ -322,7 +323,7 @@
                    body: formData
                })
                .then(() => {
-                   // 2. PUIS mettre &agrave; jour la section
+                   // 2. PUIS mettre à jour la section
                    updateCartSection();
                })
                .catch(() => form.submit()); // Fallback
@@ -358,7 +359,6 @@
   </script>
 
   <script>
-    <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Gestion des dons
         const donButton = document.querySelector('[data-donation="true"] button[x-on\\:click*="addToCart"]');
@@ -432,7 +432,6 @@
         // Rendre la fonction accessible globalement
         window.updateCartSection = updateCartSection;
     });
-    </script>
   </script>
 </div>
 {% schema %} {"tag":"section","name":"Cart","class":"section_account","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Mon panier \u00e0 caf\u00e9"},{"id":"product_product","type":"product","label":"Product"},{"id":"text_cart_empty","type":"text","label":"Cart Empty","default":"Votre panier est vide :("}],"presets":[{"name":"Cart","category":"Liquify","blocks":[]}]} {% endschema %}
