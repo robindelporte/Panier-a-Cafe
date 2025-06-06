@@ -307,131 +307,148 @@
 </div>
 <div class="hide w-embed w-script">
   <script>
-document.addEventListener('DOMContentLoaded', function () {
-   const quantityInputs = document.querySelectorAll('[cart-number-input]');
-   function updateInputValue(input, newValue) {
-       input.value = newValue;
-       input.dispatchEvent(new Event('input'));
-       input.dispatchEvent(new Event('change'));
-       // 1. D'abord faire l'appel API pour changer la quantité
-       setTimeout(() => {
-           const form = input.closest('form');
-           if (form) {
-               const formData = new FormData(form);
-               fetch('/cart', {
-                   method: 'POST',
-                   body: formData
-               })
-               .then(() => {
-                   // 2. PUIS mettre à jour la section
-                   updateCartSection();
-               })
-               .catch(() => form.submit()); // Fallback
-           }
-       }, 500);
-   }
-   quantityInputs.forEach(input => {
-       const id = input.getAttribute('cart-number-input');
-       const incrementButton = input.parentElement.querySelector(`[cart-number-button="increase"][data-id="${id}"]`);
-       const decrementButton = input.parentElement.querySelector(`[cart-number-button="decrease"][data-id="${id}"]`);
-       if (incrementButton) {
-           incrementButton.addEventListener('click', function () {
-               let currentValue = parseInt(input.value, 10);
-               updateInputValue(input, currentValue + 1);
-           });
-       }
-       if (decrementButton) {
-           decrementButton.addEventListener('click', function () {
-               let currentValue = parseInt(input.value, 10);
-               if (currentValue > 1) {
-                   updateInputValue(input, currentValue - 1);
-               }
-           });
-       }
-       input.addEventListener('change', function () {
-           let currentValue = parseInt(this.value, 10);
-           if (isNaN(currentValue) || currentValue < 1) {
-               updateInputValue(this, 1);
-           }
-       });
-   });
-});
-  </script>
+document.addEventListener('DOMContentLoaded', function() {
+    let isUpdating = false; // Éviter les appels multiples
+    
+    // FONCTION PRINCIPALE DE MISE À JOUR (une seule fois)
+    function updateCartSection() {
+        if (isUpdating) return; // Éviter les doublons
+        isUpdating = true;
+        
+        fetch(window.location.pathname + '?section_id=template--25274103464275__cart')
+            .then(res => res.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const newSection = doc.querySelector('#shopify-section-template--25274103464275__cart');
+                const currentSection = document.querySelector('#shopify-section-template--25274103464275__cart');
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Gestion des dons
-        const donButton = document.querySelector('[data-donation="true"] button[x-on\\:click*="addToCart"]');
-
-        if (donButton) {
-            donButton.addEventListener('click', function() {
-                setTimeout(() => {
-                    updateCartSection();
-                }, 1000);
+                if (currentSection && newSection) {
+                    currentSection.outerHTML = newSection.outerHTML;
+                    
+                    // RÉATTACHER les event listeners des boutons quantité
+                    initializeQuantityButtons();
+                    
+                    // METTRE À JOUR LE MINI-CART LIQUIFY
+                    fetch('/cart.js')
+                        .then(r => r.json())
+                        .then(cartData => {
+                            // Déclencher les événements Liquify spécifiques
+                            window.dispatchEvent(new CustomEvent('carttotalitems', { 
+                                detail: cartData.item_count 
+                            }));
+                            
+                            window.dispatchEvent(new CustomEvent('cartupdated', { 
+                                detail: cartData.items 
+                            }));
+                            
+                            window.dispatchEvent(new CustomEvent('currentcartitems', { 
+                                detail: cartData.items 
+                            }));
+                            
+                            // Les anciens au cas où
+                            window.dispatchEvent(new CustomEvent('cart:updated', { detail: cartData }));
+                            window.dispatchEvent(new CustomEvent('cartUpdated', { detail: cartData }));
+                        });
+                }
+                
+                isUpdating = false; // Permettre les prochains appels
+            })
+            .catch(() => {
+                isUpdating = false;
+                location.reload();
             });
-        }
-
-        // Gestion des boutons poubelle
-        document.addEventListener('click', function(e) {
-            const removeLink = e.target.closest('a[li-object\\:href*="url_to_remove"]');
-
-            if (removeLink) {
-                e.preventDefault();
-                const removeUrl = removeLink.getAttribute('href') || removeLink.getAttribute('li-object:href');
-
-                fetch(removeUrl)
+    }
+    
+    // FONCTION POUR INITIALISER LES BOUTONS QUANTITÉ
+    function initializeQuantityButtons() {
+        const quantityInputs = document.querySelectorAll('[cart-number-input]');
+        
+        function updateInputValue(input, newValue) {
+            input.value = newValue;
+            input.dispatchEvent(new Event('input'));
+            input.dispatchEvent(new Event('change'));
+            
+            setTimeout(() => {
+                const form = input.closest('form');
+                if (form) {
+                    const formData = new FormData(form);
+                    fetch('/cart', {
+                        method: 'POST',
+                        body: formData
+                    })
                     .then(() => updateCartSection())
-                    .catch(() => window.location.href = removeUrl);
-            }
-        });
-
-        // Fonction principale de mise à jour
-        function updateCartSection() {
-            fetch(window.location.pathname + '?section_id=template--25274103464275__cart')
-                .then(res => res.text())
-                .then(html => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    const newSection = doc.querySelector('#shopify-section-template--25274103464275__cart');
-                    const currentSection = document.querySelector('#shopify-section-template--25274103464275__cart');
-
-                    if (currentSection && newSection) {
-                        currentSection.outerHTML = newSection.outerHTML;
-
-                        // FORCER LA MISE À JOUR DU MINI-CART LIQUIFY
-                        setTimeout(() => {
-                            // 1. Refetch les données du cart
-                            fetch('/cart.js')
-                                .then(r => r.json())
-                                .then(cartData => {
-                                    // 2. Mettre à jour tous les éléments Alpine avec x-data qui contiennent cart
-                                    document.querySelectorAll('[x-data]').forEach(el => {
-                                        if (el._x_dataStack && el._x_dataStack[0]) {
-                                            const data = el._x_dataStack[0];
-                                            if (data.cartTotal !== undefined) {
-                                                data.cartTotal = cartData.total_price;
-                                            }
-                                        }
-                                    });
-
-                                    // 3. Déclencher plusieurs événements pour être sûr
-                                    window.dispatchEvent(new CustomEvent('cart:updated', { detail: cartData }));
-                                    window.dispatchEvent(new CustomEvent('cartUpdated', { detail: cartData }));
-                                    window.dispatchEvent(new CustomEvent('cart-updated', { detail: cartData }));
-                                });
-
-                            // 4. Re-déclencher DOMContentLoaded
-                            const event = new Event('DOMContentLoaded');
-                            document.dispatchEvent(event);
-                        }, 200);
-                    }
-                })
-                .catch(() => location.reload());
+                    .catch(() => form.submit());
+                }
+            }, 500);
         }
-
-        // Rendre la fonction accessible globalement
-        window.updateCartSection = updateCartSection;
+        
+        quantityInputs.forEach(input => {
+            const id = input.getAttribute('cart-number-input');
+            const incrementButton = input.parentElement.querySelector(`[cart-number-button="increase"][data-id="${id}"]`);
+            const decrementButton = input.parentElement.querySelector(`[cart-number-button="decrease"][data-id="${id}"]`);
+            
+            if (incrementButton) {
+                // Supprimer les anciens listeners
+                incrementButton.replaceWith(incrementButton.cloneNode(true));
+                const newIncrementButton = input.parentElement.querySelector(`[cart-number-button="increase"][data-id="${id}"]`);
+                
+                newIncrementButton.addEventListener('click', function() {
+                    let currentValue = parseInt(input.value, 10);
+                    updateInputValue(input, currentValue + 1);
+                });
+            }
+            
+            if (decrementButton) {
+                // Supprimer les anciens listeners
+                decrementButton.replaceWith(decrementButton.cloneNode(true));
+                const newDecrementButton = input.parentElement.querySelector(`[cart-number-button="decrease"][data-id="${id}"]`);
+                
+                newDecrementButton.addEventListener('click', function() {
+                    let currentValue = parseInt(input.value, 10);
+                    if (currentValue > 1) {
+                        updateInputValue(input, currentValue - 1);
+                    }
+                });
+            }
+            
+            input.addEventListener('change', function() {
+                let currentValue = parseInt(this.value, 10);
+                if (isNaN(currentValue) || currentValue < 1) {
+                    updateInputValue(this, 1);
+                }
+            });
+        });
+    }
+    
+    // INITIALISER AU CHARGEMENT
+    initializeQuantityButtons();
+    
+    // GESTION DES DONS
+    const donButton = document.querySelector('[data-donation="true"] button[x-on\\:click*="addToCart"]');
+    if (donButton) {
+        donButton.addEventListener('click', function() {
+            setTimeout(() => updateCartSection(), 1000);
+        });
+    }
+    
+    // GESTION DES BOUTONS POUBELLE
+    document.addEventListener('click', function(e) {
+        const removeLink = e.target.closest('a[li-object\\:href*="url_to_remove"]');
+        
+        if (removeLink) {
+            e.preventDefault();
+            const removeUrl = removeLink.getAttribute('href') || removeLink.getAttribute('li-object:href');
+            
+            fetch(removeUrl)
+                .then(() => updateCartSection())
+                .catch(() => window.location.href = removeUrl);
+        }
     });
+    
+    // Rendre accessible globalement
+    window.updateCartSection = updateCartSection;
+});
   </script>
 </div>
 {% schema %} {"tag":"section","name":"Cart","class":"section_account","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Mon panier \u00e0 caf\u00e9"},{"id":"product_product","type":"product","label":"Product"},{"id":"text_cart_empty","type":"text","label":"Cart Empty","default":"Votre panier est vide :("}],"presets":[{"name":"Cart","category":"Liquify","blocks":[]}]} {% endschema %}
