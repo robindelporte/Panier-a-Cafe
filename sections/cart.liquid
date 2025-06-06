@@ -305,4 +305,34 @@
     }
   </style>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const donButton = document.querySelector('[data-donation="true"] button[x-on\\:click*="addToCart"]');
+
+      if (donButton) {
+          donButton.addEventListener('click', function() {
+              // Attendre que addToCart se termine
+              setTimeout(() => {
+                  updateCartSection();
+              }, 1000);
+          });
+      }
+
+      function updateCartSection() {
+          fetch(window.location.pathname + '?section_id=template--25274103464275__cart')
+              .then(res => res.text())
+              .then(html => {
+                  const parser = new DOMParser();
+                  const doc = parser.parseFromString(html, 'text/html');
+                  const newSection = doc.querySelector('#shopify-section-template--25274103464275__cart');
+                  const currentSection = document.querySelector('#shopify-section-template--25274103464275__cart');
+
+                  if (currentSection && newSection) {
+                      currentSection.outerHTML = newSection.outerHTML;
+                  }
+              })
+              .catch(() => location.reload()); // Fallback
+      }
+  });
+</script>
 {% schema %} {"tag":"section","name":"Cart","class":"section_account","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Mon panier \u00e0 caf\u00e9"},{"id":"product_product","type":"product","label":"Product"},{"id":"text_cart_empty","type":"text","label":"Cart Empty","default":"Votre panier est vide :("}],"presets":[{"name":"Cart","category":"Liquify","blocks":[]}]} {% endschema %}
