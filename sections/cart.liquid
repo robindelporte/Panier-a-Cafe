@@ -308,28 +308,40 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
    const quantityInputs = document.querySelectorAll('[cart-number-input]');
+   
    function updateInputValue(input, newValue) {
        input.value = newValue;
        input.dispatchEvent(new Event('input'));
        input.dispatchEvent(new Event('change'));
-       // Auto-submit du formulaire
+       
+       // Au lieu de form.submit(), utiliser Section Rendering API
        setTimeout(() => {
            const form = input.closest('form');
            if (form) {
-               form.submit();
+               const formData = new FormData(form);
+               
+               fetch('/cart', {
+                   method: 'POST',
+                   body: formData
+               })
+               .then(() => updateCartSection())
+               .catch(() => form.submit()); // Fallback
            }
        }, 500);
    }
+   
    quantityInputs.forEach(input => {
        const id = input.getAttribute('cart-number-input');
        const incrementButton = input.parentElement.querySelector(`[cart-number-button="increase"][data-id="${id}"]`);
        const decrementButton = input.parentElement.querySelector(`[cart-number-button="decrease"][data-id="${id}"]`);
+       
        if (incrementButton) {
            incrementButton.addEventListener('click', function () {
                let currentValue = parseInt(input.value, 10);
                updateInputValue(input, currentValue + 1);
            });
        }
+       
        if (decrementButton) {
            decrementButton.addEventListener('click', function () {
                let currentValue = parseInt(input.value, 10);
@@ -338,6 +350,7 @@ document.addEventListener('DOMContentLoaded', function () {
                }
            });
        }
+       
        input.addEventListener('change', function () {
            let currentValue = parseInt(this.value, 10);
            if (isNaN(currentValue) || currentValue < 1) {
