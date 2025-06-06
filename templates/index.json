@@ -191,15 +191,15 @@
           "type": "dot",
           "settings": {
             "text_x_achse": "30",
-            "text_y_achse": "50",
-            "product_produit": "cafe-el-volcano"
+            "text_y_achse": "30",
+            "product_produit": "filtre-chemex"
           }
         },
         "dot_gWk4TP": {
           "type": "dot",
           "settings": {
-            "text_x_achse": "10",
-            "text_y_achse": "40",
+            "text_x_achse": "30",
+            "text_y_achse": "70",
             "product_produit": "cafe-bio-amore"
           }
         },
