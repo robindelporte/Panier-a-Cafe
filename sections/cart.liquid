@@ -56,7 +56,7 @@
        input.value = newValue;
        input.dispatchEvent(new Event('input'));
        input.dispatchEvent(new Event('change'));
-       // Au lieu de form.submit(), utiliser Section Rendering API
+       // 1. D'abord faire l'appel API pour changer la quantit&eacute;
        setTimeout(() => {
            const form = input.closest('form');
            if (form) {
@@ -65,7 +65,10 @@
                    method: 'POST',
                    body: formData
                })
-               .then(() => updateCartSection())
+               .then(() => {
+                   // 2. PUIS mettre &agrave; jour la section
+                   updateCartSection();
+               })
                .catch(() => form.submit()); // Fallback
            }
        }, 500);
@@ -117,6 +120,7 @@
                 .catch(() => window.location.href = removeUrl);
         }
     });
+    // Fonction principale de mise &agrave; jour
     function updateCartSection() {
         fetch(window.location.pathname + '?section_id=template--25274103464275__cart')
             .then(res => res.text())
@@ -127,7 +131,16 @@
                 const currentSection = document.querySelector('#shopify-section-template--25274103464275__cart');
                 if (currentSection && newSection) {
                     currentSection.outerHTML = newSection.outerHTML;
-                    // Re-d&eacute;clencher l'&eacute;v&eacute;nement pour les boutons quantit&eacute;
+                    // METTRE &Agrave; JOUR LE MINI-CART LIQUIFY
+                    if (window.Alpine) {
+                        fetch('/cart.js')
+                            .then(r => r.json())
+                            .then(cartData => {
+                                window.dispatchEvent(new CustomEvent('cart:updated', {
+                                    detail: cartData
+                                }));
+                            });
+                    }
                     setTimeout(() => {
                         const event = new Event('DOMContentLoaded');
                         document.dispatchEvent(event);
@@ -136,5 +149,7 @@
             })
             .catch(() => location.reload());
     }
+    // Rendre la fonction accessible globalement
+    window.updateCartSection = updateCartSection;
 });
 </script></div> {% schema %} {"tag":"section","name":"Cart","class":"section_account","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Mon panier \u00e0 caf\u00e9"},{"id":"product_product","type":"product","label":"Product"},{"id":"text_cart_empty","type":"text","label":"Cart Empty","default":"Votre panier est vide :("}],"presets":[{"name":"Cart","category":"Liquify","blocks":[]}]} {% endschema %}
