@@ -200,13 +200,13 @@
           "settings": {
             "text_x_achse": "30",
             "text_y_achse": "70",
-            "product_produit": "cafe-bio-amore"
+            "product_produit": "chemex"
           }
         },
         "dot_GiCabH": {
           "type": "dot",
           "settings": {
-            "text_x_achse": "60",
+            "text_x_achse": "65",
             "text_y_achse": "50",
             "product_produit": "cafe-el-greengo"
           }
