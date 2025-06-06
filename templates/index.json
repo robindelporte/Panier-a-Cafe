@@ -250,12 +250,12 @@
             "text_nom_collection": "Café en grain"
           }
         },
-        "collection_KneG98": {
+        "collection_YDeFXn": {
           "type": "collection",
           "settings": {
-            "url_lien_collection": "shopify://collections/equipements",
-            "image_image_collection": "shopify://shop_images/Moulin_marron.svg",
-            "text_nom_collection": "Équipements"
+            "url_lien_collection": "shopify://collections/capsules",
+            "image_image_collection": "shopify://shop_images/Capsules_marron.svg",
+            "text_nom_collection": "Capsules"
           }
         },
         "collection_MJJhph": {
@@ -266,14 +266,6 @@
             "text_nom_collection": "Thès"
           }
         },
-        "collection_fNy9T8": {
-          "type": "collection",
-          "settings": {
-            "url_lien_collection": "shopify://collections/cafetiere-a-filtre",
-            "image_image_collection": "shopify://shop_images/Chemex_marron_1.svg",
-            "text_nom_collection": "Cafetière à filtre"
-          }
-        },
         "collection_g38kbR": {
           "type": "collection",
           "settings": {
@@ -282,22 +274,30 @@
             "text_nom_collection": "Machines"
           }
         },
-        "collection_YDeFXn": {
+        "collection_KneG98": {
           "type": "collection",
           "settings": {
-            "url_lien_collection": "shopify://collections/capsules",
-            "image_image_collection": "shopify://shop_images/Capsules_marron.svg",
-            "text_nom_collection": "Capsules"
+            "url_lien_collection": "shopify://collections/equipements",
+            "image_image_collection": "shopify://shop_images/Moulin_marron.svg",
+            "text_nom_collection": "Équipements"
+          }
+        },
+        "collection_fNy9T8": {
+          "type": "collection",
+          "settings": {
+            "url_lien_collection": "shopify://collections/cafetiere-a-filtre",
+            "image_image_collection": "shopify://shop_images/Chemex_marron_1.svg",
+            "text_nom_collection": "Cafetière à filtre"
           }
         }
       },
       "block_order": [
         "collection_yM6Fwz",
-        "collection_KneG98",
+        "collection_YDeFXn",
         "collection_MJJhph",
-        "collection_fNy9T8",
         "collection_g38kbR",
-        "collection_YDeFXn"
+        "collection_KneG98",
+        "collection_fNy9T8"
       ],
       "settings": {}
     },
