@@ -306,93 +306,94 @@
   </style>
 </div>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // PARTIE 1: Gestion des dons (sans reload)
-    const donButton = document.querySelector('[data-donation="true"] button[x-on\\:click*="addToCart"]');
-    
-    if (donButton) {
-        donButton.addEventListener('click', function() {
-            setTimeout(() => {
-                updateCartSection();
-            }, 1000);
-        });
-    }
-    
-    // PARTIE 2: Gestion des boutons poubelle (sans reload)
-    document.addEventListener('click', function(e) {
-        const removeLink = e.target.closest('a[li-object\\:href*="url_to_remove"]');
-        
-        if (removeLink) {
-            e.preventDefault();
-            const removeUrl = removeLink.getAttribute('href') || removeLink.getAttribute('li-object:href');
-            
-            fetch(removeUrl)
-                .then(() => updateCartSection())
-                .catch(() => window.location.href = removeUrl);
-        }
-    });
-    
-    // PARTIE 3: Mise à jour de la section panier
-    function updateCartSection() {
-        fetch(window.location.pathname + '?section_id=template--25274103464275__cart')
-            .then(res => res.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const newSection = doc.querySelector('#shopify-section-template--25274103464275__cart');
-                const currentSection = document.querySelector('#shopify-section-template--25274103464275__cart');
-                
-                if (currentSection && newSection) {
-                    currentSection.outerHTML = newSection.outerHTML;
-                    reinitializeQuantityButtons(); // Réattacher les events
-                }
-            })
-            .catch(() => location.reload());
-    }
-    
-    // PARTIE 4: Réinitialiser les boutons quantité après mise à jour
-    function reinitializeQuantityButtons() {
-        const quantityInputs = document.querySelectorAll('[cart-number-input]');
-        
-        function updateInputValue(input, newValue) {
-            input.value = newValue;
-            input.dispatchEvent(new Event('input'));
-            input.dispatchEvent(new Event('change'));
-            setTimeout(() => {
-                const form = input.closest('form');
-                if (form) form.submit();
-            }, 500);
-        }
-        
-        quantityInputs.forEach(input => {
-            const id = input.getAttribute('cart-number-input');
-            const incrementButton = input.parentElement.querySelector(`[cart-number-button="increase"][data-id="${id}"]`);
-            const decrementButton = input.parentElement.querySelector(`[cart-number-button="decrease"][data-id="${id}"]`);
-            
-            if (incrementButton) {
-                incrementButton.addEventListener('click', function() {
-                    let currentValue = parseInt(input.value, 10);
-                    updateInputValue(input, currentValue + 1);
-                });
-            }
-            
-            if (decrementButton) {
-                decrementButton.addEventListener('click', function() {
-                    let currentValue = parseInt(input.value, 10);
-                    if (currentValue > 1) {
-                        updateInputValue(input, currentValue - 1);
-                    }
-                });
-            }
-            
-            input.addEventListener('change', function() {
-                let currentValue = parseInt(this.value, 10);
-                if (isNaN(currentValue) || currentValue < 1) {
-                    updateInputValue(this, 1);
-                }
-            });
-        });
-    }
+document.addEventListener('DOMContentLoaded', function () {
+   const quantityInputs = document.querySelectorAll('[cart-number-input]');
+   function updateInputValue(input, newValue) {
+       input.value = newValue;
+       input.dispatchEvent(new Event('input'));
+       input.dispatchEvent(new Event('change'));
+       // Auto-submit du formulaire
+       setTimeout(() => {
+           const form = input.closest('form');
+           if (form) {
+               form.submit();
+           }
+       }, 500);
+   }
+   quantityInputs.forEach(input => {
+       const id = input.getAttribute('cart-number-input');
+       const incrementButton = input.parentElement.querySelector(`[cart-number-button="increase"][data-id="${id}"]`);
+       const decrementButton = input.parentElement.querySelector(`[cart-number-button="decrease"][data-id="${id}"]`);
+       if (incrementButton) {
+           incrementButton.addEventListener('click', function () {
+               let currentValue = parseInt(input.value, 10);
+               updateInputValue(input, currentValue + 1);
+           });
+       }
+       if (decrementButton) {
+           decrementButton.addEventListener('click', function () {
+               let currentValue = parseInt(input.value, 10);
+               if (currentValue > 1) {
+                   updateInputValue(input, currentValue - 1);
+               }
+           });
+       }
+       input.addEventListener('change', function () {
+           let currentValue = parseInt(this.value, 10);
+           if (isNaN(currentValue) || currentValue < 1) {
+               updateInputValue(this, 1);
+           }
+       });
+   });
 });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Gestion des dons
+      const donButton = document.querySelector('[data-donation="true"] button[x-on\\:click*="addToCart"]');
+
+      if (donButton) {
+          donButton.addEventListener('click', function() {
+              setTimeout(() => {
+                  updateCartSection();
+              }, 1000);
+          });
+      }
+
+      // Gestion des boutons poubelle
+      document.addEventListener('click', function(e) {
+          const removeLink = e.target.closest('a[li-object\\:href*="url_to_remove"]');
+
+          if (removeLink) {
+              e.preventDefault();
+              const removeUrl = removeLink.getAttribute('href') || removeLink.getAttribute('li-object:href');
+
+              fetch(removeUrl)
+                  .then(() => updateCartSection())
+                  .catch(() => window.location.href = removeUrl);
+          }
+      });
+
+      function updateCartSection() {
+          fetch(window.location.pathname + '?section_id=template--25274103464275__cart')
+              .then(res => res.text())
+              .then(html => {
+                  const parser = new DOMParser();
+                  const doc = parser.parseFromString(html, 'text/html');
+                  const newSection = doc.querySelector('#shopify-section-template--25274103464275__cart');
+                  const currentSection = document.querySelector('#shopify-section-template--25274103464275__cart');
+
+                  if (currentSection && newSection) {
+                      currentSection.outerHTML = newSection.outerHTML;
+                      // Re-déclencher l'événement pour les boutons quantité
+                      setTimeout(() => {
+                          const event = new Event('DOMContentLoaded');
+                          document.dispatchEvent(event);
+                      }, 100);
+                  }
+              })
+              .catch(() => location.reload());
+      }
+  });
 </script>
 {% schema %} {"tag":"section","name":"Cart","class":"section_account","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Mon panier \u00e0 caf\u00e9"},{"id":"product_product","type":"product","label":"Product"},{"id":"text_cart_empty","type":"text","label":"Cart Empty","default":"Votre panier est vide :("}],"presets":[{"name":"Cart","category":"Liquify","blocks":[]}]} {% endschema %}
