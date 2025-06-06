@@ -50,7 +50,7 @@
 
                             
                         </div>
-{% endfor %}</div><div class="footre_soutien"><div>Ils nous soutiennent</div><div class="footer_soutiens-list"><img src="{{ section.settings.image_soutien_1 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_soutien_1.alt }}" class="footer_soutien-image">
+{% endfor %}</div><div class="footer_soutien"><div>Ils nous soutiennent</div><div class="footer_soutiens-list"><img src="{{ section.settings.image_soutien_1 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_soutien_1.alt }}" class="footer_soutien-image">
 <img src="{{ section.settings.image_soutien_2 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_soutien_2.alt }}" class="footer_soutien-image">
 <img src="{{ section.settings.image_soutien_3 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_soutien_3.alt }}" class="footer_soutien-image">
 </div></div></div></div></div><div class="footer_divider"></div><div class="background-color-black"><div class="padding-global padding-section-xsmall"><div class="container-large"><div class="footer_icon-grid"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="footer_logo-link w-inline-block"><img src="{{ 'logo_panier_a_cafe-creme.png' | asset_url }}" loading="lazy" sizes="(max-width: 1081px) 100vw, 1081px" srcset="{{ 'LOGO-CRÈME-p-500.png' | asset_url }} 500w, {{ 'LOGO-CRÈME-p-800.png' | asset_url }} 800w, {{ 'logo_panier_a_cafe-creme.png' | asset_url }} 1081w" alt="" class="footer_logo">
@@ -59,7 +59,7 @@
                             <div li-object="type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color'" class="footer_payment-svg">{{ type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color' }}</div>
                             
                         </li>
-{% endfor %}</ul></div></div><div class="footer_sub-footer"><div class="text-color-white"><div class="text-size-small margin-bottom margin-xxsmall">2025 Le Panier à Café | Tous droits réservés</div><div class="text-size-small">805 route des futaies, 74370 Villaz, Rhone-Alpes, France</div></div><div li-for:inside="link in linklists['legal'].links" id="w-node-_9f03d986-c081-15a4-3bbe-f98ead02894e-ad028921" class="footer_legal-links">
+{% endfor %}</ul></div></div><div class="footer_sub-footer"><div class="text-color-white"><div class="text-size-small margin-bottom margin-xxsmall">2025 Le Panier à Café | Tous droits réservés</div><div class="text-size-small">805 route des futaies, 74370 Villaz, Rhone-Alpes, France</div><a href="https://www.kevin-rocha.com/" target="_blank" class="text-color-white text-size-tiny">Crédit photo : Kévin Rocha</a></div><div li-for:inside="link in linklists['legal'].links" id="w-node-_9f03d986-c081-15a4-3bbe-f98ead02894e-ad028921" class="footer_legal-links">
         {% for link in linklists['legal'].links %}                            
                             <a li-object="link.title" li-object:href="link.url" href="{{ link.url }}" class="footer_legal-link">{{ link.title }}</a>
                             
