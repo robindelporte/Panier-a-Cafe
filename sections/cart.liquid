@@ -309,6 +309,7 @@
   <script>
 document.addEventListener('DOMContentLoaded', function() {
     let isUpdating = false; // Éviter les appels multiples
+    let quantityUpdateTimeout = null; // Pour les boutons quantité
     
     // FONCTION PRINCIPALE DE MISE À JOUR (une seule fois)
     function updateCartSection() {
@@ -329,26 +330,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     // RÉATTACHER les event listeners des boutons quantité
                     initializeQuantityButtons();
                     
-                    // METTRE À JOUR LE MINI-CART LIQUIFY
+                    // METTRE À JOUR LE MINI-CART LIQUIFY SEULEMENT
+                    // (Ne pas re-déclencher les événements pour éviter la boucle)
                     fetch('/cart.js')
                         .then(r => r.json())
                         .then(cartData => {
-                            // Déclencher les événements Liquify spécifiques
+                            // Ne déclencher QUE les événements pour le mini-cart
+                            // PAS cartupdated pour éviter la boucle !
                             window.dispatchEvent(new CustomEvent('carttotalitems', { 
                                 detail: cartData.item_count 
-                            }));
-                            
-                            window.dispatchEvent(new CustomEvent('cartupdated', { 
-                                detail: cartData.items 
                             }));
                             
                             window.dispatchEvent(new CustomEvent('currentcartitems', { 
                                 detail: cartData.items 
                             }));
-                            
-                            // Les anciens au cas où
-                            window.dispatchEvent(new CustomEvent('cart:updated', { detail: cartData }));
-                            window.dispatchEvent(new CustomEvent('cartUpdated', { detail: cartData }));
                         });
                 }
                 
@@ -369,7 +364,13 @@ document.addEventListener('DOMContentLoaded', function() {
             input.dispatchEvent(new Event('input'));
             input.dispatchEvent(new Event('change'));
             
-            setTimeout(() => {
+            // Annuler le timeout précédent s'il existe
+            if (quantityUpdateTimeout) {
+                clearTimeout(quantityUpdateTimeout);
+            }
+            
+            // Nouveau timeout avec délai
+            quantityUpdateTimeout = setTimeout(() => {
                 const form = input.closest('form');
                 if (form) {
                     const formData = new FormData(form);
@@ -380,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(() => updateCartSection())
                     .catch(() => form.submit());
                 }
-            }, 500);
+            }, 800); // Délai de 800ms pour permettre plusieurs clics
         }
         
         quantityInputs.forEach(input => {
@@ -424,29 +425,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // INITIALISER AU CHARGEMENT
     initializeQuantityButtons();
     
-    // GESTION DES DONS - Écouter les événements Liquify
+    // GESTION DES DONS - Écouter les événements Liquify (sans boucle)
+    let donEventHandled = false;
     window.addEventListener('cartupdated', function(e) {
-        console.log('Cart updated event received!', e.detail); // Debug
-        setTimeout(() => {
-            console.log('Updating cart section from cartupdated event...'); // Debug
-            updateCartSection();
-        }, 500);
-    });
-    
-    // GESTION DES DONS - Backup avec le clic
-    const donButton = document.querySelector('[data-donation="true"] button');
-    if (donButton) {
-        console.log('Don button found!', donButton); // Debug
-        donButton.addEventListener('click', function() {
-            console.log('Don button clicked!'); // Debug
+        if (!donEventHandled && !isUpdating) {
+            console.log('Cart updated event for don received!', e.detail);
+            donEventHandled = true;
             setTimeout(() => {
-                console.log('Calling updateCartSection...'); // Debug
                 updateCartSection();
-            }, 1500);
-        });
-    } else {
-        console.log('Don button NOT found!'); // Debug
-    }
+                // Reset après délai
+                setTimeout(() => { donEventHandled = false; }, 2000);
+            }, 500);
+        }
+    });
     
     // GESTION DES BOUTONS POUBELLE
     document.addEventListener('click', function(e) {
