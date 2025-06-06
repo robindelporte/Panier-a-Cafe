@@ -25,7 +25,7 @@
         "slide_RNTMcM": {
           "type": "slide",
           "settings": {
-            "richtext_heading": "<p>Tout commence ici. Avec la nature, avec l’humain</p>",
+            "richtext_heading": "<h2>Tout commence ici. Avec la nature, avec l’humain</h2>",
             "text_text": "",
             "url_button_1_link": "shopify://collections/cafes-en-grain",
             "text_button_1_text": "Nos cafés !",
@@ -35,7 +35,7 @@
         "slide_qJhp3m": {
           "type": "slide",
           "settings": {
-            "richtext_heading": "<p>Ici, le café est cuit avec passion, pas par hasard</p>",
+            "richtext_heading": "<h2>Ici, le café est cuit avec passion, pas par hasard</h2>",
             "text_text": "",
             "url_button_1_link": "shopify://collections/cafes-en-grain",
             "text_button_1_text": "Nos cafés !",
@@ -45,7 +45,7 @@
         "slide_C4JxQH": {
           "type": "slide",
           "settings": {
-            "richtext_heading": "<p>Naviguer pour un café plus propre</p>",
+            "richtext_heading": "<h2>Naviguer pour un café plus propre</h2>",
             "text_text": "",
             "url_button_1_link": "shopify://collections/cafe-voilier",
             "text_button_1_text": "Nos cafés voilier !",
