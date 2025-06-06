@@ -424,7 +424,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // INITIALISER AU CHARGEMENT
     initializeQuantityButtons();
     
-    // GESTION DES DONS
+    // GESTION DES DONS - Écouter les événements Liquify
+    window.addEventListener('cartupdated', function(e) {
+        console.log('Cart updated event received!', e.detail); // Debug
+        setTimeout(() => {
+            console.log('Updating cart section from cartupdated event...'); // Debug
+            updateCartSection();
+        }, 500);
+    });
+    
+    // GESTION DES DONS - Backup avec le clic
     const donButton = document.querySelector('[data-donation="true"] button');
     if (donButton) {
         console.log('Don button found!', donButton); // Debug
