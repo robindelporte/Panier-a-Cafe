@@ -23,85 +23,96 @@
                     {% endfor %}    </div>
 </div></div></div><div class="hide w-embed"></div>
 <div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() {
- // Fonction pour v&eacute;rifier si on est sur mobile/tablette
- function isMobile() {
-   return window.innerWidth < 992; // D&eacute;sactive sur &eacute;crans >= 992px
- }
- $(".swiper_component.is-product-swiper").each(function(index) {
-   // N'initialise le swiper que sur mobile/tablette
-   if (isMobile()) {
-     const swiper = new Swiper($(this).find(".swiper")[0], {
-       autoHeight: false,
-       followFinger: true,
-       freeMode: false,
-       slideToClickedSlide: true,
-       centeredSlides: false,
-       speed: 600,
-       slidesPerView: 'auto',
-       spaceBetween: 16,
-       mousewheel: {
-         forceToAxis: true
-       },
-       keyboard: {
-         enabled: true,
-         onlyInViewport: true
-       },
-       pagination: {
-         el: $(this).find('.swiper_pagination')[0],
-         clickable: true,
-         bulletClass: 'swiper_bullet',
-         bulletActiveClass: 'is-active',
-         renderBullet: function (index, className) {
-           return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '">';
-         }
-       },
-       breakpoints: {
-         479: {
-           spaceBetween: 16
-         },
-         767: {
-           spaceBetween: 20
-         },
-         991: {
-           spaceBetween: 32
-         }
-       }
-     });
-   } else {
-     // Configuration pour PC (&ge; 992px)
-     const swiper = new Swiper($(this).find(".swiper")[0], {
-       autoHeight: false,
-       followFinger: false, // D&eacute;sactive le drag sur PC
-       freeMode: false,
-       slideToClickedSlide: false,
-       centeredSlides: false,
-       speed: 600,
-       slidesPerView: 4,
-       slidesPerGroup: 1,
-       spaceBetween: 32,
-       allowTouchMove: false, // D&eacute;sactive le drag/touch sur PC
-       mousewheel: {
-         forceToAxis: true
-       },
-       keyboard: {
-         enabled: true,
-         onlyInViewport: true
-       },
-       navigation: {
-         nextEl: $(this).find('.swiper_button.swiper-next')[0],
-         prevEl: $(this).find('.swiper_button.swiper-prev')[0]
-       },
-       pagination: {
-         el: $(this).find('.swiper_pagination')[0],
-         clickable: true,
-         bulletClass: 'swiper_bullet',
-         bulletActiveClass: 'is-active',
-         renderBullet: function (index, className) {
-           return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '">';
-         }
-       }
-     });
-   }
- });
+// Fonction pour v&eacute;rifier si on est sur mobile/tablette
+function isMobile() {
+  return window.innerWidth < 992; // D&eacute;sactive sur &eacute;crans >= 992px
+}
+$(".swiper_component.is-product-swiper").each(function(index) {
+  // N'initialise le swiper que sur mobile/tablette
+  if (isMobile()) {
+    const swiper = new Swiper($(this).find(".swiper")[0], {
+      autoHeight: false,
+      followFinger: true,
+      freeMode: false,
+      slideToClickedSlide: true,
+      centeredSlides: false,
+      speed: 600,
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      // Param&egrave;tres pour am&eacute;liorer la fluidit&eacute; du swipe
+      threshold: 5, // Seuil minimum pour d&eacute;clencher le swipe
+      longSwipes: true, // Autorise les longs swipes
+      longSwipesRatio: 0.5, // Ratio pour les longs swipes
+      longSwipesMs: 300, // Dur&eacute;e minimum pour un long swipe
+      shortSwipes: true, // Autorise les courts swipes
+      touchRatio: 1, // Ratio de sensibilit&eacute; au touch
+      touchAngle: 45, // Angle maximum pour le swipe
+      simulateTouch: true, // Active la simulation de touch
+      allowTouchMove: true, // Permet le mouvement tactile
+      touchMoveStopPropagation: false, // Permet la propagation des &eacute;v&eacute;nements
+      mousewheel: {
+        forceToAxis: true
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      pagination: {
+        el: $(this).find('.swiper_pagination')[0],
+        clickable: true,
+        bulletClass: 'swiper_bullet',
+        bulletActiveClass: 'is-active',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '">';
+        }
+      },
+      breakpoints: {
+        479: {
+          spaceBetween: 16
+        },
+        767: {
+          spaceBetween: 20
+        },
+        991: {
+          spaceBetween: 32
+        }
+      }
+    });
+  } else {
+    // Configuration pour PC (&ge; 992px)
+    const swiper = new Swiper($(this).find(".swiper")[0], {
+      autoHeight: false,
+      followFinger: false, // D&eacute;sactive le drag sur PC
+      freeMode: false,
+      slideToClickedSlide: false,
+      centeredSlides: false,
+      speed: 600,
+      slidesPerView: 4,
+      slidesPerGroup: 1,
+      spaceBetween: 32,
+      allowTouchMove: false, // D&eacute;sactive le drag/touch sur PC
+      mousewheel: {
+        forceToAxis: true
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      navigation: {
+        nextEl: $(this).find('.swiper_button.swiper-next')[0],
+        prevEl: $(this).find('.swiper_button.swiper-prev')[0]
+      },
+      pagination: {
+        el: $(this).find('.swiper_pagination')[0],
+        clickable: true,
+        bulletClass: 'swiper_bullet',
+        bulletActiveClass: 'is-active',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '">';
+        }
+      }
+    });
+  }
+});
 });
 </script></div> {% schema %} {"tag":"section","name":"Collection Tabs Marr","class":"section_category-marron","settings":[{"id":"text_titre","type":"text","label":"Titre","default":"Heading"},{"type":"collection_list","id":"collection_list","label":"Collections","limit":8}],"presets":[{"name":"Collection Tabs Marr","category":"Liquify","blocks":[]}]} {% endschema %}
