@@ -1,7 +1,7 @@
 <div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium product-recommendations"><div class="container-large"><div class="headline-wrapper"><h2 class="heading-style-h2">
 {{ section.settings.text_titre }}
 </h2>
-</div><div class="splide slider"><div class="splide__track"><div class="splide__list">{% for product in recommendations.products %}    <div li-for="product in recommendations.products" class="splide__slide">
+</div><div class="swiper_component is-product-swiper"><div class="swiper is-product-swiper"><div class="swiper_overlay-navigation hide-tablet"><button aria-label="Previous slide" type="button" class="swiper_button swiper-prev is-chocolat"><div class="swiper_button-icon is-chocolat w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323" style="transform: rotate(180deg)"><g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g></svg></div></button><button aria-label="Next slide" type="button" class="swiper_button swiper-next is-chocolat"><div class="swiper_button-icon is-chocolat w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323"><g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g></svg></div></button></div><div class="swiper-wrapper is-product-swiper">{% for product in recommendations.products %}    <div li-for="product in recommendations.products" class="swiper-slide is-product-swiper">
                                     
                             {% render 'product_item', product: product %}
 
@@ -24,4 +24,54 @@
       console.error(e);
     });
   });
+</script></div><div class="hide w-embed w-script"><script>if (isMobile()) {
+  const swiper = new Swiper($(this).find(".swiper")[0], {
+    autoHeight: false,
+    followFinger: true,
+    freeMode: false,
+    slideToClickedSlide: true,
+    centeredSlides: false,
+    speed: 600,
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    // Param&egrave;tres pour am&eacute;liorer la fluidit&eacute; du swipe
+    threshold: 5, // Seuil minimum pour d&eacute;clencher le swipe (plus bas = plus sensible)
+    longSwipes: true, // Autorise les longs swipes
+    longSwipesRatio: 0.5, // Ratio pour les longs swipes (plus bas = plus facile)
+    longSwipesMs: 300, // Dur&eacute;e minimum pour un long swipe
+    shortSwipes: true, // Autorise les courts swipes
+    touchRatio: 1, // Ratio de sensibilit&eacute; au touch (1 = normal)
+    touchAngle: 45, // Angle maximum pour consid&eacute;rer le swipe comme valide
+    simulateTouch: true, // Active la simulation de touch
+    allowTouchMove: true, // Permet le mouvement tactile
+    touchMoveStopPropagation: false, // Permet la propagation des &eacute;v&eacute;nements
+    mousewheel: {
+      forceToAxis: true
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true
+    },
+    pagination: {
+      el: $(this).find('.swiper_pagination')[0],
+      clickable: true,
+      bulletClass: 'swiper_bullet',
+      bulletActiveClass: 'is-active',
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '" tabindex="0" role="button" aria-label="Go to slide ' + (index + 1) + '">';
+      }
+    },
+    breakpoints: {
+      479: {
+        spaceBetween: 16
+      },
+      767: {
+        spaceBetween: 20
+      },
+      991: {
+        spaceBetween: 32
+      }
+    }
+  });
+}
 </script></div> {% schema %} {"tag":"section","name":"Product-Recommended","class":"section_product-recommended","settings":[{"id":"text_titre","type":"text","label":"Titre","default":"Achetez avec"}],"presets":[{"name":"Product-Recommended","category":"Liquify","blocks":[]}]} {% endschema %}
