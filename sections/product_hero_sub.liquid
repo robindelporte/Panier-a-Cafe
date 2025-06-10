@@ -117,15 +117,11 @@
             <div class="product-header_price">
               <div
                 class="product_price"
-                bss-b2b-product-id="{{ product.id }}"
-                bss-b2b-variant-unit-price
               >
                 <div
                   li-js-price="product.selected_or_first_available_variant.price"
                   class="text-size-medium"
                   x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.price, true, '{{ shop.money_with_currency_format }}')"
-                  bss-b2b-product-id="{{ product.id }}"
-                  bss-b2b-variant-unit-price
                 >
                   12,40€
                 </div>
