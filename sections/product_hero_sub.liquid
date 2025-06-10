@@ -115,7 +115,11 @@
           </h1>
           <div class="product-header_price-wrapper">
             <div class="product-header_price">
-              <div class="product_price">
+              <div
+                class="product_price"
+                bss-b2b-product-id="{{ product.id }}"
+                bss-b2b-variant-unit-price
+              >
                 <div
                   li-js-price="product.selected_or_first_available_variant.price"
                   class="text-size-medium"
