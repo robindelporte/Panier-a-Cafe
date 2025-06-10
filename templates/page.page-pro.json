@@ -9,21 +9,6 @@
  */
 {
   "sections": {
-    "17495639933ee45063": {
-      "type": "apps",
-      "blocks": {
-        "bss_b2b_solution_form_meGyaY": {
-          "type": "shopify://apps/bss-b2b-solution/blocks/form/451233f2-9631-4c49-8b6f-057e4ebcde7f",
-          "settings": {
-            "form_id": "30301"
-          }
-        }
-      },
-      "block_order": [
-        "bss_b2b_solution_form_meGyaY"
-      ],
-      "settings": {}
-    },
     "professionnels": {
       "type": "professionnels",
       "blocks": {
@@ -303,7 +288,6 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "17495639933ee45063",
     "professionnels",
     "logo_defilants",
     "contenu_QbRp9z",
