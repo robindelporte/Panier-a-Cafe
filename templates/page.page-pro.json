@@ -9,21 +9,6 @@
  */
 {
   "sections": {
-    "1749564393a3bdc6ce": {
-      "type": "apps",
-      "blocks": {
-        "bss_b2b_solution_form_FnHgag": {
-          "type": "shopify://apps/bss-b2b-solution/blocks/form/451233f2-9631-4c49-8b6f-057e4ebcde7f",
-          "settings": {
-            "form_id": "30304"
-          }
-        }
-      },
-      "block_order": [
-        "bss_b2b_solution_form_FnHgag"
-      ],
-      "settings": {}
-    },
     "professionnels": {
       "type": "professionnels",
       "blocks": {
@@ -232,6 +217,21 @@
       ],
       "settings": {}
     },
+    "1749564393a3bdc6ce": {
+      "type": "apps",
+      "blocks": {
+        "bss_b2b_solution_form_FnHgag": {
+          "type": "shopify://apps/bss-b2b-solution/blocks/form/451233f2-9631-4c49-8b6f-057e4ebcde7f",
+          "settings": {
+            "form_id": "30304"
+          }
+        }
+      },
+      "block_order": [
+        "bss_b2b_solution_form_FnHgag"
+      ],
+      "settings": {}
+    },
     "faq_mbT4gY": {
       "type": "faq",
       "blocks": {
@@ -303,13 +303,13 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "1749564393a3bdc6ce",
     "professionnels",
     "logo_defilants",
     "contenu_QbRp9z",
     "contenu_Pz8x47",
     "bandeau",
     "1749206776f613b022",
+    "1749564393a3bdc6ce",
     "faq_mbT4gY"
   ]
 }
