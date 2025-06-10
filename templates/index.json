@@ -72,6 +72,16 @@
             "video_desktop": "shopify://files/videos/panier-a-cafe.mp4",
             "video_mobile": "shopify://files/videos/panier-a-cafe.mp4"
           }
+        },
+        "slide_69BGGT": {
+          "type": "slide",
+          "settings": {
+            "richtext_heading": "<p>Heading</p>",
+            "text_text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "url_button_1_link": "",
+            "text_button_1_text": "Button Text",
+            "image_image_desktop": "shopify://shop_images/V1A5109.jpg"
+          }
         }
       },
       "block_order": [
@@ -80,7 +90,8 @@
         "slide_qJhp3m",
         "slide_C4JxQH",
         "slide_GxDrBJ",
-        "slide_W8mLC8"
+        "slide_W8mLC8",
+        "slide_69BGGT"
       ],
       "settings": {}
     },
