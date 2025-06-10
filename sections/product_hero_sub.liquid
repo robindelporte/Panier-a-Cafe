@@ -122,6 +122,12 @@
                   li-js-price="product.selected_or_first_available_variant.price"
                   class="text-size-medium"
                   x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.price, true, '{{ shop.money_with_currency_format }}')"
+                  bss-b2b-product-id="{{ product.id }}"
+                  bss-b2b-product-price
+                  bss-b2b-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                  bss-b2b-variant-price
+                  bss-b2b-featured-product
+                  bss-b2b-card-information
                 >
                   12,40€
                 </div>
