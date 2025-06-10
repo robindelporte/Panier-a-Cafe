@@ -7996,6 +7996,11 @@ figcaption {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  .collections_list.is-collections {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center stretch;
+  }
+
   .highlight_item {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
@@ -8939,6 +8944,10 @@ figcaption {
     display: grid;
   }
 
+  .collections_list.is-collections {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .benefits_card_wrap.is-pro {
     min-height: 33rem;
   }
@@ -9426,7 +9435,7 @@ figcaption {
     place-items: center;
   }
 
-  .chiffres_list {
+  .collections_list.is-collections, .chiffres_list {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -9756,6 +9765,7 @@ figcaption {
   }
 
   .footer_soutien-image {
+    object-fit: contain;
     width: 100%;
     height: 100%;
   }
