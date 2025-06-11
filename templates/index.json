@@ -22,46 +22,6 @@
             "image_image_desktop": "shopify://shop_images/Sumatrasourcing-74_1.webp"
           }
         },
-        "slide_RNTMcM": {
-          "type": "slide",
-          "settings": {
-            "richtext_heading": "<h2>Tout commence ici. Avec la nature, avec l’humain</h2>",
-            "text_text": "",
-            "url_button_1_link": "shopify://collections/cafes-en-grain",
-            "text_button_1_text": "Nos cafés !",
-            "image_image_desktop": "shopify://shop_images/ben_producteur.jpg"
-          }
-        },
-        "slide_qJhp3m": {
-          "type": "slide",
-          "settings": {
-            "richtext_heading": "<h2>Ici, le café est cuit avec passion, pas par hasard</h2>",
-            "text_text": "",
-            "url_button_1_link": "shopify://collections/cafes-en-grain",
-            "text_button_1_text": "Nos cafés !",
-            "image_image_desktop": "shopify://shop_images/ben_torref.jpg"
-          }
-        },
-        "slide_C4JxQH": {
-          "type": "slide",
-          "settings": {
-            "richtext_heading": "<h2>Naviguer pour un café plus propre</h2>",
-            "text_text": "",
-            "url_button_1_link": "shopify://collections/cafe-voilier",
-            "text_button_1_text": "Nos cafés voilier !",
-            "image_image_desktop": "shopify://shop_images/20240806_-_ANEMOS_8_Ronan_Gladu_TOWT.jpg"
-          }
-        },
-        "slide_GxDrBJ": {
-          "type": "slide",
-          "settings": {
-            "richtext_heading": "<h2>Derrière chaque paquet, une histoire humaine.</h2>",
-            "text_text": "Nos cafés ensachés par nos travailleurs de l'ESAT des EPANOU du Parmelan",
-            "url_button_1_link": "shopify://collections/cafes-en-grain",
-            "text_button_1_text": "",
-            "image_image_desktop": "shopify://shop_images/V1A2466_1.webp"
-          }
-        },
         "slide_W8mLC8": {
           "type": "slide",
           "settings": {
@@ -72,26 +32,11 @@
             "video_desktop": "shopify://files/videos/panier-a-cafe.mp4",
             "video_mobile": "shopify://files/videos/panier-a-cafe.mp4"
           }
-        },
-        "slide_69BGGT": {
-          "type": "slide",
-          "settings": {
-            "richtext_heading": "<p>Heading</p>",
-            "text_text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "url_button_1_link": "",
-            "text_button_1_text": "Button Text",
-            "image_image_desktop": "shopify://shop_images/V1A5109.jpg"
-          }
         }
       },
       "block_order": [
         "slide_iMn83X",
-        "slide_RNTMcM",
-        "slide_qJhp3m",
-        "slide_C4JxQH",
-        "slide_GxDrBJ",
-        "slide_W8mLC8",
-        "slide_69BGGT"
+        "slide_W8mLC8"
       ],
       "settings": {}
     },
