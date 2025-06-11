@@ -133,7 +133,7 @@
       ],
       "name": "Contenu",
       "settings": {
-        "image_image": "shopify://shop_images/cafe-pme.webp",
+        "image_image": "shopify://shop_images/V1A6395_1.webp",
         "left_right": "right"
       }
     },
@@ -242,7 +242,8 @@
             "image_logo_4": "shopify://shop_images/pilot.png",
             "image_logo_5": "shopify://shop_images/vinci.png",
             "image_logo_6": "shopify://shop_images/salomon.png"
-          }
+          },
+          "blocks": {}
         },
         "logo_defilants_inverses_k76DcB": {
           "type": "logo-defilants-inverses",
@@ -253,7 +254,8 @@
             "image_logo_4": "shopify://shop_images/Logo-INGEOS-web.png",
             "image_logo_5": "shopify://shop_images/logo-bms-seul.png",
             "image_logo_6": "shopify://shop_images/e7bfdf_d03c7b1097594c4fa03097654ce58050_mv2.png"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
