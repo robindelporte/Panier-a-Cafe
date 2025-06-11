@@ -40,7 +40,7 @@
         "text_tableau_4": "Quelques chiffres",
         "image_drapeau_pays": "{{ product.metafields.custom.pays_d_origine.value.drapeau_icone.value }}",
         "text_salvador": "{{ product.metafields.custom.pays_d_origine.value.pays.value }}",
-        "text_1100m": "{{ product.metafields.custom.altitude_de_culture_.value }}m",
+        "text_1100m": "{{ product.metafields.custom.altitude_de_culture.value }}m",
         "text_100_arabica": "{{ product.metafields.custom.variete.value }}",
         "text_janvier_2025": "{{ product.metafields.custom.recolte.value }}",
         "text_nature": "{{ product.metafields.custom.traitement.value }}",
