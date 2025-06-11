@@ -72,50 +72,50 @@
         "faq_item_jtNTxi": {
           "type": "faq-item",
           "settings": {
-            "text_question": "Quelle est la différence entre un café de spécialité et un café classique ?",
-            "richtext_reponse": "<p>Un café de spécialité est un café noté au-dessus de 80/100 par un Q Grader, expert certifié. Il est traçable, récolté à la main, souvent bio, et surtout torréfié avec soin pour révéler ses arômes. Rien à voir avec un café industriel souvent trop torréfié, sans origine claire, ni complexité en tasse.</p>"
+            "text_question": "Pourquoi vendre uniquement du café en grain ?",
+            "richtext_reponse": "<p>Pour préserver au maximum les arômes et la fraîcheur du grain. En moudant votre café juste avant l’extraction, vous profitez de toutes les subtilités aromatiques de chaque origine. C’est aussi un choix inclusif qui permet à nos équipes de l’ESAT des Épanou de réaliser le conditionnement en toute sécurité.</p>"
           }
         },
         "faq_item_xdEAd8": {
           "type": "faq-item",
           "settings": {
-            "text_question": "Quelle quantité de café prévoir pour mon établissement ?",
-            "richtext_reponse": "<p>Tout dépend de votre débit ! Pour un coffee shop ou un restaurant qui sert 100 cafés par jour, comptez environ 3 à 4 kilos par semaine. On peut vous accompagner pour définir la bonne quantité et ajuster au fil du temps. Et si vous optez pour nos machines, on s’occupe aussi de la logistique !</p>"
+            "text_question": "Quels sont les avantages de moudre son café soi-même ?",
+            "richtext_reponse": "<p>Moudre son café juste avant de le préparer permet de conserver les huiles essentielles et les arômes, souvent altérés lorsque le café est pré-moulu. C’est l’assurance de savourer un café toujours plus riche, plus intense et plus fidèle au travail des producteurs.</p>"
           }
         },
         "faq_item_gqpraM": {
           "type": "faq-item",
           "settings": {
-            "text_question": "Peut-on louer une machine à café pour un restaurant ou un hôtel ?",
-            "richtext_reponse": "<p>Nous proposons la location de machines à café professionnelles pour les restaurants, hôtels, bureaux et autres établissements. Nos machines s’adaptent à vos besoins (volume, design, usage) et sont livrées prêtes à l’emploi. En prime, on s’occupe de tout : installation, entretien, livraison du café et accompagnement sur-mesure.<br/><br/>Une solution simple, locale et clé en main pour offrir un café de qualité à vos clients !</p>"
+            "text_question": "Quel type de moulin dois-je choisir ?",
+            "richtext_reponse": "<p>Tout dépend de vos habitudes ! Si vous buvez du café occasionnellement ou en petite quantité : un moulin manuel est idéal, précis et facile à transporter. Si vous préparez plusieurs tasses chaque jour : un moulin électrique sera plus rapide et pratique, avec des réglages de mouture adaptés à chaque méthode (espresso, filtre, piston…).</p>"
           }
         },
         "faq_item_LGQgYD": {
           "type": "faq-item",
           "settings": {
-            "text_question": "Vos cafés sont-ils issus du commerce équitable ?",
-            "richtext_reponse": "<p>Nous sélectionnons des cafés issus de relations directes avec les producteurs, ce qu’on appelle le \"direct trade\". Cela nous permet de rémunérer les producteurs à leur juste valeur, souvent au-dessus des standards du commerce équitable.<br/><br/>Certains de nos cafés sont également labellisés, mais notre priorité reste la traçabilité, la qualité humaine des échanges et un prix juste pour chacun. Chez nous, chaque grain a une histoire… et une vraie valeur !</p>"
+            "text_question": "Quelle mouture utiliser selon ma méthode de préparation ?",
+            "richtext_reponse": "<p>Chaque méthode nécessite une mouture spécifique :</p><ul><li>Espresso : très fine</li><li>Méthodes douces (V60, Chemex, Aeropress) : mouture moyenne à moyenne-fine</li><li>Cafetière piston (French Press) : mouture grossière</li></ul><p>Nos moulins permettent de régler facilement votre mouture selon votre équipement.</p>"
           }
         },
         "faq_item_CaintQ": {
           "type": "faq-item",
           "settings": {
-            "text_question": "Le café bio, c’est quoi exactement ?",
-            "richtext_reponse": "<p>Le café bio, c’est un café cultivé sans produits chimiques de synthèse.<br/>Concrètement, cela signifie pas de pesticides, pas d'engrais chimiques, pas d'OGM dans les plantations. Les cafés bio poussent souvent sous ombrage naturel, dans des environnements respectueux de la biodiversité.<br/><br/>Au Panier à Café, on sélectionne des cafés certifiés bio, mais aussi des cafés produits selon des pratiques durables, même sans label. Parce que pour nous, ce qui compte, c’est le respect de la terre, des producteurs… et de vos papilles.</p>"
+            "text_question": "Pourquoi ce choix est-il important pour nos équipes en situation de handicap ?",
+            "richtext_reponse": "<p>Le conditionnement du café en grain simplifie le travail de nos collaborateurs de l’ESAT des Épanou, en évitant les étapes délicates de mouture et de dosage. Ce choix permet de garantir un travail adapté tout en vous proposant un café d’une qualité optimale, fraîchement torréfié et préservé.</p>"
           }
         },
         "faq_item_gdbxnU": {
           "type": "faq-item",
           "settings": {
-            "text_question": "Comment bien conserver son café en grain ?",
-            "richtext_reponse": "<p>Pour préserver tous les arômes de ton café, garde-le à l’abri de ses pires ennemis : l’air, la lumière, l’humidité et la chaleur.<br/><br/>Le mieux ? Un contenant hermétique, opaque et à température ambiante, pas dans le frigo ni dans un placard au-dessus du four.<br/><br/>Nos sachets sont déjà pensés pour une bonne conservation, alors referme-les bien après usage. Mais surtout, mouds ton café au fur et à mesure, pour en savourer toute la fraîcheur !</p>"
+            "text_question": "Combien de temps le café en grain reste-t-il frais ?",
+            "richtext_reponse": "<p>Nous conseillons de consommer votre café dans les 4 à 6 mois suivant la torréfaction. Passé ce délai, les arômes commencent à diminuer, même si le café reste consommable. Le grain permet de conserver la qualité bien plus longtemps qu’un café déjà moulu.</p>"
           }
         },
         "faq_item_Yrq6rJ": {
           "type": "faq-item",
           "settings": {
-            "text_question": "Quelles différences entre un café en méthode douce et un espresso ?",
-            "richtext_reponse": "<p>Tout est une question d’extraction !<br/><br/>L’espresso, c’est un café préparé sous haute pression, en 25 à 30 secondes. Résultat : un café court, intense, avec du corps et une belle crème.<br/><br/>La méthode douce (comme la V60, la Chemex ou la cafetière à piston), utilise l’infusion par gravité. L’extraction est plus lente, ce qui donne une tasse plus légère, plus aromatique, parfaite pour savourer toutes les subtilités d’un café de spécialité.</p><p>Pour résumé : espresso = punchy / méthode douce = tout en finesse.</p>"
+            "text_question": "Comment bien conserver le café en grain ?",
+            "richtext_reponse": "<p>Pour préserver les arômes de votre café en grain, stockez-le dans un contenant hermétique, à l’abri de la lumière, de la chaleur et de l’humidité. Évitez le frigo ou le congélateur : les variations de température peuvent dégrader le café. L’idéal reste un bocal opaque et bien fermé dans un placard.</p>"
           }
         }
       },
