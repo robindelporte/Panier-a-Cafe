@@ -58,7 +58,6 @@
           "type": "selection",
           "settings": {
             "text_titre_selection": "Soutiens l’asso… avec du style !",
-            "image_icone_tag_1": "shopify://shop_images/Flag_of_Costa_Rica_svg.png",
             "text_texte_tag_1": "Costa Rica",
             "text_texte_tag_2": "Costa Rica",
             "text_paragraphe": "On te propose nos sacs en toile de jute, ceux qui ont transporté du café depuis les quatre coins du monde ! Même taille, même format… mais origine mystère ! Chaque sac a sa propre histoire, son pays, son visuel, et ses petites imperfections qui font tout le charme. Mais surtout : 100% du montant est reversé à notre association, pour nos employés en situation de handicap. Un objet utile, décoratif, engagé… et qui sent bon le café d’ailleurs !",
@@ -186,6 +185,41 @@
         "left_right": "right"
       }
     },
+    "contenu_fcRnT4": {
+      "type": "contenu",
+      "blocks": {
+        "headline_dtaxiH": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Pourquoi uniquement du café en grain ?"
+          }
+        },
+        "text_EY3eUg": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Derrière chaque sachet de café du Panier à Café, il y a aussi une histoire humaine.<br/><br/>Les membres de l’ESAT des Épanou du Parmelan viennent chaque semaine ensacher nos cafés avec soin. Afin de simplifier leur travail et de préserver leur confort, nous avons choisi de proposer uniquement du café en grain.<br/><br/>Le broyage du café demande en effet une manipulation plus délicate, difficile à réaliser en toute sécurité dans le cadre de leur mission.<br/><br/>Ce choix, en plus d’être inclusif, est aussi un véritable atout pour la qualité : en vendant le café en grain, nous permettons à chacun de le moudre au dernier moment, juste avant l’extraction. Résultat : des arômes parfaitement préservés et une tasse toujours plus savoureuse.</p>"
+          }
+        },
+        "buttons_AW3BHc": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "",
+            "text_button_text": "Button",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
+        }
+      },
+      "block_order": [
+        "headline_dtaxiH",
+        "text_EY3eUg",
+        "buttons_AW3BHc"
+      ],
+      "settings": {
+        "image_image": "shopify://shop_images/V1A2481.webp",
+        "left_right": "left"
+      }
+    },
     "pages_zhn4RK": {
       "type": "pages",
       "blocks": {
@@ -235,6 +269,7 @@
     "selection_manuel_DVdGBb",
     "card_swiper",
     "contenu_7FfWwj",
+    "contenu_fcRnT4",
     "pages_zhn4RK"
   ]
 }
