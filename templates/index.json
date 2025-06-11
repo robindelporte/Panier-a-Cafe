@@ -51,6 +51,40 @@
         ]
       }
     },
+    "contenu": {
+      "type": "contenu",
+      "blocks": {
+        "headline_QNqbNP": {
+          "type": "headline",
+          "settings": {
+            "text_headline": "Du café en grain et seulement en grain !"
+          }
+        },
+        "text_T38Lxw": {
+          "type": "text",
+          "settings": {
+            "richtext_paragraph": "<p>Au Panier à Café, nous avons fait le choix de ne proposer que du café en grains. Un engagement qui permet de préserver au maximum la fraîcheur et les arômes des cafés, afin de respecter le travail minutieux des producteurs jusqu’au bout de la chaîne.</p><p></p><p>Ce choix a aussi du sens humainement : chaque jeudi, les membres de l’ESAT des Épanou du Parmelan viennent ensacher avec soin nos paquets de café. Une belle manière d’allier qualité et inclusion.</p><p></p><p>Pour vous permettre de déguster votre café toujours au sommet de sa fraîcheur, nous proposons également une sélection de moulins dans notre boutique. Ainsi, vous pouvez moudre votre café à la maison, juste avant l’extraction, et profiter pleinement de chaque tasse.</p>"
+          }
+        },
+        "buttons_DWggAF": {
+          "type": "buttons",
+          "settings": {
+            "url_button_link": "shopify://collections/cafes",
+            "text_button_text": "Découvrir les cafés",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
+        }
+      },
+      "block_order": [
+        "headline_QNqbNP",
+        "text_T38Lxw",
+        "buttons_DWggAF"
+      ],
+      "settings": {
+        "left_right": "right"
+      }
+    },
     "bandeau": {
       "type": "bandeau",
       "blocks": {
@@ -106,22 +140,22 @@
         "text_heading": ""
       }
     },
-    "contenu": {
+    "contenu_HbkNdA": {
       "type": "contenu",
       "blocks": {
-        "headline_QNqbNP": {
+        "headline_6EPeMd": {
           "type": "headline",
           "settings": {
             "text_headline": "Bien plus qu’un café"
           }
         },
-        "text_T38Lxw": {
+        "text_VVkpDT": {
           "type": "text",
           "settings": {
             "richtext_paragraph": "<p>Au Panier à Café, chaque grain raconte une histoire. Celle d’un produit sourcé avec soin, qui tient compte de l’humain et de l’environnement.<br/><br/>Derrière chaque tasse, il y a un engagement ! Nous travaillons avec des producteurs rémunérés justement, favorisons les circuits courts et confions la préparation de nos sachets aux travailleurs de l’ESAT des EPANOU du Parmelan.<br/><br/>Notre objectif est simple : proposer un café qui a du goût, du sens, et un impact positif !</p>"
           }
         },
-        "buttons_DWggAF": {
+        "buttons_9t94aG": {
           "type": "buttons",
           "settings": {
             "url_button_link": "shopify://collections/cafes",
@@ -132,12 +166,12 @@
         }
       },
       "block_order": [
-        "headline_QNqbNP",
-        "text_T38Lxw",
-        "buttons_DWggAF"
+        "headline_6EPeMd",
+        "text_VVkpDT",
+        "buttons_9t94aG"
       ],
       "settings": {
-        "left_right": "right"
+        "left_right": "left"
       }
     },
     "lookbook": {
@@ -506,8 +540,9 @@
   "order": [
     "hero_slider",
     "collection_tabs",
-    "bandeau",
     "contenu",
+    "bandeau",
+    "contenu_HbkNdA",
     "lookbook",
     "liste_collections",
     "chiffres",
