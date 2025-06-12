@@ -136,7 +136,7 @@
         "text_headline": "Nos clients ont aussi acheté",
         "collection_collection": "cafes",
         "collection_collection_limit": 4,
-        "url_button_link": "",
+        "url_button_link": "shopify://collections/cafes",
         "text_button_text": "En voir plus"
       }
     }
