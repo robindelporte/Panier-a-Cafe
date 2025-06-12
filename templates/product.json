@@ -32,6 +32,66 @@
     },
     "contenu_produits": {
       "type": "contenu_produits",
+      "blocks": {
+        "faq_item_m9aDLj": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Pourquoi vendez-vous uniquement du café en grain ?",
+            "richtext_reponse": "<p>Nous proposons uniquement du café en grain pour préserver au maximum ses arômes et sa fraîcheur. En moudant votre café juste avant l’extraction, vous profitez de toutes les subtilités aromatiques de chaque origine. C’est aussi un choix inclusif qui permet à nos équipes de l’ESAT des Épanou de réaliser le conditionnement en toute sécurité.</p>"
+          }
+        },
+        "faq_item_9pFN7y": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Pourquoi ce choix est-il important aussi pour vos équipes en situation de handicap ?",
+            "richtext_reponse": "<p>Le conditionnement du café en grain simplifie le travail de nos collaborateurs de l’ESAT des Épanou, en évitant les étapes délicates de mouture et de dosage. Ce choix permet de garantir un travail adapté tout en vous proposant un café d’une qualité optimale, fraîchement torréfié et préservé.</p>"
+          }
+        },
+        "faq_item_QcCPKx": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Quels sont les avantages de moudre son café soi-même ?",
+            "richtext_reponse": "<p>Moudre son café juste avant de le préparer permet de conserver les huiles essentielles et les arômes, souvent altérés lorsque le café est pré-moulu. C’est l’assurance de savourer un café toujours plus riche, plus intense et plus fidèle au travail des producteurs.</p>"
+          }
+        },
+        "faq_item_8yd6Yk": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Quel type de moulin dois-je choisir ?",
+            "richtext_reponse": "<p>Tout dépend de vos habitudes !</p><p>Si vous buvez du café occasionnellement ou en petite quantité : un moulin manuel est idéal, précis et facile à transporter.</p><p>Si vous préparez plusieurs tasses chaque jour : un moulin électrique sera plus rapide et pratique, avec des réglages de mouture adaptés à chaque méthode (espresso, filtre, piston…).</p>"
+          }
+        },
+        "faq_item_xkwGhw": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Quelle mouture utiliser selon ma méthode de préparation ?",
+            "richtext_reponse": "<p>Chaque méthode nécessite une mouture spécifique :</p><ul><li>Espresso : très fine</li><li>Méthodes douces (V60, Chemex, Aeropress) : mouture moyenne à moyenne-fine</li><li>Cafetière piston (French Press) : mouture grossière.</li></ul><p>Nos moulins permettent de régler facilement votre mouture selon votre équipement.</p>"
+          }
+        },
+        "faq_item_NFQt9z": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Comment bien conserver mon café en grain ?",
+            "richtext_reponse": "<p>Pour préserver les arômes de votre café en grain, stockez-le dans un contenant hermétique, à l’abri de la lumière, de la chaleur et de l’humidité. Évitez le frigo ou le congélateur : les variations de température peuvent dégrader le café. L’idéal reste un bocal opaque et bien fermé dans un placard</p>"
+          }
+        },
+        "faq_item_GaBUTm": {
+          "type": "faq-item",
+          "settings": {
+            "text_question": "Combien de temps le café en grain reste-t-il frais ?",
+            "richtext_reponse": "<p>Nous conseillons de consommer votre café dans les 3 à 5 mois suivant la torréfaction. Passé ce délai, les arômes commencent à diminuer, même si le café reste consommable. Le grain permet de conserver la qualité bien plus longtemps qu’un café déjà moulu.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_m9aDLj",
+        "faq_item_9pFN7y",
+        "faq_item_QcCPKx",
+        "faq_item_8yd6Yk",
+        "faq_item_xkwGhw",
+        "faq_item_NFQt9z",
+        "faq_item_GaBUTm"
+      ],
       "settings": {
         "text_button_text": "Voir mode d’emploi  PDF",
         "url_button_link": "",
@@ -62,21 +122,7 @@
         "text_animation_titre_3": "{{ product.metafields.custom.animation_titre_n_3.value }}",
         "richtext_animation_texte_3": "<p>{{ product.metafields.custom.animation_texte_n_3 | metafield_tag }}</p>",
         "text_heading": "Foire aux questions",
-        "richtext_sous_titre": "",
-        "text_faq_cafe_question_1": "Pourquoi vendre uniquement du café en grain ?",
-        "richtext_faq_cafe_reponse_1": "<p>Pour préserver au maximum les arômes et la fraîcheur du grain. En moudant votre café juste avant l’extraction, vous profitez de toutes les subtilités aromatiques de chaque origine. C’est aussi un choix inclusif qui permet à nos équipes de l’ESAT des Épanou de réaliser le conditionnement en toute sécurité.<br/>                          </p>",
-        "text_faq_cafe_question_2": "Quels sont les avantages de moudre son café soi-même ?",
-        "richtext_faq_cafe_reponse_2": "<p>Moudre son café juste avant de le préparer permet de conserver les huiles essentielles et les arômes, souvent altérés lorsque le café est pré-moulu. C’est l’assurance de savourer un café toujours plus riche, plus intense et plus fidèle au travail des producteurs.<br/>                          </p>",
-        "text_faq_cafe_question_3": "Quel type de moulin dois-je choisir ?",
-        "richtext_faq_cafe_reponse_3": "<p>Tout dépend de vos habitudes ! Si vous buvez du café occasionnellement ou en petite quantité : un moulin manuel est idéal, précis et facile à transporter. Si vous préparez plusieurs tasses chaque jour : un moulin électrique sera plus rapide et pratique, avec des réglages de mouture adaptés à chaque méthode (espresso, filtre, piston…).<br/>                          </p>",
-        "text_faq_cafe_question_4": "Quelle mouture utiliser selon ma méthode de préparation ?",
-        "richtext_faq_cafe_reponse_4": "<p>Chaque méthode nécessite une mouture spécifique :</p><ul><li>Espresso : très fine</li><li>Méthodes douces (V60, Chemex, Aeropress) : mouture moyenne à moyenne-fine</li><li>Cafetière piston (French Press) : mouture grossière</li></ul><p>Nos moulins permettent de régler facilement votre mouture selon votre</p>",
-        "text_faq_cafe_question_5": "Pourquoi ce choix est-il important pour nos équipes en situation de handicap ?",
-        "richtext_faq_cafe_reponse_5": "<p>Le conditionnement du café en grain simplifie le travail de nos collaborateurs de l’ESAT des Épanou, en évitant les étapes délicates de mouture et de dosage. Ce choix permet de garantir un travail adapté tout en vous proposant un café d’une qualité optimale, fraîchement torréfié et préservé.</p>",
-        "text_faq_cafe_question_6": "Combien de temps le café en grain reste-t-il frais ?",
-        "richtext_faq_cafe_reponse_6": "<p>Nous conseillons de consommer votre café dans les 4 à 6 mois suivant la torréfaction. Passé ce délai, les arômes commencent à diminuer, même si le café reste consommable. Le grain permet de conserver la qualité bien plus longtemps qu’un café déjà moulu.</p>",
-        "text_faq_cafe_question_7": "Comment bien conserver le café en grain ?",
-        "richtext_faq_cafe_reponse_7": "<p>Pour préserver les arômes de votre café en grain, stockez-le dans un contenant hermétique, à l’abri de la lumière, de la chaleur et de l’humidité. Évitez le frigo ou le congélateur : les variations de température peuvent dégrader le café. L’idéal reste un bocal opaque et bien fermé dans un placard.</p>",
+        "richtext_richtext": "<p><br/>                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                      </p>",
         "text_type_the": "{{ product.metafields.custom.the.value.types_de_the.value }}",
         "text_origine": "{{ product.metafields.custom.the.value.origine.value }}",
         "text_temps_infusion": "{{ product.metafields.custom.the.value.temps_infusion.value }}",
