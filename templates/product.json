@@ -48,7 +48,7 @@
         "text_86": "{{ product.metafields.custom.score_sca.value }}",
         "richtext_dou_vient_mon_cafe": "<p>{{ product.metafields.custom.origine_cafe | metafield_tag }}</p>",
         "image_origine_du_cafe_image": "{{ product.metafields.custom.origine_du_cafe_image.value }}",
-        "richtext_contenu": "<p>{{ product.metafields.custom.les_conseils_du_torrefacteur_texte | metafield_tag }}</p>",
+        "richtext_contenu": "<p>{{ product.metafields.custom.les_conseils_du_torrefacteur_texte | metafield_tag }}{{ product.metafields.custom.the.value.conseils_du_torrefacteur | metafield_tag }}</p>",
         "text_type_extraction": "{{ product.metafields.custom.type_d_extraction_id_al.value }}",
         "text_conseil_mouture": "{{ product.metafields.custom.conseil_de_mouture.value }}",
         "text_86c": "{{ product.metafields.custom.temp_rature_d_eau_conseill_e.value }}",
