@@ -66,7 +66,10 @@
 <div class="product_header-tag"><div class="product_header-tag-text">
 {{ section.settings.text_badges_type_de_the_texte }}
 </div>
-</div></div>
+</div>{% if product.metafields.custom.format_the != blank %}    <div li-if="product.metafields.custom.format_the != blank" class="product_header-tag">
+    {% assign format = product.metafields.custom.format_the.value %}
+<div li-object="format" class="product_header-tag-text">{{ format }}</div>    </div>
+{% endif %}</div>
 {% endcase %}
 </div>
 
