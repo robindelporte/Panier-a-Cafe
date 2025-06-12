@@ -122,7 +122,7 @@
         "text_animation_titre_3": "{{ product.metafields.custom.animation_titre_n_3.value }}",
         "richtext_animation_texte_3": "<p>{{ product.metafields.custom.animation_texte_n_3 | metafield_tag }}</p>",
         "text_heading": "Foire aux questions",
-        "richtext_richtext": "<p><br/>                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>                      </p>",
+        "richtext_richtext": "",
         "text_type_the": "{{ product.metafields.custom.the.value.types_de_the.value }}",
         "text_origine": "{{ product.metafields.custom.the.value.origine.value }}",
         "text_temps_infusion": "{{ product.metafields.custom.the.value.temps_infusion.value }}",
