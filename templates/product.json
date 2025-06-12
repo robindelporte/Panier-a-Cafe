@@ -17,6 +17,8 @@
         "text_badges_variete_cafe_texte": "{{ product.metafields.custom.pays_d_origine.value.pays.value }}",
         "image_badges_certification_cafe_image": "{{ product.metafields.custom.certification.value.logo.value }}",
         "text_badges_certification_cafe_texte": "{{ product.metafields.custom.certification.value.nom.value }}",
+        "image_badges_certification_2_cafe_image": "{{ product.metafields.custom.certification2.value.logo.value }}",
+        "text_badges_certification_2_cafe_texte": "{{ product.metafields.custom.certification2.value.nom.value }}",
         "text_badges_type_de_the_texte": "{{ product.metafields.custom.the.value.types_de_the.value }}",
         "text_with_subscription": "Abonnement",
         "text_without_subscription": "Commande ponctuelle"
