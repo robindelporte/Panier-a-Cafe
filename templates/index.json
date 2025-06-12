@@ -12,6 +12,16 @@
     "hero_slider": {
       "type": "hero_slider",
       "blocks": {
+        "slide_tjMTU9": {
+          "type": "slide",
+          "settings": {
+            "richtext_heading": "<h1>Le Panier à Café, </h1><h1>Torréfacteur Gastronome</h1><h1>à Annecy</h1>",
+            "text_text": "",
+            "url_button_1_link": "",
+            "text_button_1_text": "Nos cafés !",
+            "image_image_desktop": "shopify://shop_images/Design_sans_titre_1.webp"
+          }
+        },
         "slide_iMn83X": {
           "type": "slide",
           "settings": {
@@ -35,6 +45,7 @@
         }
       },
       "block_order": [
+        "slide_tjMTU9",
         "slide_iMn83X",
         "slide_W8mLC8"
       ],
