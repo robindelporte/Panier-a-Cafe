@@ -8,6 +8,11 @@
 <img src="{{ pays_origine.drapeau | img_url: 'large' }}" loading="lazy" li-object:src="pays_origine.drapeau | img_url: 'large'" alt="" class="flag_icon">
 <div li-object="pays_origine.pays" class="product-item_tag-text">{{ pays_origine.pays }}</div>    </div>
 {% endif %}    </div>
+{% endif %}{% if product.type == 'The' %}    <div li-if="product.type == 'The'">
+    {% if product.metafields.custom.format_the != blank %}    <div li-if="product.metafields.custom.format_the != blank" class="product-item_tag">
+    {% assign format = product.metafields.custom.format_the.value %}
+<div li-object="format" class="product-item_tag-text">{{ format }}</div>    </div>
+{% endif %}    </div>
 {% endif %}{% if product.metafields.custom.certification %}    <div li-if="product.metafields.custom.certification" class="product-item_tag">
     {% assign certification = product.metafields.custom.certification.value %}
 <img src="{{ certification.logo| img_url: 'large' }}" loading="lazy" li-object:src="certification.logo| img_url: 'large'" alt="" class="flag_icon">
