@@ -124,18 +124,38 @@
       "acces_reserve": {
         "type": "acces_reserve",
         "blocks": {
+          "carte_Wj4Hww": {
+            "type": "carte",
+            "settings": {
+              "image_image": "shopify://shop_images/acces-pro.webp",
+              "text_titre": "Se connecter",
+              "text_texte_lien": "Je me connecte",
+              "url_lien": "https://shopify.com/94829281619/account"
+            }
+          },
           "carte_MetPWt": {
             "type": "carte",
             "settings": {
               "image_image": "shopify://shop_images/LCO-PKFE-FB.webp",
-              "text_titre": "Se connecter",
-              "text_texte_lien": "Je me connecte",
+              "text_titre": "Demander un accès",
+              "text_texte_lien": "Je demande un accès professionnel",
               "url_lien": ""
+            }
+          },
+          "carte_3UedHJ": {
+            "type": "carte",
+            "settings": {
+              "image_image": "shopify://shop_images/boutique-panier-a-cafe.webp",
+              "text_titre": "Retour à la boutique",
+              "text_texte_lien": "Je découvre les produits",
+              "url_lien": "/"
             }
           }
         },
         "block_order": [
-          "carte_MetPWt"
+          "carte_Wj4Hww",
+          "carte_MetPWt",
+          "carte_3UedHJ"
         ],
         "settings": {
           "text_titre": "Accès réservé"
