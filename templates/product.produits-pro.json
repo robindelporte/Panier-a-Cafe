@@ -1,0 +1,24 @@
+{
+    "sections": {
+        "product_hero_sub": {
+            "type": "product_hero_sub"
+        },
+        "product_recommended": {
+            "type": "product_recommended"
+        },
+        "contenu_produits": {
+            "type": "contenu_produits"
+        },
+        "category": {
+            "type": "category"
+        }
+    },
+    "layout": "product.produits-pro",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "product_hero_sub",
+        "product_recommended",
+        "contenu_produits",
+        "category"
+    ]
+}
