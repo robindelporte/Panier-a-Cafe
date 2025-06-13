@@ -120,6 +120,26 @@
           "image_soutien_2": "shopify://shop_images/logo_region.png",
           "image_soutien_3": "shopify://shop_images/logo_europe.png"
         }
+      },
+      "acces_reserve": {
+        "type": "acces_reserve",
+        "blocks": {
+          "carte_MetPWt": {
+            "type": "carte",
+            "settings": {
+              "image_image": "shopify://shop_images/LCO-PKFE-FB.webp",
+              "text_titre": "Se connecter",
+              "text_texte_lien": "Je me connecte",
+              "url_lien": ""
+            }
+          }
+        },
+        "block_order": [
+          "carte_MetPWt"
+        ],
+        "settings": {
+          "text_titre": "Accès réservé"
+        }
       }
     },
     "content_for_index": [],
