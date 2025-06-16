@@ -13,8 +13,8 @@
       "type": "collection_hero",
       "settings": {}
     },
-    "collection_produits": {
-      "type": "collection_produits",
+    "collection_pro": {
+      "type": "collection_pro",
       "settings": {}
     },
     "bandeau": {
@@ -38,7 +38,7 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "collection_hero",
-    "collection_produits",
+    "collection_pro",
     "bandeau",
     "faq",
     "collection_tabs",
