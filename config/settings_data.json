@@ -164,11 +164,6 @@
     },
     "content_for_index": [],
     "blocks": {
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      },
       "1513253815146976218": {
         "type": "shopify://apps/omnisend-email-marketing-sms/blocks/app-embed/44704aa2-794f-4c5d-8c8e-039c841158e9",
         "disabled": false,
@@ -181,6 +176,11 @@
       },
       "13969055170449783870": {
         "type": "shopify://apps/bss-b2b-solution/blocks/config-header/451233f2-9631-4c49-8b6f-057e4ebcde7f",
+        "disabled": false,
+        "settings": {}
+      },
+      "246148584256545108": {
+        "type": "shopify://apps/axeptio/blocks/cookie/ba8aa3e7-c9c9-458a-a270-7fd66b8b048c",
         "disabled": false,
         "settings": {}
       }
