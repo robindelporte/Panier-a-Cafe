@@ -10,10 +10,8 @@
 <a data-w-id="23d7e0f5-e651-d71d-f75d-54fc06f29ca8" href="#" class="filter_tablet-filters-button w-inline-block"><img loading="lazy" src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/62942b9f00484cf074e6f851_icon-filters.svg" alt="" class="button-icon-left">
 <div>Filtres</div></a><div class="filter_results-text"><span li-object="collection.all_products_count | append: ' '">{{ collection.all_products_count | append: ' ' }}</span>Produits</div></div><div class="filter_layout is-no-filter"><div id="w-node-_0b4a3b29-1fa7-6c47-5b26-de46d9ea3ce6-fe62cc2a" class="filter_feed"><div class="filter_product-list-wrapper w-dyn-list"><div role="list" class="filter_product-list w-dyn-items">{% for product in collection.products %}    <div li-for="product in collection.products" role="listitem" class="filter_product-list-item w-dyn-item">
                                     
-                            {% if product.tags contains client_tag %}    <div li-if="product.tags contains client_tag">
-    {% render 'product_item', product: product %}
-    </div>
-{% endif %}
+                            {% render 'product_item', product: product %}
+
                             
                         </div>
 {% endfor %}</div>{% if collection.products == blank %}    <div li-if="collection.products == blank" class="filter_empty w-dyn-empty">
