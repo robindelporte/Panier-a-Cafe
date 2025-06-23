@@ -289,6 +289,22 @@
     <div class="page-wrapper">
       {% render 'global_styles' %}
       {% section 'header' %}
+      {% assign client_tag = '' %}
+
+      {% if customer %}
+        {% case true %}
+          {% when customer.tags contains 'PME' %}
+            {% assign client_tag = 'PME' %}
+          {% when customer.tags contains 'CHR' %}
+            {% assign client_tag = 'CHR' %}
+          {% when customer.tags contains 'Revendeurs Bio' %}
+            {% assign client_tag = 'Revendeurs Bio' %}
+          {% when customer.tags contains 'Revendeurs' %}
+            {% assign client_tag = 'Revendeurs' %}
+          {% else %}
+            {% assign client_tag = '' %}
+        {% endcase %}
+      {% endif %}
       <div li-case="collection.metafields.custom.professionel.value == client_tag">
         {% case collection.metafields.custom.professionel.value == client_tag %}
           {% when true %}
