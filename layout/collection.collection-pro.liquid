@@ -255,7 +255,12 @@
 
 <div class="page-wrapper">{% render 'global_styles' %}
 {% section 'header' %}
-<div>{% if customer %}{% case true %}{% when customer.tags contains 'PME' %}{% assign client_tag = 'PME' %}{% when customer.tags contains 'CHR' %}{% assign client_tag = 'CHR' %}{% when customer.tags contains 'Revendeurs Bio' %}{% assign client_tag = 'Revendeurs Bio' %}{% when customer.tags contains 'Revendeurs' %}{% assign client_tag = 'Revendeurs' %}{% else %}{% assign client_tag = '' %}{% endcase %}{% endif %}</div><div li-case="collection.metafields.custom.professionel.value">
+{% assign client_tag = '' %}
+{% if customer.tags contains 'PME' assign client_tag = 'PME' endif %}
+{% if customer.tags contains 'CHR' assign client_tag = 'CHR' endif %}
+{% if customer.tags contains 'Revendeurs Bio' assign client_tag = 'Revendeurs Bio' endif %}
+{% if customer.tags contains 'Revendeurs' assign client_tag = 'Revendeurs' endif %}
+<div li-case="collection.metafields.custom.professionel.value">
 {% case collection.metafields.custom.professionel.value %}
 {% when {{ client_tag }} %} 
 <div li-when="{{ client_tag }}">
