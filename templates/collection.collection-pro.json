@@ -32,6 +32,10 @@
     "reseaux": {
       "type": "reseaux",
       "settings": {}
+    },
+    "debug_access": {
+      "type": "debug-access",
+      "settings": {}
     }
   },
   "layout": "collection.collection-pro",
@@ -42,6 +46,7 @@
     "bandeau",
     "faq",
     "collection_tabs",
-    "reseaux"
+    "reseaux",
+    "debug_access"
   ]
 }
