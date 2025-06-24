@@ -1,17 +1,1 @@
-{% assign client_tag = '' %}
-
-{% if customer.tags contains 'PME' %}
-  {% assign client_tag = 'PME' %}
-{% elsif customer.tags contains 'CHR' %}
-  {% assign client_tag = 'CHR' %}
-{% elsif customer.tags contains 'Revendeurs Bio' %}
-  {% assign client_tag = 'Revendeurs Bio' %}
-{% elsif customer.tags contains 'Revendeurs' %}
-  {% assign client_tag = 'Revendeurs' %}
-{% endif %}
-
-{% assign access_status = 'blocked' %}
-
-{% if client_tag == collection.metafields.custom.professionel.value %}
-  {% assign access_status = 'granted' %}
-{% endif %}
+<div style="padding:20px; background:#f9f9f9; border:1px solid #ccc;"> <h3>🧪 DEBUG ACCÈS PRO</h3>{% assign client_tag = '' %}{% if customer.tags contains 'PME' %}{% assign client_tag = 'PME' %}{% elsif customer.tags contains 'CHR' %}{% assign client_tag = 'CHR' %}{% elsif customer.tags contains 'Revendeurs Bio' %}{% assign client_tag = 'Revendeurs Bio' %}{% elsif customer.tags contains 'Revendeurs' %}{% assign client_tag = 'Revendeurs' %}{% endif %}{% assign access_status = 'blocked' %}{% if client_tag == collection.metafields.custom.professionel.value %}{% assign access_status = 'granted' %}{% endif %}<p><strong>Client connecté :</strong>{% if customer %}✅{{customer.email}}{% else %}❌ Non{% endif %}</p> <p><strong>Tags client :</strong>{% if customer %}{{customer.tags | join: ', '}}{% else %}Aucun{% endif %}</p> <p><strong>Tag détecté (client_tag) :</strong>{{client_tag}}</p> <p><strong>Tag collection :</strong>{{collection.metafields.custom.professionel.value}}</p> <p><strong>Statut d’accès :</strong>{{access_status}}</p> </div>
