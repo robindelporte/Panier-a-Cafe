@@ -292,8 +292,8 @@
     <div class="page-wrapper">
       {% render 'global_styles' %}
       {% section 'header' %}
-      {% assign client_tag = '' %}
 
+      {% assign client_tag = '' %}
       {% if customer.tags contains 'PME' %}
         {% assign client_tag = 'PME' %}
       {% elsif customer.tags contains 'CHR' %}
@@ -305,34 +305,16 @@
       {% endif %}
 
       {% assign access_status = 'blocked' %}
-
       {% if client_tag == collection.metafields.custom.professionel.value %}
         {% assign access_status = 'granted' %}
       {% endif %}
 
-      <p>client_tag: {{ client_tag }}</p>
-      <p>collection tag: {{ collection.metafields.custom.professionel.value }}</p>
-      <p>access_status: {{ access_status }}</p>
-
       {% case access_status %}
         {% when 'granted' %}
-          <p>✓ Access GRANTED</p>
+          {{ content_for_layout }}
         {% else %}
-          <p>✗ Access BLOCKED</p>
+          {% section 'acces_reserve' %}
       {% endcase %}
-
-      <div li-case="access_status">
-        {% case access_status %}
-          {% when 'granted' %}
-            <div li-when="granted">
-              {{ content_for_layout }}
-            </div>
-          {% else %}
-            <div li-when="">
-              {% section 'acces_reserve' %}
-            </div>
-        {% endcase %}
-      </div>
 
       {% section 'footer' %}
     </div>
