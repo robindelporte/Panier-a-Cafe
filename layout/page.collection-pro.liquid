@@ -323,7 +323,7 @@
       </div>
       <div li-case="access_status">
         {% case access_status %}
-          {% when granted %}
+          {% when 'granted' %}
             <div li-when="granted">
               {{ content_for_layout }}
             </div>
