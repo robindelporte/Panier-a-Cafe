@@ -1,1 +1,17 @@
-{% assign client_tag = '' %}{% if customer.tags contains 'PME' %}{% assign client_tag = 'PME' %}{% elsif customer.tags contains 'CHR' %}{% assign client_tag = 'CHR' %}{% elsif customer.tags contains 'Revendeurs Bio' %}{% assign client_tag = 'Revendeurs Bio' %}{% elsif customer.tags contains 'Revendeurs' %}{% assign client_tag = 'Revendeurs' %}{% endif %}{% assign access_ok = client_tag == collection.metafields.custom.professionel.value %}
+{% assign client_tag = '' %}
+
+{% if customer.tags contains 'PME' %}
+  {% assign client_tag = 'PME' %}
+{% elsif customer.tags contains 'CHR' %}
+  {% assign client_tag = 'CHR' %}
+{% elsif customer.tags contains 'Revendeurs Bio' %}
+  {% assign client_tag = 'Revendeurs Bio' %}
+{% elsif customer.tags contains 'Revendeurs' %}
+  {% assign client_tag = 'Revendeurs' %}
+{% endif %}
+
+{% assign access_status = 'blocked' %}
+
+{% if client_tag == collection.metafields.custom.professionel.value %}
+  {% assign access_status = 'granted' %}
+{% endif %}
