@@ -292,23 +292,6 @@
     <div class="page-wrapper">
       {% render 'global_styles' %}
       {% section 'header' %}
-      <div style="padding:20px; background:#fff0f0; border:1px solid #ffcccc;">
-        <h3>🧪 DEBUG FORCE AFFICHAGE</h3>
-
-        {% if customer %}
-          <p>✅ Client connecté : {{ customer.email }}</p>
-          <p>🔖 Tags : {{ customer.tags | join: ', ' }}</p>
-        {% else %}
-          <p>❌ Aucun client connecté</p>
-        {% endif %}
-
-        <p>📌 client_tag = {{ client_tag }}</p>
-        <p>
-          📌 collection.metafields.custom.professionel.value = {{ collection.metafields.custom.professionel.value }}
-        </p>
-        <p>📌 access_status = {{ access_status }}</p>
-      </div>
-
       {% assign client_tag = '' %}
       {% if customer.tags contains 'PME' %}
         {% assign client_tag = 'PME' %}
