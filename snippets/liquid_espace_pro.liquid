@@ -3,3 +3,12 @@
 {% else %}
   <p>Aucun client connecté</p>
 {% endif %}
+
+{% if customer %}
+  <p>Tags du client :</p>
+  <ul>
+    {% for tag in customer.tags %}
+      <li>{{ tag }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
