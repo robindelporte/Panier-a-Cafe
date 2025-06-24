@@ -1,0 +1,28 @@
+{% if customer %}    <div li-if="customer">
+    <div li-case="true ">
+{% case true  %}
+{% when customer.tags contains 'PME' %} 
+<div li-when="customer.tags contains 'PME'">
+{% assign client_tag = 'PME' %}
+</div>
+{% when customer.tags contains 'CHR' %} 
+<div li-when="customer.tags contains 'CHR'">
+{% assign client_tag = 'CHR' %}
+</div>
+{% when customer.tags contains 'Revendeurs Bio' %} 
+<div li-when="customer.tags contains 'Revendeurs Bio'">
+{% assign client_tag = 'Revendeurs Bio' %}
+</div>
+{% when customer.tags contains 'Revendeurs' %} 
+<div li-when="customer.tags contains 'Revendeurs'">
+{% assign client_tag = 'Revendeurs' %}
+</div>
+{% else %} 
+<div li-when="">
+{% assign client_tag = '' %}
+</div>
+{% endcase %}
+</div>
+
+    </div>
+{% endif %} {% schema %} {"tag":"section","name":"Liquid-Pro","presets":[{"name":"Liquid-Pro","category":"Liquify","blocks":[]}],"disabled_on":{"templates":["*"]}} {% endschema %}
