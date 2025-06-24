@@ -308,6 +308,10 @@
       {% if client_tag == collection.metafields.custom.professionel.value %}
         {% assign access_status = 'granted' %}
       {% endif %}
+      <p><strong>DEBUG</strong></p>
+      <p>client_tag : {{ client_tag }}</p>
+      <p>collection tag : {{ collection.metafields.custom.professionel.value }}</p>
+      <p>access_status : {{ access_status }}</p>
 
       {% case access_status %}
         {% when 'granted' %}
