@@ -308,10 +308,31 @@
       {% if client_tag == collection.metafields.custom.professionel.value %}
         {% assign access_status = 'granted' %}
       {% endif %}
-      <p><strong>DEBUG</strong></p>
-      <p>client_tag : {{ client_tag }}</p>
-      <p>collection tag : {{ collection.metafields.custom.professionel.value }}</p>
-      <p>access_status : {{ access_status }}</p>
+      <div style="padding:20px; background:#f3f3f3; border:1px solid #ccc;">
+        <h3>🔍 DEBUG INFOS</h3>
+
+        <p>
+          <strong>Client connecté ?</strong>
+          {% if customer %}
+            ✅ Oui - {{ customer.email }}
+          {% else %}
+            ❌ Non
+          {% endif %}
+        </p>
+
+        <p>
+          <strong>Tags du client :</strong>
+          {% if customer and customer.tags.size > 0 %}
+            {{ customer.tags | join: ', ' }}
+          {% else %}
+            Aucun
+          {% endif %}
+        </p>
+
+        <p><strong>Tag client détecté :</strong> {{ client_tag }}</p>
+        <p><strong>Tag de la collection :</strong> {{ collection.metafields.custom.professionel.value }}</p>
+        <p><strong>Statut d'accès :</strong> {{ access_status }}</p>
+      </div>
 
       {% case access_status %}
         {% when 'granted' %}
