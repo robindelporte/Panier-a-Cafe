@@ -292,6 +292,8 @@
     <div class="page-wrapper">
       {% render 'global_styles' %}
       {% section 'header' %}
+      {% section 'debug-access' %}
+
       {% assign client_tag = '' %}
       {% if customer.tags contains 'PME' %}
         {% assign client_tag = 'PME' %}
