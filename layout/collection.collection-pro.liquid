@@ -256,10 +256,10 @@
 <div class="page-wrapper">{% render 'global_styles' %}
 {% render 'liquid_espace_pro' %}
 {% section 'header' %}
-<div li-case="collection.metafields.custom.professionel.value">
-{% case collection.metafields.custom.professionel.value %}
-{% when {{ client_tag }} %} 
-<div li-when="{{ client_tag }}">
+<div li-case="access_ok">
+{% case access_ok %}
+{% when true %} 
+<div li-when="true">
  {{ content_for_layout }} </div>
 {% else %} 
 <div li-when="">
