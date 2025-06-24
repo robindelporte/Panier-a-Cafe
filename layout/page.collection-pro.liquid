@@ -291,12 +291,12 @@
   <body li-page="collection.collection-pro">
     <div class="page-wrapper">
       {% render 'global_styles' %}
-      {% render 'liquid_espace_pro' %}
       {% section 'header' %}
-      <div li-case="access_ok">
+      {% section 'espace_pro_liquid' %}
+      <div li-case="access_status">
         {% case access_status %}
           {% when granted %}
-            <div li-when="true">
+            <div li-when="granted">
               {{ content_for_layout }}
             </div>
           {% else %}
