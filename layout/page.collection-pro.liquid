@@ -294,8 +294,8 @@
       {% render 'liquid_espace_pro' %}
       {% section 'header' %}
       <div li-case="access_ok">
-        {% case access_ok %}
-          {% when true %}
+        {% case access_status %}
+          {% when granted %}
             <div li-when="true">
               {{ content_for_layout }}
             </div>
