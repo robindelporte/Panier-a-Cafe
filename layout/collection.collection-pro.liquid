@@ -259,11 +259,11 @@
 {% case collection.metafields.custom.professionel.value %}
 {% when {{ client_tag }} %} 
 <div li-when="{{ client_tag }}">
-{% section 'acces_reserve' %}
-</div>
+ {{ content_for_layout }} </div>
 {% else %} 
 <div li-when="">
- {{ content_for_layout }} </div>
+{% section 'acces_reserve' %}
+</div>
 {% endcase %}
 </div>
 
