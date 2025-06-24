@@ -9,4 +9,9 @@
 {% elsif customer.tags contains 'Revendeurs' %}
   {% assign client_tag = 'Revendeurs' %}
 {% endif %}
-<p>Tag détecté : {{ client_tag }}</p>
+
+{% assign access_ok = client_tag == collection.metafields.custom.professionel.value %}
+
+<p>Client tag : {{ client_tag }}</p>
+<p>Tag collection : {{ collection.metafields.custom.professionel.value }}</p>
+<p>Accès autorisé ? {{ access_ok }}</p>
