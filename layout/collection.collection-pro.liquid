@@ -255,8 +255,24 @@
 
 <div class="page-wrapper">{% render 'global_styles' %}
 {% section 'header' %}
-{% section 'espace_pro_liquid' %}
-<div li-case="access_status">
+<div class="hide">{% assign client_tag = '' %}
+{% if customer.tags contains 'PME' %}    <div li-if="customer.tags contains 'PME'" class="li-tag">
+    {% assign client_tag = 'PME' %}
+    </div>
+{% endif %}{% if customer.tags contains 'CHR' %}    <div li-if="customer.tags contains 'CHR'" class="li-tag">
+    {% assign client_tag = 'CHR' %}
+    </div>
+{% endif %}{% if customer.tags contains 'Revendeurs Bio' %}    <div li-if="customer.tags contains 'Revendeurs Bio'" class="li-tag">
+    {% assign client_tag = 'Revendeurs Bio' %}
+    </div>
+{% endif %}{% if customer.tags contains 'Revendeurs' %}    <div li-if="customer.tags contains 'Revendeurs'" class="li-tag">
+    {% assign client_tag = 'Revendeurs' %}
+    </div>
+{% endif %}{% assign access_status = 'blocked' %}
+{% if client_tag == collection.metafields.custom.professionel.value %}    <div li-if="client_tag == collection.metafields.custom.professionel.value" class="li-tag">
+    {% assign access_status = 'granted' %}
+    </div>
+{% endif %}</div><div li-case="access_status">
 {% case access_status %}
 {% when granted %} 
 <div li-when="granted">
