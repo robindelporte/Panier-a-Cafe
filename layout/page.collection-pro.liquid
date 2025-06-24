@@ -290,24 +290,6 @@
   </head>
   <body li-page="collection.collection-pro">
     <div class="page-wrapper">
-      {% render 'global_styles' %}
-      {% section 'header' %}
-
-      {% assign client_tag = '' %}
-      {% if customer.tags contains 'PME' %}
-        {% assign client_tag = 'PME' %}
-      {% elsif customer.tags contains 'CHR' %}
-        {% assign client_tag = 'CHR' %}
-      {% elsif customer.tags contains 'Revendeurs Bio' %}
-        {% assign client_tag = 'Revendeurs Bio' %}
-      {% elsif customer.tags contains 'Revendeurs' %}
-        {% assign client_tag = 'Revendeurs' %}
-      {% endif %}
-
-      {% assign access_status = 'blocked' %}
-      {% if client_tag == collection.metafields.custom.professionel.value %}
-        {% assign access_status = 'granted' %}
-      {% endif %}
       <div style="padding:20px; background:#f3f3f3; border:1px solid #ccc;">
         <h3>🔍 DEBUG INFOS</h3>
 
@@ -333,6 +315,25 @@
         <p><strong>Tag de la collection :</strong> {{ collection.metafields.custom.professionel.value }}</p>
         <p><strong>Statut d'accès :</strong> {{ access_status }}</p>
       </div>
+
+      {% render 'global_styles' %}
+      {% section 'header' %}
+
+      {% assign client_tag = '' %}
+      {% if customer.tags contains 'PME' %}
+        {% assign client_tag = 'PME' %}
+      {% elsif customer.tags contains 'CHR' %}
+        {% assign client_tag = 'CHR' %}
+      {% elsif customer.tags contains 'Revendeurs Bio' %}
+        {% assign client_tag = 'Revendeurs Bio' %}
+      {% elsif customer.tags contains 'Revendeurs' %}
+        {% assign client_tag = 'Revendeurs' %}
+      {% endif %}
+
+      {% assign access_status = 'blocked' %}
+      {% if client_tag == collection.metafields.custom.professionel.value %}
+        {% assign access_status = 'granted' %}
+      {% endif %}
 
       {% case access_status %}
         {% when 'granted' %}
