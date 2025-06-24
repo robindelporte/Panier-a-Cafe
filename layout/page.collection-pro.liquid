@@ -321,11 +321,18 @@
           </div>
         {% endif %}
       </div>
-      {% if access_status == 'granted' %}
-        {{ content_for_layout }}
-      {% else %}
-        {% section 'acces_reserve' %}
-      {% endif %}
+      <div li-case="access_status">
+        {% case access_status %}
+          {% when 'granted' %}
+            <div li-when="granted">
+              {{ content_for_layout }}
+            </div>
+          {% else %}
+            <div li-when="">
+              {% section 'acces_reserve' %}
+            </div>
+        {% endcase %}
+      </div>
 
       {% section 'footer' %}
     </div>
