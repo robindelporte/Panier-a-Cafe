@@ -1,21 +1,4 @@
-<div class="hide">{% assign client_tag = '' %}
-{% if customer.tags contains 'PME' %}    <div li-if="customer.tags contains 'PME'" class="li-tag">
-    {% assign client_tag = 'PME' %}
-    </div>
-{% endif %}{% if customer.tags contains 'CHR' %}    <div li-if="customer.tags contains 'CHR'" class="li-tag">
-    {% assign client_tag = 'CHR' %}
-    </div>
-{% endif %}{% if customer.tags contains 'Revendeurs Bio' %}    <div li-if="customer.tags contains 'Revendeurs Bio'" class="li-tag">
-    {% assign client_tag = 'Revendeurs Bio' %}
-    </div>
-{% endif %}{% if customer.tags contains 'Revendeurs' %}    <div li-if="customer.tags contains 'Revendeurs'" class="li-tag">
-    {% assign client_tag = 'Revendeurs' %}
-    </div>
-{% endif %}{% assign access_status = 'blocked' %}
-{% if client_tag == collection.metafields.custom.professionel.value %}    <div li-if="client_tag == collection.metafields.custom.professionel.value" class="li-tag">
-    {% assign access_status = 'granted' %}
-    </div>
-{% endif %}</div><div class="banner_component"><div class="padding-global"><div class="banner_content-wrapper"><div class="banner_content"><div class="banner_rich-text w-richtext"> {{ section.settings.richtext_banner_content }} </div>
+<div class="banner_component"><div class="padding-global"><div class="banner_content-wrapper"><div class="banner_content"><div class="banner_rich-text w-richtext"> {{ section.settings.richtext_banner_content }} </div>
 </div></div></div></div><div data-animation="default" class="navbar9_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="aaae659e-26a2-8a91-9a34-6264eddd3133" role="banner" data-duration="400"><div class="navbar9_container"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="navbar9_logo-link w-nav-brand"><img sizes="(max-width: 479px) 98vw, (max-width: 767px) 99vw, (max-width: 1081px) 100vw, 1081px" srcset="{{ 'LOGO-MARON-p-500.png' | asset_url }} 500w, {{ 'LOGO-MARON-p-800.png' | asset_url }} 800w, {{ 'logo_panier_a_cafe-maron.png' | asset_url }} 1081w" alt="" src="{{ 'logo_panier_a_cafe-maron.png' | asset_url }}" loading="lazy" class="navbar9_logo">
 </a><nav role="navigation" class="navbar9_menu w-nav-menu"><div class="navbar9_menu-left">{% for block in section.blocks %}
     {% if block.type == "menu" %}
@@ -57,7 +40,7 @@
                             </div>
             {% endif %}
 {% endfor %}
-{% if client_tag == 'PME' %}    <div li-if="client_tag == 'PME'">
+{% if customer.tags contains 'PME' %}    <div li-if="customer.tags contains 'PME'">
     {% for link in linklists[section.settings.PME].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.PME].links" class="nav_menu-dropdown w-dropdown">
                                     
                             <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
@@ -75,7 +58,7 @@
                             
                         </div>
 {% endfor %}    </div>
-{% endif %}{% if client_tag == 'CHR' %}    <div li-if="client_tag == 'CHR'">
+{% endif %}{% if customer.tags contains 'CHR' %}    <div li-if="customer.tags contains 'CHR'">
     {% for link in linklists[section.settings.CHR].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.CHR].links" class="nav_menu-dropdown w-dropdown">
                                     
                             <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
@@ -93,7 +76,7 @@
                             
                         </div>
 {% endfor %}    </div>
-{% endif %}{% if client_tag == 'Revendeurs Bio' %}    <div li-if="client_tag == 'Revendeurs Bio'">
+{% endif %}{% if customer.tags contains 'Revendeurs Bio' %}    <div li-if="customer.tags contains 'Revendeurs Bio'">
     {% for link in linklists[section.settings.RevendeursBio].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.RevendeursBio].links" class="nav_menu-dropdown w-dropdown">
                                     
                             <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
@@ -111,7 +94,7 @@
                             
                         </div>
 {% endfor %}    </div>
-{% endif %}{% if client_tag == 'Revendeurs' %}    <div li-if="client_tag == 'Revendeurs'">
+{% endif %}{% if customer.tags contains 'Revendeurs' %}    <div li-if="customer.tags contains 'Revendeurs'">
     {% for link in linklists[section.settings.Revendeurs].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.Revendeurs].links" class="nav_menu-dropdown w-dropdown">
                                     
                             <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
