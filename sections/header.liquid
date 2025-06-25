@@ -1,4 +1,21 @@
-<div class="banner_component"><div class="padding-global"><div class="banner_content-wrapper"><div class="banner_content"><div class="banner_rich-text w-richtext"> {{ section.settings.richtext_banner_content }} </div>
+<div class="hide">{% assign client_tag = '' %}
+{% if customer.tags contains 'PME' %}    <div li-if="customer.tags contains 'PME'" class="li-tag">
+    {% assign client_tag = 'PME' %}
+    </div>
+{% endif %}{% if customer.tags contains 'CHR' %}    <div li-if="customer.tags contains 'CHR'" class="li-tag">
+    {% assign client_tag = 'CHR' %}
+    </div>
+{% endif %}{% if customer.tags contains 'Revendeurs Bio' %}    <div li-if="customer.tags contains 'Revendeurs Bio'" class="li-tag">
+    {% assign client_tag = 'Revendeurs Bio' %}
+    </div>
+{% endif %}{% if customer.tags contains 'Revendeurs' %}    <div li-if="customer.tags contains 'Revendeurs'" class="li-tag">
+    {% assign client_tag = 'Revendeurs' %}
+    </div>
+{% endif %}{% assign access_status = 'blocked' %}
+{% if client_tag == collection.metafields.custom.professionel.value %}    <div li-if="client_tag == collection.metafields.custom.professionel.value" class="li-tag">
+    {% assign access_status = 'granted' %}
+    </div>
+{% endif %}</div><div class="banner_component"><div class="padding-global"><div class="banner_content-wrapper"><div class="banner_content"><div class="banner_rich-text w-richtext"> {{ section.settings.richtext_banner_content }} </div>
 </div></div></div></div><div data-animation="default" class="navbar9_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="aaae659e-26a2-8a91-9a34-6264eddd3133" role="banner" data-duration="400"><div class="navbar9_container"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="navbar9_logo-link w-nav-brand"><img sizes="(max-width: 479px) 98vw, (max-width: 767px) 99vw, (max-width: 1081px) 100vw, 1081px" srcset="{{ 'LOGO-MARON-p-500.png' | asset_url }} 500w, {{ 'LOGO-MARON-p-800.png' | asset_url }} 800w, {{ 'logo_panier_a_cafe-maron.png' | asset_url }} 1081w" alt="" src="{{ 'logo_panier_a_cafe-maron.png' | asset_url }}" loading="lazy" class="navbar9_logo">
 </a><nav role="navigation" class="navbar9_menu w-nav-menu"><div class="navbar9_menu-left">{% for block in section.blocks %}
     {% if block.type == "menu" %}
@@ -40,7 +57,79 @@
                             </div>
             {% endif %}
 {% endfor %}
-</div><div class="navbar9_menu-right">{% for link in linklists[section.settings.small].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.small].links" class="nav_menu-dropdown w-dropdown">
+{% if client_tag == 'PME' %}    <div li-if="client_tag == 'PME'">
+    {% for link in linklists[section.settings.PME].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.PME].links" class="nav_menu-dropdown w-dropdown">
+                                    
+                            <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
+    <svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg>    </div>
+{% endif %}<a li-object:href="link.url" href="{{ link.url }}" class="nav_link-block w-inline-block"><div li-object="link.title">{{ link.title }}</div></a></div>
+                            
+                            {% if link.links.size > 0  %}    <nav li-if="link.links.size > 0 " class="navbar_small-dropdown-list w-dropdown-list">
+    {% for child_link in link.links %}    <div li-for="child_link in link.links" class="nav_child-link">
+                                    
+                            <a href="{{ child_link.url }}" li-object="child_link.title" li-object:href="child_link.url" class="navbar_small-dropdown-link w-dropdown-link">{{ child_link.title }}</a>
+                            
+                        </div>
+{% endfor %}    </nav>
+{% endif %}
+                            
+                        </div>
+{% endfor %}    </div>
+{% endif %}{% if client_tag == 'CHR' %}    <div li-if="client_tag == 'CHR'">
+    {% for link in linklists[section.settings.CHR].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.CHR].links" class="nav_menu-dropdown w-dropdown">
+                                    
+                            <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
+    <svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg>    </div>
+{% endif %}<a li-object:href="link.url" href="{{ link.url }}" class="nav_link-block w-inline-block"><div li-object="link.title">{{ link.title }}</div></a></div>
+                            
+                            {% if link.links.size > 0  %}    <nav li-if="link.links.size > 0 " class="navbar_small-dropdown-list w-dropdown-list">
+    {% for child_link in link.links %}    <div li-for="child_link in link.links" class="nav_child-link">
+                                    
+                            <a href="{{ child_link.url }}" li-object="child_link.title" li-object:href="child_link.url" class="navbar_small-dropdown-link w-dropdown-link">{{ child_link.title }}</a>
+                            
+                        </div>
+{% endfor %}    </nav>
+{% endif %}
+                            
+                        </div>
+{% endfor %}    </div>
+{% endif %}{% if client_tag == 'Revendeurs Bio' %}    <div li-if="client_tag == 'Revendeurs Bio'">
+    {% for link in linklists[section.settings.RevendeursBio].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.RevendeursBio].links" class="nav_menu-dropdown w-dropdown">
+                                    
+                            <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
+    <svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg>    </div>
+{% endif %}<a li-object:href="link.url" href="{{ link.url }}" class="nav_link-block w-inline-block"><div li-object="link.title">{{ link.title }}</div></a></div>
+                            
+                            {% if link.links.size > 0  %}    <nav li-if="link.links.size > 0 " class="navbar_small-dropdown-list w-dropdown-list">
+    {% for child_link in link.links %}    <div li-for="child_link in link.links" class="nav_child-link">
+                                    
+                            <a href="{{ child_link.url }}" li-object="child_link.title" li-object:href="child_link.url" class="navbar_small-dropdown-link w-dropdown-link">{{ child_link.title }}</a>
+                            
+                        </div>
+{% endfor %}    </nav>
+{% endif %}
+                            
+                        </div>
+{% endfor %}    </div>
+{% endif %}{% if client_tag == 'Revendeurs' %}    <div li-if="client_tag == 'Revendeurs'">
+    {% for link in linklists[section.settings.Revendeurs].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.Revendeurs].links" class="nav_menu-dropdown w-dropdown">
+                                    
+                            <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
+    <svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg>    </div>
+{% endif %}<a li-object:href="link.url" href="{{ link.url }}" class="nav_link-block w-inline-block"><div li-object="link.title">{{ link.title }}</div></a></div>
+                            
+                            {% if link.links.size > 0  %}    <nav li-if="link.links.size > 0 " class="navbar_small-dropdown-list w-dropdown-list">
+    {% for child_link in link.links %}    <div li-for="child_link in link.links" class="nav_child-link">
+                                    
+                            <a href="{{ child_link.url }}" li-object="child_link.title" li-object:href="child_link.url" class="navbar_small-dropdown-link w-dropdown-link">{{ child_link.title }}</a>
+                            
+                        </div>
+{% endfor %}    </nav>
+{% endif %}
+                            
+                        </div>
+{% endfor %}    </div>
+{% endif %}</div><div class="navbar9_menu-right">{% for link in linklists[section.settings.small].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.small].links" class="nav_menu-dropdown w-dropdown">
                                     
                             <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
     <svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg>    </div>
