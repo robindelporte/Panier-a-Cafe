@@ -19,6 +19,8 @@
             "text_text": "",
             "url_button_1_link": "shopify://collections/cafes",
             "text_button_1_text": "Découvrir",
+            "image_image_desktop": "shopify://shop_images/thumbnail-video.webp",
+            "image_image_mobile": "shopify://shop_images/thumbnail-video.webp",
             "video_desktop": "shopify://files/videos/panier-a-cafe.mp4",
             "video_mobile": "shopify://files/videos/panier-a-cafe.mp4"
           }
