@@ -28,7 +28,7 @@
           "settings": {
             "richtext_heading": "<h2>Café de spécialité, sourcés en direct du producteur</h2>",
             "text_text": "",
-            "url_button_1_link": "",
+            "url_button_1_link": "shopify://collections/cafes",
             "text_button_1_text": "Nos cafés !",
             "image_image_desktop": "shopify://shop_images/Sumatrasourcing-74_1.webp"
           }
