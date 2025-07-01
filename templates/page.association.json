@@ -56,13 +56,14 @@
       "blocks": {
         "selection_gg9rJi": {
           "type": "selection",
+          "disabled": true,
           "settings": {
             "text_titre_selection": "Soutiens l’asso… avec du style !",
             "text_texte_tag_1": "Costa Rica",
             "text_texte_tag_2": "Costa Rica",
             "text_paragraphe": "On te propose nos sacs en toile de jute, ceux qui ont transporté du café depuis les quatre coins du monde ! Même taille, même format… mais origine mystère ! Chaque sac a sa propre histoire, son pays, son visuel, et ses petites imperfections qui font tout le charme. Mais surtout : 100% du montant est reversé à notre association, pour nos employés en situation de handicap. Un objet utile, décoratif, engagé… et qui sent bon le café d’ailleurs !",
-            "url_button_lien": "",
-            "text_button_texte": "Découvrir nos sacs",
+            "url_lien": "",
+            "text_texte_bouton": "This is some text inside of a div block.",
             "url_link": "",
             "image_image_produit": "shopify://shop_images/A_big_pile_of_99_recycled_cushions_1.webp",
             "text_etiquette": "Sacs en toile de jute"
@@ -75,8 +76,8 @@
             "text_texte_tag_1": "Costa Rica",
             "text_texte_tag_2": "Costa Rica",
             "text_paragraphe": "À chaque achat d’un sac de café d’un kilo, tu fais plus que te régaler : 1 euro est reversé à notre association, qui œuvre pour créer des ponts entre le monde du café et les personnes en situation de handicap. Une façon concrète de soutenir nos actions dans les pays producteurs, tout en continuant à savourer ton café préféré. Parce qu’un bon café, c’est encore meilleur quand il a du sens.",
-            "url_button_lien": "",
-            "text_button_texte": "Découvrir nos cafés",
+            "url_lien": "shopify://collections/cafes",
+            "text_texte_bouton": "Découvrir nos cafés",
             "url_link": "shopify://collections/cafes",
             "image_image_produit": "shopify://shop_images/V1A4928-2_1.webp",
             "text_etiquette": "Sachet de 1 kilo"
@@ -89,9 +90,9 @@
             "text_texte_tag_1": "Costa Rica",
             "text_texte_tag_2": "Costa Rica",
             "text_paragraphe": "Tu veux soutenir notre asso sans forcément craquer pour un sac ou un kilo de café ? Bonne nouvelle : tu peux faire un don du montant de ton choix, quand tu veux et comme tu veux ! Chaque euro récolté nous permet d’aller plus loin dans notre mission : créer du lien entre le monde du café et celui du handicap, ici comme ailleurs. Pas besoin de filtre pour être solidaire (ni de cafetière, promis). Juste un petit geste, mais un grand effet !",
-            "url_button_lien": "https://www.helloasso.com/associations/nos-trucs-z-en-plus",
-            "text_button_texte": "Faire un don",
-            "url_link": "",
+            "url_lien": "https://www.helloasso.com/associations/nos-trucs-z-en-plus",
+            "text_texte_bouton": "Faire un don",
+            "url_link": "https://www.helloasso.com/associations/nos-trucs-z-en-plus",
             "image_image_produit": "shopify://shop_images/V1A2627_2_2.jpg",
             "text_etiquette": "Un don"
           }
