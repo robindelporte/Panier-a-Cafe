@@ -59,12 +59,13 @@
                             <div li-object="type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color'" class="footer_payment-svg">{{ type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color' }}</div>
                             
                         </li>
-{% endfor %}</ul></div></div><div class="footer_sub-footer"><div class="text-color-white"><div class="text-size-small margin-bottom margin-xxsmall">2025 Le Panier à Café | Tous droits réservés</div><div class="text-size-small">805 route des futaies, 74370 Villaz, Rhone-Alpes, France</div><a href="https://www.kevin-rocha.com/" target="_blank" class="text-color-white text-size-tiny">Crédit photo : Kévin Rocha</a></div><div li-for:inside="link in linklists['legal'].links" id="w-node-_9f03d986-c081-15a4-3bbe-f98ead02894e-ad028921" class="footer_legal-links">
+{% endfor %}</ul></div></div><div class="footer_sub-footer"><div class="text-color-white"><div class="text-size-small margin-bottom margin-xxsmall">2025 Le Panier à Café | Tous droits réservés</div><div class="text-size-small">805 route des futaies, 74370 Villaz, Rhone-Alpes, France</div><a href="https://www.kevin-rocha.com/" target="_blank" class="text-color-white text-size-tiny">Crédit photo : Kévin Rocha</a></div><div id="w-node-_1f0ebb76-8d76-53b9-37c8-eaeb925a3cab-ad028921" class="footer_legal-links"><div li-for:inside="link in linklists['legal'].links" class="footer_legal-links">
         {% for link in linklists['legal'].links %}                            
                             <a li-object="link.title" li-object:href="link.url" href="{{ link.url }}" class="footer_legal-link">{{ link.title }}</a>
                             
                     {% endfor %}    </div>
-{% if localization.available_languages.size > 1 %}    <localization-form li-if="localization.available_languages.size > 1" class="li-lang_wrapper">
+<div class="w-embed"><a class="footer_legal-link" href="javascript:openAxeptioCookies()">Cookies
+                  </a></div></div>{% if localization.available_languages.size > 1 %}    <localization-form li-if="localization.available_languages.size > 1" class="li-lang_wrapper">
     {% form 'localization', class: 'li-lang_form' %}
 <div data-delay="500" data-hover="true" class="li-lang_dropdown w-dropdown"><div lang="{{ language.iso_code }}" class="li-lang_dd-toggle w-dropdown-toggle"><div li-object="localization.language.endonym_name | capitalize">{{ localization.language.endonym_name | capitalize }}</div><img loading="lazy" src="https://uploads-ssl.webflow.com/613f2f905ede8d670775fc8a/61548248f37f3a0faab19498_arrow-drop.svg" alt="" class="li-lang_dd-toggle-icon">
 </div><nav li-for:inside="language in localization.available_languages" class="li-lang_dd-list w-dropdown-list">
