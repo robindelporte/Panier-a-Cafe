@@ -27,7 +27,7 @@
         "bouttons_nprMeU": {
           "type": "bouttons",
           "settings": {
-            "url_button_link": "#form-container-ref",
+            "url_button_link": "#app-embed",
             "text_button_text": "Obtenir un devis",
             "url_button_link_2": "",
             "text_button_text_2": "Button 2"
