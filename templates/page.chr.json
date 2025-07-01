@@ -171,8 +171,8 @@
             "text_texte_tag_1": "Torréfaction artisanale",
             "text_texte_tag_2": "Sourcing direct producteur",
             "text_paragraphe": "Nos cafés sont sourcés à la ferme, souvent bio, parfois importés à la voile et toujours traçables. On travaille main dans la main avec des producteurs, on torréfie en Haute-Savoie, et on sélectionne le meilleur pour ton établissement. Résultat : un café bon, juste, et vraiment différent !",
-            "url_button_lien": "shopify://collections/cafes",
-            "text_button_texte": "Découvrir",
+            "url_lien": "shopify://collections/cafes",
+            "text_texte_bouton": "Découvrir nos cafés",
             "url_link": "shopify://collections/cafes",
             "image_image_produit": "shopify://shop_images/cafe.webp",
             "text_etiquette": "Nos cafés"
@@ -185,8 +185,8 @@
             "text_texte_tag_1": "Location adaptée à vos besoins",
             "text_texte_tag_2": "Installation & SAV inclus",
             "text_paragraphe": "Machine à grains automatique ou machine expresso avec moulin : on t’équipe en fonction de ton débit et de tes besoins. Installation rapide, formation de ton équipe, maintenance assurée… Tu restes focus sur ton service, on gère le reste !",
-            "url_button_lien": "shopify://collections/machines-a-cafe-a-grain",
-            "text_button_texte": "Découvrir",
+            "url_lien": "shopify://collections/machines-a-cafe-a-grain",
+            "text_texte_bouton": "Découvrir nos machines",
             "url_link": "shopify://collections/machines-a-cafe-a-grain",
             "image_image_produit": "shopify://shop_images/machines.webp",
             "text_etiquette": "Nos machines"
