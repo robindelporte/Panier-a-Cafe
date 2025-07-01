@@ -151,9 +151,9 @@
             "text_texte_tag_1": "100% Arabica",
             "text_texte_tag_2": "Cafés engagés",
             "text_paragraphe": "Ajoutez à votre offre une gamme de cafés de spécialité engagés, locaux et torréfiés à Annecy. Nos étiquettes colorées attirent l’œil et leur histoire fait mouche à chaque conversation client. Conditionnés avec soin, ils sont disponibles en plusieurs formats pour s’adapter à votre espace et à votre clientèle.",
-            "url_button_lien": "",
-            "text_button_texte": "Découvrir",
-            "url_link": "",
+            "url_lien": "shopify://collections/cafes",
+            "text_texte_bouton": "Découvrir nos cafés",
+            "url_link": "shopify://collections/cafes",
             "image_image_produit": "shopify://shop_images/V1A4902.webp",
             "text_etiquette": "Nos cafés à revendre"
           }
