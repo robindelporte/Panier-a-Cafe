@@ -17,7 +17,8 @@
           "settings": {
             "image_image": "shopify://shop_images/chr-image.webp",
             "text_titre": "CHR",
-            "url_lien": "shopify://pages/chr"
+            "url_lien": "shopify://pages/chr",
+            "url_link": "shopify://pages/chr"
           }
         },
         "bloc_BgbMLE": {
@@ -25,7 +26,8 @@
           "settings": {
             "image_image": "shopify://shop_images/PME.webp",
             "text_titre": "PME",
-            "url_lien": "shopify://pages/pme"
+            "url_lien": "shopify://pages/pme",
+            "url_link": "shopify://pages/pme"
           }
         },
         "bloc_KLYxXm": {
@@ -33,7 +35,8 @@
           "settings": {
             "image_image": "shopify://shop_images/revendeurs-image.webp",
             "text_titre": "Revendeurs",
-            "url_lien": "shopify://pages/revendeurs"
+            "url_lien": "shopify://pages/revendeurs",
+            "url_link": "shopify://pages/revendeurs"
           }
         }
       },
