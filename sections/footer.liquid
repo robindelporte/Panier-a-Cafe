@@ -18,8 +18,8 @@
 <div class="newsletter_form-block w-form">{% form 'customer', return_to: '/', class: 'newsletter_form' %}
 <div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[email]" data-name="Email 2" placeholder="info@lepanieracafe.fr" type="email" id="Email-2" required="">
 </div><div li-object="form.errors | default_errors" class="text-size-regular">{{ form.errors | default_errors }}</div><div id="w-node-c1e5e1ea-5da9-4c61-f6f5-7cb0794ab89d-ad028921" class="hide w-embed"><input type="hidden" name="contact[accepts_marketing]" value="false">
-</div><label id="w-node-c1e5e1ea-5da9-4c61-f6f5-7cb0794ab89e-ad028921" class="w-checkbox form_checkbox" name="contact[accepts_marketing]"><input type="checkbox" name="Accepts-Marketing-2" id="Accepts-Marketing-2" data-name="Accepts Marketing 2" class="w-checkbox-input form_checkbox-icon">
-<span class="form_checkbox-label text-size-tiny w-form-label" for="Accepts-Marketing-2">
+</div><label id="w-node-c1e5e1ea-5da9-4c61-f6f5-7cb0794ab89e-ad028921" class="w-checkbox form_checkbox" name="contact[accepts_marketing]"><input type="checkbox" name="Accepts-Marketing" id="Accepts-Marketing" data-name="Accepts Marketing" required="" class="w-checkbox-input form_checkbox-icon">
+<span class="form_checkbox-label text-size-tiny w-form-label" for="Accepts-Marketing">
 {{ section.settings.text_checkbox }}
 </span>
 </label><input type="submit" data-wait="" id="w-node-c1e5e1ea-5da9-4c61-f6f5-7cb0794ab8a5-ad028921" class="button w-button" value="S'incrire à la newsletter">
@@ -59,12 +59,13 @@
                             <div li-object="type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color'" class="footer_payment-svg">{{ type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color' }}</div>
                             
                         </li>
-{% endfor %}</ul></div></div><div class="footer_sub-footer"><div class="text-color-white"><div class="text-size-small margin-bottom margin-xxsmall">2025 Le Panier à Café | Tous droits réservés</div><div class="text-size-small">805 route des futaies, 74370 Villaz, Rhone-Alpes, France</div><a href="https://www.kevin-rocha.com/" target="_blank" class="text-color-white text-size-tiny">Crédit photo : Kévin Rocha</a></div><div li-for:inside="link in linklists['legal'].links" id="w-node-_9f03d986-c081-15a4-3bbe-f98ead02894e-ad028921" class="footer_legal-links">
+{% endfor %}</ul></div></div><div class="footer_sub-footer"><div class="text-color-white"><div class="text-size-small margin-bottom margin-xxsmall">2025 Le Panier à Café | Tous droits réservés</div><div class="text-size-small">805 route des futaies, 74370 Villaz, Rhone-Alpes, France</div><a href="https://www.kevin-rocha.com/" target="_blank" class="text-color-white text-size-tiny">Crédit photo : Kévin Rocha</a></div><div id="w-node-_1f0ebb76-8d76-53b9-37c8-eaeb925a3cab-ad028921" class="footer_legal-links"><div li-for:inside="link in linklists['legal'].links" class="footer_legal-links">
         {% for link in linklists['legal'].links %}                            
                             <a li-object="link.title" li-object:href="link.url" href="{{ link.url }}" class="footer_legal-link">{{ link.title }}</a>
                             
                     {% endfor %}    </div>
-{% if localization.available_languages.size > 1 %}    <localization-form li-if="localization.available_languages.size > 1" class="li-lang_wrapper">
+<div class="w-embed"><a class="footer_legal-link" href="javascript:openAxeptioCookies()">Cookies
+                  </a></div></div>{% if localization.available_languages.size > 1 %}    <localization-form li-if="localization.available_languages.size > 1" class="li-lang_wrapper">
     {% form 'localization', class: 'li-lang_form' %}
 <div data-delay="500" data-hover="true" class="li-lang_dropdown w-dropdown"><div lang="{{ language.iso_code }}" class="li-lang_dd-toggle w-dropdown-toggle"><div li-object="localization.language.endonym_name | capitalize">{{ localization.language.endonym_name | capitalize }}</div><img loading="lazy" src="https://uploads-ssl.webflow.com/613f2f905ede8d670775fc8a/61548248f37f3a0faab19498_arrow-drop.svg" alt="" class="li-lang_dd-toggle-icon">
 </div><nav li-for:inside="language in localization.available_languages" class="li-lang_dd-list w-dropdown-list">
