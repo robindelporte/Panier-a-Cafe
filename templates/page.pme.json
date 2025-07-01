@@ -173,9 +173,9 @@
             "text_texte_tag_1": "100% Arabica",
             "text_texte_tag_2": "Selon vos goûts",
             "text_paragraphe": "Vous aimez les cafés fruités, ronds ou plus corsés ? On vous guide pour choisir la torréfaction qui plaira à vos équipes. Côté prix ? On s’adapte à votre consommation et à vos contraintes.Un vrai bon café, livré automatiquement tous les mois.",
-            "url_button_lien": "",
-            "text_button_texte": "Découvrir",
-            "url_link": "",
+            "url_lien": "shopify://collections/cafes",
+            "text_texte_bouton": "Découvrez nos cafés",
+            "url_link": "shopify://collections/cafes",
             "image_image_produit": "shopify://shop_images/cafe.png",
             "text_etiquette": "Un café de spécialité"
           }
@@ -187,9 +187,9 @@
             "text_texte_tag_1": "Location adaptée à vos besoins",
             "text_texte_tag_2": "Installation & SAV inclus",
             "text_paragraphe": "Que vous soyez une petite structure ou une entreprise plus large, nous vous proposons une formule adaptée à vos besoins :  → La location de machines à café professionnelles performantes et simples d’utilisation  → Une sélection de cafés de spécialité en fonction de vos goûts et de votre budget",
-            "url_button_lien": "",
-            "text_button_texte": "Découvrir",
-            "url_link": "",
+            "url_lien": "shopify://collections/machines-et-cafetieres",
+            "text_texte_bouton": "Découvrez nos machines",
+            "url_link": "shopify://collections/machines-et-cafetieres",
             "image_image_produit": "shopify://shop_images/machine_773d7676-cd81-4b4b-ab13-d1165622b2a6.png",
             "text_etiquette": "Une machine et du café"
           }
