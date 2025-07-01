@@ -15,7 +15,7 @@
         "image_bild": "shopify://shop_images/V1A5109_1_1.webp",
         "text_headline": "Notre histoire",
         "richtext_text": "<p>Derrière chaque tasse, il y a une histoire. La nôtre commence en Haute-Savoie, avec une passion sincère pour le café, l’artisanat et l’humain.</p>",
-        "url_button_link": "",
+        "url_button_link": "#a-propos",
         "text_button_text": "Découvrir"
       }
     },
@@ -303,8 +303,8 @@
           "settings": {
             "image_image": "shopify://shop_images/histoire.webp",
             "text_heading": "Notre histoire",
-            "url_link": "shopify://pages/a-propos",
-            "text_text": "Découvrir"
+            "text_text": "Découvrir",
+            "url_link": "shopify://pages/a-propos"
           }
         },
         "carte_DdYjAw": {
@@ -312,8 +312,8 @@
           "settings": {
             "image_image": "shopify://shop_images/atelier.webp",
             "text_heading": "Les ateliers",
-            "url_link": "shopify://pages/professionnels",
-            "text_text": "Découvrir"
+            "text_text": "Découvrir",
+            "url_link": "shopify://pages/professionnels"
           }
         },
         "carte_kmtBbx": {
@@ -321,8 +321,8 @@
           "settings": {
             "image_image": "shopify://shop_images/association_0c2478a2-02cb-49a2-96e7-77834aad3dad.webp",
             "text_heading": "L'association",
-            "url_link": "shopify://pages/lassociation",
-            "text_text": "Découvrir"
+            "text_text": "Découvrir",
+            "url_link": "shopify://pages/lassociation"
           }
         }
       },
