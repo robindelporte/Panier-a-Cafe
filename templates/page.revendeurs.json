@@ -23,11 +23,21 @@
           "settings": {
             "richtext_paragraph": "<p>Au Panier à Café, on torréfie des cafés de spécialité. Si vous avez une boutique, une épicerie fine, un concept store ou un magasin bio… et que vous souhaitez proposer un café qui a du sens, vous êtes au bon endroit !Que ce soit en grain ou moulu, on vous accompagne pour trouver la meilleure formule, selon votre espace, vos clients et votre rythme de vente.Vous avez juste à faire découvrir, on s’occupe du reste !</p>"
           }
+        },
+        "bouttons_pYC8nJ": {
+          "type": "bouttons",
+          "settings": {
+            "url_button_link": "shopify://pages/contact",
+            "text_button_text": "Demander un devis",
+            "url_button_link_2": "",
+            "text_button_text_2": "Button 2"
+          }
         }
       },
       "block_order": [
         "titre_8A3KQM",
-        "paragrpahe_HmyCH8"
+        "paragrpahe_HmyCH8",
+        "bouttons_pYC8nJ"
       ],
       "settings": {
         "image_image": "shopify://shop_images/V1A4928-2_1.webp"

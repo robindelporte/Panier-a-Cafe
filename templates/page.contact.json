@@ -11,7 +11,10 @@
   "sections": {
     "small_hero": {
       "type": "small_hero",
-      "settings": {}
+      "settings": {
+        "image_image": "shopify://shop_images/cafeieier-contact.webp",
+        "text_titre": "Nous contacter"
+      }
     },
     "1748598935bce7216f": {
       "type": "apps",
@@ -22,9 +25,9 @@
             "form_id": "488295",
             "text_color": "#202020",
             "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "center",
             "padding_top": 64,
