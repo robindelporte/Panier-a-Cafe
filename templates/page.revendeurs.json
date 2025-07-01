@@ -27,7 +27,7 @@
         "bouttons_pYC8nJ": {
           "type": "bouttons",
           "settings": {
-            "url_button_link": "shopify://pages/contact",
+            "url_button_link": "#app-embed",
             "text_button_text": "Demander un devis",
             "url_button_link_2": "",
             "text_button_text_2": "Button 2"
