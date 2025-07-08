@@ -16,7 +16,8 @@
         "pickup_label": "Retrait en boutique ou au marché"
       },
       "delivery_options": {
-        "pick_up_from_store": "Retrait en boutique ou au marché"
+        "pick_up_from_store": "Retrait en boutique ou au marché",
+        "pick_up_locations": "Emplacements atelier boutique et marchés"
       }
     }
   }
