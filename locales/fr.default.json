@@ -18,6 +18,13 @@
       "delivery_options": {
         "pick_up_from_store": "Retrait en boutique ou au marché",
         "pick_up_locations": "Emplacements atelier boutique et marchés"
+      },
+      "local_pickup": {
+        "location_information": {
+          "one": "Vous pouvez récupérer votre commande à cet emplacement",
+          "other": "Vous pouvez récupérer votre commande dans ces {{ count }} emplacements",
+          "many": "Vous pouvez récupérer votre commande dans ces {{ count }} emplacements"
+        }
       }
     }
   }
