@@ -17,7 +17,8 @@
       },
       "delivery_options": {
         "pick_up_from_store": "Retrait en boutique ou au marché",
-        "pick_up_locations": "Emplacements atelier boutique et marchés"
+        "pick_up_locations": "Emplacements atelier boutique et marchés",
+        "ship": "Livraison à domicile ou point relais"
       },
       "local_pickup": {
         "location_information": {
