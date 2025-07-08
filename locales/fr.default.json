@@ -26,6 +26,9 @@
           "other": "Vous pouvez récupérer votre commande dans ces {{ count }} emplacements",
           "many": "Vous pouvez récupérer votre commande dans ces {{ count }} emplacements"
         }
+      },
+      "shipping_errors": {
+        "empty_state": "Saisissez votre adresse pour voir les modes de livraison disponibles."
       }
     }
   }
