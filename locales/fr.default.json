@@ -12,7 +12,11 @@
     "checkout": {
       "order_summary": {
         "discount_label": "Code de réduction",
-        "discount_placeholder": "Code de réduction"
+        "discount_placeholder": "Code de réduction",
+        "pickup_label": "Retrait en boutique ou au marché"
+      },
+      "delivery_options": {
+        "pick_up_from_store": "Retrait en boutique ou au marché"
       }
     }
   }
