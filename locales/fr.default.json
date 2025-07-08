@@ -31,5 +31,12 @@
         "empty_state": "Saisissez votre adresse pour voir les modes de livraison disponibles."
       }
     }
+  },
+  "customer_accounts": {
+    "order_details": {
+      "shipping": {
+        "method": "Mode de livraison"
+      }
+    }
   }
 }
