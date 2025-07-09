@@ -12,7 +12,8 @@
     "blog_articles": {
       "type": "blog_articles",
       "settings": {
-        "text_headline": "Nouveautés du blog"
+        "text_titre_blog": "Nouveautés du blog",
+        "text_blog_sous_titre": "Ici, on parle café, bien sûr, mais pas que.  Découvrez nos coulisses, nos voyages de sourcing, nos conseils pour bien choisir votre machine ou préparer votre tasse à la maison.  On partage aussi nos engagements, nos rencontres et tout ce qui fait vibrer notre quotidien de torréfacteurs passionnés. Que vous soyez simple curieux ou amateur éclairé, vous êtes au bon endroit pour infuser un peu de culture café dans votre journée !"
       }
     },
     "pages_9Afe6Y": {
@@ -23,8 +24,8 @@
           "settings": {
             "image_image": "shopify://shop_images/Cafe_El_Moustacho_4.webp",
             "text_heading": "Cafés",
-            "url_link": "shopify://collections/cafes",
-            "text_text": "Découvrir"
+            "text_text": "Découvrir",
+            "url_link": "shopify://collections/cafes"
           }
         },
         "carte_HE3RYT": {
@@ -32,8 +33,8 @@
           "settings": {
             "image_image": "shopify://shop_images/FILTRE_CHEMEX_4.jpg",
             "text_heading": "Équipements",
-            "url_link": "shopify://collections/accessoires",
-            "text_text": "Découvrir"
+            "text_text": "Découvrir",
+            "url_link": "shopify://collections/accessoires"
           }
         },
         "carte_fmUFCK": {
@@ -41,8 +42,8 @@
           "settings": {
             "image_image": "shopify://shop_images/Cafetiere_italienne_M_-_1_f06a513b-11e9-4780-b43f-6d3c2eb10c1d.webp",
             "text_heading": "Machines",
-            "url_link": "shopify://collections/machines-et-cafetieres",
-            "text_text": "Découvrir"
+            "text_text": "Découvrir",
+            "url_link": "shopify://collections/machines-et-cafetieres"
           }
         }
       },
