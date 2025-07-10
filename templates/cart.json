@@ -9,14 +9,6 @@
  */
 {
   "sections": {
-    "cart": {
-      "type": "cart",
-      "settings": {
-        "text_heading": "Mon panier",
-        "product_product": "don-association",
-        "text_cart_empty": "Votre panier est vide :("
-      }
-    },
     "17521550294b2bd1c5": {
       "type": "apps",
       "blocks": {
@@ -28,7 +20,7 @@
             "button_width": 350,
             "button_height": 48,
             "align_button": "right",
-            "display_text": "Pay later"
+            "display_text": "Payer plus tard"
           }
         }
       },
@@ -36,12 +28,20 @@
         "bss_b2b_solution_nt_X6VifP"
       ],
       "settings": {}
+    },
+    "cart": {
+      "type": "cart",
+      "settings": {
+        "text_heading": "Mon panier",
+        "product_product": "don-association",
+        "text_cart_empty": "Votre panier est vide :("
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "cart",
-    "17521550294b2bd1c5"
+    "17521550294b2bd1c5",
+    "cart"
   ]
 }
