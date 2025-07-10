@@ -16,11 +16,32 @@
         "product_product": "don-association",
         "text_cart_empty": "Votre panier est vide :("
       }
+    },
+    "17521550294b2bd1c5": {
+      "type": "apps",
+      "blocks": {
+        "bss_b2b_solution_nt_X6VifP": {
+          "type": "shopify://apps/bss-b2b-solution/blocks/nt/451233f2-9631-4c49-8b6f-057e4ebcde7f",
+          "settings": {
+            "text_color": "#FFFFFF",
+            "background_color": "#121212",
+            "button_width": 350,
+            "button_height": 48,
+            "align_button": "right",
+            "display_text": "Pay later"
+          }
+        }
+      },
+      "block_order": [
+        "bss_b2b_solution_nt_X6VifP"
+      ],
+      "settings": {}
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "cart"
+    "cart",
+    "17521550294b2bd1c5"
   ]
 }
