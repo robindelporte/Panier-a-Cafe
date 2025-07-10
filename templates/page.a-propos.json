@@ -130,6 +130,52 @@
         "richtext_animation_texte_3": "<p>Chez nous, on source une grande partie de nos cafés en direct chez les producteurs, pour garantir une traçabilité totale !  Pourquoi ? Pour assurer une juste rémunération, comprendre le travail de chaque ferme et sélectionner des cafés d’exception. En allant sur le terrain, on crée du lien, on échange, on apprend. Chaque café que vous buvez raconte une histoire vraie — celle d’un terroir, d’un savoir-faire, d’un engagement. Et ça change tout dans </p>"
       }
     },
+    "badges_ecMyrg": {
+      "type": "badges",
+      "blocks": {
+        "badge_kTU8GJ": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/1615992077461.jpg",
+            "text_heading": "8 MONT BLANC",
+            "text_texte": "Une vidéo qui sort des sentiers battus, café et fromage au même menu..."
+          }
+        },
+        "badge_fr7iAD": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/initiative_grand_annecy_logo.jpg",
+            "text_heading": "RÉSEAU INITIATIVE",
+            "text_texte": "Une interview pleine d’anecdotes et d’infos pour mieux nous découvrir."
+          }
+        },
+        "badge_fajMi6": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/4919003-logo-de-la-radio-france-bleu-1200x0-1.webp",
+            "text_heading": "FRANCE BLEU",
+            "text_texte": "Redonner au café ses lettres de noblesse gustative."
+          }
+        },
+        "badge_hNdWNc": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/unnamed.png",
+            "text_heading": "LE DAUPHINÉ LIBÉRÉ",
+            "text_texte": "Un petit café pour un grand voyage solidaire."
+          }
+        }
+      },
+      "block_order": [
+        "badge_kTU8GJ",
+        "badge_fr7iAD",
+        "badge_fajMi6",
+        "badge_hNdWNc"
+      ],
+      "settings": {
+        "text_titre": "Ils parlent de nous"
+      }
+    },
     "team": {
       "type": "team",
       "blocks": {
@@ -397,6 +443,7 @@
     "contenu_UhVyzY",
     "badges_cDDfKL",
     "animation_produit_zR93AN",
+    "badges_ecMyrg",
     "team",
     "team_3_QJygzt",
     "faq",
