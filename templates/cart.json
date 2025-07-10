@@ -9,26 +9,6 @@
  */
 {
   "sections": {
-    "17521550294b2bd1c5": {
-      "type": "apps",
-      "blocks": {
-        "bss_b2b_solution_nt_X6VifP": {
-          "type": "shopify://apps/bss-b2b-solution/blocks/nt/451233f2-9631-4c49-8b6f-057e4ebcde7f",
-          "settings": {
-            "text_color": "#FFFFFF",
-            "background_color": "#121212",
-            "button_width": 350,
-            "button_height": 48,
-            "align_button": "right",
-            "display_text": "Payer plus tard"
-          }
-        }
-      },
-      "block_order": [
-        "bss_b2b_solution_nt_X6VifP"
-      ],
-      "settings": {}
-    },
     "cart": {
       "type": "cart",
       "settings": {
@@ -41,7 +21,6 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "17521550294b2bd1c5",
     "cart"
   ]
 }
