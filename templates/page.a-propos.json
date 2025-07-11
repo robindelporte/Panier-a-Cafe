@@ -164,13 +164,22 @@
             "text_heading": "LE DAUPHINÉ LIBÉRÉ",
             "text_texte": "Un petit café pour un grand voyage solidaire."
           }
+        },
+        "badge_VGzReR": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/ECO-SMB-FOND-ROUGE-RVB-2023-web.jpg",
+            "text_heading": "Heading",
+            "text_texte": "Nous achetons une grande partie de nos cafés en direct."
+          }
         }
       },
       "block_order": [
         "badge_kTU8GJ",
         "badge_fr7iAD",
         "badge_fajMi6",
-        "badge_hNdWNc"
+        "badge_hNdWNc",
+        "badge_VGzReR"
       ],
       "settings": {
         "text_titre": "Ils parlent de nous"
