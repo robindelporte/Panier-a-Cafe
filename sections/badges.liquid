@@ -155,6 +155,9 @@
     background-color: transparent;
      color: #241f18
   }
+  .li-custom {
+    display: none
+  }
   .text-size-large {
     font-size: 1.625rem;
      line-height: 1.2;
@@ -197,14 +200,18 @@
                   </p>
                 </div>
 
-                <a class="button is-link is-icon" href="{{ block.settings.url_lien }}">
-                  <div>{{ block.settings.text_texte_lien }}</div>
-                  <div class="icon-embed-xxsmall">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323">
-                      <g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g>
-                    </svg>
+                {% if section.settings.bouton %}
+                  <div li-if="section.settings.bouton">
+                    <a class="button is-link is-icon" href="{{ block.settings.url_lien }}">
+                      <div>{{ block.settings.text_texte_lien }}</div>
+                      <div class="icon-embed-xxsmall">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323">
+                          <g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g>
+                        </svg>
+                      </div>
+                    </a>
                   </div>
-                </a>
+                {% endif %}
               </li>
             {% endif %}
           {% endfor %}
@@ -213,4 +220,4 @@
     </div>
   </div>
 </div>
-{% schema %} {"tag":"section","name":"Badges","class":"section_badges","blocks":[{"name":"Badge","type":"badge","settings":[{"id":"image_image","type":"image_picker","label":"Image"},{"id":"text_heading","type":"text","label":"Heading","default":"\n                    Heading\n                "},{"id":"text_texte","type":"text","label":"Texte","default":"\n                    Nous achetons une grande partie de nos caf\u00e9s en direct.\n                "},{"id":"url_lien","type":"url","label":"Lien"},{"id":"text_texte_lien","type":"text","label":"Texte Lien","default":"\n                    Button\n                "}]}],"settings":[{"id":"text_titre","type":"text","label":"Titre","default":"\n                Heading\n            "}],"presets":[{"name":"Badges","category":"Liquify","blocks":[{"type":"badge"}]}]} {% endschema %}
+{% schema %} {"tag":"section","name":"Badges","class":"section_badges","blocks":[{"name":"Badge","type":"badge","settings":[{"id":"image_image","type":"image_picker","label":"Image"},{"id":"text_heading","type":"text","label":"Heading","default":"\n                    Heading\n                "},{"id":"text_texte","type":"text","label":"Texte","default":"\n                    Nous achetons une grande partie de nos caf\u00e9s en direct.\n                "},{"id":"url_lien","type":"url","label":"Lien"},{"id":"text_texte_lien","type":"text","label":"Texte Lien","default":"\n                      Button\n                  "},{"type":"header","content":"checkbox"},{"type":"checkbox","id":"bouton","label":"Bouton","default":false}]}],"settings":[{"id":"text_titre","type":"text","label":"Titre","default":"\n                Heading\n            "}],"presets":[{"name":"Badges","category":"Liquify","blocks":[{"type":"badge"}]}]} {% endschema %}
