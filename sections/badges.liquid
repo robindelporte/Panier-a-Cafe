@@ -116,7 +116,7 @@
                   </p>
                 </div>
 
-                <a href="{{ block.settings.url_lien }}"> {{ block.settings.text_texte }} </a>
+                <a href="{{ block.settings.url_lien }}"> {{ block.settings.text_texte_lien }} </a>
               </li>
             {% endif %}
           {% endfor %}
@@ -125,4 +125,4 @@
     </div>
   </div>
 </div>
-{% schema %} {"tag":"section","name":"Badges","class":"section_badges","blocks":[{"name":"Badge","type":"badge","settings":[{"id":"image_image","type":"image_picker","label":"Image"},{"id":"text_heading","type":"text","label":"Heading","default":"\n                    Heading\n                "},{"id":"text_texte","type":"text","label":"Texte","default":"\n                    Nous achetons une grande partie de nos caf\u00e9s en direct.\n                "},{"id":"url_lien","type":"url","label":"Lien"}]}],"settings":[{"id":"text_titre","type":"text","label":"Titre","default":"\n                Heading\n            "}],"presets":[{"name":"Badges","category":"Liquify","blocks":[{"type":"badge"}]}]} {% endschema %}
+{% schema %} {"tag":"section","name":"Badges","class":"section_badges","blocks":[{"name":"Badge","type":"badge","settings":[{"id":"image_image","type":"image_picker","label":"Image"},{"id":"text_heading","type":"text","label":"Heading","default":"\n                    Heading\n                "},{"id":"text_texte","type":"text","label":"Texte","default":"\n                    Nous achetons une grande partie de nos caf\u00e9s en direct.\n                "},{"id":"url_lien","type":"url","label":"Lien"},{"id":"text_texte_lien","type":"text","label":"Texte lien","default":"\n                  Text Link\n              "}]}],"settings":[{"id":"text_titre","type":"text","label":"Titre","default":"\n                Heading\n            "}],"presets":[{"name":"Badges","category":"Liquify","blocks":[{"type":"badge"}]}]} {% endschema %}
