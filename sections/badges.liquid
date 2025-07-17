@@ -1,21 +1,216 @@
-<div class="padding-global"><div class="padding-section-medium"><div class="container-large"><div class="badges_component"><div class="badges_heading"><h2>
-{{ section.settings.text_titre }}
-</h2>
-</div><ul role="list" class="badges_list w-list-unstyled">{% for block in section.blocks %}
-    {% if block.type == "badge" %}
-                    <li li-block="Badge" class="badges_item">
-                                    <img src="{{ block.settings.image_image | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_image.alt }}" class="badges_icon">
+<style>
+  .badges_content {
+    display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     grid-column-gap: 0.25rem;
+     grid-row-gap: 0.25rem;
+     text-align: center
+  }
+  .padding-section-medium {
+    padding-top: 4.875rem;
+     padding-bottom: 4.875rem
+  }
+  .padding-section-medium.medium {
+    padding-top: 4rem;
+     padding-bottom: 4rem
+  }
+  @media screen and (max-width: 767px) {
+    .padding-section-medium {
+      padding-top: 3rem;
+       padding-bottom: 3rem
+    }
+  }
+  .is-icon {
+    grid-column-gap: 0.5rem;
+     grid-row-gap: 0.5rem;
+     border-bottom-style: solid;
+     border-bottom-color: transparent;
+     border-top-left-radius: 0rem;
+     border-top-right-radius: 0rem;
+     border-bottom-left-radius: 0rem;
+     border-bottom-right-radius: 0rem
+  }
+  .is-icon:hover {
+    border-bottom-style: solid;
+     border-bottom-color: #241f18;
+     border-top-left-radius: 0rem;
+     border-top-right-radius: 0rem;
+     border-bottom-left-radius: 0rem;
+     border-bottom-right-radius: 0rem
+  }
+  .badges_list {
+    display: flex;
+     margin-top: 0rem;
+     margin-bottom: 0rem;
+     padding-left: 0rem;
+     flex-direction: row;
+     justify-content: center;
+     flex-wrap: wrap;
+     align-items: center;
+     grid-column-gap: 2rem;
+     grid-row-gap: 3rem
+  }
+  .badges_icon {
+    width: 4rem;
+     height: 4rem
+  }
+  .icon-embed-xxsmall {
+    display: flex;
+     width: 1rem;
+     height: 1rem;
+     min-height: 1rem;
+     min-width: 1rem;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center
+  }
+  .is-link {
+    padding-top: 0.25rem;
+     padding-right: 0rem;
+     padding-bottom: 0.25rem;
+     padding-left: 0rem;
+     justify-content: flex-start;
+     align-items: center;
+     border-top-style: none;
+     border-right-style: none;
+     border-bottom-style: none;
+     border-left-style: none;
+     background-color: transparent;
+     color: black;
+     line-height: 1;
+     text-decoration: none
+  }
+  .badges_item {
+    display: flex;
+     width: 22%;
+     margin-top: 0rem;
+     margin-right: 0rem;
+     margin-bottom: 0rem;
+     margin-left: 0rem;
+     padding-left: 0rem;
+     flex-direction: column;
+     justify-content: flex-start;
+     flex-wrap: nowrap;
+     align-items: center;
+     grid-column-gap: 1.5rem;
+     grid-row-gap: 1.5rem
+  }
+  .container-large {
+    width: 100%;
+     max-width: 80rem;
+     margin-right: auto;
+     margin-left: auto
+  }
+  .text-font-body {
+    font-family: Fustat
+  }
+  .padding-global {
+    padding-right: 5%;
+     padding-left: 5%}
+  .badges_heading {
+    text-align: center
+  }
+  .badges_component {
+    display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     grid-column-gap: 3rem;
+     grid-row-gap: 3rem
+  }
+  .button {
+    display: flex;
+     padding-top: 0.9375rem;
+     padding-right: 1.625rem;
+     padding-bottom: 0.9375rem;
+     padding-left: 1.625rem;
+     justify-content: center;
+     align-items: center;
+     border-top-style: solid;
+     border-top-width: 1px;
+     border-top-color: #241f18;
+     border-right-style: solid;
+     border-right-width: 1px;
+     border-right-color: #241f18;
+     border-bottom-style: solid;
+     border-bottom-width: 1px;
+     border-bottom-color: #241f18;
+     border-left-style: solid;
+     border-left-width: 1px;
+     border-left-color: #241f18;
+     border-top-left-radius: 0.5rem;
+     border-top-right-radius: 0.5rem;
+     border-bottom-left-radius: 0.5rem;
+     border-bottom-right-radius: 0.5rem;
+     background-color: #241f18;
+     transition-property: all;
+     transition-duration: 200ms;
+     transition-timing-function: ease;
+     color: #fffdf9;
+     line-height: 1;
+     text-align: center;
+     text-decoration: none
+  }
+  .button:hover {
+    background-color: transparent;
+     color: #241f18
+  }
+  .text-size-large {
+    font-size: 1.625rem;
+     line-height: 1.2;
+     letter-spacing: -0.5px
+  }
+  @media screen and (max-width: 767px) {
+    .text-size-large {
+      font-size: 1.125rem
+    }
+  }
+</style>
+<div class="padding-global">
+  <div class="padding-section-medium">
+    <div class="container-large">
+      <div class="badges_component">
+        <div class="badges_heading">
+          <h2>
+            {{ section.settings.text_titre }}
+          </h2>
+        </div>
+        <ul class="badges_list">
+          {% for block in section.blocks %}
+            {% if block.type == 'badge' %}
+              <li class="badges_item" li-block="Badge">
+                <img
+                  class="badges_icon"
+                  width="auto"
+                  height="auto"
+                  alt="{{ block.settings.image_image.alt }}"
+                  src="{{ block.settings.image_image | img_url: 'master' }}"
+                  loading="lazy"
+                >
 
-                                    
-                                    <div class="badges_content"><h3 class="text-size-large text-font-body text-weight-bold">
-{{ block.settings.text_heading }}
-</h3>
-<p>
-{{ block.settings.text_texte }}
-</p>
-</div>
-                                    
-                            </li>
+                <div class="badges_content">
+                  <h3 class="text-size-large text-font-body text-weight-bold">
+                    {{ block.settings.text_heading }}
+                  </h3>
+                  <p>
+                    {{ block.settings.text_texte }}
+                  </p>
+                </div>
+
+                <a class="button is-link is-icon">
+                  <div>Button</div>
+                  <div class="icon-embed-xxsmall">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323">
+                      <g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g>
+                    </svg>
+                  </div>
+                </a>
+              </li>
             {% endif %}
-{% endfor %}
-</ul></div></div></div></div> {% schema %} {"tag":"section","name":"Badges","class":"section_badges","blocks":[{"name":"Badge","type":"badge","settings":[{"id":"image_image","type":"image_picker","label":"Image"},{"id":"text_heading","type":"text","label":"Heading","default":"Heading"},{"id":"text_texte","type":"text","label":"Texte","default":"Nous achetons une grande partie de nos caf\u00e9s en direct."}]}],"settings":[{"id":"text_titre","type":"text","label":"Titre","default":"Heading"}],"presets":[{"name":"Badges","category":"Liquify","blocks":[{"type":"badge"}]}]} {% endschema %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %} {"tag":"section","name":"Badges","class":"section_badges","blocks":[{"name":"Badge","type":"badge","settings":[{"id":"image_image","type":"image_picker","label":"Image"},{"id":"text_heading","type":"text","label":"Heading","default":"\n                    Heading\n                "},{"id":"text_texte","type":"text","label":"Texte","default":"\n                    Nous achetons une grande partie de nos caf\u00e9s en direct.\n                "}]}],"settings":[{"id":"text_titre","type":"text","label":"Titre","default":"\n                Heading\n            "}],"presets":[{"name":"Badges","category":"Liquify","blocks":[{"type":"badge"}]}]} {% endschema %}
