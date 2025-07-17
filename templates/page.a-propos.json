@@ -63,7 +63,9 @@
           "settings": {
             "image_image": "shopify://shop_images/direct.png",
             "text_heading": "CAFÉ EN DIRECT",
-            "text_texte": "Nous achetons une grande partie de nos cafés en direct."
+            "text_texte": "Nous achetons une grande partie de nos cafés en direct.",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         },
         "badge_HkD4fR": {
@@ -71,7 +73,9 @@
           "settings": {
             "image_image": "shopify://shop_images/voilier.png",
             "text_heading": "CAFÉ VOILIER",
-            "text_texte": "Certains de nos cafés viennent à la voile, pour un transport bas carbone."
+            "text_texte": "Certains de nos cafés viennent à la voile, pour un transport bas carbone.",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         },
         "badge_XABPx4": {
@@ -79,7 +83,9 @@
           "settings": {
             "image_image": "shopify://shop_images/women.png",
             "text_heading": "CAFÉ DE FEMME",
-            "text_texte": "Nous mettons à l’honneur des cafés produits par des femmes engagées."
+            "text_texte": "Nous mettons à l’honneur des cafés produits par des femmes engagées.",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         },
         "badge_mArQ8E": {
@@ -87,7 +93,9 @@
           "settings": {
             "image_image": "shopify://shop_images/formation.png",
             "text_heading": "VERS L’AVENIR",
-            "text_texte": "Notre équipe est composée de plusieurs alternants."
+            "text_texte": "Notre équipe est composée de plusieurs alternants.",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         },
         "badge_qJHipX": {
@@ -95,7 +103,9 @@
           "settings": {
             "image_image": "shopify://shop_images/bio.png",
             "text_heading": "CAFÉ BIO",
-            "text_texte": "Certains cafés issus de l’agriculture biologique."
+            "text_texte": "Certains cafés issus de l’agriculture biologique.",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         },
         "badge_6wnTCQ": {
@@ -103,7 +113,9 @@
           "settings": {
             "image_image": "shopify://shop_images/epanou.png",
             "text_heading": "INCLUSION",
-            "text_texte": "Nous travaillons main dans la main avec les EPANOU (ESAT du Parmelan)."
+            "text_texte": "Nous travaillons main dans la main avec les EPANOU (ESAT du Parmelan).",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         }
       },
@@ -138,7 +150,9 @@
           "settings": {
             "image_image": "shopify://shop_images/1615992077461.jpg",
             "text_heading": "8 MONT BLANC",
-            "text_texte": "Une vidéo qui sort des sentiers battus, café et fromage au même menu..."
+            "text_texte": "Une vidéo qui sort des sentiers battus, café et fromage au même menu...",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         },
         "badge_fr7iAD": {
@@ -146,7 +160,9 @@
           "settings": {
             "image_image": "shopify://shop_images/initiative_grand_annecy_logo.jpg",
             "text_heading": "RÉSEAU INITIATIVE",
-            "text_texte": "Une interview pleine d’anecdotes et d’infos pour mieux nous découvrir."
+            "text_texte": "Une interview pleine d’anecdotes et d’infos pour mieux nous découvrir.",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         },
         "badge_fajMi6": {
@@ -154,7 +170,9 @@
           "settings": {
             "image_image": "shopify://shop_images/4919003-logo-de-la-radio-france-bleu-1200x0-1.webp",
             "text_heading": "FRANCE BLEU",
-            "text_texte": "Redonner au café ses lettres de noblesse gustative."
+            "text_texte": "Redonner au café ses lettres de noblesse gustative.",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         },
         "badge_hNdWNc": {
@@ -162,7 +180,9 @@
           "settings": {
             "image_image": "shopify://shop_images/unnamed.png",
             "text_heading": "LE DAUPHINÉ LIBÉRÉ",
-            "text_texte": "Un petit café pour un grand voyage solidaire."
+            "text_texte": "Un petit café pour un grand voyage solidaire.",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         },
         "badge_VGzReR": {
@@ -170,7 +190,9 @@
           "settings": {
             "image_image": "shopify://shop_images/ECO-SMB-FOND-ROUGE-RVB-2023-web.jpg",
             "text_heading": "ECO SAVOIE MONT BLANC",
-            "text_texte": "Fabien interviewé sur l’inclusion dans la torréfaction artisanale."
+            "text_texte": "Fabien interviewé sur l’inclusion dans la torréfaction artisanale.",
+            "url_lien": "",
+            "text_texte_lien": ""
           }
         }
       },
