@@ -9,13 +9,6 @@
  */
 {
   "sections": {
-    "small_hero": {
-      "type": "small_hero",
-      "settings": {
-        "image_image": "shopify://shop_images/cafeieier-contact.webp",
-        "text_titre": "Nous contacter"
-      }
-    },
     "17528391134258bc6b": {
       "type": "apps",
       "blocks": {
@@ -29,13 +22,13 @@
       "block_order": [
         "bss_b2b_solution_form_Fb4Gce"
       ],
+      "custom_css": [],
       "settings": {}
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "small_hero",
     "17528391134258bc6b"
   ]
 }
