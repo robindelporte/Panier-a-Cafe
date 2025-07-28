@@ -185,16 +185,6 @@
             "text_texte_lien": "Lire l'article"
           }
         },
-        "badge_VGzReR": {
-          "type": "badge",
-          "settings": {
-            "image_image": "shopify://shop_images/ECO-SMB-FOND-ROUGE-RVB-2023-web.jpg",
-            "text_heading": "ECO SAVOIE MONT BLANC",
-            "text_texte": "Interview au sujet de l’inclusion dans la torréfaction artisanale.",
-            "url_lien": "",
-            "text_texte_lien": "Voir l'article"
-          }
-        },
         "badge_G7AEpf": {
           "type": "badge",
           "settings": {
@@ -204,6 +194,16 @@
             "url_lien": "https://www.radiofrance.fr/francebleu/podcasts/cote-saveurs-l-assiette-savoyarde/le-panier-a-cafe-avec-fabien-roguet-a-annecy-et-villaz-choisir-degster-et-utliser-le-cafe-9582816",
             "text_texte_lien": "Écouter l'émission de radio"
           }
+        },
+        "badge_VGzReR": {
+          "type": "badge",
+          "settings": {
+            "image_image": "shopify://shop_images/ECO-SMB-FOND-ROUGE-RVB-2023-web.jpg",
+            "text_heading": "ECO SAVOIE MONT BLANC",
+            "text_texte": "Interview au sujet de l’inclusion dans la torréfaction artisanale.",
+            "url_lien": "",
+            "text_texte_lien": "Voir l'article"
+          }
         }
       },
       "block_order": [
@@ -211,8 +211,8 @@
         "badge_fr7iAD",
         "badge_fajMi6",
         "badge_hNdWNc",
-        "badge_VGzReR",
-        "badge_G7AEpf"
+        "badge_G7AEpf",
+        "badge_VGzReR"
       ],
       "settings": {
         "text_titre": "Ils parlent de nous"
