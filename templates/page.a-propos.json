@@ -168,8 +168,8 @@
         "badge_fajMi6": {
           "type": "badge",
           "settings": {
-            "image_image": "shopify://shop_images/4919003-logo-de-la-radio-france-bleu-1200x0-1.webp",
-            "text_heading": "FRANCE BLEU",
+            "image_image": "shopify://shop_images/logo_radio_france.png",
+            "text_heading": "RADIO FRANCE",
             "text_texte": "Comment choisir son café ? Les recettes et astuces !",
             "url_lien": "",
             "text_texte_lien": "https://www.francebleu.fr/emissions/la-vie-en-bleu-l-assiette-savoyarde-cuisine-ensemble/pays-de-savoie/les-cafes-frappees-pour-ce-printemps-et-l-ete-avec-fabien-roguet-le-panier-a-cafe-annecy"
@@ -198,6 +198,7 @@
         "badge_G7AEpf": {
           "type": "badge",
           "settings": {
+            "image_image": "shopify://shop_images/logo_radio_france.png",
             "text_heading": "RADIO FRANCE",
             "text_texte": "Redonner au café ses lettres de noblesse gustative.",
             "url_lien": "",
