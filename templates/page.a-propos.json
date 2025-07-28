@@ -280,15 +280,6 @@
             "text_tab_label": "Nos jeunes"
           }
         },
-        "tab_VihqW4": {
-          "type": "tab",
-          "settings": {
-            "image_image": "shopify://shop_images/V1A6530.webp",
-            "text_titre": "Jeune… mais déjà très (très) caféiné",
-            "text_paragraphe": "Clément, c’est le plus jeune de l’équipe, mais ne t’y fie pas, côté café, il en connaît déjà un rayon ! Rigoureux et passionné, il apprend avec sérieux toutes les techniques d’extraction : V60, Chemex, espresso… chaque geste compte et il le sait. Futur torréfacteur en devenir, il adore aussi conseiller les clients, que ce soit sur les marchés ou à l’atelier. Curieux, appliqué et toujours motivé, Clément prouve chaque jour qu’on peut être jeune… et sacrément pointu sur le café.",
-            "text_tab_label": "Clément"
-          }
-        },
         "tab_YHtiET": {
           "type": "tab",
           "settings": {
@@ -298,13 +289,13 @@
             "text_tab_label": "Alexis"
           }
         },
-        "tab_TMBzte": {
+        "tab_VihqW4": {
           "type": "tab",
           "settings": {
-            "image_image": "shopify://shop_images/ilona.webp",
-            "text_titre": "Directrice artistique (et tornade créative)",
-            "text_paragraphe": "Ilona, c’est l’œil graphique du Panier à Café. Directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter.",
-            "text_tab_label": "Ilona"
+            "image_image": "shopify://shop_images/V1A6530.webp",
+            "text_titre": "Jeune… mais déjà très (très) caféiné",
+            "text_paragraphe": "Clément, c’est le plus jeune de l’équipe, mais ne t’y fie pas, côté café, il en connaît déjà un rayon ! Rigoureux et passionné, il apprend avec sérieux toutes les techniques d’extraction : V60, Chemex, espresso… chaque geste compte et il le sait. Futur torréfacteur en devenir, il adore aussi conseiller les clients, que ce soit sur les marchés ou à l’atelier. Curieux, appliqué et toujours motivé, Clément prouve chaque jour qu’on peut être jeune… et sacrément pointu sur le café.",
+            "text_tab_label": "Clément"
           }
         },
         "tab_7W3xYw": {
@@ -315,14 +306,23 @@
             "text_paragraphe": "Fraîchement arrivé, mais déjà bien rodé, Charlie met un point d’honneur à préparer vos commandes avec autant de soin qu’un espresso bien tassé. Derrière chaque paquet expédié, il y a souvent sa touche perso… Et si tu trouves un petit cadeau glissé dans ta commande, tu peux parier que c’est lui le coupable. Sur le marché aussi, Charlie prend son rôle à cœur : toujours prêt à conseiller, orienter et trouver le café qui matchera pile avec ton goût. Son objectif ? Que chaque client reparte avec le sourire… et revienne pour le plaisir !",
             "text_tab_label": "Charlie"
           }
+        },
+        "tab_TMBzte": {
+          "type": "tab",
+          "settings": {
+            "image_image": "shopify://shop_images/ilona.webp",
+            "text_titre": "Directrice artistique (et tornade créative)",
+            "text_paragraphe": "Ilona, c’est l’œil graphique du Panier à Café. Directrice artistique, elle façonne l’univers visuel de l’entreprise : des packagings aux réseaux sociaux, en passant par les affiches, les newsletters ou les étiquettes. Créative, organisée et toujours pleine d’idées, elle donne du sens à chaque visuel et de la cohérence à toute la communication. C’est aussi elle qui guide l’équipe pour capter les bons contenus sur les marchés… et qui transforme un simple café en belle histoire à raconter.",
+            "text_tab_label": "Ilona"
+          }
         }
       },
       "block_order": [
         "tab_hTdJwh",
-        "tab_VihqW4",
         "tab_YHtiET",
-        "tab_TMBzte",
-        "tab_7W3xYw"
+        "tab_VihqW4",
+        "tab_7W3xYw",
+        "tab_TMBzte"
       ],
       "settings": {}
     },
