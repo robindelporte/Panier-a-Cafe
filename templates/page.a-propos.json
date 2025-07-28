@@ -194,6 +194,15 @@
             "url_lien": "",
             "text_texte_lien": ""
           }
+        },
+        "badge_G7AEpf": {
+          "type": "badge",
+          "settings": {
+            "text_heading": "RADIO FRANCE",
+            "text_texte": "Redonner au café ses lettres de noblesse gustative.",
+            "url_lien": "",
+            "text_texte_lien": "https://www.radiofrance.fr/francebleu/podcasts/cote-saveurs-l-assiette-savoyarde/le-panier-a-cafe-avec-fabien-roguet-a-annecy-et-villaz-choisir-degster-et-utliser-le-cafe-9582816"
+          }
         }
       },
       "block_order": [
@@ -201,7 +210,8 @@
         "badge_fr7iAD",
         "badge_fajMi6",
         "badge_hNdWNc",
-        "badge_VGzReR"
+        "badge_VGzReR",
+        "badge_G7AEpf"
       ],
       "settings": {
         "text_titre": "Ils parlent de nous"
