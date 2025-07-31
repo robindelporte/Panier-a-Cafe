@@ -208,6 +208,7 @@
         "badge_ptzzXg": {
           "type": "badge",
           "settings": {
+            "image_image": "shopify://shop_images/12.png",
             "text_heading": "LE PETIT FUTÉ",
             "text_texte": "Nous sommes recensés par Le Petit Futé depuis plusieurs années maintenant !",
             "url_lien": "https://www.petitfute.com/v35102-villaz-74370/c650-produits-gourmands-vins/c1103-cafe-the-tisane/c651-cafe/2027550-le-panier-a-cafe.html",
