@@ -204,6 +204,15 @@
             "url_lien": "https://cdn.shopify.com/s/files/1/0948/2928/1619/files/Article_ECO_SAVOIE_MONT_BLANC.pdf?v=1753706326",
             "text_texte_lien": "Voir l'article"
           }
+        },
+        "badge_ptzzXg": {
+          "type": "badge",
+          "settings": {
+            "text_heading": "LE PETIT FUTÉ",
+            "text_texte": "Nous achetons une grande partie de nos cafés en direct.",
+            "url_lien": "https://www.petitfute.com/v35102-villaz-74370/c650-produits-gourmands-vins/c1103-cafe-the-tisane/c651-cafe/2027550-le-panier-a-cafe.html",
+            "text_texte_lien": "Lire l'article"
+          }
         }
       },
       "block_order": [
@@ -212,7 +221,8 @@
         "badge_fajMi6",
         "badge_hNdWNc",
         "badge_G7AEpf",
-        "badge_VGzReR"
+        "badge_VGzReR",
+        "badge_ptzzXg"
       ],
       "settings": {
         "text_titre": "Ils parlent de nous"
