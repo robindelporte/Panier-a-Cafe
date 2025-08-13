@@ -1414,4 +1414,39 @@
     </div>
   </div>
 </div>
-{% schema %} {"tag":"section","name":"Product-Hero-Sub","class":"section_product-header","settings":[{"id":"image_settingsimage","type":"image_picker","label":"settings.image"},{"id":"image_badges_variete_cafe_image","type":"image_picker","label":"Badges - Variete Cafe - Image"},{"id":"text_badges_variete_cafe_texte","type":"text","label":"Badges - Variete Cafe - Texte","default":"100% Arabica"},{"id":"image_badges_certification_cafe_image","type":"image_picker","label":"Badges - Certification Cafe - Image"},{"id":"text_badges_certification_cafe_texte","type":"text","label":"Badges - Certification Cafe - Texte","default":"100% Arabica"},{"id":"image_badges_certification_2_cafe_image","type":"image_picker","label":"Badges - Certification 2 Cafe - Image"},{"id":"text_badges_certification_2_cafe_texte","type":"text","label":"Badges - Certification 2 Cafe - Texte","default":"100% Arabica"},{"id":"text_badges_type_de_the_texte","type":"text","label":"Badges - Type de The - Texte","default":"100% Arabica"},{"id":"text_with_subscription","type":"text","label":"with Subscription","default":"Je m\u2019abonne"},{"id":"text_without_subscription","type":"text","label":"without Subscription","default":"Je commande ponctuellement"}],"presets":[{"name":"Product-Hero-Sub","category":"Liquify","blocks":[]}]} {% endschema %}
+{% schema %}
+{
+  "tag": "section",
+  "name": "Product-Hero-Sub",
+  "class": "section_product-header",
+  "settings": [
+    { "id": "image_settingsimage", "type": "image_picker", "label": "settings.image" },
+    { "id": "image_badges_variete_cafe_image", "type": "image_picker", "label": "Badges - Variete Cafe - Image" },
+    { "id": "text_badges_variete_cafe_texte", "type": "text", "label": "Badges - Variete Cafe - Texte", "default": "100% Arabica" },
+    { "id": "image_badges_certification_cafe_image", "type": "image_picker", "label": "Badges - Certification Cafe - Image" },
+    { "id": "text_badges_certification_cafe_texte", "type": "text", "label": "Badges - Certification Cafe - Texte", "default": "100% Arabica" },
+    { "id": "image_badges_certification_2_cafe_image", "type": "image_picker", "label": "Badges - Certification 2 Cafe - Image" },
+    { "id": "text_badges_certification_2_cafe_texte", "type": "text", "label": "Badges - Certification 2 Cafe - Texte", "default": "100% Arabica" },
+    { "id": "text_badges_type_de_the_texte", "type": "text", "label": "Badges - Type de The - Texte", "default": "100% Arabica" },
+    { "id": "text_with_subscription", "type": "text", "label": "with Subscription", "default": "Je m\u2019abonne" },
+    { "id": "text_without_subscription", "type": "text", "label": "without Subscription", "default": "Je commande ponctuellement" }
+  ],
+
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "custom_liquid",
+      "name": "Slot code perso",
+      "settings": [
+        { "type": "liquid", "id": "code", "label": "Liquid/HTML" }
+      ]
+    }
+  ],
+
+  "presets": [
+    { "name": "Product-Hero-Sub", "category": "Liquify", "blocks": [] }
+  ]
+}
+{% endschema %}
