@@ -11,6 +11,26 @@
   "sections": {
     "product_hero_sub": {
       "type": "product_hero_sub",
+      "blocks": {
+        "loox_reviews_loox_rating_KWg9ya": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_rating_KWg9ya"
+      ],
       "settings": {
         "image_settingsimage": "{{ product.metafields.custom.pays_d_origine.value.drapeau.value }}",
         "image_badges_variete_cafe_image": "{{ product.metafields.custom.pays_d_origine.value.drapeau_icone.value }}",
@@ -93,13 +113,10 @@
         "faq_item_GaBUTm"
       ],
       "settings": {
-        "text_button_text": "Voir mode d’emploi  PDF",
-        "url_button_link": "",
         "text_tableau_1": "Spécialités",
         "text_6": "{{ product.metafields.custom.machine.value.nombre_de_specialite.value }}",
         "text_tableau_3": "Caractéristiques standard de la machine",
         "text_tableau_2": "Pourquoi vous allez l’adorer",
-        "text_tableau_4": "Quelques chiffres",
         "image_drapeau_pays": "{{ product.metafields.custom.pays_d_origine.value.drapeau_icone.value }}",
         "text_salvador": "{{ product.metafields.custom.pays_d_origine.value.pays.value }}",
         "text_1100m": "{{ product.metafields.custom.altitude_de_culture.value }}m",
