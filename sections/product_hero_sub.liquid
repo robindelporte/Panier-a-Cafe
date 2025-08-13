@@ -118,58 +118,63 @@
             {{ product.title }}
           </h1>
           <div class="product-header_price-wrapper">
-            <div class="product-header_price" style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;">
-  <div bss-b2b-item-original-price="" bss-b2b-cart-item-key="{{ item.key }}" class="product_price" style="order:0;">
-    <div
-      bss-b2b-featured-product=""
-      li-js-price="product.selected_or_first_available_variant.price"
-      bss-b2b-product-id="{{ product.id }}"
-      bss-b2b-product-price=""
-      bss-b2b-variant-price=""
-      bss-b2b-variant-id="{{ product.selected_or_first_available_variant.id }}"
-      class="text-size-medium"
-      x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.price, true, '{{ shop.money_with_currency_format }}')"
-    >
-      12,40€
+            <div class="product-header_price-container" style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+  
+  <!-- prix + prix/kg restent groupés -->
+  <div class="product-header_price">
+    <div bss-b2b-item-original-price="" bss-b2b-cart-item-key="{{ item.key }}" class="product_price">
+      <div
+        bss-b2b-featured-product=""
+        li-js-price="product.selected_or_first_available_variant.price"
+        bss-b2b-product-id="{{ product.id }}"
+        bss-b2b-product-price=""
+        bss-b2b-variant-price=""
+        bss-b2b-variant-id="{{ product.selected_or_first_available_variant.id }}"
+        class="text-size-medium"
+        x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.price, true, '{{ shop.money_with_currency_format }}')"
+      >
+        12,40€
+      </div>
+      <template x-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
+        <div li-js-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
+          <div
+            li-object="product.compare_at_price | money"
+            class="text-size-regular text-style-strikethrough text-align-right text-style-muted"
+          >
+            {{ product.compare_at_price | money }}
+          </div>
+        </div>
+      </template>
     </div>
-    <template x-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
-      <div li-js-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
-        <div
-          li-object="product.compare_at_price | money"
-          class="text-size-regular text-style-strikethrough text-align-right text-style-muted"
-        >
-          {{ product.compare_at_price | money }}
+
+    {% if product.selected_or_first_available_variant.unit_price %}
+      <div li-if="product.selected_or_first_available_variant.unit_price" class="product_price-per-kilo">
+        <div>–</div>
+        <div data-price-per-kg="">
+          <span li-object="product.selected_or_first_available_variant.unit_price | money">
+            {{- product.selected_or_first_available_variant.unit_price | money -}}
+          </span>
+          {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_unit %}
+            <span li-if="product.selected_or_first_available_variant.unit_price_measurement.reference_unit">/kg</span>
+          {% endif %}
         </div>
       </div>
-    </template>
+    {% endif %}
   </div>
 
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
-        <div class="app-slot" {{ block.shopify_attributes }} style="order:99;margin-left:auto;white-space:nowrap;">
+        <div class="app-slot" {{ block.shopify_attributes }}>
           {%- render block -%}
         </div>
       {%- when 'custom_liquid' -%}
-        <div class="custom-slot" {{ block.shopify_attributes }} style="order:99;margin-left:auto;white-space:nowrap;">
+        <div class="custom-slot" {{ block.shopify_attributes }}>
           {{ block.settings.code }}
         </div>
     {%- endcase -%}
   {%- endfor -%}
 
-  {% if product.selected_or_first_available_variant.unit_price %}
-    <div li-if="product.selected_or_first_available_variant.unit_price" class="product_price-per-kilo" style="order:0;">
-      <div>–</div>
-      <div data-price-per-kg="">
-        <span li-object="product.selected_or_first_available_variant.unit_price | money">
-          {{- product.selected_or_first_available_variant.unit_price | money -}}
-        </span>
-        {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_unit %}
-          <span li-if="product.selected_or_first_available_variant.unit_price_measurement.reference_unit">/kg</span>
-        {% endif %}
-      </div>
-    </div>
-  {% endif %}
 </div>
 
             <div class="product-header_shipping-wrapper">
@@ -1413,39 +1418,4 @@
     </div>
   </div>
 </div>
-{% schema %}
-{
-  "tag": "section",
-  "name": "Product-Hero-Sub",
-  "class": "section_product-header",
-  "settings": [
-    { "id": "image_settingsimage", "type": "image_picker", "label": "settings.image" },
-    { "id": "image_badges_variete_cafe_image", "type": "image_picker", "label": "Badges - Variete Cafe - Image" },
-    { "id": "text_badges_variete_cafe_texte", "type": "text", "label": "Badges - Variete Cafe - Texte", "default": "100% Arabica" },
-    { "id": "image_badges_certification_cafe_image", "type": "image_picker", "label": "Badges - Certification Cafe - Image" },
-    { "id": "text_badges_certification_cafe_texte", "type": "text", "label": "Badges - Certification Cafe - Texte", "default": "100% Arabica" },
-    { "id": "image_badges_certification_2_cafe_image", "type": "image_picker", "label": "Badges - Certification 2 Cafe - Image" },
-    { "id": "text_badges_certification_2_cafe_texte", "type": "text", "label": "Badges - Certification 2 Cafe - Texte", "default": "100% Arabica" },
-    { "id": "text_badges_type_de_the_texte", "type": "text", "label": "Badges - Type de The - Texte", "default": "100% Arabica" },
-    { "id": "text_with_subscription", "type": "text", "label": "with Subscription", "default": "Je m\u2019abonne" },
-    { "id": "text_without_subscription", "type": "text", "label": "without Subscription", "default": "Je commande ponctuellement" }
-  ],
-
-  "blocks": [
-    {
-      "type": "@app"
-    },
-    {
-      "type": "custom_liquid",
-      "name": "Slot code perso",
-      "settings": [
-        { "type": "liquid", "id": "code", "label": "Liquid/HTML" }
-      ]
-    }
-  ],
-
-  "presets": [
-    { "name": "Product-Hero-Sub", "category": "Liquify", "blocks": [] }
-  ]
-}
-{% endschema %}
+{% schema %} {"tag":"section","name":"Product-Hero-Sub","class":"section_product-header","settings":[{"id":"image_settingsimage","type":"image_picker","label":"settings.image"},{"id":"image_badges_variete_cafe_image","type":"image_picker","label":"Badges - Variete Cafe - Image"},{"id":"text_badges_variete_cafe_texte","type":"text","label":"Badges - Variete Cafe - Texte","default":"100% Arabica"},{"id":"image_badges_certification_cafe_image","type":"image_picker","label":"Badges - Certification Cafe - Image"},{"id":"text_badges_certification_cafe_texte","type":"text","label":"Badges - Certification Cafe - Texte","default":"100% Arabica"},{"id":"image_badges_certification_2_cafe_image","type":"image_picker","label":"Badges - Certification 2 Cafe - Image"},{"id":"text_badges_certification_2_cafe_texte","type":"text","label":"Badges - Certification 2 Cafe - Texte","default":"100% Arabica"},{"id":"text_badges_type_de_the_texte","type":"text","label":"Badges - Type de The - Texte","default":"100% Arabica"},{"id":"text_with_subscription","type":"text","label":"with Subscription","default":"Je m\u2019abonne"},{"id":"text_without_subscription","type":"text","label":"without Subscription","default":"Je commande ponctuellement"}],"presets":[{"name":"Product-Hero-Sub","category":"Liquify","blocks":[]}]} {% endschema %}
