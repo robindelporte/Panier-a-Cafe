@@ -1,9 +1,10 @@
 <!doctype html>
-<html data-wf-page="68134830de541dd62ef81999" data-wf-site="68025cbd2676ca8827196077" lang="{{ request.locale.iso_code }}">
+<html data-wf-page="6839e1517dfcf91c4b6c159b" data-wf-site="68025cbd2676ca8827196077" lang="{{ request.locale.iso_code }}">
 <head>
   <meta charset="utf-8">
-  <title>{{ page_title }}</title>
-  <meta content="{{ page_description }}" name="description">
+  <title>Foire aux question</title>
+  <meta content="Foire aux question" property="og:title">
+  <meta content="Foire aux question" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="{{ 'normalize.css' | asset_url }}" rel="stylesheet" type="text/css">
@@ -251,8 +252,9 @@
     })(window, document, "clarity", "script", "s0y7y4t0ik");
 </script>
 <script src="{{ 'li_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
-<body li-page="cart" li-layout="theme">
+<body li-page="FAQ" li-layout="Theme">
   <div class="page-wrapper">
+    {% render 'global_styles' %}
     {% section 'header' %}
     {{ content_for_layout }}
     {% section 'footer' %}

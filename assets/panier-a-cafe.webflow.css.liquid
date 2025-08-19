@@ -2628,7 +2628,7 @@ figcaption {
   color: var(--color-scheme-1--text);
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   text-decoration: none;
   display: flex;
 }
@@ -2638,7 +2638,7 @@ figcaption {
   grid-row-gap: .125rem;
   flex-flow: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   margin-right: 1rem;
   display: flex;
 }
@@ -2699,6 +2699,8 @@ figcaption {
 }
 
 .icon {
+  object-fit: cover;
+  max-width: 4rem;
   max-height: 3.125rem;
 }
 
@@ -7851,6 +7853,13 @@ figcaption {
 
 .text-size-regular-2 {
   font-size: 1rem;
+}
+
+.product_price-hero, .product_item-name {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
 }
 
 @media screen and (max-width: 991px) {
