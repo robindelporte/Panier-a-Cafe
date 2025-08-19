@@ -10,7 +10,7 @@
 {
   "sections": {
     "product_hero_sub": {
-      "type": "product_hero_sub",
+      "type": "product_hero_pro",
       "settings": {}
     },
     "product_recommended": {
