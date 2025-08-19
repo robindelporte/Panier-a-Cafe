@@ -16,32 +16,12 @@
     "produits_pro_collect": {
       "type": "produits_pro_collect",
       "settings": {}
-    },
-    "bandeau": {
-      "type": "bandeau",
-      "blocks": {
-        "icone": {
-          "type": "icone",
-          "name": "icone",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "icone"
-      ],
-      "settings": {}
-    },
-    "reseaux": {
-      "type": "reseaux",
-      "settings": {}
     }
   },
   "layout": "collection.collection-pro",
   "wrapper": "main.main-wrapper",
   "order": [
     "collection_pro_hero",
-    "produits_pro_collect",
-    "bandeau",
-    "reseaux"
+    "produits_pro_collect"
   ]
 }
