@@ -1,17 +1,17 @@
 <div class="padding-global padding-section-small">
-            <div class="container-large">
-              <div class="margin-bottom margin-medium">
-                <h1 li-object="collection.title" class="heading-style-h1">{{ collection.title }}</h1>
-              </div>
-              {% if collection.description %}    <div li-if="collection.description" class="text_container-wrapper">
+          <div class="container-large">
+            <div class="margin-bottom margin-medium">
+              <h1 li-object="collection.title" class="heading-style-h1">{{ collection.title }}</h1>
+            </div>
+            {% if collection.description %}    <div li-if="collection.description" class="text_container-wrapper">
     
-                <div class="text_container">
-                  <div li-object="collection.description" class="collection_description w-richtext">{{ collection.description }}</div>
-                  <div class="text_overlay is-active"></div>
-                </div>
-                <a role="button" href="#" class="see_more">Voir plus</a>
-                <div class="hide w-embed w-script">
-                  <script>
+              <div class="text_container">
+                <div li-object="collection.description" class="collection_description w-richtext">{{ collection.description }}</div>
+                <div class="text_overlay is-active"></div>
+              </div>
+              <a role="button" href="#" class="see_more">Voir plus</a>
+              <div class="hide w-embed w-script">
+                <script>
 document.addEventListener('DOMContentLoaded', function() {
   // S&eacute;lectionner tous les boutons "Voir plus"
   var seeMoreButtons = document.querySelectorAll('.see_more');
@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+              </div>
                 </div>
-                  </div>
 {% endif %}
-            </div>
-          </div> {% schema %} {
+          </div>
+        </div> {% schema %} {
     "tag": "section",
     "name": "Collection-Pro-Hero",
     "class": "section_small-hero",
