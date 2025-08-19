@@ -1,4 +1,8 @@
-<div class="padding-section-medium"><div class="marquee_component"><div class="hide w-embed"><style>@keyframes scroll {
+<div class="padding-section-medium">
+          <div class="marquee_component">
+            <div class="hide w-embed">
+              <style>
+@keyframes scroll {
   from {
     transform: translateX(0);
   }
@@ -15,10 +19,50 @@
 .marquee-image {
   -webkit-transform: translateZ(0);
 }
-</style></div><h2 class="text-align-center">
+</style>
+            </div>
+            <h2 class="text-align-center">
 {{ section.settings.text_heading }}
 </h2>
-<div li-content-for-theme-blocks="" class="marquees_wrapper">
+            <div li-content-for-theme-blocks="" class="marquees_wrapper">
 {% content_for 'blocks' %}
 </div>
-</div></div> {% schema %} {"tag":"section","name":"Logo defilants","class":"section_marquee","blocks":[{"type":"logo-defilants"},{"type":"logo-defilants-inverses"},{"type":"@app"}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Ils nous font confiance"}],"presets":[{"name":"Logo defilants","category":"Liquify","blocks":[{"type":"logo-defilants"},{"type":"logo-defilants-inverses"}]}]} {% endschema %}
+          </div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Logo defilants",
+    "class": "section_marquee",
+    "blocks": [
+        {
+            "type": "logo-defilants"
+        },
+        {
+            "type": "logo-defilants-inverses"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Ils nous font confiance"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Logo defilants",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "logo-defilants"
+                },
+                {
+                    "type": "logo-defilants-inverses"
+                }
+            ]
+        }
+    ]
+} {% endschema %}
