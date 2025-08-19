@@ -99,13 +99,15 @@
                             </div>
 {% endif %}
                       </div>
-                      {% for block in section.blocks %}
-    {% if block.type == "loox" %}
-                    <div li-block="Loox">
-                                    
-                            </div>
-            {% endif %}
+                      <div li-content-for-blocks="">
+{% for block in section.blocks %}
+{% case block.type %}
+{% when '@app' %}
+{% render block %}
+{% endcase %}
 {% endfor %}
+
+    </div>
                     </div>
                     <div class="product-header_shipping-wrapper">
                       <div class="product-header_shipping">
@@ -638,9 +640,7 @@
     "class": "section_product-header",
     "blocks": [
         {
-            "name": "Loox",
-            "type": "loox",
-            "settings": null
+            "type": "@app"
         }
     ],
     "settings": [
@@ -705,11 +705,7 @@
         {
             "name": "Product-Hero-Sub",
             "category": "Liquify",
-            "blocks": [
-                {
-                    "type": "loox"
-                }
-            ]
+            "blocks": []
         }
     ]
 } {% endschema %}
