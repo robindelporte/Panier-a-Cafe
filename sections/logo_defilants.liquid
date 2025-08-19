@@ -1,4 +1,8 @@
-<div class="padding-section-medium"><div class="marquee_component"><div class="hide w-embed"><style>@keyframes scroll {
+<div class="padding-section-medium">
+          <div class="marquee_component">
+            <div class="hide w-embed">
+              <style>
+@keyframes scroll {
   from {
     transform: translateX(0);
   }
@@ -15,85 +19,50 @@
 .marquee-image {
   -webkit-transform: translateZ(0);
 }
-</style></div><h2 class="text-align-center">
+</style>
+            </div>
+            <h2 class="text-align-center">
 {{ section.settings.text_heading }}
 </h2>
-<div class="marquees_wrapper"><div class="marquee is-1">{% for logo in settings.marquee_1_logos %}    <div li-for="logo in settings.marquee_1_logos" class="marquee-content scroll reverse">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_1_1.alt }}" src="{{ block.settings.image_logo_1_1 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}{% for logo in settings.marquee_1_logos %}    <div li-for="logo in settings.marquee_1_logos" class="marquee-content scroll reverse">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_1_2.alt }}" src="{{ block.settings.image_logo_1_2 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}</div><div class="marquee is-2">{% for logo in settings.marquee_2_logos %}    <div li-for="logo in settings.marquee_2_logos" class="marquee-content scroll">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_2_1.alt }}" src="{{ block.settings.image_logo_2_1 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}{% for logo in settings.marquee_2_logos %}    <div li-for="logo in settings.marquee_2_logos" class="marquee-content scroll">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_2_2.alt }}" src="{{ block.settings.image_logo_2_2 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}</div><div class="marquee is-3">{% for logo in settings.marquee_3_logos %}    <div li-for="logo in settings.marquee_3_logos" class="marquee-content scroll reverse">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_3_1.alt }}" src="{{ block.settings.image_logo_3_1 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}{% for logo in settings.marquee_3_logos %}    <div li-for="logo in settings.marquee_3_logos" class="marquee-content scroll reverse">
-                                    
-                            {% for block in section.blocks %}
-    {% if block.type == "logo" %}
-                    <div li-block="Logo" class="marquee_image-container">
-                                    <img loading="eager" alt="{{ block.settings.image_logo_3_2.alt }}" src="{{ block.settings.image_logo_3_2 | img_url: 'master' }}" class="marquee-image">
-
-                            </div>
-            {% endif %}
-{% endfor %}
-
-                            
-                        </div>
-{% endfor %}</div></div></div></div> {% schema %} {"tag":"section","name":"Logo defilants","class":"section_marquee","blocks":[{"name":"Logo","type":"logo","settings":[{"id":"image_logo_1_1","type":"image_picker","label":"Logo-1-1"}]},{"type":"@app"}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Ils nous font confiance"}],"presets":[{"name":"Logo defilants","category":"Liquify","blocks":[{"type":"logo"}]}]} {% endschema %}
+            <div li-content-for-theme-blocks="" class="marquees_wrapper">
+{% content_for 'blocks' %}
+</div>
+          </div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Logo defilants",
+    "class": "section_marquee",
+    "blocks": [
+        {
+            "type": "logo-defilants"
+        },
+        {
+            "type": "logo-defilants-inverses"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Ils nous font confiance"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Logo defilants",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "logo-defilants"
+                },
+                {
+                    "type": "logo-defilants-inverses"
+                }
+            ]
+        }
+    ]
+} {% endschema %}
