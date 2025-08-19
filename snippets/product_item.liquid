@@ -88,7 +88,10 @@
                           <div class="spacer-xxsmall"></div>
                           <a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link w-inline-block">
                             <div class="product-item_left">
-                              <div li-object="product.title" class="product_name">{{ product.title }}</div>
+                              <div class="product_item-name">
+                                <div li-object="product.title" class="product_name">{{ product.title }}</div>
+                                <div class="loox_parent"></div>
+                              </div>
                               <div>
                                 {% assign aromeNames = product.metafields.custom.famille_aromatique.value | map: 'nom' | slice: 0, 2 %}
                                 <div li-object="aromeNames | join: ', '">{{ aromeNames | join: ', ' }}</div>
