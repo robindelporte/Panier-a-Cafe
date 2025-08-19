@@ -9,8 +9,8 @@
  */
 {
   "sections": {
-    "product_hero_sub": {
-      "type": "product_hero_sub",
+    "product_hero_pro": {
+      "type": "product_hero_pro",
       "settings": {}
     },
     "contenu_produits": {
@@ -20,13 +20,28 @@
     "category": {
       "type": "category",
       "settings": {}
+    },
+    "acces_reserve": {
+      "type": "acces_reserve",
+      "blocks": {
+        "carte": {
+          "type": "carte",
+          "name": "Carte",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "carte"
+      ],
+      "settings": {}
     }
   },
   "layout": "product.produits-pro",
   "wrapper": "main.main-wrapper",
   "order": [
-    "product_hero_sub",
+    "product_hero_pro",
     "contenu_produits",
-    "category"
+    "category",
+    "acces_reserve"
   ]
 }
