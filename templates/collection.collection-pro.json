@@ -9,24 +9,26 @@
  */
 {
   "sections": {
-    "collection_hero": {
-      "type": "collection_hero",
+    "collection_pro_hero": {
+      "type": "collection_pro_hero",
       "settings": {}
     },
-    "collection_pro": {
-      "type": "collection_pro",
+    "produits_pro_collect": {
+      "type": "produits_pro_collect",
       "settings": {}
     },
     "bandeau": {
       "type": "bandeau",
-      "settings": {}
-    },
-    "faq": {
-      "type": "faq",
-      "settings": {}
-    },
-    "collection_tabs": {
-      "type": "collection_tabs",
+      "blocks": {
+        "icone": {
+          "type": "icone",
+          "name": "icone",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "icone"
+      ],
       "settings": {}
     },
     "reseaux": {
@@ -37,11 +39,9 @@
   "layout": "collection.collection-pro",
   "wrapper": "main.main-wrapper",
   "order": [
-    "collection_hero",
-    "collection_pro",
+    "collection_pro_hero",
+    "produits_pro_collect",
     "bandeau",
-    "faq",
-    "collection_tabs",
     "reseaux"
   ]
 }
